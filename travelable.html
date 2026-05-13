@@ -61,38 +61,44 @@ h1 strong{color:var(--blue)}
 </style>
 <style>.smartvel-logo-link{display:inline-flex;align-items:center;text-decoration:none}.smartvel-logo-link img{display:block}</style>
 
+
+
+
 <style id="travelable-cinematic-hero-css">
+.visual.travelable-cinema-host{
+display:block!important;
+}
 .travelable-cinema{
-position:relative;
-height:520px;
-border-radius:34px;
-overflow:hidden;
+position:relative!important;
+height:520px!important;
+border-radius:34px!important;
+overflow:hidden!important;
 background:
 radial-gradient(circle at 18% 20%,rgba(41,170,224,.18),transparent 32%),
 radial-gradient(circle at 82% 72%,rgba(0,166,152,.14),transparent 34%),
-linear-gradient(135deg,#F7FCFF,#FFFFFF 58%,#EEF8FD);
-border:1px solid rgba(222,231,239,.95);
-box-shadow:0 30px 90px rgba(10,35,60,.13);
+linear-gradient(135deg,#F7FCFF,#FFFFFF 58%,#EEF8FD)!important;
+border:1px solid rgba(222,231,239,.95)!important;
+box-shadow:0 30px 90px rgba(10,35,60,.13)!important;
 }
 .travelable-frame{
-position:absolute;
-inset:24px;
-border-radius:28px;
-overflow:hidden;
-background:#fff;
-box-shadow:0 22px 70px rgba(10,35,60,.12);
-border:1px solid rgba(222,231,239,.9);
+position:absolute!important;
+inset:24px!important;
+border-radius:28px!important;
+overflow:hidden!important;
+background:#fff!important;
+box-shadow:0 22px 70px rgba(10,35,60,.12)!important;
+border:1px solid rgba(222,231,239,.9)!important;
 }
 .ta-slide{
-position:absolute;
-inset:0;
+position:absolute!important;
+inset:0!important;
 opacity:0;
 animation:taSlideFade 30s infinite;
-display:grid;
-grid-template-columns:.9fr 1.1fr;
-gap:22px;
-align-items:center;
-padding:30px;
+display:grid!important;
+grid-template-columns:.9fr 1.1fr!important;
+gap:22px!important;
+align-items:center!important;
+padding:30px!important;
 }
 .ta-slide:nth-child(1){animation-delay:0s}
 .ta-slide:nth-child(2){animation-delay:5s}
@@ -100,44 +106,37 @@ padding:30px;
 .ta-slide:nth-child(4){animation-delay:15s}
 .ta-slide:nth-child(5){animation-delay:20s}
 .ta-slide:nth-child(6){animation-delay:25s}
-.ta-copy{
-position:relative;
-z-index:2;
-}
+.ta-copy{position:relative;z-index:2}
 .ta-kicker{
-font-size:11px;
-font-weight:900;
-letter-spacing:.13em;
-text-transform:uppercase;
-color:#125885;
-margin-bottom:10px;
+font-size:11px!important;
+font-weight:900!important;
+letter-spacing:.13em!important;
+text-transform:uppercase!important;
+color:#125885!important;
+margin-bottom:10px!important;
 }
 .ta-copy h3{
-margin:0 0 10px;
-font-size:32px;
-line-height:1.05;
-letter-spacing:-.05em;
-color:#071018;
+margin:0 0 10px!important;
+font-size:32px!important;
+line-height:1.05!important;
+letter-spacing:-.05em!important;
+color:#071018!important;
 }
 .ta-copy p{
-margin:0 0 14px;
-font-size:13px;
-line-height:1.48;
-color:#4E5C6B;
-max-width:380px;
+margin:0 0 14px!important;
+font-size:13px!important;
+line-height:1.48!important;
+color:#4E5C6B!important;
+max-width:380px!important;
 }
-.ta-points{
-display:grid;
-gap:8px;
-margin-top:14px;
-}
+.ta-points{display:grid!important;gap:8px!important;margin-top:14px!important}
 .ta-points span{
-display:flex;
-align-items:flex-start;
-gap:8px;
-font-size:11px;
-line-height:1.35;
-color:#334155;
+display:flex!important;
+align-items:flex-start!important;
+gap:8px!important;
+font-size:11px!important;
+line-height:1.35!important;
+color:#334155!important;
 }
 .ta-points span:before{
 content:"";
@@ -149,56 +148,56 @@ flex:0 0 auto;
 margin-top:4px;
 }
 .ta-visual{
-position:relative;
-z-index:1;
-height:330px;
-border-radius:24px;
-overflow:hidden;
-background:#F5FAFE;
-border:1px solid rgba(222,231,239,.9);
-box-shadow:0 18px 50px rgba(10,35,60,.10);
-display:flex;
-align-items:center;
-justify-content:center;
+position:relative!important;
+z-index:1!important;
+height:330px!important;
+border-radius:24px!important;
+overflow:hidden!important;
+background:#F5FAFE!important;
+border:1px solid rgba(222,231,239,.9)!important;
+box-shadow:0 18px 50px rgba(10,35,60,.10)!important;
+display:flex!important;
+align-items:center!important;
+justify-content:center!important;
 }
 .ta-visual img{
-width:100%;
-height:100%;
-object-fit:cover;
-object-position:center center;
-filter:saturate(1.03) contrast(1.01);
+width:100%!important;
+height:100%!important;
+object-fit:cover!important;
+object-position:center center!important;
+filter:saturate(1.03) contrast(1.01)!important;
 }
 .ta-visual.contain img{
-object-fit:contain;
-padding:14px;
-background:#fff;
+object-fit:contain!important;
+padding:14px!important;
+background:#fff!important;
 }
 .ta-badge{
-position:absolute;
-right:18px;
-bottom:18px;
-z-index:3;
-padding:10px 13px;
-border-radius:999px;
-background:rgba(255,255,255,.92);
-border:1px solid rgba(222,231,239,.9);
-box-shadow:0 12px 32px rgba(10,35,60,.12);
-font-size:11px;
-font-weight:900;
-color:#125885;
-letter-spacing:.08em;
-text-transform:uppercase;
+position:absolute!important;
+right:18px!important;
+bottom:18px!important;
+z-index:3!important;
+padding:10px 13px!important;
+border-radius:999px!important;
+background:rgba(255,255,255,.92)!important;
+border:1px solid rgba(222,231,239,.9)!important;
+box-shadow:0 12px 32px rgba(10,35,60,.12)!important;
+font-size:11px!important;
+font-weight:900!important;
+color:#125885!important;
+letter-spacing:.08em!important;
+text-transform:uppercase!important;
 }
 .travelable-progress{
-position:absolute;
-left:28px;
-right:28px;
-bottom:22px;
-height:3px;
-border-radius:999px;
-background:rgba(18,88,133,.12);
-overflow:hidden;
-z-index:5;
+position:absolute!important;
+left:28px!important;
+right:28px!important;
+bottom:22px!important;
+height:3px!important;
+border-radius:999px!important;
+background:rgba(18,88,133,.12)!important;
+overflow:hidden!important;
+z-index:5!important;
 }
 .travelable-progress:after{
 content:"";
@@ -220,17 +219,11 @@ animation:taProgress 30s steps(6) infinite;
 0%{transform:translateX(0)}
 100%{transform:translateX(600%)}
 }
-@media(max-width:1100px){
-.travelable-cinema{height:auto;min-height:720px}
-.travelable-frame{position:relative;inset:auto;margin:18px;height:680px}
-.ta-slide{grid-template-columns:1fr;padding:22px}
-.ta-copy h3{font-size:26px}
-.ta-visual{height:300px}
-}
 </style>
 
 </head>
 <body>
+<!-- TRAVELABLE_FORCE_CINEMATIC_MARKER -->
 <!-- TRAVELABLE_CINEMATIC_HERO_MARKER -->
 <main class="page">
 <header class="header">

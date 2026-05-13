@@ -1,0 +1,7 @@
+travelable replacement count: 0
+travelable force marker: True
+index cache bust travelable: True
+copa padded: True
+world2fly padded: True
+all slide images included: True
+missing refs in updated html: None
