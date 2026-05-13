@@ -1,0 +1,83 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>TravelAble fixed preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style id="travelable-cinematic-hero-css">
+.travelable-cinema{position:relative!important;height:520px!important;border-radius:34px!important;overflow:hidden!important;background:linear-gradient(135deg,#F7FCFF,#FFFFFF 58%,#EEF8FD)!important;border:1px solid rgba(222,231,239,.95)!important;box-shadow:0 30px 90px rgba(10,35,60,.13)!important}
+.travelable-frame{position:absolute!important;inset:24px!important;border-radius:28px!important;overflow:hidden!important;background:#fff!important;box-shadow:0 22px 70px rgba(10,35,60,.12)!important;border:1px solid rgba(222,231,239,.9)!important}
+.ta-slide{position:absolute!important;inset:0!important;opacity:0;animation:taSlideFade 25s infinite;display:grid!important;grid-template-columns:.86fr 1.14fr!important;gap:26px!important;align-items:center!important;padding:30px!important}
+.ta-slide:nth-child(1){animation-delay:0s}.ta-slide:nth-child(2){animation-delay:5s}.ta-slide:nth-child(3){animation-delay:10s}.ta-slide:nth-child(4){animation-delay:15s}.ta-slide:nth-child(5){animation-delay:20s}
+.ta-copy{position:relative;z-index:2}
+.ta-kicker{font-size:11px!important;font-weight:900!important;letter-spacing:.13em!important;text-transform:uppercase!important;color:#125885!important;margin-bottom:10px!important}
+.ta-copy h3{margin:0 0 10px!important;font-size:31px!important;line-height:1.05!important;letter-spacing:-.05em!important;color:#071018!important}
+.ta-copy p{margin:0 0 14px!important;font-size:13px!important;line-height:1.48!important;color:#4E5C6B!important;max-width:385px!important}
+.ta-points{display:grid!important;gap:8px!important;margin-top:14px!important}
+.ta-points span{display:flex!important;align-items:flex-start!important;gap:8px!important;font-size:11px!important;line-height:1.35!important;color:#334155!important}
+.ta-points span:before{content:"";width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#29AAE0,#00A698);flex:0 0 auto;margin-top:4px}
+.ta-visual{position:relative!important;z-index:1!important;height:350px!important;border-radius:24px!important;overflow:hidden!important;background:#F5FAFE!important;border:1px solid rgba(222,231,239,.9)!important;box-shadow:0 18px 50px rgba(10,35,60,.10)!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.ta-visual img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;filter:saturate(1.03) contrast(1.01)!important}
+.ta-visual.contain img{object-fit:contain!important;padding:10px!important;background:#fff!important}
+.ta-badge{position:absolute!important;right:18px!important;bottom:18px!important;z-index:3!important;padding:10px 13px!important;border-radius:999px!important;background:rgba(255,255,255,.92)!important;border:1px solid rgba(222,231,239,.9)!important;box-shadow:0 12px 32px rgba(10,35,60,.12)!important;font-size:11px!important;font-weight:900!important;color:#125885!important;letter-spacing:.08em!important;text-transform:uppercase!important}
+.travelable-progress{position:absolute!important;left:28px!important;right:28px!important;bottom:22px!important;height:3px!important;border-radius:999px!important;background:rgba(18,88,133,.12)!important;overflow:hidden!important;z-index:5!important}
+.travelable-progress:after{content:"";display:block;height:100%;width:20%;background:linear-gradient(90deg,#29AAE0,#00A698);border-radius:999px;animation:taProgress 25s steps(5) infinite}
+@keyframes taSlideFade{0%{opacity:0;transform:translateY(10px) scale(.995)}4%{opacity:1;transform:translateY(0) scale(1)}16%{opacity:1;transform:translateY(0) scale(1)}20%{opacity:0;transform:translateY(-8px) scale(1.005)}100%{opacity:0}}
+@keyframes taProgress{0%{transform:translateX(0)}100%{transform:translateX(500%)}}
+</style>
+</head>
+<body style="margin:0;background:#f6f8fb;font-family:Poppins,Arial,sans-serif;padding:40px;">
+<div style="max-width:900px;margin:auto;">
+<div class="travelable-cinema">
+  <div class="travelable-frame">
+    <div class="ta-slide">
+      <div class="ta-copy">
+        <div class="ta-kicker">Clearer accessible travel</div>
+        <h3>Guidance travellers can actually use.</h3>
+        <p>TravelAble turns fragmented accessibility and PRM information into a structured, traveller-friendly digital experience.</p>
+        <div class="ta-points"><span>Route, airline and airport guidance in one place</span><span>Practical information before, during and after travel</span><span>Designed to reduce uncertainty and support pressure</span></div>
+      </div>
+      <div class="ta-visual contain"><img src="travelable_visual_platform.png" alt="TravelAble platform overview"></div>
+    </div>
+
+    <div class="ta-slide">
+      <div class="ta-copy">
+        <div class="ta-kicker">Benefits for travel teams</div>
+        <h3>Useful for airlines, airports and support teams.</h3>
+        <p>A clearer self-service layer helps teams answer accessibility questions consistently across the traveller journey.</p>
+        <div class="ta-points"><span>Lower repetitive support queries</span><span>More consistent pre-trip information</span><span>Better traveller confidence before departure</span></div>
+      </div>
+      <div class="ta-visual"><img src="travelable_visual_benefits.png" alt="Airline and airport team benefits"></div>
+    </div>
+
+    <div class="ta-slide">
+      <div class="ta-copy">
+        <div class="ta-kicker">Governance and compliance</div>
+        <h3>Structured accessibility intelligence.</h3>
+        <p>Clear, maintained information supports better governance, internal alignment and transparent accessibility communication.</p>
+        <div class="ta-points"><span>Structured PRM and accessibility content</span><span>Governance-ready content model</span><span>Cleaner communication than scattered policy pages</span></div>
+      </div>
+      <div class="ta-visual"><img src="travelable_visual_governance.png" alt="Wheelchair passenger at airport"></div>
+    </div>
+
+    <div class="ta-slide">
+      <div class="ta-copy">
+        <div class="ta-kicker">Built with traveller insight</div>
+        <h3>Real needs, not abstract policy.</h3>
+        <p>TravelAble is shaped around practical questions travellers ask when planning assisted and accessible journeys.</p>
+        <div class="ta-points"><span>Wheelchair and mobility-equipment guidance</span><span>Airport-stage support information</span><span>Clearer answers for travellers and companions</span></div>
+      </div>
+      <div class="ta-visual"><img src="travelable_visual_traveller.png" alt="Traveller using wheelchair"></div>
+    </div>
+
+    <div class="ta-slide">
+      <div class="ta-copy">
+        <div class="ta-kicker">Beyond PRM</div>
+        <h3>Accessibility intelligence across the journey.</h3>
+        <p>From assistance requests to onboard preparation and arrival guidance, TravelAble can support a wider accessibility information layer.</p>
+        <div class="ta-points"><span>Before travel, airport, onboard and arrival stages</span><span>Scalable across channels and customer touchpoints</span><span>Future-ready accessibility communication</span></div>
+      </div>
+      <div class="ta-visual"><img src="travelable_visual_future.png" alt="TravelAble mobile accessibility interface"></div>
+    </div>
+
+    <div class="ta-badge">TravelAble</div>
+    <div class="travelable-progress"></div>
+  </div>
+</div>
+</div></body></html>

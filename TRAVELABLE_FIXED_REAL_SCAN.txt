@@ -1,0 +1,6 @@
+travelable visual replacement: True
+image pairing corrected: True
+right side uses cropped visual-only imagery: True
+world2fly logo canvas: 420x130
+index cache-busted: True
+missing refs: None
