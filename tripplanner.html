@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trip Planner | Smartvel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--black:#121212;--dark-blue:#125885;--blue:#29AAE0;--orange:#FF9400;--yellow:#FFC700;--green:#00A698;--red:#FF6262;--bg:#F6F8FB;--muted:#667383;--line:#DEE7EF}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--black);font-family:'Poppins',Arial,sans-serif}
+.page{width:100%;max-width:1536px;min-height:100vh;margin:0 auto;padding:34px 48px 34px;position:relative;overflow:hidden}
+.page:before{content:"";position:absolute;right:-190px;top:-180px;width:650px;height:650px;border-radius:50%;background:radial-gradient(circle,rgba(0,166,152,.23),rgba(0,166,152,0) 68%)}
+.page:after{content:"";position:absolute;left:-160px;bottom:-250px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(255,148,0,.14),rgba(255,148,0,0) 70%)}
+.header,.hero,.engagement,.proof-row,.bottom-strip,.footnote{position:relative;z-index:1}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px}
+.logo{width:230px;height:auto;display:block}
+.product-label{display:flex;align-items:center;gap:14px;color:var(--dark-blue);font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.product-label span{width:34px;height:4px;border-radius:999px;background:var(--green)}
+.hero{display:grid;grid-template-columns:.92fr 1.12fr;gap:42px;align-items:start}
+.kicker{color:var(--dark-blue);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.09em;margin-bottom:16px}
+h1{margin:0 0 18px;font-size:74px;line-height:1.01;letter-spacing:-.065em;font-weight:800}
+h1 strong{color:var(--green)}
+.lead{font-size:20px;line-height:1.48;color:#283241;margin:0 0 24px;max-width:650px}
+.value-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:25px 0 0}
+.value-card{background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:22px;padding:18px 20px;box-shadow:0 16px 38px rgba(18,18,18,.06);min-height:116px}
+.value-card b{display:block;color:var(--dark-blue);font-size:16px;margin-bottom:8px}
+.value-card span{display:block;color:var(--muted);font-size:13px;line-height:1.38}
+.visual{background:rgba(255,255,255,.78);border:1px solid rgba(222,231,239,.95);border-radius:34px;padding:20px;box-shadow:0 28px 80px rgba(18,18,18,.12)}
+.visual-main{position:relative;height:405px;border-radius:26px;overflow:hidden;border:1px solid var(--line)}
+.visual-main img{width:100%;height:100%;object-fit:cover;object-position:center 36%;display:block}
+.visual-main:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,18,18,.18),rgba(18,18,18,0) 45%)}
+.overlay{position:absolute;left:22px;bottom:22px;background:rgba(255,255,255,.95);border:1px solid rgba(222,231,239,.95);border-radius:18px;padding:15px 17px;max-width:460px;z-index:2}
+.overlay b{display:block;color:var(--black);font-size:18px;margin-bottom:5px}.overlay span{color:var(--muted);font-size:12px;line-height:1.42}
+.micro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+.micro{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 15px;min-height:86px}
+.micro b{display:block;color:var(--green);font-size:14px;margin-bottom:5px}.micro span{font-size:11px;line-height:1.35;color:var(--muted)}
+.engagement{margin-top:28px;border-radius:30px;overflow:hidden;background:linear-gradient(135deg,#121212,#125885);box-shadow:0 26px 78px rgba(18,18,18,.22);color:white}
+.engagement-inner{position:relative;padding:28px 32px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;overflow:hidden}
+.engagement-inner:before{content:"";position:absolute;right:-70px;top:-120px;width:430px;height:430px;border-radius:50%;background:radial-gradient(circle,rgba(0,166,152,.40),rgba(0,166,152,0) 67%)}
+.engagement h2{position:relative;z-index:2;font-size:34px;line-height:1.08;letter-spacing:-.045em;margin:0 0 12px}
+.engagement p{position:relative;z-index:2;margin:0;color:#D9EEF8;font-size:15px;line-height:1.48;max-width:760px}
+.metrics{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.metric{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:18px}
+.metric b{display:block;font-size:31px;line-height:1;color:white;margin-bottom:7px}
+.metric span{display:block;color:#D9EEF8;font-size:12px;line-height:1.35}
+.proof-row{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:18px}
+.proof{background:#fff;border:1px solid var(--line);border-radius:22px;padding:16px 17px;box-shadow:0 14px 38px rgba(18,18,18,.055);min-height:96px}
+.proof b{display:block;color:var(--dark-blue);font-size:15px;margin-bottom:6px}.proof span{display:block;color:var(--muted);font-size:12px;line-height:1.35}
+.bottom-strip{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:26px;padding:20px 22px;display:grid;grid-template-columns:.7fr 1.3fr;gap:24px;align-items:center;box-shadow:0 18px 50px rgba(18,18,18,.07)}
+.bottom-strip img{width:100%;height:155px;object-fit:cover;object-position:center 40%;border-radius:20px;border:1px solid var(--line)}
+.bottom-copy h2{margin:0 0 7px;font-size:25px;letter-spacing:-.04em;color:var(--dark-blue)}
+.bottom-copy p{margin:0;color:var(--muted);font-size:13px;line-height:1.45}
+.tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}.tag{background:#EAF6FC;border:1px solid #CAEAF8;color:#125885;border-radius:999px;padding:8px 11px;font-size:11px;font-weight:800}.demo-link{display:inline-flex;align-items:center;justify-content:center;margin-top:14px;background:#00A698;color:#fff;border-radius:999px;padding:12px 17px;font-weight:800;font-size:13px;text-decoration:none;box-shadow:0 12px 28px rgba(0,166,152,.22)}
+.footnote{margin-top:13px;color:#7A8491;font-size:10px;line-height:1.4}
+@media(max-width:1100px){.page{padding:28px 22px}.hero,.engagement-inner,.bottom-strip{grid-template-columns:1fr}h1{font-size:52px}.proof-row{grid-template-columns:1fr 1fr}.metrics{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="header"><img class="logo" src="smartvel_logo.png" alt="Smartvel logo"><div class="product-label"><span></span> Trip Planner</div></header>
+<section class="hero">
+<div><div class="kicker">Destination engagement + itinerary intelligence</div><h1>Keep travellers <strong>exploring longer.</strong></h1><p class="lead">Trip Planner turns destination content into an interactive planning experience — combining POIs, restaurants, live events, maps and personalised itineraries so travellers can discover what to do and build a trip that feels relevant.</p>
+<div class="value-grid"><div class="value-card"><b>Live destination agenda</b><span>Events, activities and seasonal experiences connected to the traveller’s destination and travel dates.</span></div><div class="value-card"><b>POIs + restaurants</b><span>Curated points of interest, restaurants, museums, tours and local highlights in one experience.</span></div><div class="value-card"><b>Personalised itineraries</b><span>Travellers can plan around duration, interests, profile and time available.</span></div><div class="value-card"><b>Ancillary opportunities</b><span>Connect to preferred third-party partners for tours, activities, tickets or other bookable experiences.</span></div></div></div>
+<div class="visual"><div class="visual-main"><img src="tripplanner.png" alt="Trip Planner product visual"><div class="overlay"><b>More than itinerary planning.</b><span>A destination engagement layer that keeps users inside your ecosystem before, during and after booking.</span></div></div><div class="micro-grid"><div class="micro"><b>Live events</b><span>Concerts, sports, exhibitions, festivals and local activities.</span></div><div class="micro"><b>Interactive maps</b><span>Explore what is nearby and build plans around real locations.</span></div><div class="micro"><b>Shareable plans</b><span>Save, revisit and continue planning across the traveller journey.</span></div></div></div>
+</section>
+<section class="engagement"><div class="engagement-inner"><div><h2>From browsing to active trip planning.</h2><p>Trip Planner is designed to increase time on page, repeat interaction and traveller intent by turning destination content into something users can actively filter, save, customise and use.</p></div><div class="metrics"><div class="metric"><b>POIs</b><span>Must-see locations, museums, restaurants and local highlights.</span></div><div class="metric"><b>Events</b><span>Fresh destination agenda linked to travel dates and interests.</span></div><div class="metric"><b>CTAs</b><span>Partner integrations and ancillary links can turn inspiration into revenue.</span></div></div></div></section>
+<section class="proof-row"><div class="proof"><b>All-in-one guide</b><span>Places, restaurants, events, tours and activities in one destination experience.</span></div><div class="proof"><b>Traveller filters</b><span>Content can be filtered by interests, audience, duration and context.</span></div><div class="proof"><b>Managed content</b><span>Smartvel maintains and categorises content so client teams do not have to.</span></div><div class="proof"><b>Partner-ready</b><span>Supports client agreements with tours, activities, tickets or other providers.</span></div><div class="proof"><b>Widget or API</b><span>Deploy as a white-label widget or use Smartvel data inside your own solution.</span></div></section>
+<section class="bottom-strip"><img src="exploreandgo.png" alt="Explore and Go connection visual"><div class="bottom-copy"><h2>Connect inspiration to planning.</h2><p>Trip Planner works naturally after Explore & Go, TravelSEO or campaign landing pages — once travellers are inspired, it gives them a reason to stay, explore and move closer to booking.</p><div class="tags"><span class="tag">Live agenda</span><span class="tag">POIs + restaurants</span><span class="tag">Itineraries</span><span class="tag">Ancillary CTAs</span></div><a class="demo-link" href="https://sales-itineraries.cst.smartvel.com/?lang=en#modal" target="_blank" rel="noopener noreferrer">Open Trip Planner demo</a></div></section>
+<div class="footnote">Metrics and engagement claims should be adapted with client-specific figures where available. The commercial framing is based on Smartvel destination-content and Trip Planner product material.</div>
+</main></body></html>

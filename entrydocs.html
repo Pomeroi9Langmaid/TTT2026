@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EntryDocs | Smartvel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#121212;--dark-blue:#125885;--blue:#29AAE0;--orange:#FF9400;--yellow:#FFC700;
+  --green:#00A698;--red:#FF6262;--bg:#F6F8FB;--muted:#667383;--line:#DEE7EF;--eu:#003399;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--black);font-family:'Poppins',Arial,sans-serif}
+.page{width:100%;max-width:1536px;min-height:100vh;margin:0 auto;padding:34px 48px 34px;position:relative;overflow:hidden}
+.page:before{content:"";position:absolute;right:-190px;top:-180px;width:650px;height:650px;border-radius:50%;background:radial-gradient(circle,rgba(41,170,224,.24),rgba(41,170,224,0) 68%)}
+.page:after{content:"";position:absolute;left:-160px;bottom:-250px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(255,148,0,.14),rgba(255,148,0,0) 70%)}
+.header,.hero,.eu-banner,.proof-row,.bottom-strip,.footnote{position:relative;z-index:1}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px}
+.logo{width:230px;height:auto;display:block}
+.product-label{display:flex;align-items:center;gap:14px;color:var(--dark-blue);font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.product-label span{width:34px;height:4px;border-radius:999px;background:var(--orange)}
+.hero{display:grid;grid-template-columns:.92fr 1.12fr;gap:42px;align-items:start}
+.kicker{color:var(--dark-blue);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.09em;margin-bottom:16px}
+h1{margin:0 0 18px;font-size:74px;line-height:1.01;letter-spacing:-.065em;font-weight:800}
+h1 strong{color:var(--orange)}
+.lead{font-size:20px;line-height:1.48;color:#283241;margin:0 0 24px;max-width:650px}
+.value-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:25px 0 0}
+.value-card{background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:22px;padding:18px 20px;box-shadow:0 16px 38px rgba(18,18,18,.06);min-height:116px}
+.value-card b{display:block;color:var(--dark-blue);font-size:16px;margin-bottom:8px}
+.value-card span{display:block;color:var(--muted);font-size:13px;line-height:1.38}
+.visual{background:rgba(255,255,255,.78);border:1px solid rgba(222,231,239,.95);border-radius:34px;padding:20px;box-shadow:0 28px 80px rgba(18,18,18,.12)}
+.visual-main{position:relative;height:405px;border-radius:26px;overflow:hidden;border:1px solid var(--line)}
+.visual-main img{width:100%;height:100%;object-fit:cover;object-position:center 32%;display:block}
+.visual-main:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,18,18,.20),rgba(18,18,18,0) 45%)}
+.overlay{position:absolute;left:22px;bottom:22px;background:rgba(255,255,255,.95);border:1px solid rgba(222,231,239,.95);border-radius:18px;padding:15px 17px;max-width:440px;z-index:2}
+.overlay b{display:block;color:var(--black);font-size:18px;margin-bottom:5px}.overlay span{color:var(--muted);font-size:12px;line-height:1.42}
+.micro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+.micro{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 15px;min-height:86px}
+.micro b{display:block;color:var(--orange);font-size:14px;margin-bottom:5px}.micro span{font-size:11px;line-height:1.35;color:var(--muted)}
+.eu-banner{margin-top:28px;border-radius:30px;overflow:hidden;background:linear-gradient(135deg,#003399,#125885);box-shadow:0 26px 78px rgba(0,51,153,.25);color:white}
+.eu-inner{position:relative;padding:28px 32px;display:grid;grid-template-columns:230px 1fr;gap:32px;align-items:center;overflow:hidden}
+.eu-mark{width:206px;height:136px;border-radius:24px;background:#003399;border:1px solid rgba(255,255,255,.24);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 10px rgba(255,255,255,.04),0 18px 48px rgba(0,0,0,.18)}
+.eu-flag{position:relative;width:116px;height:116px;border-radius:50%}
+.eu-flag i{position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px 0 0 -5px;color:#FFCC00;font-size:17px;line-height:10px;text-align:center;transform-origin:0 0}
+.eu-flag i:nth-child(1){transform:rotate(0deg) translateY(-48px)}
+.eu-flag i:nth-child(2){transform:rotate(30deg) translateY(-48px)}
+.eu-flag i:nth-child(3){transform:rotate(60deg) translateY(-48px)}
+.eu-flag i:nth-child(4){transform:rotate(90deg) translateY(-48px)}
+.eu-flag i:nth-child(5){transform:rotate(120deg) translateY(-48px)}
+.eu-flag i:nth-child(6){transform:rotate(150deg) translateY(-48px)}
+.eu-flag i:nth-child(7){transform:rotate(180deg) translateY(-48px)}
+.eu-flag i:nth-child(8){transform:rotate(210deg) translateY(-48px)}
+.eu-flag i:nth-child(9){transform:rotate(240deg) translateY(-48px)}
+.eu-flag i:nth-child(10){transform:rotate(270deg) translateY(-48px)}
+.eu-flag i:nth-child(11){transform:rotate(300deg) translateY(-48px)}
+.eu-flag i:nth-child(12){transform:rotate(330deg) translateY(-48px)}
+.eu-copy{position:relative;z-index:2}
+.eu-copy h2{font-size:34px;line-height:1.08;letter-spacing:-.045em;margin:0 0 12px;max-width:780px}
+.eu-copy p{margin:0;color:#D9EEF8;font-size:15px;line-height:1.48;max-width:850px}
+.eu-points{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+.eu-point{background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.16);border-radius:17px;padding:13px 14px;font-size:12px;line-height:1.35;color:#fff}
+.proof-row{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:18px}
+.proof{background:#fff;border:1px solid var(--line);border-radius:22px;padding:16px 17px;box-shadow:0 14px 38px rgba(18,18,18,.055);min-height:96px}
+.proof b{display:block;color:var(--dark-blue);font-size:15px;margin-bottom:6px}.proof span{display:block;color:var(--muted);font-size:12px;line-height:1.35}
+.bottom-strip{margin-top:18px;background:var(--black);border-radius:26px;color:white;padding:22px 25px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.bottom-strip h2{margin:0;font-size:25px;letter-spacing:-.04em}.bottom-strip p{margin:5px 0 0;color:#D9E1EA;font-size:13px}
+.pill{background:var(--orange);color:#121212;border-radius:999px;padding:12px 17px;font-weight:800;font-size:13px;white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+.footnote{margin-top:13px;color:#7A8491;font-size:10px;line-height:1.4}
+@media(max-width:1100px){.page{padding:28px 22px}.hero,.eu-inner{grid-template-columns:1fr}h1{font-size:52px}.proof-row,.eu-points{grid-template-columns:1fr 1fr}.bottom-strip{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="header">
+  <img class="logo" src="smartvel_logo.png" alt="Smartvel logo">
+  <div class="product-label"><span></span> EntryDocs</div>
+</header>
+
+<section class="hero">
+  <div>
+    <div class="kicker">Travel requirements intelligence</div>
+    <h1>Keep travellers <strong>ready to go.</strong></h1>
+    <p class="lead">EntryDocs gives travel companies continuously updated, traveller-specific entry requirement information across route, nationality, residency, transit and trip conditions — without building or maintaining the data operation internally.</p>
+
+    <div class="value-grid">
+      <div class="value-card"><b>Reliable pre-trip guidance</b><span>Show visa, passport, health, ticket and destination-document requirements before travel.</span></div>
+      <div class="value-card"><b>Route and traveller logic</b><span>Information adapts by origin, destination, nationality, residency, age, transit and trip type.</span></div>
+      <div class="value-card"><b>Smartvel-managed updates</b><span>Our team monitors changing regulations, operational alerts and official source updates.</span></div>
+      <div class="value-card"><b>Low internal workload</b><span>Deploy via widget or API across web, mobile, booking flows, CRM, chatbot or customer support journeys.</span></div>
+    </div>
+  </div>
+
+  <div class="visual">
+    <div class="visual-main">
+      <img src="entrydocs.png" alt="EntryDocs product visual">
+      <div class="overlay"><b>Not just a visa checker.</b><span>A traveller-readiness layer designed to reduce confusion, support pressure and missed-document risk.</span></div>
+    </div>
+    <div class="micro-grid">
+      <div class="micro"><b>24/7 monitoring</b><span>Official-source tracking and operational change monitoring.</span></div>
+      <div class="micro"><b>White-label</b><span>Built for client-branded web and mobile journeys.</span></div>
+      <div class="micro"><b>API-ready</b><span>Can support booking, CRM, chatbot and pre-trip flows.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="eu-banner">
+  <div class="eu-inner">
+    <div class="eu-mark"><div class="eu-flag"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></div></div>
+    <div class="eu-copy">
+      <h2>Supporting evolving EU traveller information and duty-of-care expectations.</h2>
+      <p>For airlines, OTA's, cruise operators and package travel companies, accurate pre-trip information is becoming more important. EntryDocs helps provide transparent, continuously updated travel requirements so travellers can understand what they need before departure.</p>
+      <div class="eu-points">
+        <div class="eu-point">Reduces misinformation and avoidable support queries</div>
+        <div class="eu-point">Supports transparency across package and multi-leg journeys</div>
+        <div class="eu-point">Helps travellers understand document and entry conditions</div>
+        <div class="eu-point">Useful for web, mobile, email, chatbot and booking flows</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proof-row">
+  <div class="proof"><b>Official sources</b><span>Information is compiled from monitored official and trusted sources.</span></div>
+  <div class="proof"><b>Dynamic updates</b><span>Changes can be reflected without client teams manually rewriting content.</span></div>
+  <div class="proof"><b>Multi-destination</b><span>Built for routes, returns, transit and complex travel itineraries.</span></div>
+  <div class="proof"><b>Support reduction</b><span>Travellers self-serve before calling or emailing customer service.</span></div>
+  <div class="proof"><b>Scalable delivery</b><span>Widget and API options support different digital environments.</span></div>
+</section>
+
+<section class="bottom-strip">
+  <div>
+    <h2>Clear requirements. Lower friction. Better traveller confidence.</h2>
+    <p>EntryDocs gives travel companies a maintained, branded way to communicate changing entry information before problems reach the support desk.</p>
+  </div>
+  <a class="pill" href="https://www.finnair.com/fi-en/travel-documents/travel-requirements-for-your-trip" target="_blank" rel="noopener noreferrer">See EntryDocs in action</a>
+</section>
+
+<div class="footnote">Positioning is informational, not legal advice. EntryDocs supports traveller-information transparency and operational readiness; legal compliance obligations remain with each travel company and should be reviewed with appropriate counsel.</div>
+</main>
+</body>
+</html>

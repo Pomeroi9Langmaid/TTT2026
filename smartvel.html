@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Smartvel | Overview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--black:#121212;--dark-blue:#125885;--blue:#29AAE0;--orange:#FF9400;--yellow:#FFC700;--green:#00A698;--red:#FF6262;--bg:#F6F8FB;--muted:#667383;--line:#DEE7EF}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--black);font-family:'Poppins',Arial,sans-serif}
+.page{width:100%;max-width:1536px;min-height:100vh;margin:0 auto;padding:34px 48px 34px;position:relative;overflow:hidden}
+.page:before{content:"";position:absolute;right:-180px;top:-190px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(41,170,224,.26),rgba(41,170,224,0) 68%)}
+.page:after{content:"";position:absolute;left:-160px;bottom:-240px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(255,148,0,.15),rgba(255,148,0,0) 70%)}
+.header,.hero,.mission,.journey,.bottom-strip,.footnote{position:relative;z-index:1}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:34px}
+.logo{width:230px;height:auto;display:block}
+.header-line{height:2px;flex:1;margin-left:34px;background:linear-gradient(90deg,var(--blue),rgba(41,170,224,0))}
+.hero{display:grid;grid-template-columns:.92fr 1.12fr;gap:42px;align-items:start}
+.kicker{color:var(--dark-blue);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.09em;margin-bottom:16px}
+h1{margin:0 0 20px;font-size:72px;line-height:1.02;letter-spacing:-.065em;font-weight:800}
+h1 strong{color:var(--blue)}
+.lead{font-size:20px;line-height:1.48;color:#283241;margin:0 0 24px;max-width:640px}
+.promise{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:26px 0 0}
+.promise-card{background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:22px;padding:18px 20px;box-shadow:0 16px 38px rgba(18,18,18,.06);min-height:120px}
+.promise-card b{display:block;color:var(--dark-blue);font-size:16px;margin-bottom:8px}
+.promise-card span{display:block;color:var(--muted);font-size:13px;line-height:1.38}
+.visual{background:rgba(255,255,255,.78);border:1px solid rgba(222,231,239,.95);border-radius:34px;padding:20px;box-shadow:0 28px 80px rgba(18,18,18,.12)}
+.visual-main{position:relative;height:315px;border-radius:26px;overflow:hidden;border:1px solid var(--line)}
+.visual-main img,.tile img{width:100%;height:100%;object-fit:cover;display:block}
+.visual-main .overlay{position:absolute;left:22px;bottom:22px;background:rgba(255,255,255,.94);border:1px solid rgba(222,231,239,.95);border-radius:18px;padding:14px 16px;max-width:430px}
+.overlay b{display:block;color:var(--black);font-size:17px;margin-bottom:4px}.overlay span{color:var(--muted);font-size:12px;line-height:1.4}
+.visual-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}.tile{position:relative;height:150px;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.tile b{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.92);border:1px solid rgba(222,231,239,.95);color:var(--black);border-radius:999px;padding:7px 10px;font-size:11px}
+.mission{margin-top:28px;border-radius:30px;overflow:hidden;background:linear-gradient(135deg,#125885,#0E4263);box-shadow:0 24px 70px rgba(18,88,133,.25);color:white}
+.mission-inner{padding:25px 30px;background-image:radial-gradient(circle at 15% 20%,rgba(41,170,224,.35),transparent 28%),radial-gradient(circle at 85% 40%,rgba(255,148,0,.22),transparent 24%)}
+.mission-top{display:flex;align-items:flex-start;justify-content:space-between;gap:34px;margin-bottom:18px}
+.mission h2{font-size:30px;line-height:1.1;letter-spacing:-.045em;margin:0}
+.mission p{margin:0;color:#D9EEF8;font-size:14px;line-height:1.48;max-width:670px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.stat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:18px 20px}
+.stat b{display:block;font-size:35px;line-height:1;color:white;margin-bottom:7px}
+.stat span{display:block;color:#D9EEF8;font-size:13px}
+.journey{margin-top:18px;background:var(--black);color:#fff;border-radius:28px;padding:22px 24px;box-shadow:0 22px 60px rgba(18,18,18,.16)}
+.journey-title h2{margin:0 0 16px;font-size:27px;line-height:1.08;letter-spacing:-.04em}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.step{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:15px 14px;min-height:112px}
+.step i{display:block;width:26px;height:4px;border-radius:999px;margin-bottom:12px}.step:nth-child(1) i{background:var(--orange)}.step:nth-child(2) i{background:var(--yellow)}.step:nth-child(3) i{background:var(--blue)}.step:nth-child(4) i{background:var(--green)}.step:nth-child(5) i{background:var(--red)}
+.step b{display:block;font-size:15px;margin-bottom:6px}.step span{display:block;color:#D9E1EA;font-size:11px;line-height:1.35}
+.bottom-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}.value-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:17px 18px;box-shadow:0 14px 38px rgba(18,18,18,.055)}
+.value-card b{display:block;color:var(--dark-blue);font-size:15px;margin-bottom:6px}.value-card span{display:block;color:var(--muted);font-size:12px;line-height:1.38}
+.footnote{margin-top:14px;color:#7A8491;font-size:10px}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="header"><img class="logo" src="smartvel_logo.png" alt="Smartvel logo"><div class="header-line"></div></header>
+
+<section class="hero">
+<div>
+<div class="kicker">Travel technology & content intelligence</div>
+<h1>Simplifying complex <strong>traveller experiences.</strong></h1>
+<p class="lead">Smartvel turns fragmented destination content, live events, travel requirements and journey information into scalable digital experiences for airlines, OTA's, cruise companies, airports and travel brands.</p>
+<div class="promise">
+<div class="promise-card"><b>For marketing teams</b><span>Launch destination campaigns, SEO/GEO pages and inspiration experiences without building content operations from scratch.</span></div>
+<div class="promise-card"><b>For digital teams</b><span>Deploy white-label widgets or APIs that fit existing web, mobile, CRM and booking journeys.</span></div>
+<div class="promise-card"><b>For operations teams</b><span>Keep travellers informed with maintained content, changing requirements and support information.</span></div>
+<div class="promise-card"><b>For travellers</b><span>Make discovery, planning and preparation easier, clearer and more useful before and during the trip.</span></div>
+</div>
+</div>
+
+<div class="visual">
+<div class="visual-main"><img src="tripplanner.png" alt="Trip Planner visual"><div class="overlay"><b>AI-enriched content + white-label technology</b><span>Brandable widgets and APIs managed by Smartvel, designed to reduce internal workload and improve traveller engagement.</span></div></div>
+<div class="visual-grid">
+<div class="tile"><img src="exploreandgo.png" alt="Explore and Go"><b>Explore & Go</b></div>
+<div class="tile"><img src="entrydocs.png" alt="EntryDocs"><b>EntryDocs</b></div>
+<div class="tile"><img src="travelseo.png" alt="TravelSEO"><b>TravelSEO/GEO</b></div>
+</div>
+</div>
+</section>
+
+<section class="mission">
+<div class="mission-inner">
+<div class="mission-top"><h2>Content without limits.</h2><p>Smartvel’s mission is to become the go-to content-as-a-service provider across channels, sectors and content types — combining verified information, destination intelligence and technology into usable traveller experiences.</p></div>
+<div class="stats">
+<div class="stat"><b>1K</b><span>sources of information</span></div>
+<div class="stat"><b>750K</b><span>events processed annually</span></div>
+<div class="stat"><b>20</b><span>languages supported</span></div>
+</div>
+</div>
+</section>
+
+<section class="journey">
+<div class="journey-title"><h2>One ecosystem, from inspiration to arrival.</h2></div>
+<div class="steps">
+<div class="step"><i></i><b>Inspire</b><span>Explore & Go, TravelSEO and destination content create demand.</span></div>
+<div class="step"><i></i><b>Plan</b><span>Trip Planner, POIs, restaurants, events and itineraries keep users engaged.</span></div>
+<div class="step"><i></i><b>Convert</b><span>Promos, CTAs and partner integrations turn intent into action.</span></div>
+<div class="step"><i></i><b>Prepare</b><span>EntryDocs and TravelAble reduce friction before departure.</span></div>
+<div class="step"><i></i><b>Experience</b><span>Relevant content supports travellers during and after the trip.</span></div>
+</div>
+</section>
+
+<section class="bottom-strip">
+<div class="value-card"><b>White-label</b><span>Widgets adapted to client brand, fonts, colours and digital journey.</span></div>
+<div class="value-card"><b>Widget or API</b><span>Ready-to-use components or Smartvel data inside your own experience.</span></div>
+<div class="value-card"><b>Managed updates</b><span>Content, events and travel information maintained by Smartvel.</span></div>
+<div class="value-card"><b>SEO + GEO</b><span>Structured destination content ready for Google and AI-driven search.</span></div>
+</section>
+
+<div class="footnote">Figures shown are based on Smartvel corporate/product material and should be used as general company-scale indicators unless client-specific metrics are confirmed.</div>
+</main>
+</body>
+</html>

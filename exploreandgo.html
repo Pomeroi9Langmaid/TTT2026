@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Explore & Go | Smartvel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--black:#121212;--dark-blue:#125885;--blue:#29AAE0;--orange:#FF9400;--yellow:#FFC700;--green:#00A698;--bg:#F6F8FB;--muted:#667383;--line:#DEE7EF}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--black);font-family:'Poppins',Arial,sans-serif}
+.page{width:100%;max-width:1536px;min-height:100vh;margin:0 auto;padding:34px 48px;position:relative;overflow:hidden}
+.page:before{content:"";position:absolute;right:-180px;top:-160px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(41,170,224,.22),rgba(41,170,224,0) 68%)}
+.page:after{content:"";position:absolute;left:-150px;bottom:-230px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(255,148,0,.15),rgba(255,148,0,0) 70%)}
+.header,.hero,.journey,.proof-row,.bottom-strip,.footnote{position:relative;z-index:1}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px}
+.logo{width:230px;height:auto}
+.product-label{display:flex;align-items:center;gap:14px;color:var(--dark-blue);font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.product-label span{width:34px;height:4px;border-radius:999px;background:var(--orange)}
+.hero{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:start}
+.kicker{color:var(--dark-blue);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.09em;margin-bottom:16px}
+h1{margin:0 0 18px;font-size:74px;line-height:1.01;letter-spacing:-.065em;font-weight:800}
+h1 strong{color:var(--orange)}
+.lead{font-size:20px;line-height:1.48;color:#283241;margin:0 0 24px;max-width:650px}
+.value-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:25px}
+.value-card{background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:22px;padding:18px 20px;box-shadow:0 16px 38px rgba(18,18,18,.06);min-height:116px}
+.value-card b{display:block;color:var(--dark-blue);font-size:16px;margin-bottom:8px}
+.value-card span{display:block;color:var(--muted);font-size:13px;line-height:1.38}
+.visual{background:rgba(255,255,255,.78);border:1px solid rgba(222,231,239,.95);border-radius:34px;padding:20px;box-shadow:0 28px 80px rgba(18,18,18,.12)}
+.visual-main{position:relative;height:405px;border-radius:26px;overflow:hidden;border:1px solid var(--line)}
+.visual-main img{width:100%;height:100%;object-fit:cover;object-position:center 35%;display:block}
+.visual-main:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,18,18,.20),rgba(18,18,18,0) 48%)}
+.overlay{position:absolute;left:22px;bottom:22px;background:rgba(255,255,255,.95);border:1px solid rgba(222,231,239,.95);border-radius:18px;padding:15px 17px;max-width:460px;z-index:2}
+.overlay b{display:block;color:var(--black);font-size:18px;margin-bottom:5px}
+.overlay span{color:var(--muted);font-size:12px;line-height:1.42}
+.micro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+.micro{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 15px;min-height:86px}
+.micro b{display:block;color:var(--orange);font-size:14px;margin-bottom:5px}
+.micro span{font-size:11px;line-height:1.35;color:var(--muted)}
+.journey{margin-top:28px;border-radius:30px;overflow:hidden;background:linear-gradient(135deg,#121212,#125885);box-shadow:0 26px 78px rgba(18,18,18,.24);color:white}
+.journey-inner{position:relative;padding:28px 32px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;overflow:hidden}
+.journey-inner:before{content:"";position:absolute;right:-70px;top:-120px;width:430px;height:430px;border-radius:50%;background:radial-gradient(circle,rgba(255,148,0,.35),rgba(255,148,0,0) 67%)}
+.journey h2{position:relative;z-index:2;font-size:34px;line-height:1.08;letter-spacing:-.045em;margin:0 0 12px}
+.journey p{position:relative;z-index:2;margin:0;color:#D9EEF8;font-size:15px;line-height:1.48;max-width:760px}
+.flow{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.step{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:18px}
+.step b{display:block;font-size:16px;margin-bottom:6px}
+.step span{display:block;color:#D9EEF8;font-size:12px;line-height:1.35}
+.proof-row{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:18px}
+.proof{background:#fff;border:1px solid var(--line);border-radius:22px;padding:16px 17px;box-shadow:0 14px 38px rgba(18,18,18,.055);min-height:96px}
+.proof b{display:block;color:var(--dark-blue);font-size:15px;margin-bottom:6px}
+.proof span{display:block;color:var(--muted);font-size:12px;line-height:1.35}
+.bottom-strip{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:26px;padding:20px 22px;display:grid;grid-template-columns:.7fr 1.3fr;gap:24px;align-items:center;box-shadow:0 18px 50px rgba(18,18,18,.07)}
+.bottom-strip img{width:100%;height:155px;object-fit:cover;object-position:center 40%;border-radius:20px;border:1px solid var(--line)}
+.bottom-copy h2{margin:0 0 7px;font-size:25px;letter-spacing:-.04em;color:var(--dark-blue)}
+.bottom-copy p{margin:0;color:var(--muted);font-size:13px;line-height:1.45}
+.tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}
+.tag{background:#FFF4E7;border:1px solid #FFE0B2;color:#A45B00;border-radius:999px;padding:8px 11px;font-size:11px;font-weight:800}
+.demo-link{display:inline-flex;align-items:center;justify-content:center;margin-top:14px;background:var(--orange);color:#fff;border-radius:999px;padding:12px 17px;font-weight:800;font-size:13px;text-decoration:none;box-shadow:0 12px 28px rgba(255,148,0,.22)}
+.footnote{margin-top:13px;color:#7A8491;font-size:10px;line-height:1.4}
+@media(max-width:1100px){.page{padding:28px 22px}.hero,.journey-inner,.bottom-strip{grid-template-columns:1fr}h1{font-size:52px}.proof-row,.flow{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="header">
+<img class="logo" src="smartvel_logo.png" alt="Smartvel logo">
+<div class="product-label"><span></span> Explore & Go</div>
+</header>
+
+<section class="hero">
+<div>
+<div class="kicker">Destination inspiration + route discovery</div>
+<h1>Turn travel inspiration into <strong>traveller intent.</strong></h1>
+<p class="lead">Explore & Go helps airlines, OTA's and travel brands inspire travellers with visually rich destination discovery experiences connected to routes, campaigns, interests and seasonal travel opportunities.</p>
+
+<div class="value-grid">
+<div class="value-card"><b>Inspiration-led journeys</b><span>Transform route networks and destination inventory into visually engaging travel discovery experiences.</span></div>
+<div class="value-card"><b>Campaign-ready content</b><span>Support route launches, seasonal promotions, loyalty campaigns and destination marketing initiatives.</span></div>
+<div class="value-card"><b>Traveller intent generation</b><span>Help users move from passive browsing into active travel consideration and planning.</span></div>
+<div class="value-card"><b>White-label flexibility</b><span>Adapt layouts, content blocks, CTA's and experiences to the client’s digital ecosystem.</span></div>
+</div>
+</div>
+
+<div class="visual">
+<div class="visual-main">
+<img src="exploreandgo.png" alt="Explore and Go product visual">
+<div class="overlay"><b>Not just destination inspiration.</b><span>A visual travel discovery experience designed to increase engagement, route exploration and booking consideration.</span></div>
+</div>
+
+<div class="micro-grid">
+<div class="micro"><b>Interactive discovery</b><span>Browse destinations visually through themes, interests and regions.</span></div>
+<div class="micro"><b>Route-driven inspiration</b><span>Highlight destinations connected to the client’s network or inventory.</span></div>
+<div class="micro"><b>Seasonal campaigns</b><span>Support summer, winter, city-break and event-driven promotions.</span></div>
+</div>
+</div>
+</section>
+
+<section class="journey">
+<div class="journey-inner">
+<div>
+<h2>From dreaming about travel to clicking “book”.</h2>
+<p>Explore & Go is designed to create emotional destination discovery moments while guiding travellers towards deeper engagement, route exploration and conversion opportunities.</p>
+</div>
+
+<div class="flow">
+<div class="step"><b>Dream</b><span>Travel imagery and destination storytelling spark inspiration.</span></div>
+<div class="step"><b>Discover</b><span>Users explore routes, themes, regions and destination ideas.</span></div>
+<div class="step"><b>Engage</b><span>Interactive content keeps travellers browsing and planning longer.</span></div>
+<div class="step"><b>Convert</b><span>CTA's and integrations guide users towards booking journeys.</span></div>
+</div>
+</div>
+</section>
+
+<section class="proof-row">
+<div class="proof"><b>Visual-first experience</b><span>Premium destination imagery designed to increase exploration and inspiration.</span></div>
+<div class="proof"><b>Campaign flexibility</b><span>Adapt content to seasons, events, routes and commercial priorities.</span></div>
+<div class="proof"><b>Destination intelligence</b><span>Smartvel content powers experiences with POIs, events and travel context.</span></div>
+<div class="proof"><b>Traveller engagement</b><span>Keep users browsing destinations instead of bouncing after one search.</span></div>
+<div class="proof"><b>Cross-solution synergy</b><span>Naturally connects into Trip Planner, TravelSEO and booking journeys.</span></div>
+</section>
+
+<section class="bottom-strip">
+<img src="exploreandgo.png" alt="Explore and Go destination inspiration visual">
+<div class="bottom-copy">
+<h2>Turn inspiration into action.</h2>
+<p>Explore & Go helps travellers move from curiosity to destination intent through visual discovery, personalised inspiration and clear commercial CTA's connected to routes, campaigns and booking journeys.</p>
+
+<div class="tags">
+<span class="tag">Destination inspiration</span>
+<span class="tag">Route discovery</span>
+<span class="tag">Traveller engagement</span>
+<span class="tag">Booking CTA's</span>
+</div>
+
+<a class="demo-link" href="https://smartvel-sales-explorego.cst.smartvel.com/?market=world#modal" target="_blank" rel="noopener noreferrer">Open Explore & Go demo</a>
+</div>
+</section>
+
+<div class="footnote">Commercial positioning and engagement framing are based on Smartvel Explore & Go product material and destination-content capabilities.</div>
+</main>
+</body>
+</html>
