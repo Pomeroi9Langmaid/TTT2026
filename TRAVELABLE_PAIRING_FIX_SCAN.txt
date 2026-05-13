@@ -1,0 +1,6 @@
+replacement_count: 0
+pairing marker: True
+index cache bust: True
+visual files: True
+logos regenerated: True
+missing refs: {'travelable.html': ['smartvel_logo.png'], 'index.html': ['andrew_profile.png', 'avuxi.html', 'entrydocs.html', 'exploreandgo.html', 'logo_accor.png', 'logo_air_niugini.png', 'logo_avianca.png', 'logo_cocha.png', 'logo_condes.png', 'logo_dorms.png', 'logo_finnair.png', 'logo_flowo.png', 'logo_hotel_cristina.png', 'logo_iberia.png', 'logo_intermundial.png', 'logo_latam.png', 'logo_monument.png', 'logo_palladium.png', 'logo_ponant.png', 'logo_praktik_hotels.png', 'logo_roommate.png', 'logo_saudia.png', 'logo_stayforlong.png', 'logo_tap.png', 'logo_trivago_deals.png', 'logo_ubico.png', 'logo_webjet.png', 'smartvel.html', 'smartvel_logo.png', 'travelseo.html', 'tripplanner.html']}
