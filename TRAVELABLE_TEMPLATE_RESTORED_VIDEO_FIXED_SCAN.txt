@@ -1,0 +1,5 @@
+Restored previous TravelAble template.
+Changed only TravelAble cinematic/hero visual block.
+Kept page structure from earlier template.
+Slides: 4 user-confirmed image/text pairings.
+Missing refs: None
