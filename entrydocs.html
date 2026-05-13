@@ -293,74 +293,9 @@ margin-top:20px!important;
 }
 </style>
 
-
-<style id="entrydocs-dynamic-scenes-final">
-.dynamic-entrydocs-stage{
-position:relative!important;
-height:390px!important;
-border-radius:28px!important;
-overflow:hidden!important;
-background:#fff!important;
-border:1px solid #DEE7EF!important;
-box-shadow:0 26px 80px rgba(0,0,0,.10)!important;
-display:flex!important;
-align-items:center!important;
-justify-content:center!important;
-}
-.hero-scenes{
-position:absolute!important;
-inset:0!important;
-z-index:1!important;
-}
-.scene{
-position:absolute!important;
-inset:0!important;
-width:100%!important;
-height:100%!important;
-object-fit:cover!important;
-object-position:top center!important;
-opacity:0;
-animation:entrySceneFade 15s infinite;
-transform:scale(1.03);
-filter:saturate(1.02) contrast(.98);
-}
-.scene1{animation-delay:0s}
-.scene2{animation-delay:5s}
-.scene3{animation-delay:10s}
-.scene-shade{
-position:absolute!important;
-inset:0!important;
-z-index:2!important;
-background:
-linear-gradient(90deg,rgba(255,255,255,.88),rgba(255,255,255,.55) 42%,rgba(255,255,255,.72)),
-radial-gradient(circle at 72% 44%,rgba(41,170,224,.16),transparent 34%);
-}
-.devices-hero{
-position:relative!important;
-z-index:3!important;
-width:78%!important;
-max-height:360px!important;
-height:auto!important;
-object-fit:contain!important;
-filter:drop-shadow(0 36px 72px rgba(0,0,0,.23))!important;
-animation:entryDeviceFloat 7s ease-in-out infinite alternate;
-}
-@keyframes entrySceneFade{
-0%{opacity:0}
-7%{opacity:.9}
-29%{opacity:.9}
-36%{opacity:0}
-100%{opacity:0}
-}
-@keyframes entryDeviceFloat{
-0%{transform:translateY(0)}
-100%{transform:translateY(-8px)}
-}
-</style>
-
 </head>
 <body>
-<!-- DYNAMIC_ENTRYDOCS_HERO_FIXED_MARKER -->
+<!-- ALMU_ENTRYDOCS_UPDATE_MARKER -->
 <main class="page">
 <header class="header">
 <img class="logo" src="smartvel_logo.png" alt="Smartvel logo">
@@ -382,17 +317,9 @@ animation:entryDeviceFloat 7s ease-in-out infinite alternate;
 </div>
 
 <div class="entry-visual">
-  
-<div class="product-stage premium-stage dynamic-entrydocs-stage">
-  <div class="hero-scenes">
-    <img class="scene scene1" src="entrydocs_scene1.png" alt="EntryDocs travel requirements setup screen">
-    <img class="scene scene2" src="entrydocs_scene2.png" alt="EntryDocs China travel advisory screen">
-    <img class="scene scene3" src="entrydocs_scene3.png" alt="EntryDocs UK ETA requirement screen">
+  <div class="product-stage premium-stage">
+    <img src="entrydocs_premium_devices.png" alt="EntryDocs premium mobile experience">
   </div>
-  <div class="scene-shade"></div>
-  <img class="devices-hero" src="entrydocs_premium_devices.png" alt="EntryDocs premium mobile experience">
-</div>
-
 <div class="metric-bar">
     <div class="metric"><b>3B+</b><span>API calls processed</span></div>
     <div class="metric"><b>190+</b><span>Countries covered</span></div>
