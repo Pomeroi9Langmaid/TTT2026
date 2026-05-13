@@ -1,0 +1,11 @@
+tripplanner video included: True
+tripplanner html references video: True
+tripplanner replacement count: 1
+tripplanner marker: True
+entrydocs carousel preserved: True
+explorego video preserved: True
+contact ticker preserved: True
+linkedin contact preserved: True
+source durations: 28.92s + 34.13s
+final duration: 15.97s
+missing refs: None

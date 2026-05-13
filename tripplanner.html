@@ -58,14 +58,90 @@ h1 strong{color:var(--green)}
 @media(max-width:1100px){.page{padding:28px 22px}.hero,.engagement-inner,.bottom-strip{grid-template-columns:1fr}h1{font-size:52px}.proof-row{grid-template-columns:1fr 1fr}.metrics{grid-template-columns:1fr}}
 </style>
 <style>.smartvel-logo-link{display:inline-flex;align-items:center;text-decoration:none}.smartvel-logo-link img{display:block}</style>
+
+
+
+
+<style id="tripplanner-video-hero-css">
+.tripplanner-video-stage{
+position:relative!important;
+width:100%!important;
+height:520px!important;
+border-radius:34px!important;
+overflow:hidden!important;
+background:#F4F8FB!important;
+border:1px solid rgba(222,231,239,.96)!important;
+box-shadow:0 30px 90px rgba(10,35,60,.12)!important;
+}
+.tripplanner-video-stage video{
+width:100%!important;
+height:100%!important;
+display:block!important;
+object-fit:cover!important;
+object-position:center center!important;
+filter:brightness(1.04) saturate(1.02) contrast(1.01)!important;
+}
+.tripplanner-video-stage:after{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.05)),
+linear-gradient(90deg,rgba(7,16,24,.10),rgba(7,16,24,.00) 45%,rgba(7,16,24,.03));
+pointer-events:none;
+z-index:2;
+}
+.tripplanner-video-label{
+position:absolute;
+left:24px;
+bottom:22px;
+z-index:3;
+max-width:455px;
+padding:17px 19px;
+border-radius:22px;
+background:rgba(255,255,255,.92);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.52);
+box-shadow:0 18px 48px rgba(0,0,0,.12);
+}
+.tripplanner-video-label b{
+display:block;
+font-size:18px;
+line-height:1.1;
+letter-spacing:-.035em;
+color:#071018;
+margin-bottom:5px;
+}
+.tripplanner-video-label span{
+display:block;
+font-size:12px;
+line-height:1.42;
+color:#4E5C6B;
+}
+</style>
+
 </head>
 <body>
+<!-- TRIPPLANNER_FORCE_VISIBLE_VIDEO_MARKER -->
+
 <main class="page">
 <header class="header"><a class="smartvel-logo-link" href="https://www.smartvel.com/" target="_blank" rel="noopener noreferrer"><img class="logo" src="smartvel_logo.png" alt="Smartvel logo"></a><div class="product-label"><span></span> Trip Planner</div></header>
 <section class="hero">
 <div><div class="kicker">Destination engagement + itinerary intelligence</div><h1>Keep travellers <strong>exploring longer.</strong></h1><p class="lead">Trip Planner turns destination content into an interactive planning experience — combining POIs, restaurants, live events, maps and personalised itineraries so travellers can discover what to do and build a trip that feels relevant.</p>
 <div class="value-grid"><div class="value-card"><b>Live destination agenda</b><span>Events, activities and seasonal experiences connected to the traveller’s destination and travel dates.</span></div><div class="value-card"><b>POIs + restaurants</b><span>Curated points of interest, restaurants, museums, tours and local highlights in one experience.</span></div><div class="value-card"><b>Personalised itineraries</b><span>Travellers can plan around duration, interests, profile and time available.</span></div><div class="value-card"><b>Ancillary opportunities</b><span>Connect to preferred third-party partners for tours, activities, tickets or other bookable experiences.</span></div></div></div>
-<div class="visual"><div class="visual-main"><img src="tripplanner.png" alt="Trip Planner product visual"><div class="overlay"><b>More than itinerary planning.</b><span>A destination engagement layer that keeps users inside your ecosystem before, during and after booking.</span></div></div><div class="micro-grid"><div class="micro"><b>Live events</b><span>Concerts, sports, exhibitions, festivals and local activities.</span></div><div class="micro"><b>Interactive maps</b><span>Explore what is nearby and build plans around real locations.</span></div><div class="micro"><b>Shareable plans</b><span>Save, revisit and continue planning across the traveller journey.</span></div></div></div>
+<div class="visual">
+
+<div class="tripplanner-video-stage">
+  <video autoplay muted loop playsinline preload="auto">
+    <source src="tripplanner_hero_video.mp4?v=tp2" type="video/mp4">
+  </video>
+  <div class="tripplanner-video-label">
+    <b>TripPlanner in action</b>
+    <span>From discovery and filtering to saved points of interest and itinerary planning.</span>
+  </div>
+</div>
+
+<div class="micro-grid"><div class="micro"><b>Live events</b><span>Concerts, sports, exhibitions, festivals and local activities.</span></div><div class="micro"><b>Interactive maps</b><span>Explore what is nearby and build plans around real locations.</span></div><div class="micro"><b>Shareable plans</b><span>Save, revisit and continue planning across the traveller journey.</span></div></div></div>
 </section>
 <section class="engagement"><div class="engagement-inner"><div><h2>From browsing to active trip planning.</h2><p>Trip Planner is designed to increase time on page, repeat interaction and traveller intent by turning destination content into something users can actively filter, save, customise and use.</p></div><div class="metrics"><div class="metric"><b>POIs</b><span>Must-see locations, museums, restaurants and local highlights.</span></div><div class="metric"><b>Events</b><span>Fresh destination agenda linked to travel dates and interests.</span></div><div class="metric"><b>CTAs</b><span>Partner integrations and ancillary links can turn inspiration into revenue.</span></div></div></div></section>
 <section class="proof-row"><div class="proof"><b>All-in-one guide</b><span>Places, restaurants, events, tours and activities in one destination experience.</span></div><div class="proof"><b>Traveller filters</b><span>Content can be filtered by interests, audience, duration and context.</span></div><div class="proof"><b>Managed content</b><span>Smartvel maintains and categorises content so client teams do not have to.</span></div><div class="proof"><b>Partner-ready</b><span>Supports client agreements with tours, activities, tickets or other providers.</span></div><div class="proof"><b>Widget or API</b><span>Deploy as a white-label widget or use Smartvel data inside your own solution.</span></div></section>
