@@ -424,69 +424,116 @@ box-shadow:0 14px 34px rgba(41,170,224,.26);
 
 <style id="clean-below-logo-ticker-css">
 .clean-logo-ticker{
-position:relative;
-z-index:2;
-margin:24px 0 6px;
-padding:8px 0 4px;
-overflow:hidden;
+position:relative!important;
+z-index:2!important;
+margin:18px 0 4px!important;
+padding:6px 0 2px!important;
+overflow:hidden!important;
 background:transparent!important;
 }
 .clean-logo-title{
-font-size:11px;
-font-weight:900;
-letter-spacing:.14em;
-text-transform:uppercase;
-color:#125885;
-margin:0 0 13px;
+font-size:10px!important;
+font-weight:900!important;
+letter-spacing:.14em!important;
+text-transform:uppercase!important;
+color:#125885!important;
+margin:0 0 10px!important;
 }
 .clean-logo-window{
-overflow:hidden;
-width:100%;
-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
--webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+overflow:hidden!important;
+width:100%!important;
+mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)!important;
+-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)!important;
 }
 .clean-logo-track{
-display:flex;
-align-items:center;
-gap:34px;
-width:max-content;
-animation:cleanTickerMove 58s linear infinite;
+display:flex!important;
+align-items:center!important;
+gap:28px!important;
+width:max-content!important;
+animation:cleanTickerMove 56s linear infinite!important;
 }
 .clean-logo-ticker:hover .clean-logo-track{
-animation-play-state:paused;
+animation-play-state:paused!important;
 }
 .clean-logo{
-height:62px;
-min-width:154px;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:8px 18px;
-background:rgba(255,255,255,.38);
-border:1px solid rgba(222,231,239,.46);
-border-radius:18px;
-box-shadow:0 8px 22px rgba(18,18,18,.035);
+height:52px!important;
+min-width:132px!important;
+display:flex!important;
+align-items:center!important;
+justify-content:center!important;
+padding:7px 14px!important;
+background:rgba(255,255,255,.42)!important;
+border:1px solid rgba(222,231,239,.38)!important;
+border-radius:16px!important;
+box-shadow:0 7px 20px rgba(18,18,18,.035)!important;
 }
 .clean-logo img{
-display:block;
-max-height:42px;
-max-width:145px;
-object-fit:contain;
+display:block!important;
+max-height:36px!important;
+max-width:124px!important;
+object-fit:contain!important;
 }
 .contact .clean-logo-ticker{
-grid-column:1 / -1;
-margin-top:26px;
+grid-column:1 / -1!important;
+margin-top:24px!important;
 }
 .contact .clean-logo-title{
-color:#D9EEF8;
+color:#D9EEF8!important;
 }
 .contact .clean-logo{
-background:rgba(255,255,255,.86);
-border-color:rgba(255,255,255,.2);
+background:rgba(255,255,255,.86)!important;
+border-color:rgba(255,255,255,.18)!important;
 }
 @keyframes cleanTickerMove{
 0%{transform:translateX(0)}
 100%{transform:translateX(-50%)}
+}
+</style>
+
+<style>.smartvel-logo-link{display:inline-flex;align-items:center;text-decoration:none}.smartvel-logo-link img{display:block}</style>
+
+<style id="contact-links-and-ticker-css">
+.brand-mark-link{
+position:absolute;
+top:38px;
+left:48px;
+z-index:5;
+display:inline-flex;
+}
+.brand-mark-link .brand-mark{
+position:static!important;
+width:210px;
+filter:drop-shadow(0 0 24px rgba(41,170,224,.24));
+}
+.contact-profile-link{
+display:block;
+color:inherit;
+text-decoration:none;
+cursor:pointer;
+transition:transform .18s ease, box-shadow .18s ease;
+}
+.contact-profile-link:hover{
+transform:translateY(-3px);
+}
+.contact-profile-link:hover .card{
+box-shadow:0 34px 100px rgba(0,0,0,.38)!important;
+}
+.contact .clean-logo-ticker{
+grid-column:1 / -1;
+margin-top:24px!important;
+padding:6px 0 2px!important;
+background:transparent!important;
+}
+.contact .clean-logo-title{
+color:#D9EEF8!important;
+}
+.contact .clean-logo-window{
+mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)!important;
+-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)!important;
+}
+.contact .clean-logo{
+background:rgba(255,255,255,.82)!important;
+border-color:rgba(255,255,255,.22)!important;
 }
 </style>
 
@@ -497,7 +544,7 @@ border-color:rgba(255,255,255,.2);
 
 <div class='app'>
 <aside class='side'>
-<img class='logo' src='smartvel_logo.png'>
+<a class='smartvel-logo-link' href='https://www.smartvel.com/' target='_blank' rel='noopener noreferrer'><a class='smartvel-logo-link' href='https://www.smartvel.com/' target='_blank' rel='noopener noreferrer'><img class='logo' src='smartvel_logo.png'></a>
 <div class='ttw'>Flight Path</div>
 <div class='plane' id='plane'>✈</div>
 <div class='nav'>
@@ -530,7 +577,7 @@ border-color:rgba(255,255,255,.2);
 <div class='slide' data-title='TravelSEO' data-sub='SEO and GEO'><iframe src='travelseo.html'></iframe></div>
 <div class='slide' data-title='Avuxi' data-sub='Neighbourhood intelligence'><iframe src='avuxi.html'></iframe></div>
 <div class='slide' data-title='Contact' data-sub='Reach out'>
-<div class='contact'><img class='brand-mark' src='smartvel_logo.png' alt='Smartvel logo'><div class='visual-orbit'></div><div class='route-line'></div>
+<div class='contact'><a class='brand-mark-link' href='https://www.smartvel.com/' target='_blank' rel='noopener noreferrer'><img class='brand-mark' src='smartvel_logo.png' alt='Smartvel logo'></a><div class='visual-orbit'></div><div class='route-line'></div>
 <div>
 <h1>Let’s build better traveller journeys together.</h1>
 <div class='closing-visual'>
@@ -541,14 +588,19 @@ border-color:rgba(255,255,255,.2);
 <div class='contact-actions'><a class='mail left-mail' href='mailto:alangmaid@smartvel.com?subject=Smartvel%20Toronto%20Travel%20Tech%20follow-up'>Email Andrew</a><a class='schedule' href='https://meetings.hubspot.com/alangmaid' target='_blank' rel='noopener noreferrer'>Schedule a meeting</a></div>
 </div>
 
+<a class='contact-profile-link' href='https://www.linkedin.com/in/andrewlangmaid/' target='_blank' rel='noopener noreferrer' aria-label='Open Andrew Langmaid on LinkedIn'>
 <div class='card'>
 <img src='andrew_profile.png' style='width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:18px;border:4px solid rgba(255,255,255,.12);box-shadow:0 10px 30px rgba(0,0,0,.25);'>
 <h2>Andrew Langmaid</h2>
 <p>CEO – ArrivalGuides, part of Smartvel</p>
-<a class='mail' href='mailto:alangmaid@smartvel.com'>alangmaid@smartvel.com</a>
-</div>
 
 </div>
+</a>
+
+</div>
+
+
+
 </div>
 </div>
 
