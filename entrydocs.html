@@ -71,6 +71,170 @@ h1 strong{color:var(--orange)}
 .footnote{margin-top:13px;color:#7A8491;font-size:10px;line-height:1.4}
 @media(max-width:1100px){.page{padding:28px 22px}.hero,.eu-inner{grid-template-columns:1fr}h1{font-size:52px}.proof-row,.eu-points{grid-template-columns:1fr 1fr}.bottom-strip{flex-direction:column;align-items:flex-start}}
 </style>
+
+<style id='entrydocs-enhanced-v2'>
+.hero-visual{
+position:relative;
+overflow:hidden;
+background:
+radial-gradient(circle at 18% 22%, rgba(41,170,224,.22), transparent 32%),
+radial-gradient(circle at 78% 72%, rgba(255,148,0,.18), transparent 30%),
+linear-gradient(135deg,#F5FBFF,#FFFFFF 62%,#EEF8FD);
+border-radius:34px;
+padding:28px;
+min-height:520px;
+box-shadow:0 30px 90px rgba(10,35,60,.12);
+}
+.hero-visual:before{
+content:'';
+position:absolute;
+inset:0;
+background:
+linear-gradient(rgba(41,170,224,.05) 1px, transparent 1px),
+linear-gradient(90deg, rgba(41,170,224,.05) 1px, transparent 1px);
+background-size:26px 26px;
+opacity:.55;
+pointer-events:none;
+}
+.float-phone{
+position:absolute;
+right:44px;
+top:34px;
+width:210px;
+border-radius:36px;
+background:#fff;
+padding:14px;
+box-shadow:0 26px 80px rgba(0,0,0,.18);
+transform:rotate(-4deg);
+animation:floatPhone 5s ease-in-out infinite alternate;
+z-index:4;
+}
+.float-phone img{
+width:100%;
+border-radius:24px;
+display:block;
+}
+.passport-card{
+position:absolute;
+left:34px;
+bottom:42px;
+width:240px;
+padding:22px;
+background:linear-gradient(135deg,#0E3A66,#0B223E);
+border-radius:28px;
+color:#fff;
+box-shadow:0 28px 80px rgba(0,0,0,.22);
+transform:rotate(-7deg);
+z-index:3;
+animation:passportFloat 6s ease-in-out infinite alternate;
+}
+.passport-card .tiny{
+font-size:11px;
+letter-spacing:.14em;
+text-transform:uppercase;
+opacity:.7;
+margin-bottom:8px;
+}
+.passport-card h4{
+margin:0 0 10px;
+font-size:22px;
+line-height:1.05;
+}
+.passport-card p{
+margin:0;
+font-size:13px;
+line-height:1.45;
+opacity:.88;
+}
+.monitor-strip{
+position:absolute;
+left:50%;
+top:54%;
+transform:translate(-50%,-50%);
+width:360px;
+padding:18px 20px;
+background:rgba(255,255,255,.86);
+backdrop-filter:blur(10px);
+border:1px solid rgba(41,170,224,.14);
+border-radius:24px;
+box-shadow:0 18px 60px rgba(0,0,0,.10);
+z-index:5;
+}
+.monitor-strip .live{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:12px;
+font-weight:800;
+color:#0E5F93;
+text-transform:uppercase;
+letter-spacing:.08em;
+margin-bottom:10px;
+}
+.monitor-strip .pulse{
+width:10px;
+height:10px;
+border-radius:50%;
+background:#00C16A;
+box-shadow:0 0 0 rgba(0,193,106,.5);
+animation:pulse 1.8s infinite;
+}
+.monitor-strip h3{
+margin:0 0 8px;
+font-size:26px;
+line-height:1.05;
+letter-spacing:-.04em;
+color:#071018;
+}
+.monitor-strip p{
+margin:0;
+font-size:13px;
+line-height:1.5;
+color:#4E5C6B;
+}
+.metric-bar{
+position:absolute;
+right:24px;
+bottom:28px;
+display:flex;
+gap:12px;
+z-index:5;
+}
+.metric{
+background:#fff;
+border-radius:18px;
+padding:14px 16px;
+min-width:118px;
+box-shadow:0 14px 38px rgba(0,0,0,.10);
+}
+.metric b{
+display:block;
+font-size:22px;
+line-height:1;
+color:#FF9400;
+margin-bottom:6px;
+}
+.metric span{
+font-size:11px;
+line-height:1.3;
+color:#4E5C6B;
+display:block;
+}
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(0,193,106,.5)}
+70%{box-shadow:0 0 0 12px rgba(0,193,106,0)}
+100%{box-shadow:0 0 0 0 rgba(0,193,106,0)}
+}
+@keyframes floatPhone{
+0%{transform:translateY(0) rotate(-4deg)}
+100%{transform:translateY(-12px) rotate(-2deg)}
+}
+@keyframes passportFloat{
+0%{transform:translateY(0) rotate(-7deg)}
+100%{transform:translateY(-10px) rotate(-5deg)}
+}
+</style>
+
 </head>
 <body>
 <main class="page">
@@ -83,7 +247,7 @@ h1 strong{color:var(--orange)}
   <div>
     <div class="kicker">Travel requirements intelligence</div>
     <h1>Keep travellers <strong>ready to go.</strong></h1>
-    <p class="lead">EntryDocs gives travel companies continuously updated, traveller-specific entry requirement information across route, nationality, residency, transit and trip conditions — without building or maintaining the data operation internally.</p>
+    <p class="lead">EntryDocs helps travel companies become a trusted source of travel requirements with continuously monitored, traveller-specific entry information across route, nationality, residency, transit and trip conditions — without maintaining the operational complexity internally.</p>
 
     <div class="value-grid">
       <div class="value-card"><b>Reliable pre-trip guidance</b><span>Show visa, passport, health, ticket and destination-document requirements before travel.</span></div>
