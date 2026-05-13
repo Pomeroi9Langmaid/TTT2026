@@ -1,0 +1,3 @@
+logo_world2fly.png regenerated with generous crop and padding
+source size: (1795, 1011)
+output size: (353, 172)
