@@ -168,6 +168,131 @@ transform:translateY(-6px);
 }
 </style>
 
+
+<style id="entrydocs-final-hero-breathes">
+.entry-visual{
+min-height:520px!important;
+padding:26px!important;
+overflow:hidden!important;
+}
+.product-stage,
+.premium-stage{
+height:390px!important;
+margin-top:0!important;
+border-radius:28px!important;
+background:transparent!important;
+border:none!important;
+box-shadow:none!important;
+overflow:visible!important;
+display:flex!important;
+align-items:center!important;
+justify-content:center!important;
+}
+.premium-stage img{
+width:86%!important;
+max-height:390px!important;
+height:auto!important;
+object-fit:contain!important;
+filter:drop-shadow(0 38px 76px rgba(0,0,0,.18))!important;
+transform:none!important;
+}
+.metric-bar{
+position:absolute!important;
+left:26px!important;
+right:26px!important;
+bottom:24px!important;
+display:grid!important;
+grid-template-columns:repeat(3,1fr)!important;
+gap:14px!important;
+z-index:7!important;
+}
+.metric{
+min-width:0!important;
+text-align:left!important;
+padding:16px 18px!important;
+}
+.monitor,
+.source-flow{
+display:none!important;
+}
+.monitor-panel{
+position:relative;
+z-index:1;
+margin-top:18px;
+display:grid;
+grid-template-columns:.9fr 1.1fr;
+gap:18px;
+align-items:stretch;
+background:rgba(255,255,255,.94);
+border:1px solid #DEE7EF;
+border-radius:28px;
+padding:20px 22px;
+box-shadow:0 18px 54px rgba(18,18,18,.075);
+}
+.monitor-copy{
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+.monitor-copy .live{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:12px;
+font-weight:800;
+color:#125885;
+text-transform:uppercase;
+letter-spacing:.08em;
+margin-bottom:9px;
+}
+.monitor-copy h3{
+margin:0 0 7px;
+font-size:28px;
+line-height:1.05;
+letter-spacing:-.045em;
+color:#071018;
+}
+.monitor-copy p{
+margin:0;
+font-size:13px;
+line-height:1.48;
+color:#4E5C6B;
+max-width:560px;
+}
+.monitor-flow{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+}
+.monitor-flow div{
+background:#F5FAFE;
+border:1px solid rgba(18,88,133,.12);
+border-radius:17px;
+padding:13px 14px;
+}
+.monitor-flow b{
+display:block;
+color:#125885;
+font-size:12px;
+margin-bottom:4px;
+}
+.monitor-flow span{
+display:block;
+color:#4E5C6B;
+font-size:10px;
+line-height:1.3;
+}
+.eu-banner{
+margin-top:20px!important;
+}
+@media(max-width:1100px){
+.monitor-panel{grid-template-columns:1fr}
+.monitor-flow{grid-template-columns:1fr 1fr}
+.metric-bar{position:relative!important;left:auto!important;right:auto!important;bottom:auto!important;margin-top:16px!important}
+.entry-visual{min-height:auto!important}
+}
+</style>
+
 </head>
 <body>
 <main class="page">
@@ -194,27 +319,29 @@ transform:translateY(-6px);
   <div class="product-stage premium-stage">
     <img src="entrydocs_premium_devices.png" alt="EntryDocs premium mobile experience">
   </div>
-
-  <div class="monitor">
-    <div class="live"><span class="pulse"></span> AI monitoring active</div>
-    <h3>Detect changes in regulations instantly.</h3>
-    <p>Official-source monitoring, traveller logic and human validation help reduce misinformation, denied boarding and support pressure.</p>
-  </div>
-
-  <div class="source-flow">
-    <div class="source-step"><b>Official sources</b><span>Government, embassy and border data.</span></div>
-    <div class="source-step"><b>AI monitoring</b><span>Regulatory changes detected continuously.</span></div>
-    <div class="source-step"><b>Human validation</b><span>Specialists structure complex rules.</span></div>
-    <div class="source-step"><b>Traveller delivery</b><span>Widget and API across all touchpoints.</span></div>
-  </div>
-
-  <div class="metric-bar">
+<div class="metric-bar">
     <div class="metric"><b>3B+</b><span>API calls processed</span></div>
     <div class="metric"><b>190+</b><span>Countries covered</span></div>
     <div class="metric"><b>99.9%</b><span>Platform availability</span></div>
   </div>
 </div>
 </section>
+
+
+<section class="monitor-panel">
+  <div class="monitor-copy">
+    <div class="live"><span class="pulse"></span> AI monitoring active</div>
+    <h3>Detect changes in regulations instantly.</h3>
+    <p>Official-source monitoring, traveller logic and human validation help reduce misinformation, denied boarding and support pressure.</p>
+  </div>
+  <div class="monitor-flow">
+    <div><b>Official sources</b><span>Government, embassy and border data.</span></div>
+    <div><b>AI monitoring</b><span>Regulatory changes detected continuously.</span></div>
+    <div><b>Human validation</b><span>Specialists structure complex rules.</span></div>
+    <div><b>Traveller delivery</b><span>Widget and API across all touchpoints.</span></div>
+  </div>
+</section>
+
 
 <section class="eu-banner">
   <div class="eu-inner">
