@@ -1,0 +1,3 @@
+ENTRYDOCS FINAL HERO BREATHES SCAN
+Missing refs: None
+AI monitoring moved outside hero visual. Hero visual now breathes. Metrics aligned under image. EU Package Travel Directive retained.
