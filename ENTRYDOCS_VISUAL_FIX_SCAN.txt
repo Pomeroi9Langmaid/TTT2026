@@ -1,0 +1,3 @@
+ENTRYDOCS VISUAL FIX SCAN
+Missing refs: None
+entrydocs.html rebuilt directly with enhanced visual hero.
