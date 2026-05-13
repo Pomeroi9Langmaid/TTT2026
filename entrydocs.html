@@ -68,31 +68,115 @@ h1 strong{color:var(--orange)}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(0,193,106,.5)}70%{box-shadow:0 0 0 12px rgba(0,193,106,0)}100%{box-shadow:0 0 0 0 rgba(0,193,106,0)}}
 </style>
 
-<style id="entrydocs-video-hero-css">
-.video-stage{
+
+
+
+<style id="entrydocs-video-carousel-css">
+.video-carousel-stage{
+position:relative!important;
 height:390px!important;
 border-radius:28px!important;
 overflow:hidden!important;
-background:#fff!important;
+background:
+radial-gradient(circle at 18% 18%,rgba(41,170,224,.12),transparent 32%),
+linear-gradient(135deg,#F8FCFF,#FFFFFF)!important;
 border:1px solid rgba(222,231,239,.95)!important;
 box-shadow:0 26px 80px rgba(0,0,0,.10)!important;
-display:flex!important;
-align-items:center!important;
-justify-content:center!important;
+display:block!important;
+padding:0!important;
 }
-.entrydocs-hero-video{
+.video-slide{
+position:absolute!important;
+inset:0!important;
+display:grid!important;
+grid-template-columns:.72fr 1.28fr!important;
+gap:22px!important;
+align-items:center!important;
+padding:28px 30px!important;
+opacity:0;
+animation:entryVideoSlide 14s infinite;
+}
+.video-slide-ai{animation-delay:0s}
+.video-slide-unify{animation-delay:7s}
+.video-copy{
+position:relative;
+z-index:3;
+}
+.video-kicker{
+font-size:11px;
+font-weight:900;
+letter-spacing:.13em;
+text-transform:uppercase;
+color:#125885;
+margin-bottom:8px;
+}
+.video-copy h3{
+margin:0 0 9px;
+font-size:27px;
+line-height:1.05;
+letter-spacing:-.045em;
+color:#071018;
+}
+.video-copy p{
+margin:0;
+font-size:12px;
+line-height:1.45;
+color:#4E5C6B;
+max-width:300px;
+}
+.video-frame{
+position:relative;
+z-index:2;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:24px;
+background:#fff;
+border:1px solid rgba(222,231,239,.9);
+box-shadow:0 22px 60px rgba(0,0,0,.10);
+overflow:hidden;
+}
+.laptop-frame{
+height:282px;
+padding:16px;
+}
+.phone-frame{
+height:282px;
+padding:10px;
+}
+.video-frame video{
+display:block!important;
 width:100%!important;
 height:100%!important;
-display:block!important;
-object-fit:cover!important;
+object-fit:contain!important;
 object-position:center center!important;
-border-radius:26px!important;
+background:#fff!important;
+border-radius:18px!important;
+}
+.video-carousel-stage:after{
+content:"";
+position:absolute;
+left:30px;
+right:30px;
+bottom:18px;
+height:3px;
+border-radius:999px;
+background:linear-gradient(90deg,#29AAE0,#00A698,#FF9400);
+opacity:.65;
+}
+@keyframes entryVideoSlide{
+0%{opacity:0;transform:translateY(8px)}
+7%{opacity:1;transform:translateY(0)}
+43%{opacity:1;transform:translateY(0)}
+50%{opacity:0;transform:translateY(-8px)}
+100%{opacity:0;transform:translateY(-8px)}
 }
 </style>
 
 </head>
 <body>
-<!-- ENTRYDOCS_VIDEO_HERO_MARKER -->
+<!-- ENTRYDOCS_FILENAME_FIX_MARKER -->
+<!-- ENTRYDOCS_VIDEO_CAROUSEL_MARKER -->
 <main class="page">
 <header class="header">
 <img class="logo" src="smartvel_logo.png" alt="Smartvel logo">
@@ -114,11 +198,35 @@ border-radius:26px!important;
 </div>
 
 <div class="entry-visual">
-  <div class="product-stage video-stage">
-    <video class="entrydocs-hero-video" autoplay muted loop playsinline preload="auto" poster="entrydocs_premium_devices.png">
-      <source src="entrydocs_hero_video.mp4" type="video/mp4">
-    </video>
+  
+<div class="product-stage video-carousel-stage">
+  <div class="video-slide video-slide-ai">
+    <div class="video-copy">
+      <div class="video-kicker">Always updated</div>
+      <h3>AI monitoring to detect changes in regulations.</h3>
+      <p>Continuous monitoring helps identify changing travel requirements and keep traveller information up to date.</p>
+    </div>
+    <div class="video-frame laptop-frame">
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="entrydocs_hero_video.mp4?v=carousel2" type="video/mp4">
+      </video>
+    </div>
   </div>
+
+  <div class="video-slide video-slide-unify">
+    <div class="video-copy">
+      <div class="video-kicker">One-stop solution</div>
+      <h3>Unify your travel requirements.</h3>
+      <p>Traveller-specific guidance across visa, documents, health, route, nationality, residency and trip conditions.</p>
+    </div>
+    <div class="video-frame phone-frame">
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="entrydocs_hero_video_alt.mp4?v=carousel2" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+
   <div class="metric-bar">
     <div class="metric"><b>3B+</b><span>API calls processed</span></div>
     <div class="metric"><b>190+</b><span>Countries covered</span></div>
