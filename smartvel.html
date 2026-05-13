@@ -11,7 +11,7 @@
 :root{--black:#121212;--dark-blue:#125885;--blue:#29AAE0;--orange:#FF9400;--yellow:#FFC700;--green:#00A698;--red:#FF6262;--bg:#F6F8FB;--muted:#667383;--line:#DEE7EF}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--bg);color:var(--black);font-family:'Poppins',Arial,sans-serif}
-.page{width:100%;max-width:1536px;min-height:100vh;margin:0 auto;padding:34px 48px 34px;position:relative;overflow:hidden}
+.page{width:100%;max-width:1536px;min-height:100vh;margin:0 auto;padding:34px 48px 34px;position:relative;overflow:visible}
 .page:before{content:"";position:absolute;right:-180px;top:-190px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(41,170,224,.26),rgba(41,170,224,0) 68%)}
 .page:after{content:"";position:absolute;left:-160px;bottom:-240px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(255,148,0,.15),rgba(255,148,0,0) 70%)}
 .header,.hero,.mission,.journey,.bottom-strip,.footnote{position:relative;z-index:1}
@@ -53,63 +53,71 @@ h1 strong{color:var(--blue)}
 .footnote{margin-top:14px;color:#7A8491;font-size:10px}
 </style>
 
-<style id="sv-direct-logo-ticker-css">
-.sv-direct-logo-ticker{
+<style id="clean-below-logo-ticker-css">
+.clean-logo-ticker{
 position:relative;
-left:28px;
-right:28px;
-bottom:22px;
-z-index:20;
-border-radius:22px;
-background:rgba(255,255,255,.95);
-border:1px solid rgba(222,231,239,.95);
-box-shadow:0 16px 42px rgba(18,18,18,.10);
+z-index:2;
+margin:24px 0 6px;
+padding:8px 0 4px;
 overflow:hidden;
-padding:13px 0 12px;
+background:transparent!important;
 }
-.sv-logo-title{
-font-size:10px;
+.clean-logo-title{
+font-size:11px;
 font-weight:900;
-letter-spacing:.13em;
+letter-spacing:.14em;
 text-transform:uppercase;
 color:#125885;
-padding:0 20px 9px;
+margin:0 0 13px;
 }
-.sv-logo-window{overflow:hidden;width:100%;}
-.sv-logo-track{
+.clean-logo-window{
+overflow:hidden;
+width:100%;
+mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+}
+.clean-logo-track{
 display:flex;
 align-items:center;
-gap:22px;
+gap:34px;
 width:max-content;
-animation:svLogoMove 48s linear infinite;
-padding:0 20px;
+animation:cleanTickerMove 58s linear infinite;
 }
-.sv-logo-item{
-height:48px;
-min-width:120px;
+.clean-logo-ticker:hover .clean-logo-track{
+animation-play-state:paused;
+}
+.clean-logo{
+height:62px;
+min-width:154px;
 display:flex;
 align-items:center;
 justify-content:center;
-background:#fff;
-border:1px solid #E7EDF3;
-border-radius:15px;
-padding:8px 15px;
-box-shadow:0 6px 16px rgba(0,0,0,.035);
+padding:8px 18px;
+background:rgba(255,255,255,.38);
+border:1px solid rgba(222,231,239,.46);
+border-radius:18px;
+box-shadow:0 8px 22px rgba(18,18,18,.035);
 }
-.sv-logo-item img{
-max-height:30px;
-max-width:112px;
-object-fit:contain;
+.clean-logo img{
 display:block;
+max-height:42px;
+max-width:145px;
+object-fit:contain;
 }
-@keyframes svLogoMove{
+.contact .clean-logo-ticker{
+grid-column:1 / -1;
+margin-top:26px;
+}
+.contact .clean-logo-title{
+color:#D9EEF8;
+}
+.contact .clean-logo{
+background:rgba(255,255,255,.86);
+border-color:rgba(255,255,255,.2);
+}
+@keyframes cleanTickerMove{
 0%{transform:translateX(0)}
 100%{transform:translateX(-50%)}
-}
-.slide[data-title="Smartvel"] .content,
-.slide[data-title="Contact"] .contact{
-padding-bottom:118px!important;
-position:relative!important;
 }
 </style>
 
@@ -168,6 +176,65 @@ position:relative!important;
 <div class="value-card"><b>Widget or API</b><span>Ready-to-use components or Smartvel data inside your own experience.</span></div>
 <div class="value-card"><b>Managed updates</b><span>Content, events and travel information maintained by Smartvel.</span></div>
 <div class="value-card"><b>SEO + GEO</b><span>Structured destination content ready for Google and AI-driven search.</span></div>
+</section>
+
+
+<section class="clean-logo-ticker" aria-label="Smartvel client logos">
+  <div class="clean-logo-title">Trusted across airlines, OTA's, hotels, cruises, TMCs, insurance and travel brands</div>
+  <div class="clean-logo-window">
+    <div class="clean-logo-track">
+      <div class="clean-logo"><img src="logo_accor.png" alt=""></div>
+<div class="clean-logo"><img src="logo_air_niugini.png" alt=""></div>
+<div class="clean-logo"><img src="logo_avianca.png" alt=""></div>
+<div class="clean-logo"><img src="logo_cocha.png" alt=""></div>
+<div class="clean-logo"><img src="logo_condes.png" alt=""></div>
+<div class="clean-logo"><img src="logo_copa.png" alt=""></div>
+<div class="clean-logo"><img src="logo_dorms.png" alt=""></div>
+<div class="clean-logo"><img src="logo_finnair.png" alt=""></div>
+<div class="clean-logo"><img src="logo_flowo.png" alt=""></div>
+<div class="clean-logo"><img src="logo_hotel_cristina.png" alt=""></div>
+<div class="clean-logo"><img src="logo_iberia.png" alt=""></div>
+<div class="clean-logo"><img src="logo_intermundial.png" alt=""></div>
+<div class="clean-logo"><img src="logo_latam.png" alt=""></div>
+<div class="clean-logo"><img src="logo_monument.png" alt=""></div>
+<div class="clean-logo"><img src="logo_palladium.png" alt=""></div>
+<div class="clean-logo"><img src="logo_ponant.png" alt=""></div>
+<div class="clean-logo"><img src="logo_praktik_hotels.png" alt=""></div>
+<div class="clean-logo"><img src="logo_roommate.png" alt=""></div>
+<div class="clean-logo"><img src="logo_saudia.png" alt=""></div>
+<div class="clean-logo"><img src="logo_stayforlong.png" alt=""></div>
+<div class="clean-logo"><img src="logo_tap.png" alt=""></div>
+<div class="clean-logo"><img src="logo_trivago_deals.png" alt=""></div>
+<div class="clean-logo"><img src="logo_ubico.png" alt=""></div>
+<div class="clean-logo"><img src="logo_webjet.png" alt=""></div>
+<div class="clean-logo"><img src="logo_world2fly.png" alt=""></div>
+<div class="clean-logo"><img src="logo_accor.png" alt=""></div>
+<div class="clean-logo"><img src="logo_air_niugini.png" alt=""></div>
+<div class="clean-logo"><img src="logo_avianca.png" alt=""></div>
+<div class="clean-logo"><img src="logo_cocha.png" alt=""></div>
+<div class="clean-logo"><img src="logo_condes.png" alt=""></div>
+<div class="clean-logo"><img src="logo_copa.png" alt=""></div>
+<div class="clean-logo"><img src="logo_dorms.png" alt=""></div>
+<div class="clean-logo"><img src="logo_finnair.png" alt=""></div>
+<div class="clean-logo"><img src="logo_flowo.png" alt=""></div>
+<div class="clean-logo"><img src="logo_hotel_cristina.png" alt=""></div>
+<div class="clean-logo"><img src="logo_iberia.png" alt=""></div>
+<div class="clean-logo"><img src="logo_intermundial.png" alt=""></div>
+<div class="clean-logo"><img src="logo_latam.png" alt=""></div>
+<div class="clean-logo"><img src="logo_monument.png" alt=""></div>
+<div class="clean-logo"><img src="logo_palladium.png" alt=""></div>
+<div class="clean-logo"><img src="logo_ponant.png" alt=""></div>
+<div class="clean-logo"><img src="logo_praktik_hotels.png" alt=""></div>
+<div class="clean-logo"><img src="logo_roommate.png" alt=""></div>
+<div class="clean-logo"><img src="logo_saudia.png" alt=""></div>
+<div class="clean-logo"><img src="logo_stayforlong.png" alt=""></div>
+<div class="clean-logo"><img src="logo_tap.png" alt=""></div>
+<div class="clean-logo"><img src="logo_trivago_deals.png" alt=""></div>
+<div class="clean-logo"><img src="logo_ubico.png" alt=""></div>
+<div class="clean-logo"><img src="logo_webjet.png" alt=""></div>
+<div class="clean-logo"><img src="logo_world2fly.png" alt=""></div>
+    </div>
+  </div>
 </section>
 
 <div class="footnote">Figures shown are based on Smartvel corporate/product material and should be used as general company-scale indicators unless client-specific metrics are confirmed.</div>

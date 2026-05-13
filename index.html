@@ -422,63 +422,71 @@ box-shadow:0 14px 34px rgba(41,170,224,.26);
 </style>
 
 
-<style id="sv-direct-logo-ticker-css">
-.sv-direct-logo-ticker{
-position:absolute;
-left:28px;
-right:28px;
-bottom:22px;
-z-index:20;
-border-radius:22px;
-background:rgba(255,255,255,.95);
-border:1px solid rgba(222,231,239,.95);
-box-shadow:0 16px 42px rgba(18,18,18,.10);
+<style id="clean-below-logo-ticker-css">
+.clean-logo-ticker{
+position:relative;
+z-index:2;
+margin:24px 0 6px;
+padding:8px 0 4px;
 overflow:hidden;
-padding:13px 0 12px;
+background:transparent!important;
 }
-.sv-logo-title{
-font-size:10px;
+.clean-logo-title{
+font-size:11px;
 font-weight:900;
-letter-spacing:.13em;
+letter-spacing:.14em;
 text-transform:uppercase;
 color:#125885;
-padding:0 20px 9px;
+margin:0 0 13px;
 }
-.sv-logo-window{overflow:hidden;width:100%;}
-.sv-logo-track{
+.clean-logo-window{
+overflow:hidden;
+width:100%;
+mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+}
+.clean-logo-track{
 display:flex;
 align-items:center;
-gap:22px;
+gap:34px;
 width:max-content;
-animation:svLogoMove 48s linear infinite;
-padding:0 20px;
+animation:cleanTickerMove 58s linear infinite;
 }
-.sv-logo-item{
-height:48px;
-min-width:120px;
+.clean-logo-ticker:hover .clean-logo-track{
+animation-play-state:paused;
+}
+.clean-logo{
+height:62px;
+min-width:154px;
 display:flex;
 align-items:center;
 justify-content:center;
-background:#fff;
-border:1px solid #E7EDF3;
-border-radius:15px;
-padding:8px 15px;
-box-shadow:0 6px 16px rgba(0,0,0,.035);
+padding:8px 18px;
+background:rgba(255,255,255,.38);
+border:1px solid rgba(222,231,239,.46);
+border-radius:18px;
+box-shadow:0 8px 22px rgba(18,18,18,.035);
 }
-.sv-logo-item img{
-max-height:30px;
-max-width:112px;
-object-fit:contain;
+.clean-logo img{
 display:block;
+max-height:42px;
+max-width:145px;
+object-fit:contain;
 }
-@keyframes svLogoMove{
+.contact .clean-logo-ticker{
+grid-column:1 / -1;
+margin-top:26px;
+}
+.contact .clean-logo-title{
+color:#D9EEF8;
+}
+.contact .clean-logo{
+background:rgba(255,255,255,.86);
+border-color:rgba(255,255,255,.2);
+}
+@keyframes cleanTickerMove{
 0%{transform:translateX(0)}
 100%{transform:translateX(-50%)}
-}
-.slide[data-title="Smartvel"] .content,
-.slide[data-title="Contact"] .contact{
-padding-bottom:118px!important;
-position:relative!important;
 }
 </style>
 
@@ -514,13 +522,7 @@ position:relative!important;
 </div>
 
 <div class='viewport'>
-<div class='slide active' data-title='Smartvel' data-sub='Company overview and ecosystem'><iframe src='smartvel.html'></iframe>
-<div class="sv-direct-logo-ticker">
-  <div class="sv-logo-title">Trusted across airlines, OTA's, hotels, cruises, insurance and travel brands</div>
-  <div class="sv-logo-window"><div class="sv-logo-track"><div class="sv-logo-item"><img src="logo_accor.png" alt=""></div><div class="sv-logo-item"><img src="logo_avianca_req.png" alt=""></div><div class="sv-logo-item"><img src="logo_finnair.png" alt=""></div><div class="sv-logo-item"><img src="logo_iberia_req.png" alt=""></div><div class="sv-logo-item"><img src="logo_latam.png" alt=""></div><div class="sv-logo-item"><img src="logo_saudia.png" alt=""></div><div class="sv-logo-item"><img src="logo_air_niugini.png" alt=""></div><div class="sv-logo-item"><img src="logo_world2fly.png" alt=""></div><div class="sv-logo-item"><img src="logo_copa.png" alt=""></div><div class="sv-logo-item"><img src="logo_flowo.png" alt=""></div><div class="sv-logo-item"><img src="logo_ubico.png" alt=""></div><div class="sv-logo-item"><img src="logo_ponant.png" alt=""></div><div class="sv-logo-item"><img src="logo_intermundial.png" alt=""></div><div class="sv-logo-item"><img src="logo_trivago_deals.png" alt=""></div><div class="sv-logo-item"><img src="logo_stayforlong.png" alt=""></div><div class="sv-logo-item"><img src="logo_roommate.png" alt=""></div><div class="sv-logo-item"><img src="logo_praktik_hotels.png" alt=""></div><div class="sv-logo-item"><img src="logo_palladium.png" alt=""></div><div class="sv-logo-item"><img src="logo_webjet.png" alt=""></div><div class="sv-logo-item"><img src="logo_tap.png" alt=""></div><div class="sv-logo-item"><img src="logo_cocha_req.png" alt=""></div><div class="sv-logo-item"><img src="logo_accor.png" alt=""></div><div class="sv-logo-item"><img src="logo_avianca_req.png" alt=""></div><div class="sv-logo-item"><img src="logo_finnair.png" alt=""></div><div class="sv-logo-item"><img src="logo_iberia_req.png" alt=""></div><div class="sv-logo-item"><img src="logo_latam.png" alt=""></div><div class="sv-logo-item"><img src="logo_saudia.png" alt=""></div><div class="sv-logo-item"><img src="logo_air_niugini.png" alt=""></div><div class="sv-logo-item"><img src="logo_world2fly.png" alt=""></div><div class="sv-logo-item"><img src="logo_copa.png" alt=""></div><div class="sv-logo-item"><img src="logo_flowo.png" alt=""></div><div class="sv-logo-item"><img src="logo_ubico.png" alt=""></div><div class="sv-logo-item"><img src="logo_ponant.png" alt=""></div><div class="sv-logo-item"><img src="logo_intermundial.png" alt=""></div><div class="sv-logo-item"><img src="logo_trivago_deals.png" alt=""></div><div class="sv-logo-item"><img src="logo_stayforlong.png" alt=""></div><div class="sv-logo-item"><img src="logo_roommate.png" alt=""></div><div class="sv-logo-item"><img src="logo_praktik_hotels.png" alt=""></div><div class="sv-logo-item"><img src="logo_palladium.png" alt=""></div><div class="sv-logo-item"><img src="logo_webjet.png" alt=""></div><div class="sv-logo-item"><img src="logo_tap.png" alt=""></div><div class="sv-logo-item"><img src="logo_cocha_req.png" alt=""></div></div></div>
-</div>
-
-</div>
+<div class='slide active' data-title='Smartvel' data-sub='Company overview and ecosystem'><iframe src='smartvel.html'></iframe></div>
 <div class='slide' data-title='EntryDocs' data-sub='Travel requirements intelligence'><iframe src='entrydocs.html'></iframe></div>
 <div class='slide' data-title='TravelAble' data-sub='Accessible travel support'><iframe src='travelable.html'></iframe></div>
 <div class='slide' data-title='Explore & Go' data-sub='Destination inspiration'><iframe src='exploreandgo.html'></iframe></div>
@@ -547,12 +549,6 @@ position:relative!important;
 </div>
 
 </div>
-
-<div class="sv-direct-logo-ticker">
-  <div class="sv-logo-title">Trusted across airlines, OTA's, hotels, cruises, insurance and travel brands</div>
-  <div class="sv-logo-window"><div class="sv-logo-track"><div class="sv-logo-item"><img src="logo_accor.png" alt=""></div><div class="sv-logo-item"><img src="logo_avianca_req.png" alt=""></div><div class="sv-logo-item"><img src="logo_finnair.png" alt=""></div><div class="sv-logo-item"><img src="logo_iberia_req.png" alt=""></div><div class="sv-logo-item"><img src="logo_latam.png" alt=""></div><div class="sv-logo-item"><img src="logo_saudia.png" alt=""></div><div class="sv-logo-item"><img src="logo_air_niugini.png" alt=""></div><div class="sv-logo-item"><img src="logo_world2fly.png" alt=""></div><div class="sv-logo-item"><img src="logo_copa.png" alt=""></div><div class="sv-logo-item"><img src="logo_flowo.png" alt=""></div><div class="sv-logo-item"><img src="logo_ubico.png" alt=""></div><div class="sv-logo-item"><img src="logo_ponant.png" alt=""></div><div class="sv-logo-item"><img src="logo_intermundial.png" alt=""></div><div class="sv-logo-item"><img src="logo_trivago_deals.png" alt=""></div><div class="sv-logo-item"><img src="logo_stayforlong.png" alt=""></div><div class="sv-logo-item"><img src="logo_roommate.png" alt=""></div><div class="sv-logo-item"><img src="logo_praktik_hotels.png" alt=""></div><div class="sv-logo-item"><img src="logo_palladium.png" alt=""></div><div class="sv-logo-item"><img src="logo_webjet.png" alt=""></div><div class="sv-logo-item"><img src="logo_tap.png" alt=""></div><div class="sv-logo-item"><img src="logo_cocha_req.png" alt=""></div><div class="sv-logo-item"><img src="logo_accor.png" alt=""></div><div class="sv-logo-item"><img src="logo_avianca_req.png" alt=""></div><div class="sv-logo-item"><img src="logo_finnair.png" alt=""></div><div class="sv-logo-item"><img src="logo_iberia_req.png" alt=""></div><div class="sv-logo-item"><img src="logo_latam.png" alt=""></div><div class="sv-logo-item"><img src="logo_saudia.png" alt=""></div><div class="sv-logo-item"><img src="logo_air_niugini.png" alt=""></div><div class="sv-logo-item"><img src="logo_world2fly.png" alt=""></div><div class="sv-logo-item"><img src="logo_copa.png" alt=""></div><div class="sv-logo-item"><img src="logo_flowo.png" alt=""></div><div class="sv-logo-item"><img src="logo_ubico.png" alt=""></div><div class="sv-logo-item"><img src="logo_ponant.png" alt=""></div><div class="sv-logo-item"><img src="logo_intermundial.png" alt=""></div><div class="sv-logo-item"><img src="logo_trivago_deals.png" alt=""></div><div class="sv-logo-item"><img src="logo_stayforlong.png" alt=""></div><div class="sv-logo-item"><img src="logo_roommate.png" alt=""></div><div class="sv-logo-item"><img src="logo_praktik_hotels.png" alt=""></div><div class="sv-logo-item"><img src="logo_palladium.png" alt=""></div><div class="sv-logo-item"><img src="logo_webjet.png" alt=""></div><div class="sv-logo-item"><img src="logo_tap.png" alt=""></div><div class="sv-logo-item"><img src="logo_cocha_req.png" alt=""></div></div></div>
-</div>
-
 </div>
 </div>
 
