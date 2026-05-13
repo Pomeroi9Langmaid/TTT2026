@@ -1,0 +1,3 @@
+ENTRYDOCS CLEAN FIX SCAN
+Missing refs: None
+Removed fake floating iPhone/passport UI. Restored EU Package Travel Directive strip. Kept AI monitoring and metrics.
