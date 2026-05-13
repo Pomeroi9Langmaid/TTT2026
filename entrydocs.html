@@ -300,102 +300,92 @@ margin-top:20px!important;
 
 
 
-<style id="entrydocs-visible-scenario-hero">
-.visible-scenario-stage{
+
+
+
+<style id="entrydocs-monitor-screen-hero">
+.monitor-screen-stage{
 position:relative!important;
 height:390px!important;
 border-radius:28px!important;
-overflow:hidden!important;
+overflow:visible!important;
 background:
 radial-gradient(circle at 18% 20%,rgba(41,170,224,.12),transparent 32%),
 linear-gradient(135deg,#F8FCFF,#FFFFFF)!important;
 border:1px solid #DEE7EF!important;
 box-shadow:0 26px 80px rgba(0,0,0,.10)!important;
-display:block!important;
-padding:18px!important;
+display:flex!important;
+align-items:center!important;
+justify-content:center!important;
+padding:22px!important;
 }
-.scenario-carousel{
-position:absolute!important;
-left:18px!important;
-top:18px!important;
-bottom:18px!important;
-width:68%!important;
-z-index:3!important;
+.monitor-frame{
+position:relative!important;
+width:92%!important;
+height:318px!important;
+border-radius:26px!important;
+background:#101820!important;
+padding:12px!important;
+box-shadow:
+0 36px 90px rgba(0,0,0,.22),
+inset 0 0 0 1px rgba(255,255,255,.12)!important;
+overflow:hidden!important;
 }
-.scenario-card{
-position:absolute!important;
-inset:0!important;
-border-radius:22px!important;
+.monitor-frame:before{
+content:"";
+position:absolute;
+left:50%;
+bottom:-34px;
+width:180px;
+height:34px;
+transform:translateX(-50%);
+background:linear-gradient(180deg,#1B2734,#111922);
+border-radius:0 0 26px 26px;
+box-shadow:0 18px 34px rgba(0,0,0,.18);
+z-index:0;
+}
+.screen-carousel{
+position:relative!important;
+width:100%!important;
+height:100%!important;
+border-radius:18px!important;
 overflow:hidden!important;
 background:#fff!important;
-border:1px solid rgba(222,231,239,.95)!important;
-box-shadow:0 18px 54px rgba(18,18,18,.10)!important;
-opacity:0;
-animation:scenarioFade 15s infinite;
+z-index:2!important;
 }
-.scenario-card-1{animation-delay:0s}
-.scenario-card-2{animation-delay:5s}
-.scenario-card-3{animation-delay:10s}
-.scenario-card img{
+.screen-shot{
+position:absolute!important;
+inset:0!important;
 width:100%!important;
 height:100%!important;
 object-fit:cover!important;
 object-position:top center!important;
-display:block!important;
+opacity:0;
+animation:screenRotate 15s infinite;
 }
-.scenario-card:after{
+.screen-shot-1{animation-delay:0s}
+.screen-shot-2{animation-delay:5s}
+.screen-shot-3{animation-delay:10s}
+.screen-carousel:after{
 content:"";
 position:absolute;
 inset:0;
-background:linear-gradient(180deg,rgba(255,255,255,0) 52%,rgba(7,16,24,.72));
+background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,0) 45%,rgba(0,0,0,.03));
+pointer-events:none;
+z-index:3;
 }
-.scenario-caption{
-position:absolute;
-left:18px;
-right:18px;
-bottom:16px;
-z-index:4;
-color:#fff;
-}
-.scenario-caption b{
-display:block;
-font-size:17px;
-line-height:1.05;
-margin-bottom:4px;
-}
-.scenario-caption span{
-display:block;
-font-size:11px;
-line-height:1.35;
-color:rgba(255,255,255,.86);
-}
-.devices-hero-small{
-position:absolute!important;
-right:20px!important;
-bottom:52px!important;
-width:34%!important;
-max-height:250px!important;
-object-fit:contain!important;
-z-index:4!important;
-filter:drop-shadow(0 28px 56px rgba(0,0,0,.22))!important;
-animation:deviceSmallFloat 7s ease-in-out infinite alternate;
-}
-@keyframes scenarioFade{
+@keyframes screenRotate{
 0%{opacity:0;transform:scale(1.015)}
 7%{opacity:1;transform:scale(1)}
 29%{opacity:1;transform:scale(1.025)}
 36%{opacity:0;transform:scale(1.035)}
 100%{opacity:0;transform:scale(1.035)}
 }
-@keyframes deviceSmallFloat{
-0%{transform:translateY(0)}
-100%{transform:translateY(-8px)}
-}
 </style>
 
 </head>
 <body>
-<!-- VISIBLE_SCENARIO_HERO_MARKER -->
+<!-- MONITOR_SCREEN_HERO_MARKER -->
 <!-- DYNAMIC_ENTRYDOCS_MERGED_WITH_TEXT_MARKER -->
 <!-- ALMU_TEXT_UPDATE_FIXED -->
 <main class="page">
@@ -421,12 +411,17 @@ animation:deviceSmallFloat 7s ease-in-out infinite alternate;
 <div class="entry-visual">
   
 
-<div class="product-stage premium-stage visible-scenario-stage">
-  <div class="scenario-carousel">
-    <div class="scenario-card scenario-card-1">
-      <img src="entrydocs_scene1.png" alt="EntryDocs travel requirement setup">
-      <div class="scenario-caption"><b>Traveller setup</b><span>Route, nationality, residency and trip logic.</span></div>
+
+<div class="product-stage premium-stage monitor-screen-stage">
+  <div class="monitor-frame">
+    <div class="screen-carousel">
+      <img class="screen-shot screen-shot-1" src="entrydocs_scene1.png" alt="EntryDocs travel requirements setup screen">
+      <img class="screen-shot screen-shot-2" src="entrydocs_scene2.png" alt="EntryDocs China advisory screen">
+      <img class="screen-shot screen-shot-3" src="entrydocs_scene3.png" alt="EntryDocs UK ETA requirement screen">
     </div>
+  </div>
+</div>
+
     <div class="scenario-card scenario-card-2">
       <img src="entrydocs_scene2.png" alt="EntryDocs China travel advisory">
       <div class="scenario-caption"><b>Live advisory</b><span>Important regulatory notices and requirement changes.</span></div>
