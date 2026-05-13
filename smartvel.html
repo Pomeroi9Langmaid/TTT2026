@@ -123,7 +123,53 @@ border-color:rgba(255,255,255,.18)!important;
 
 <style>.smartvel-logo-link{display:inline-flex;align-items:center;text-decoration:none}.smartvel-logo-link img{display:block}</style>
 
-<style id="smartvel-homepage-video-css">
+
+
+
+<style id="smartvel-homepage-rebalanced-css">
+.hero{
+grid-template-columns:1fr 1fr!important;
+gap:44px!important;
+align-items:start!important;
+}
+.promise{
+display:grid!important;
+grid-template-columns:repeat(4,1fr)!important;
+gap:14px!important;
+grid-column:1 / -1!important;
+margin-top:22px!important;
+}
+.promise-card{
+position:relative!important;
+min-height:118px!important;
+padding:20px 18px!important;
+border-radius:22px!important;
+background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(247,252,255,.94))!important;
+border:1px solid rgba(222,231,239,.96)!important;
+box-shadow:0 16px 42px rgba(18,18,18,.06)!important;
+overflow:hidden!important;
+}
+.promise-card:before{
+content:"";
+position:absolute;
+left:18px;
+top:14px;
+width:26px;
+height:3px;
+border-radius:999px;
+background:linear-gradient(90deg,#29AAE0,#00A698);
+}
+.promise-card b{
+display:block!important;
+margin-top:12px!important;
+font-size:15px!important;
+color:#125885!important;
+}
+.promise-card span{
+font-size:12px!important;
+line-height:1.38!important;
+color:#586778!important;
+}
 .home-video-stage{
 position:relative;
 width:100%;
@@ -138,7 +184,7 @@ box-shadow:0 32px 90px rgba(7,16,24,.28);
 display:flex;
 align-items:center;
 justify-content:center;
-padding:22px;
+padding:18px;
 }
 .home-video-frame{
 position:relative;
@@ -161,47 +207,15 @@ object-fit:contain;
 object-position:center center;
 background:#050B12;
 }
-.home-video-actions{
-position:absolute;
-left:22px;
-right:22px;
-bottom:20px;
-z-index:4;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:14px;
-pointer-events:none;
-}
-.home-video-label{
-padding:13px 16px;
-border-radius:18px;
-background:rgba(255,255,255,.90);
-backdrop-filter:blur(12px);
-border:1px solid rgba(255,255,255,.35);
-box-shadow:0 16px 44px rgba(0,0,0,.16);
-max-width:420px;
-pointer-events:auto;
-}
-.home-video-label b{
-display:block;
-font-size:15px;
-line-height:1.1;
-letter-spacing:-.03em;
-color:#071018;
-margin-bottom:4px;
-}
-.home-video-label span{
-display:block;
-font-size:11px;
-line-height:1.35;
-color:#4E5C6B;
-}
 .home-video-open{
+position:absolute;
+right:28px;
+bottom:28px;
+z-index:4;
 display:inline-flex;
 align-items:center;
 justify-content:center;
-padding:12px 15px;
+padding:12px 16px;
 border-radius:999px;
 background:linear-gradient(135deg,#29AAE0,#00A698);
 color:#fff;
@@ -210,7 +224,6 @@ font-size:12px;
 text-decoration:none;
 box-shadow:0 14px 34px rgba(41,170,224,.25);
 white-space:nowrap;
-pointer-events:auto;
 }
 .home-video-note{
 position:absolute;
@@ -228,58 +241,72 @@ letter-spacing:.08em;
 text-transform:uppercase;
 backdrop-filter:blur(8px);
 }
-@media(max-width:1100px){
-.home-video-stage{min-height:420px;padding:16px}
+.mission-top h2{
+font-size:30px!important;
+line-height:1.1!important;
+letter-spacing:-.045em!important;
+}
+.mission-top p{
+font-size:14px!important;
+line-height:1.45!important;
+max-width:650px!important;
+}
+.stats{
+grid-template-columns:repeat(3,1fr)!important;
+}
+.stat b{
+font-size:34px!important;
+}
+@media(max-width:1200px){
+.hero{grid-template-columns:1fr!important}
+.promise{grid-template-columns:repeat(2,1fr)!important}
+.home-video-stage{min-height:420px}
 .home-video-frame{height:330px}
-.home-video-actions{position:relative;left:auto;right:auto;bottom:auto;margin-top:14px;flex-direction:column;align-items:flex-start}
 }
 </style>
 
 </head>
 <body>
+<!-- SMARTVEL_HOMEPAGE_REBALANCED_MARKER -->
 <!-- SMARTVEL_HOMEPAGE_VIDEO_MARKER -->
 <main class="page">
 <header class="header"><a class="smartvel-logo-link" href="https://www.smartvel.com/" target="_blank" rel="noopener noreferrer"><img class="logo" src="smartvel_logo.png" alt="Smartvel logo"></a><div class="header-line"></div></header>
+
 
 <section class="hero">
 <div>
 <div class="kicker">Travel technology & content intelligence</div>
 <h1>AI-powered travel content and solutions for <strong>travel companies.</strong></h1>
 <p class="lead">We provide structured destination content and travel requirement intelligence through APIs and white-label solutions.</p>
-<div class="promise">
-<div class="promise-card"><b>For marketing teams</b><span>Launch destination campaigns, SEO/GEO pages and inspiration experiences without building content operations from scratch.</span></div>
-<div class="promise-card"><b>For digital teams</b><span>Deploy white-label widgets or APIs that fit existing web, mobile, CRM and booking journeys.</span></div>
-<div class="promise-card"><b>For operations teams</b><span>Keep travellers informed with maintained content, changing requirements and support information.</span></div>
-<div class="promise-card"><b>For travellers</b><span>Make discovery, planning and preparation easier, clearer and more useful before and during the trip.</span></div>
 </div>
-</div>
-
 
 <div class="home-video-stage">
   <div class="home-video-note">Smartvel introduction</div>
   <div class="home-video-frame">
     <video autoplay muted loop playsinline controls preload="metadata">
-      <source src="smartvel_homepage_video.mp4?v=home-video-1" type="video/mp4">
+      <source src="smartvel_homepage_video.mp4?v=home-video-2" type="video/mp4">
     </video>
   </div>
-  <div class="home-video-actions">
-    <div class="home-video-label">
-      <b>Smartvel in motion</b>
-      <span>Watch the Smartvel ecosystem come together across destination content, travel requirements and digital traveller experiences.</span>
-    </div>
-    <a class="home-video-open" href="smartvel_homepage_video.mp4?v=home-video-1" target="_blank" rel="noopener noreferrer">Open full video</a>
-  </div>
+  <a class="home-video-open" href="smartvel_homepage_video.mp4?v=home-video-2" target="_blank" rel="noopener noreferrer">Open full video</a>
 </div>
 
+<div class="promise">
+
+<div class="promise-card"><b>For marketing teams</b><span>Launch destination campaigns, SEO/GEO pages and inspiration experiences without building content operations from scratch.</span></div>
+<div class="promise-card"><b>For digital teams</b><span>Deploy white-label widgets or APIs that fit existing web, mobile, CRM and booking journeys.</span></div>
+<div class="promise-card"><b>For operations teams</b><span>Keep travellers informed with maintained content, changing requirements and support information.</span></div>
+<div class="promise-card"><b>For travellers</b><span>Make discovery, planning and preparation easier, clearer and more useful before and during the trip.</span></div>
+
+</div>
 </section>
 
 <section class="mission">
 <div class="mission-inner">
-<div class="mission-top"><h2>Content without limits.</h2><p>Smartvel’s mission is to become the go-to content-as-a-service provider across channels, sectors and content types — combining verified information, destination intelligence and technology into usable travel companies.</p></div>
+<div class="mission-top"><h2>Structured travel content, ready to deploy.</h2><p>Smartvel is the travel content-as-a-service layer for modern travel brands — combining verified information, destination intelligence and white-label technology across channels, sectors and traveller journeys.</p></div>
 <div class="stats">
-<div class="stat"><b>1K</b><span>sources of information</span></div>
-<div class="stat"><b>750K</b><span>events processed annually</span></div>
-<div class="stat"><b>20</b><span>languages supported</span></div>
+<div class="stat"><b>1K+</b><span>verified information sources</span></div>
+<div class="stat"><b>750K+</b><span>events processed annually</span></div>
+<div class="stat"><b>20+</b><span>languages supported</span></div>
 </div>
 </div>
 </section>
