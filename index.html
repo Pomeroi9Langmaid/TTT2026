@@ -384,6 +384,43 @@ margin-top:2px!important;
 }
 </style>
 
+
+<style id='contact-meeting-final-fix'>
+.contact{
+padding-top:96px!important;
+}
+.contact h1{
+margin-top:18px!important;
+}
+.contact .card p{
+margin-bottom:0!important;
+}
+.contact .card .mail{
+display:none!important;
+}
+.contact-actions{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+align-items:center;
+margin-top:18px;
+}
+.contact-actions .mail,
+.contact-actions .schedule{
+margin-top:0!important;
+}
+.schedule{
+display:inline-flex;
+padding:13px 18px;
+border-radius:999px;
+background:linear-gradient(135deg,#29AAE0,#00A698);
+color:#fff;
+text-decoration:none;
+font-weight:800;
+box-shadow:0 14px 34px rgba(41,170,224,.26);
+}
+</style>
+
 </head>
 <body>
 
@@ -432,13 +469,13 @@ margin-top:2px!important;
   <span>From inspiration and planning to travel requirements, accessibility and destination intelligence — Smartvel helps travel brands create clearer, more useful traveller experiences.</span>
 </div>
 <p>For demos, partnership discussions, product questions or Toronto Travel Tech follow-up conversations, contact Andrew directly.</p>
-<a class='mail left-mail' href='mailto:alangmaid@smartvel.com?subject=Smartvel%20Toronto%20Travel%20Tech%20follow-up'>Email Andrew</a>
+<div class='contact-actions'><a class='mail left-mail' href='mailto:alangmaid@smartvel.com?subject=Smartvel%20Toronto%20Travel%20Tech%20follow-up'>Email Andrew</a><a class='schedule' href='https://meetings.hubspot.com/alangmaid' target='_blank' rel='noopener noreferrer'>Schedule a meeting</a></div>
 </div>
 
 <div class='card'>
 <img src='andrew_profile.png' style='width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:18px;border:4px solid rgba(255,255,255,.12);box-shadow:0 10px 30px rgba(0,0,0,.25);'>
 <h2>Andrew Langmaid</h2>
-<p>CEO – ArrivalGuides, part of Smartvel<br>alangmaid@smartvel.com</p>
+<p>CEO – ArrivalGuides, part of Smartvel</p>
 <a class='mail' href='mailto:alangmaid@smartvel.com'>alangmaid@smartvel.com</a>
 </div>
 
@@ -477,7 +514,7 @@ const ctas=[
   {label:'Open Trip Planner demo',url:'https://sales-itineraries.cst.smartvel.com/?lang=en#modal'},
   {label:'Open TravelSEO example',url:'https://demo-las-vegas-seo.cst.smartvel.com/'},
   {label:'See Avuxi in action',url:'https://www.trivago.deals/hotels/spain_08_barcelona/4005796_the-corner-hotel'},
-  {label:'Email Andrew',url:'mailto:alangmaid@smartvel.com?subject=Smartvel%20Toronto%20Travel%20Tech%20follow-up'}
+  {label:'Schedule a meeting',url:'https://meetings.hubspot.com/alangmaid'}
 ];
 
 let current=0;
