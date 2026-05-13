@@ -67,8 +67,32 @@ h1 strong{color:var(--orange)}
 .footnote{margin-top:13px;color:#7A8491;font-size:10px;line-height:1.4}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(0,193,106,.5)}70%{box-shadow:0 0 0 12px rgba(0,193,106,0)}100%{box-shadow:0 0 0 0 rgba(0,193,106,0)}}
 </style>
+
+<style id="entrydocs-video-hero-css">
+.video-stage{
+height:390px!important;
+border-radius:28px!important;
+overflow:hidden!important;
+background:#fff!important;
+border:1px solid rgba(222,231,239,.95)!important;
+box-shadow:0 26px 80px rgba(0,0,0,.10)!important;
+display:flex!important;
+align-items:center!important;
+justify-content:center!important;
+}
+.entrydocs-hero-video{
+width:100%!important;
+height:100%!important;
+display:block!important;
+object-fit:cover!important;
+object-position:center center!important;
+border-radius:26px!important;
+}
+</style>
+
 </head>
 <body>
+<!-- ENTRYDOCS_VIDEO_HERO_MARKER -->
 <main class="page">
 <header class="header">
 <img class="logo" src="smartvel_logo.png" alt="Smartvel logo">
@@ -90,8 +114,10 @@ h1 strong{color:var(--orange)}
 </div>
 
 <div class="entry-visual">
-  <div class="product-stage">
-    <img src="entrydocs_premium_devices.png" alt="EntryDocs product interface">
+  <div class="product-stage video-stage">
+    <video class="entrydocs-hero-video" autoplay muted loop playsinline preload="auto" poster="entrydocs_premium_devices.png">
+      <source src="entrydocs_hero_video.mp4" type="video/mp4">
+    </video>
   </div>
   <div class="metric-bar">
     <div class="metric"><b>3B+</b><span>API calls processed</span></div>
