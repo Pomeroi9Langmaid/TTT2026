@@ -1,0 +1,6 @@
+TravelAble final professional rebuild
+layout: static left narrative + animated right cinematic panel
+slides: 4
+image/text pairings: user-confirmed sequence
+raw webpage screenshots: not used
+missing references: {'travelable.html': ['smartvel_logo.png']}
