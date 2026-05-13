@@ -122,8 +122,122 @@ border-color:rgba(255,255,255,.18)!important;
 </style>
 
 <style>.smartvel-logo-link{display:inline-flex;align-items:center;text-decoration:none}.smartvel-logo-link img{display:block}</style>
+
+<style id="smartvel-homepage-video-css">
+.home-video-stage{
+position:relative;
+width:100%;
+min-height:520px;
+border-radius:34px;
+overflow:hidden;
+background:
+radial-gradient(circle at 22% 18%,rgba(41,170,224,.18),transparent 34%),
+linear-gradient(135deg,#071018,#10243A 58%,#0B1828);
+border:1px solid rgba(255,255,255,.10);
+box-shadow:0 32px 90px rgba(7,16,24,.28);
+display:flex;
+align-items:center;
+justify-content:center;
+padding:22px;
+}
+.home-video-frame{
+position:relative;
+width:100%;
+height:430px;
+border-radius:26px;
+overflow:hidden;
+background:#050B12;
+border:1px solid rgba(255,255,255,.14);
+box-shadow:0 28px 80px rgba(0,0,0,.28);
+display:flex;
+align-items:center;
+justify-content:center;
+}
+.home-video-frame video{
+width:100%;
+height:100%;
+display:block;
+object-fit:contain;
+object-position:center center;
+background:#050B12;
+}
+.home-video-actions{
+position:absolute;
+left:22px;
+right:22px;
+bottom:20px;
+z-index:4;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:14px;
+pointer-events:none;
+}
+.home-video-label{
+padding:13px 16px;
+border-radius:18px;
+background:rgba(255,255,255,.90);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.35);
+box-shadow:0 16px 44px rgba(0,0,0,.16);
+max-width:420px;
+pointer-events:auto;
+}
+.home-video-label b{
+display:block;
+font-size:15px;
+line-height:1.1;
+letter-spacing:-.03em;
+color:#071018;
+margin-bottom:4px;
+}
+.home-video-label span{
+display:block;
+font-size:11px;
+line-height:1.35;
+color:#4E5C6B;
+}
+.home-video-open{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:12px 15px;
+border-radius:999px;
+background:linear-gradient(135deg,#29AAE0,#00A698);
+color:#fff;
+font-weight:800;
+font-size:12px;
+text-decoration:none;
+box-shadow:0 14px 34px rgba(41,170,224,.25);
+white-space:nowrap;
+pointer-events:auto;
+}
+.home-video-note{
+position:absolute;
+top:18px;
+right:18px;
+z-index:4;
+padding:9px 12px;
+border-radius:999px;
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.16);
+color:#fff;
+font-size:11px;
+font-weight:800;
+letter-spacing:.08em;
+text-transform:uppercase;
+backdrop-filter:blur(8px);
+}
+@media(max-width:1100px){
+.home-video-stage{min-height:420px;padding:16px}
+.home-video-frame{height:330px}
+.home-video-actions{position:relative;left:auto;right:auto;bottom:auto;margin-top:14px;flex-direction:column;align-items:flex-start}
+}
+</style>
+
 </head>
 <body>
+<!-- SMARTVEL_HOMEPAGE_VIDEO_MARKER -->
 <main class="page">
 <header class="header"><a class="smartvel-logo-link" href="https://www.smartvel.com/" target="_blank" rel="noopener noreferrer"><img class="logo" src="smartvel_logo.png" alt="Smartvel logo"></a><div class="header-line"></div></header>
 
@@ -140,14 +254,23 @@ border-color:rgba(255,255,255,.18)!important;
 </div>
 </div>
 
-<div class="visual">
-<div class="visual-main"><img src="tripplanner.png" alt="Trip Planner visual"><div class="overlay"><b>AI-enriched content + white-label technology</b><span>Brandable widgets and APIs managed by Smartvel, designed to reduce internal workload and improve traveller engagement.</span></div></div>
-<div class="visual-grid">
-<div class="tile"><img src="exploreandgo.png" alt="Explore and Go"><b>Explore & Go</b></div>
-<div class="tile"><img src="entrydocs.png" alt="EntryDocs"><b>EntryDocs</b></div>
-<div class="tile"><img src="travelseo.png" alt="TravelSEO"><b>TravelSEO/GEO</b></div>
+
+<div class="home-video-stage">
+  <div class="home-video-note">Smartvel introduction</div>
+  <div class="home-video-frame">
+    <video autoplay muted loop playsinline controls preload="metadata">
+      <source src="smartvel_homepage_video.mp4?v=home-video-1" type="video/mp4">
+    </video>
+  </div>
+  <div class="home-video-actions">
+    <div class="home-video-label">
+      <b>Smartvel in motion</b>
+      <span>Watch the Smartvel ecosystem come together across destination content, travel requirements and digital traveller experiences.</span>
+    </div>
+    <a class="home-video-open" href="smartvel_homepage_video.mp4?v=home-video-1" target="_blank" rel="noopener noreferrer">Open full video</a>
+  </div>
 </div>
-</div>
+
 </section>
 
 <section class="mission">
