@@ -1,0 +1,12 @@
+source A duration: 28.92s
+source B duration: 34.13s
+final duration: 62.13s
+expected approx duration: 62.30s
+tripplanner full marker: True
+cache busted reference: True
+tripplanner video file included: True
+entrydocs preserved: True
+explorego preserved: True
+contact ticker preserved: True
+linkedin preserved: True
+missing refs: None
