@@ -1,0 +1,12 @@
+TTT2026 VIDEO HERO + CONTACT TICKER SCAN
+
+explorego video ref present: True
+explorego video file included: True
+entrydocs carousel preserved: True
+entrydocs video files included: True
+smartvel homepage ticker present: True
+contact ticker inserted in index: True
+linkedin contact card preserved: True
+smartvel logo link preserved: True
+root logo files count: 25
+missing refs: None
