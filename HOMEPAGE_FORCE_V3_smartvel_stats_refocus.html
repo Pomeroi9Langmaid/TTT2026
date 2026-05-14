@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Smartvel | Overview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--black:#121212;--dark-blue:#125885;--blue:#29AAE0;--orange:#FF9400;--yellow:#FFC700;--green:#00A698;--red:#FF6262;--bg:#F6F8FB;--muted:#667383;--line:#DEE7EF}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--black);font-family:'Poppins',Arial,sans-serif}
+.page{width:100%;max-width:1536px;min-height:100vh;margin:0 auto;padding:34px 48px 34px;position:relative;overflow:visible}
+.page:before{content:"";position:absolute;right:-180px;top:-190px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(41,170,224,.26),rgba(41,170,224,0) 68%)}
+.page:after{content:"";position:absolute;left:-160px;bottom:-240px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(255,148,0,.15),rgba(255,148,0,0) 70%)}
+.header,.hero,.mission,.journey,.bottom-strip,.footnote{position:relative;z-index:1}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:34px}
+.logo{width:230px;height:auto;display:block}
+.header-line{height:2px;flex:1;margin-left:34px;background:linear-gradient(90deg,var(--blue),rgba(41,170,224,0))}
+.hero{display:grid;grid-template-columns:.92fr 1.12fr;gap:42px;align-items:start}
+.kicker{color:var(--dark-blue);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.09em;margin-bottom:16px}
+h1{margin:0 0 20px;font-size:72px;line-height:1.02;letter-spacing:-.065em;font-weight:800}
+h1 strong{color:var(--blue)}
+.hero-rotating-wrap{display:inline-block;position:relative;min-width:10.8ch;vertical-align:baseline}
+.hero-rotating-wrap strong{display:inline-block;white-space:nowrap;transition:opacity .26s ease,transform .26s ease;will-change:opacity,transform}
+.hero-rotating-wrap.is-switching strong{opacity:0;transform:translateY(8px)}
+.hero-rotating-measure{visibility:hidden;display:block;height:0;overflow:hidden;white-space:nowrap;font-weight:800;letter-spacing:-.065em}
+.lead{font-size:20px;line-height:1.48;color:#283241;margin:0 0 24px;max-width:640px}
+.promise{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:26px 0 0}
+.promise-card{background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:22px;padding:18px 20px;box-shadow:0 16px 38px rgba(18,18,18,.06);min-height:120px}
+.promise-card b{display:block;color:var(--dark-blue);font-size:16px;margin-bottom:8px}
+.promise-card span{display:block;color:var(--muted);font-size:13px;line-height:1.38}
+.visual{background:rgba(255,255,255,.78);border:1px solid rgba(222,231,239,.95);border-radius:34px;padding:20px;box-shadow:0 28px 80px rgba(18,18,18,.12)}
+.visual-main{position:relative;height:315px;border-radius:26px;overflow:hidden;border:1px solid var(--line)}
+.visual-main img,.tile img{width:100%;height:100%;object-fit:cover;display:block}
+.visual-main .overlay{position:absolute;left:22px;bottom:22px;background:rgba(255,255,255,.94);border:1px solid rgba(222,231,239,.95);border-radius:18px;padding:14px 16px;max-width:430px}
+.overlay b{display:block;color:var(--black);font-size:17px;margin-bottom:4px}.overlay span{color:var(--muted);font-size:12px;line-height:1.4}
+.visual-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}.tile{position:relative;height:150px;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.tile b{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.92);border:1px solid rgba(222,231,239,.95);color:var(--black);border-radius:999px;padding:7px 10px;font-size:11px}
+.mission{margin-top:28px;border-radius:30px;overflow:hidden;background:linear-gradient(135deg,#125885,#0E4263);box-shadow:0 24px 70px rgba(18,88,133,.25);color:white}
+.mission-inner{padding:25px 30px;background-image:radial-gradient(circle at 15% 20%,rgba(41,170,224,.35),transparent 28%),radial-gradient(circle at 85% 40%,rgba(255,148,0,.22),transparent 24%)}
+.mission-top{display:flex;align-items:flex-start;justify-content:space-between;gap:34px;margin-bottom:18px}
+.mission h2{font-size:30px;line-height:1.1;letter-spacing:-.045em;margin:0}
+.mission p{margin:0;color:#D9EEF8;font-size:14px;line-height:1.48;max-width:670px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.stat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:18px 20px}
+.stat b{display:block;font-size:35px;line-height:1;color:white;margin-bottom:7px}
+.stat span{display:block;color:#D9EEF8;font-size:13px}
+.journey{margin-top:18px;background:var(--black);color:#fff;border-radius:28px;padding:22px 24px;box-shadow:0 22px 60px rgba(18,18,18,.16)}
+.journey-title h2{margin:0 0 16px;font-size:27px;line-height:1.08;letter-spacing:-.04em}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.step{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:15px 14px;min-height:112px}
+.step i{display:block;width:26px;height:4px;border-radius:999px;margin-bottom:12px}.step:nth-child(1) i{background:var(--orange)}.step:nth-child(2) i{background:var(--yellow)}.step:nth-child(3) i{background:var(--blue)}.step:nth-child(4) i{background:var(--green)}.step:nth-child(5) i{background:var(--red)}
+.step b{display:block;font-size:15px;margin-bottom:6px}.step span{display:block;color:#D9E1EA;font-size:11px;line-height:1.35}
+.bottom-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}.value-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:17px 18px;box-shadow:0 14px 38px rgba(18,18,18,.055)}
+.value-card b{display:block;color:var(--dark-blue);font-size:15px;margin-bottom:6px}.value-card span{display:block;color:var(--muted);font-size:12px;line-height:1.38}
+.footnote{margin-top:14px;color:#7A8491;font-size:10px}
+</style>
+
+<style id="clean-below-logo-ticker-css">
+.clean-logo-ticker{
+position:relative!important;
+z-index:2!important;
+margin:18px 0 4px!important;
+padding:6px 0 2px!important;
+overflow:hidden!important;
+background:transparent!important;
+}
+.clean-logo-title{
+font-size:10px!important;
+font-weight:900!important;
+letter-spacing:.14em!important;
+text-transform:uppercase!important;
+color:#125885!important;
+margin:0 0 10px!important;
+}
+.clean-logo-window{
+overflow:hidden!important;
+width:100%!important;
+mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)!important;
+-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)!important;
+}
+.clean-logo-track{
+display:flex!important;
+align-items:center!important;
+gap:28px!important;
+width:max-content!important;
+animation:cleanTickerMove 56s linear infinite!important;
+}
+.clean-logo-ticker:hover .clean-logo-track{
+animation-play-state:paused!important;
+}
+.clean-logo{
+height:52px!important;
+min-width:132px!important;
+display:flex!important;
+align-items:center!important;
+justify-content:center!important;
+padding:7px 14px!important;
+background:rgba(255,255,255,.42)!important;
+border:1px solid rgba(222,231,239,.38)!important;
+border-radius:16px!important;
+box-shadow:0 7px 20px rgba(18,18,18,.035)!important;
+}
+.clean-logo img{
+display:block!important;
+max-height:36px!important;
+max-width:124px!important;
+object-fit:contain!important;
+}
+.contact .clean-logo-ticker{
+grid-column:1 / -1!important;
+margin-top:24px!important;
+}
+.contact .clean-logo-title{
+color:#D9EEF8!important;
+}
+.contact .clean-logo{
+background:rgba(255,255,255,.86)!important;
+border-color:rgba(255,255,255,.18)!important;
+}
+@keyframes cleanTickerMove{
+0%{transform:translateX(0)}
+100%{transform:translateX(-50%)}
+}
+</style>
+
+<style>.smartvel-logo-link{display:inline-flex;align-items:center;text-decoration:none}.smartvel-logo-link img{display:block}</style>
+
+
+
+
+<style id="smartvel-homepage-rebalanced-css">
+.hero{
+grid-template-columns:1fr 1fr!important;
+gap:44px!important;
+align-items:start!important;
+}
+.promise{
+display:grid!important;
+grid-template-columns:repeat(4,1fr)!important;
+gap:14px!important;
+grid-column:1 / -1!important;
+margin-top:22px!important;
+}
+.promise-card{
+position:relative!important;
+min-height:118px!important;
+padding:20px 18px!important;
+border-radius:22px!important;
+background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(247,252,255,.94))!important;
+border:1px solid rgba(222,231,239,.96)!important;
+box-shadow:0 16px 42px rgba(18,18,18,.06)!important;
+overflow:hidden!important;
+}
+.promise-card:before{
+content:"";
+position:absolute;
+left:18px;
+top:14px;
+width:26px;
+height:3px;
+border-radius:999px;
+background:linear-gradient(90deg,#29AAE0,#00A698);
+}
+.promise-card b{
+display:block!important;
+margin-top:12px!important;
+font-size:15px!important;
+color:#125885!important;
+}
+.promise-card span{
+font-size:12px!important;
+line-height:1.38!important;
+color:#586778!important;
+}
+.home-video-stage{
+position:relative;
+width:100%;
+min-height:520px;
+border-radius:34px;
+overflow:hidden;
+background:
+radial-gradient(circle at 22% 18%,rgba(41,170,224,.18),transparent 34%),
+linear-gradient(135deg,#071018,#10243A 58%,#0B1828);
+border:1px solid rgba(255,255,255,.10);
+box-shadow:0 32px 90px rgba(7,16,24,.28);
+display:flex;
+align-items:center;
+justify-content:center;
+padding:18px;
+}
+.home-video-frame{
+position:relative;
+width:100%;
+height:430px;
+border-radius:26px;
+overflow:hidden;
+background:#050B12;
+border:1px solid rgba(255,255,255,.14);
+box-shadow:0 28px 80px rgba(0,0,0,.28);
+display:flex;
+align-items:center;
+justify-content:center;
+}
+.home-video-frame video{
+width:100%;
+height:100%;
+display:block;
+object-fit:contain;
+object-position:center center;
+background:#050B12;
+}
+.home-video-open{
+position:absolute;
+right:28px;
+bottom:28px;
+z-index:4;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:12px 16px;
+border-radius:999px;
+background:linear-gradient(135deg,#29AAE0,#00A698);
+color:#fff;
+font-weight:800;
+font-size:12px;
+text-decoration:none;
+box-shadow:0 14px 34px rgba(41,170,224,.25);
+white-space:nowrap;
+}
+.home-video-note{
+position:absolute;
+top:18px;
+right:18px;
+z-index:4;
+padding:9px 12px;
+border-radius:999px;
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.16);
+color:#fff;
+font-size:11px;
+font-weight:800;
+letter-spacing:.08em;
+text-transform:uppercase;
+backdrop-filter:blur(8px);
+}
+.mission-top h2{
+font-size:30px!important;
+line-height:1.1!important;
+letter-spacing:-.045em!important;
+}
+.mission-top p{
+font-size:14px!important;
+line-height:1.45!important;
+max-width:650px!important;
+}
+
+
+/* HOMEPAGE_DYNAMIC_STATS_ECOSYSTEM_V1 */
+.stats-enhanced{
+grid-template-columns:repeat(6,1fr)!important;
+gap:12px!important;
+}
+.stat-enhanced{
+position:relative!important;
+overflow:hidden!important;
+min-height:124px!important;
+padding:18px 16px!important;
+background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.08))!important;
+border:1px solid rgba(255,255,255,.22)!important;
+box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 16px 38px rgba(0,0,0,.10)!important;
+transform:translateY(0);
+animation:statLift 7.5s ease-in-out infinite;
+}
+.stat-enhanced:nth-child(2){animation-delay:.35s}.stat-enhanced:nth-child(3){animation-delay:.7s}.stat-enhanced:nth-child(4){animation-delay:1.05s}.stat-enhanced:nth-child(5){animation-delay:1.4s}.stat-enhanced:nth-child(6){animation-delay:1.75s}
+.stat-enhanced:before{
+content:"";
+position:absolute;
+left:16px;
+top:12px;
+width:28px;
+height:3px;
+border-radius:999px;
+background:linear-gradient(90deg,#29AAE0,#00A698,#FF9400);
+opacity:.9;
+}
+.stat-enhanced:after{
+content:"";
+position:absolute;
+inset:-1px;
+background:linear-gradient(110deg,transparent 0%,transparent 38%,rgba(255,255,255,.18) 50%,transparent 62%,transparent 100%);
+transform:translateX(-120%);
+animation:statSweep 6.8s ease-in-out infinite;
+pointer-events:none;
+}
+.stat-enhanced b{
+position:relative;
+z-index:1;
+margin-top:16px!important;
+font-size:34px!important;
+letter-spacing:-.035em!important;
+}
+.stat-enhanced span:last-child{
+position:relative;
+z-index:1;
+font-size:12px!important;
+line-height:1.25!important;
+text-transform:uppercase;
+letter-spacing:.025em;
+}
+@keyframes statSweep{0%,52%{transform:translateX(-120%)}72%,100%{transform:translateX(120%)}}
+@keyframes statLift{0%,100%{transform:translateY(0)}45%{transform:translateY(-3px)}}
+.step{
+position:relative!important;
+overflow:hidden!important;
+transition:transform .42s ease,background .42s ease,border-color .42s ease,box-shadow .42s ease!important;
+}
+.step:before{
+content:"";
+position:absolute;
+inset:0;
+background:radial-gradient(circle at 18% 0%,rgba(255,255,255,.13),transparent 38%);
+opacity:0;
+transition:opacity .42s ease;
+pointer-events:none;
+}
+.step i{
+transition:width .42s ease,box-shadow .42s ease,transform .42s ease!important;
+}
+.step.is-active{
+transform:translateY(-5px);
+background:rgba(255,255,255,.145)!important;
+border-color:rgba(255,255,255,.24)!important;
+box-shadow:0 18px 42px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.12)!important;
+}
+.step.is-active:before{opacity:1}
+.step.is-active i{width:48px;box-shadow:0 0 18px currentColor;transform:translateX(2px)}
+.step:nth-child(1){color:var(--orange)}.step:nth-child(2){color:var(--yellow)}.step:nth-child(3){color:var(--blue)}.step:nth-child(4){color:var(--green)}.step:nth-child(5){color:var(--red)}
+.step b,.step span{color:#fff!important}.step span{color:#D9E1EA!important}
+@media(max-width:1200px){.stats-enhanced{grid-template-columns:repeat(3,1fr)!important}.stat-enhanced{min-height:112px!important}}
+@media(max-width:760px){.stats-enhanced{grid-template-columns:repeat(2,1fr)!important}}
+@media(prefers-reduced-motion:reduce){.stat-enhanced,.stat-enhanced:after{animation:none!important}.step{transition:none!important}}
+
+@media(max-width:1200px){
+.hero{grid-template-columns:1fr!important}
+.promise{grid-template-columns:repeat(2,1fr)!important}
+.home-video-stage{min-height:420px}
+.home-video-frame{height:330px}
+.hero-rotating-wrap{min-width:10ch}
+}
+</style>
+
+
+<style id="homepage-stats-refix-force-v3">
+/* FORCE UPDATE: Structured travel content band */
+.mission .mission-inner{
+  padding-top:32px!important;
+  padding-bottom:32px!important;
+}
+.mission .mission-top{
+  display:block!important;
+  width:100%!important;
+  margin:0 0 26px 0!important;
+}
+.mission .mission-top h2{
+  display:block!important;
+  width:100%!important;
+  font-size:38px!important;
+  line-height:1.05!important;
+  letter-spacing:-.055em!important;
+  margin:0 0 10px 0!important;
+}
+.mission .mission-top p{
+  display:block!important;
+  width:100%!important;
+  max-width:1320px!important;
+  margin:0!important;
+  font-size:18px!important;
+  line-height:1.35!important;
+  color:#E8F6FB!important;
+}
+.mission .stats.stats-enhanced{
+  display:grid!important;
+  grid-template-columns:repeat(6,minmax(0,1fr))!important;
+  gap:14px!important;
+}
+.mission .stat.stat-enhanced{
+  min-height:150px!important;
+  padding:24px 18px 20px!important;
+  border-radius:22px!important;
+}
+.mission .stat.stat-enhanced b{
+  display:block!important;
+  margin:22px 0 12px 0!important;
+  font-size:68px!important;
+  line-height:.86!important;
+  letter-spacing:-.065em!important;
+  font-weight:900!important;
+  color:#fff!important;
+}
+.mission .stat.stat-enhanced b span{
+  display:inline!important;
+  font-size:inherit!important;
+  line-height:inherit!important;
+  color:inherit!important;
+  letter-spacing:inherit!important;
+  font-weight:inherit!important;
+}
+.mission .stat.stat-enhanced > span:last-child{
+  display:block!important;
+  font-size:13px!important;
+  line-height:1.25!important;
+  letter-spacing:.035em!important;
+  text-transform:uppercase!important;
+  color:#E1F1F7!important;
+}
+@media(max-width:1200px){
+  .mission .stats.stats-enhanced{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .mission .stat.stat-enhanced b{font-size:60px!important}
+}
+</style>
+
+</head>
+<body>
+<!-- SMARTVEL_HOMEPAGE_REBALANCED_MARKER -->
+<!-- SMARTVEL_HOMEPAGE_VIDEO_MARKER -->
+<main class="page">
+<header class="header"><a class="smartvel-logo-link" href="https://www.smartvel.com/" target="_blank" rel="noopener noreferrer"><img class="logo" src="smartvel_logo.png" alt="Smartvel logo"></a><div class="header-line"></div></header>
+
+
+<section class="hero">
+<div>
+<div class="kicker">Travel technology & content intelligence</div>
+<h1>AI-powered travel content and solutions for <span class="hero-rotating-wrap"><strong id="hero-rotating-sector">OTA's.</strong><span class="hero-rotating-measure">travel companies.</span></span></h1>
+<p class="lead">We provide structured destination content and travel requirement intelligence through APIs and white-label solutions.</p>
+</div>
+
+<div class="home-video-stage">
+  <div class="home-video-note">Smartvel introduction</div>
+  <div class="home-video-frame">
+    <video autoplay muted loop playsinline controls preload="metadata">
+      <source src="smartvel_homepage_video.mp4?v=home-video-2" type="video/mp4">
+    </video>
+  </div>
+  <a class="home-video-open" href="smartvel_homepage_video.mp4?v=home-video-2" target="_blank" rel="noopener noreferrer">Open full video</a>
+</div>
+
+<div class="promise">
+
+<div class="promise-card"><b>For marketing teams</b><span>Launch destination campaigns, SEO/GEO pages and inspiration experiences without building content operations from scratch.</span></div>
+<div class="promise-card"><b>For digital teams</b><span>Deploy white-label widgets or APIs that fit existing web, mobile, CRM and booking journeys.</span></div>
+<div class="promise-card"><b>For operations teams</b><span>Keep travellers informed with maintained content, changing requirements and support information.</span></div>
+<div class="promise-card"><b>For travellers</b><span>Make discovery, planning and preparation easier, clearer and more useful before and during the trip.</span></div>
+
+</div>
+</section>
+
+<section class="mission">
+<div class="mission-inner">
+<div class="mission-top"><h2>Structured travel content, ready to deploy.</h2><p>Smartvel combines verified content, live events, POIs, restaurants, travel requirements and white-label technology in one deployable layer.</p></div>
+<div class="stats stats-enhanced" aria-label="Smartvel content scale">
+<div class="stat stat-enhanced"><b><span class="count-up" data-target="16" data-suffix="K+">0</span></b><span>events published</span></div>
+<div class="stat stat-enhanced"><b><span class="count-up" data-target="12" data-suffix="K+">0</span></b><span>points of interest</span></div>
+<div class="stat stat-enhanced"><b><span class="count-up" data-target="16" data-suffix="K+">0</span></b><span>restaurants</span></div>
+<div class="stat stat-enhanced"><b><span class="count-up" data-target="900" data-suffix="+">0</span></b><span>sources of data</span></div>
+<div class="stat stat-enhanced"><b><span class="count-up" data-target="150" data-suffix="+">0</span></b><span>customisable categories</span></div>
+<div class="stat stat-enhanced"><b><span class="count-up" data-target="20" data-suffix="+">0</span></b><span>languages available</span></div>
+</div>
+</div>
+</section>
+
+<section class="journey">
+<div class="journey-title"><h2>One ecosystem, from inspiration to arrival.</h2></div>
+<div class="steps">
+<div class="step"><i></i><b>Inspire</b><span>Explore & Go, TravelSEO and destination content create demand.</span></div>
+<div class="step"><i></i><b>Plan</b><span>Trip Planner, POIs, restaurants, events and itineraries keep users engaged.</span></div>
+<div class="step"><i></i><b>Convert</b><span>Promos, CTAs and partner integrations turn intent into action.</span></div>
+<div class="step"><i></i><b>Prepare</b><span>EntryDocs and TravelAble reduce friction before departure.</span></div>
+<div class="step"><i></i><b>Experience</b><span>Relevant content supports travellers during and after the trip.</span></div>
+</div>
+</section>
+
+<section class="bottom-strip">
+<div class="value-card"><b>White-label</b><span>Widgets adapted to client brand, fonts, colours and digital journey.</span></div>
+<div class="value-card"><b>Widget or API</b><span>Ready-to-use components or Smartvel data inside your own experience.</span></div>
+<div class="value-card"><b>Managed updates</b><span>Content, events and travel information maintained by Smartvel.</span></div>
+<div class="value-card"><b>SEO + GEO</b><span>Structured destination content ready for Google and AI-driven search.</span></div>
+</section>
+
+
+<section class="clean-logo-ticker" aria-label="Smartvel client logos">
+  <div class="clean-logo-title">Trusted across airlines, OTA's, hotels, cruises, TMCs, insurance and travel brands</div>
+  <div class="clean-logo-window">
+    <div class="clean-logo-track">
+      <div class="clean-logo"><img src="logo_avianca.png" alt=""></div>
+<div class="clean-logo"><img src="logo_finnair.png" alt=""></div>
+<div class="clean-logo"><img src="logo_iberia.png" alt=""></div>
+<div class="clean-logo"><img src="logo_latam.png" alt=""></div>
+<div class="clean-logo"><img src="logo_saudia.png" alt=""></div>
+<div class="clean-logo"><img src="logo_air_niugini.png" alt=""></div>
+<div class="clean-logo"><img src="logo_world2fly.png" alt=""></div>
+<div class="clean-logo"><img src="logo_copa.png" alt=""></div>
+<div class="clean-logo"><img src="logo_cocha.png" alt=""></div>
+<div class="clean-logo"><img src="logo_flowo.png" alt=""></div>
+<div class="clean-logo"><img src="logo_ubico.png" alt=""></div>
+<div class="clean-logo"><img src="logo_intermundial.png" alt=""></div>
+<div class="clean-logo"><img src="logo_ponant.png" alt=""></div>
+<div class="clean-logo"><img src="logo_hotel_cristina.png" alt=""></div>
+<div class="clean-logo"><img src="logo_praktik_hotels.png" alt=""></div>
+<div class="clean-logo"><img src="logo_monument.png" alt=""></div>
+<div class="clean-logo"><img src="logo_accor.png" alt=""></div>
+<div class="clean-logo"><img src="logo_roommate.png" alt=""></div>
+<div class="clean-logo"><img src="logo_condes.png" alt=""></div>
+<div class="clean-logo"><img src="logo_palladium.png" alt=""></div>
+<div class="clean-logo"><img src="logo_tap.png" alt=""></div>
+<div class="clean-logo"><img src="logo_dorms.png" alt=""></div>
+<div class="clean-logo"><img src="logo_webjet.png" alt=""></div>
+<div class="clean-logo"><img src="logo_stayforlong.png" alt=""></div>
+<div class="clean-logo"><img src="logo_trivago_deals.png" alt=""></div>
+<div class="clean-logo"><img src="logo_avianca.png" alt=""></div>
+<div class="clean-logo"><img src="logo_finnair.png" alt=""></div>
+<div class="clean-logo"><img src="logo_iberia.png" alt=""></div>
+<div class="clean-logo"><img src="logo_latam.png" alt=""></div>
+<div class="clean-logo"><img src="logo_saudia.png" alt=""></div>
+<div class="clean-logo"><img src="logo_air_niugini.png" alt=""></div>
+<div class="clean-logo"><img src="logo_world2fly.png" alt=""></div>
+<div class="clean-logo"><img src="logo_copa.png" alt=""></div>
+<div class="clean-logo"><img src="logo_cocha.png" alt=""></div>
+<div class="clean-logo"><img src="logo_flowo.png" alt=""></div>
+<div class="clean-logo"><img src="logo_ubico.png" alt=""></div>
+<div class="clean-logo"><img src="logo_intermundial.png" alt=""></div>
+<div class="clean-logo"><img src="logo_ponant.png" alt=""></div>
+<div class="clean-logo"><img src="logo_hotel_cristina.png" alt=""></div>
+<div class="clean-logo"><img src="logo_praktik_hotels.png" alt=""></div>
+<div class="clean-logo"><img src="logo_monument.png" alt=""></div>
+<div class="clean-logo"><img src="logo_accor.png" alt=""></div>
+<div class="clean-logo"><img src="logo_roommate.png" alt=""></div>
+<div class="clean-logo"><img src="logo_condes.png" alt=""></div>
+<div class="clean-logo"><img src="logo_palladium.png" alt=""></div>
+<div class="clean-logo"><img src="logo_tap.png" alt=""></div>
+<div class="clean-logo"><img src="logo_dorms.png" alt=""></div>
+<div class="clean-logo"><img src="logo_webjet.png" alt=""></div>
+<div class="clean-logo"><img src="logo_stayforlong.png" alt=""></div>
+<div class="clean-logo"><img src="logo_trivago_deals.png" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<div class="footnote">Figures shown are based on Smartvel corporate/product material and should be used as general company-scale indicators unless client-specific metrics are confirmed.</div>
+</main>
+
+<script>
+(function(){
+  const sequence = [
+    { text: "OTA's.", hold: 850 },
+    { text: "hotels.", hold: 850 },
+    { text: "airlines.", hold: 850 },
+    { text: "airports.", hold: 850 },
+    { text: "travel agencies.", hold: 850 },
+    { text: "rental cars.", hold: 850 },
+    { text: "insurance.", hold: 850 },
+    { text: "finance.", hold: 850 },
+    { text: "cruises.", hold: 850 },
+    { text: "tour operators.", hold: 850 },
+    { text: "travel companies.", hold: 1200 }
+  ];
+  const wrap = document.querySelector('.hero-rotating-wrap');
+  const target = document.getElementById('hero-rotating-sector');
+  const measure = document.querySelector('.hero-rotating-measure');
+  if(!wrap || !target || !measure) return;
+  const longest = sequence.reduce((a,b)=> a.length >= b.text.length ? a : b.text, sequence[0].text);
+  measure.textContent = longest;
+  let index = 0;
+  let timer = null;
+  function queueNext(delay){
+    if(timer) window.clearTimeout(timer);
+    timer = window.setTimeout(swapWord, delay);
+  }
+  function swapWord(){
+    wrap.classList.add('is-switching');
+    window.setTimeout(function(){
+      index = (index + 1) % sequence.length;
+      target.textContent = sequence[index].text;
+      wrap.classList.remove('is-switching');
+      queueNext(sequence[index].hold);
+    }, 220);
+  }
+  queueNext(sequence[0].hold);
+})();
+</script>
+
+<script>
+(function(){
+  const counters = Array.from(document.querySelectorAll('.count-up'));
+  if(!counters.length) return;
+  let done = false;
+  function animateCounter(el){
+    const target = Number(el.dataset.target || 0);
+    const suffix = el.dataset.suffix || '';
+    const duration = target >= 900 ? 1450 : 1250;
+    const start = performance.now();
+    function tick(now){
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const value = Math.round(target * eased);
+      el.textContent = value.toLocaleString('en-GB') + suffix;
+      if(progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+  function start(){
+    if(done) return;
+    done = true;
+    counters.forEach((el, index) => window.setTimeout(() => animateCounter(el), index * 90));
+  }
+  if('IntersectionObserver' in window){
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{ if(entry.isIntersecting) start(); });
+    }, { threshold:.28 });
+    const mission = document.querySelector('.mission');
+    if(mission) observer.observe(mission); else start();
+  } else {
+    start();
+  }
+})();
+(function(){
+  const steps = Array.from(document.querySelectorAll('.step'));
+  if(!steps.length) return;
+  let active = 0;
+  function setActive(){
+    steps.forEach((step, index)=>step.classList.toggle('is-active', index === active));
+    active = (active + 1) % steps.length;
+  }
+  setActive();
+  window.setInterval(setActive, 1450);
+})();
+</script>
+
+</body>
+</html>
