@@ -1,0 +1,5 @@
+avuxi visual replaced: True
+uses real Avuxi Barcelona screenshots from user upload
+sequence: standard map -> sightseeing -> eating -> shopping -> nightlife
+removed overlay caption box
+missing refs: None

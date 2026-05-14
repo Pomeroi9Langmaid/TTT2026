@@ -64,7 +64,7 @@ h1 strong{color:var(--green)}
 <style>.smartvel-logo-link{display:inline-flex;align-items:center;text-decoration:none}.smartvel-logo-link img{display:block}</style>
 
 <style id="avuxi-heatmap-carousel-css">
-.avuxi-map-carousel{
+.avuxi-real-map-sequence{
 position:relative!important;
 height:575px!important;
 border-radius:28px!important;
@@ -73,25 +73,25 @@ background:#F7FBFE!important;
 border:1px solid rgba(222,231,239,.94)!important;
 box-shadow:0 28px 80px rgba(10,35,60,.12)!important;
 }
-.avuxi-map-carousel .av-slide{
+.avuxi-real-map-sequence .av-slide{
 position:absolute!important;
 inset:0!important;
 opacity:0;
-animation:avuxiFade 30s infinite;
+animation:avuxiRealFade 35s infinite;
 }
-.avuxi-map-carousel .av-slide:nth-child(1){animation-delay:0s}
-.avuxi-map-carousel .av-slide:nth-child(2){animation-delay:6s}
-.avuxi-map-carousel .av-slide:nth-child(3){animation-delay:12s}
-.avuxi-map-carousel .av-slide:nth-child(4){animation-delay:18s}
-.avuxi-map-carousel .av-slide:nth-child(5){animation-delay:24s}
-.avuxi-map-carousel img{
+.avuxi-real-map-sequence .av-slide:nth-child(1){animation-delay:0s}
+.avuxi-real-map-sequence .av-slide:nth-child(2){animation-delay:7s}
+.avuxi-real-map-sequence .av-slide:nth-child(3){animation-delay:14s}
+.avuxi-real-map-sequence .av-slide:nth-child(4){animation-delay:21s}
+.avuxi-real-map-sequence .av-slide:nth-child(5){animation-delay:28s}
+.avuxi-real-map-sequence img{
 width:100%!important;
 height:100%!important;
 object-fit:cover!important;
 object-position:center center!important;
 display:block!important;
 }
-.avuxi-map-progress{
+.avuxi-real-map-progress{
 position:absolute!important;
 left:34px!important;
 right:34px!important;
@@ -102,23 +102,23 @@ border-radius:999px!important;
 z-index:8!important;
 overflow:hidden!important;
 }
-.avuxi-map-progress:after{
+.avuxi-real-map-progress:after{
 content:"";
 display:block;
 height:100%;
 width:20%;
 background:linear-gradient(90deg,#00A698,#29AAE0);
 border-radius:999px;
-animation:avuxiProgress 30s steps(5) infinite;
+animation:avuxiRealProgress 35s steps(5) infinite;
 }
-@keyframes avuxiFade{
-0%{opacity:0;transform:scale(1.006)}
+@keyframes avuxiRealFade{
+0%{opacity:0;transform:scale(1.002)}
 4%{opacity:1;transform:scale(1)}
 17%{opacity:1;transform:scale(1)}
-21%{opacity:0;transform:scale(1.004)}
+21%{opacity:0;transform:scale(1.002)}
 100%{opacity:0}
 }
-@keyframes avuxiProgress{
+@keyframes avuxiRealProgress{
 0%{transform:translateX(0)}
 100%{transform:translateX(500%)}
 }
@@ -126,7 +126,7 @@ animation:avuxiProgress 30s steps(5) infinite;
 
 </head>
 <body>
-<!-- AVUXI_HEATMAP_CAROUSEL_MARKER -->
+<!-- AVUXI_REAL_MAP_SEQUENCE_MARKER -->
 <main class="page">
 <header class="header">
 <a class="smartvel-logo-link" href="https://www.smartvel.com/" target="_blank" rel="noopener noreferrer"><img class="logo" src="smartvel_logo.png" alt="Smartvel logo"></a>
@@ -149,13 +149,13 @@ animation:avuxiProgress 30s steps(5) infinite;
 
 <div class="visual">
 
-<div class="avuxi-map-carousel">
-  <div class="av-slide"><img src="avuxi_map_1_standard.png" alt="Standard Barcelona hotel map"></div>
-  <div class="av-slide"><img src="avuxi_map_2_sightseeing.png" alt="Avuxi sightseeing heatmap overlay"></div>
-  <div class="av-slide"><img src="avuxi_map_3_eating.png" alt="Avuxi popular eating heatmap overlay"></div>
-  <div class="av-slide"><img src="avuxi_map_4_shopping.png" alt="Avuxi shopping heatmap overlay"></div>
-  <div class="av-slide"><img src="avuxi_map_5_nightlife.png" alt="Avuxi nightlife heatmap overlay"></div>
-  <div class="avuxi-map-progress"></div>
+<div class="avuxi-real-map-sequence">
+  <div class="av-slide"><img src="avuxi_sequence_1_standard.png" alt="Standard accommodation map with hotel location only"></div>
+  <div class="av-slide"><img src="avuxi_sequence_2_sightseeing.png" alt="Avuxi sightseeing heatmap layer"></div>
+  <div class="av-slide"><img src="avuxi_sequence_3_eating.png" alt="Avuxi popular eating heatmap layer"></div>
+  <div class="av-slide"><img src="avuxi_sequence_4_shopping.png" alt="Avuxi shopping heatmap layer"></div>
+  <div class="av-slide"><img src="avuxi_sequence_5_nightlife.png" alt="Avuxi nightlife heatmap layer"></div>
+  <div class="avuxi-real-map-progress"></div>
 </div>
 <div class="micro-grid">
 <div class="micro"><b>Popular areas</b><span>Show which parts of a city are busiest or most visited.</span></div>
