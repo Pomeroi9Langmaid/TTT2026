@@ -66,9 +66,6 @@ h1 strong{color:var(--green)}
 
 
 
-
-
-
 <style id="avuxi-heatmap-carousel-css">
 .visual-main{
   position:relative!important;
@@ -83,14 +80,15 @@ h1 strong{color:var(--green)}
 .visual-main > .overlay,
 .visual-main > .avuxi-real-map-sequence,
 .visual-main > .avuxi-map-carousel,
-.visual-main > .avuxi-click-film{display:none!important;}
-.avuxi-v2-film{
+.visual-main > .avuxi-click-film,
+.visual-main > .avuxi-v2-film{display:none!important;}
+.avuxi-final-film{
   position:absolute!important;
   inset:0!important;
   background:#F7FBFE!important;
   overflow:hidden!important;
 }
-.avuxi-v2-film .av-frame{
+.avuxi-final-film .av-frame{
   position:absolute!important;
   inset:0!important;
   opacity:0;
@@ -98,14 +96,14 @@ h1 strong{color:var(--green)}
   align-items:center!important;
   justify-content:center!important;
   background:#F7FBFE!important;
-  animation:avuxiV2Film 18s infinite;
+  animation:avuxiFinalFilm 18s infinite;
 }
-.avuxi-v2-film .av-frame:nth-child(1){animation-delay:0s}
-.avuxi-v2-film .av-frame:nth-child(2){animation-delay:3.6s}
-.avuxi-v2-film .av-frame:nth-child(3){animation-delay:7.2s}
-.avuxi-v2-film .av-frame:nth-child(4){animation-delay:10.8s}
-.avuxi-v2-film .av-frame:nth-child(5){animation-delay:14.4s}
-.avuxi-v2-film img{
+.avuxi-final-film .av-frame:nth-child(1){animation-delay:0s}
+.avuxi-final-film .av-frame:nth-child(2){animation-delay:3.6s}
+.avuxi-final-film .av-frame:nth-child(3){animation-delay:7.2s}
+.avuxi-final-film .av-frame:nth-child(4){animation-delay:10.8s}
+.avuxi-final-film .av-frame:nth-child(5){animation-delay:14.4s}
+.avuxi-final-film img{
   width:100%!important;
   height:100%!important;
   object-fit:contain!important;
@@ -113,7 +111,7 @@ h1 strong{color:var(--green)}
   display:block!important;
   background:#F7FBFE!important;
 }
-.avuxi-v2-film .av-progress{
+.avuxi-final-film .av-progress{
   position:absolute!important;
   left:28px!important;
   right:28px!important;
@@ -124,23 +122,23 @@ h1 strong{color:var(--green)}
   overflow:hidden!important;
   z-index:6!important;
 }
-.avuxi-v2-film .av-progress:after{
+.avuxi-final-film .av-progress:after{
   content:"";
   display:block;
   width:20%;
   height:100%;
   border-radius:999px;
   background:linear-gradient(90deg,#00A698,#29AAE0);
-  animation:avuxiV2Progress 18s steps(5) infinite;
+  animation:avuxiFinalProgress 18s steps(5) infinite;
 }
-@keyframes avuxiV2Film{
+@keyframes avuxiFinalFilm{
   0%{opacity:0}
   4%{opacity:1}
   17%{opacity:1}
   21%{opacity:0}
   100%{opacity:0}
 }
-@keyframes avuxiV2Progress{
+@keyframes avuxiFinalProgress{
   0%{transform:translateX(0)}
   100%{transform:translateX(500%)}
 }
@@ -148,8 +146,7 @@ h1 strong{color:var(--green)}
 
 </head>
 <body>
-<!-- AVUXI_V2_OLD_MAP_FIRST_MARKER -->
-<!-- AVUXI_FINAL_CLICK_SEQUENCE_MARKER -->
+<!-- AVUXI_TRUE_FINAL_STANDARD_MAP_FIRST_MARKER -->
 <!-- AVUXI_FULL_VISUAL_REPLACE_MARKER -->
 <main class="page">
 <header class="header">
@@ -174,12 +171,12 @@ h1 strong{color:var(--green)}
 <div class="visual">
 <div class="visual-main">
 
-<div class="avuxi-v2-film">
-  <div class="av-frame"><img src="avuxi_v2_scene_1_old_map.png" alt="Old-style accommodation map with price and location only"></div>
-  <div class="av-frame"><img src="avuxi_v2_scene_2_sightseeing.png" alt="Avuxi sightseeing heatmap layer"></div>
-  <div class="av-frame"><img src="avuxi_v2_scene_3_eating.png" alt="Avuxi popular eating heatmap layer"></div>
-  <div class="av-frame"><img src="avuxi_v2_scene_4_shopping.png" alt="Avuxi shopping heatmap layer"></div>
-  <div class="av-frame"><img src="avuxi_v2_scene_5_nightlife.png" alt="Avuxi nightlife heatmap layer"></div>
+<div class="avuxi-final-film">
+  <div class="av-frame"><img src="avuxi_start_standard_map.jpg?v=final1" alt="Standard accommodation map showing price and location only"></div>
+  <div class="av-frame"><img src="avuxi_layer_sightseeing.jpg?v=final1" alt="Avuxi sightseeing heatmap layer"></div>
+  <div class="av-frame"><img src="avuxi_layer_eating.jpg?v=final1" alt="Avuxi popular eating heatmap layer"></div>
+  <div class="av-frame"><img src="avuxi_layer_shopping.jpg?v=final1" alt="Avuxi shopping heatmap layer"></div>
+  <div class="av-frame"><img src="avuxi_layer_nightlife.jpg?v=final1" alt="Avuxi nightlife heatmap layer"></div>
   <div class="av-progress"></div>
 </div>
 

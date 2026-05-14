@@ -1,0 +1,7 @@
+This package DOES include avuxi.html.
+First frame is forced to avuxi_start_standard_map.jpg.
+The sequence always starts with old-style map on page load.
+Then Avuxi layers follow: sightseeing, eating, shopping, nightlife.
+Cycle speed: 18 seconds total / 3.6 seconds per frame.
+Object-fit: contain, no cropping.
+Missing refs: ['smartvel_logo.png']
