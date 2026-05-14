@@ -1,0 +1,8 @@
+FIXED SOURCE ERROR.
+The previous bad video used Screenshot 2026-05-14 at 11.25.56.png, which is a screenshot of the Avuxi page.
+This video uses Screenshot 2026-05-14 at 11.24.56.png as frame 1, which is the raw Barcelona map.
+Frame 1: standard accommodation map with hotel pin and prices.
+Then: exact Avuxi layer screenshots — sightseeing, eating, shopping, nightlife.
+No page screenshot is used in the MP4.
+MP4 size MB: 0.3
+Raw map dimensions: 1542x960
