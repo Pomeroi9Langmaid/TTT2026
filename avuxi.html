@@ -63,74 +63,80 @@ h1 strong{color:var(--green)}
 </style>
 <style>.smartvel-logo-link{display:inline-flex;align-items:center;text-decoration:none}.smartvel-logo-link img{display:block}</style>
 
+
+
+
 <style id="avuxi-heatmap-carousel-css">
 .visual-main{
+  position:relative!important;
   height:405px!important;
   border-radius:26px!important;
   overflow:hidden!important;
   border:1px solid rgba(222,231,239,.95)!important;
-  background:#f7fbfe!important;
-  position:relative!important;
+  background:#F7FBFE!important;
 }
-.visual-main:after{display:none!important}
-.visual-main > img, .visual-main > .overlay{display:none!important}
-.avuxi-real-sequence{
+.visual-main:after{display:none!important;}
+.visual-main > img,
+.visual-main > .overlay,
+.visual-main > .avuxi-real-map-sequence,
+.visual-main > .avuxi-map-carousel{display:none!important;}
+.avuxi-click-film{
   position:absolute!important;
   inset:0!important;
-  background:#f7fbfe!important;
+  background:#F7FBFE!important;
   overflow:hidden!important;
 }
-.avuxi-real-sequence .av-slide{
+.avuxi-click-film .av-frame{
   position:absolute!important;
   inset:0!important;
   opacity:0;
-  animation:avuxiSequenceFade 35s infinite;
+  animation:avuxiClickFilm 20s infinite;
   display:flex!important;
   align-items:center!important;
   justify-content:center!important;
-  background:#f7fbfe!important;
+  background:#F7FBFE!important;
 }
-.avuxi-real-sequence .av-slide:nth-child(1){animation-delay:0s}
-.avuxi-real-sequence .av-slide:nth-child(2){animation-delay:7s}
-.avuxi-real-sequence .av-slide:nth-child(3){animation-delay:14s}
-.avuxi-real-sequence .av-slide:nth-child(4){animation-delay:21s}
-.avuxi-real-sequence .av-slide:nth-child(5){animation-delay:28s}
-.avuxi-real-sequence img{
+.avuxi-click-film .av-frame:nth-child(1){animation-delay:0s}
+.avuxi-click-film .av-frame:nth-child(2){animation-delay:4s}
+.avuxi-click-film .av-frame:nth-child(3){animation-delay:8s}
+.avuxi-click-film .av-frame:nth-child(4){animation-delay:12s}
+.avuxi-click-film .av-frame:nth-child(5){animation-delay:16s}
+.avuxi-click-film img{
   width:100%!important;
   height:100%!important;
   object-fit:contain!important;
   object-position:center center!important;
   display:block!important;
-  background:#f7fbfe!important;
+  background:#F7FBFE!important;
 }
-.avuxi-real-sequence .progress{
+.avuxi-click-film .av-progress{
   position:absolute!important;
-  left:32px!important;
-  right:32px!important;
-  bottom:18px!important;
+  left:28px!important;
+  right:28px!important;
+  bottom:16px!important;
   height:3px!important;
   border-radius:999px!important;
   background:rgba(0,166,152,.16)!important;
-  z-index:5!important;
   overflow:hidden!important;
+  z-index:6!important;
 }
-.avuxi-real-sequence .progress:after{
+.avuxi-click-film .av-progress:after{
   content:"";
   display:block;
-  height:100%;
   width:20%;
+  height:100%;
   border-radius:999px;
   background:linear-gradient(90deg,#00A698,#29AAE0);
-  animation:avuxiSequenceProgress 35s steps(5) infinite;
+  animation:avuxiClickProgress 20s steps(5) infinite;
 }
-@keyframes avuxiSequenceFade{
+@keyframes avuxiClickFilm{
   0%{opacity:0}
-  4%{opacity:1}
+  5%{opacity:1}
   17%{opacity:1}
-  21%{opacity:0}
+  22%{opacity:0}
   100%{opacity:0}
 }
-@keyframes avuxiSequenceProgress{
+@keyframes avuxiClickProgress{
   0%{transform:translateX(0)}
   100%{transform:translateX(500%)}
 }
@@ -138,6 +144,7 @@ h1 strong{color:var(--green)}
 
 </head>
 <body>
+<!-- AVUXI_FINAL_CLICK_SEQUENCE_MARKER -->
 <!-- AVUXI_FULL_VISUAL_REPLACE_MARKER -->
 <main class="page">
 <header class="header">
@@ -162,13 +169,13 @@ h1 strong{color:var(--green)}
 <div class="visual">
 <div class="visual-main">
 
-<div class="avuxi-real-sequence">
-  <div class="av-slide"><img src="avuxi_real_standard.png" alt="Standard accommodation map showing hotel location and price only"></div>
-  <div class="av-slide"><img src="avuxi_real_sightseeing.png" alt="Avuxi popular sightseeing layer"></div>
-  <div class="av-slide"><img src="avuxi_real_eating.png" alt="Avuxi popular eating layer"></div>
-  <div class="av-slide"><img src="avuxi_real_shopping.png" alt="Avuxi popular shopping layer"></div>
-  <div class="av-slide"><img src="avuxi_real_nightlife.png" alt="Avuxi nightlife layer"></div>
-  <div class="progress"></div>
+<div class="avuxi-click-film">
+  <div class="av-frame"><img src="avuxi_scene_1_standard_map.png" alt="Standard accommodation map showing price and location only"></div>
+  <div class="av-frame"><img src="avuxi_scene_2_sightseeing.png" alt="Avuxi popular sightseeing heatmap"></div>
+  <div class="av-frame"><img src="avuxi_scene_3_eating.png" alt="Avuxi popular eating heatmap"></div>
+  <div class="av-frame"><img src="avuxi_scene_4_shopping.png" alt="Avuxi shopping heatmap"></div>
+  <div class="av-frame"><img src="avuxi_scene_5_nightlife.png" alt="Avuxi nightlife heatmap"></div>
+  <div class="av-progress"></div>
 </div>
 
 </div>
