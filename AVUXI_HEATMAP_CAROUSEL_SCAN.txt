@@ -1,0 +1,5 @@
+avuxi visual replaced: True
+removed overlay caption: Location intelligence travellers instantly understand
+created standard Barcelona hotel map + four Avuxi heatmap overlays
+categories: sightseeing, popular eating, shopping, nightlife
+missing refs: None
