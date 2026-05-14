@@ -63,8 +63,30 @@ h1 strong{color:var(--green)}
 @media(max-width:1100px){.page{padding:28px 22px}.hero,.geo-inner,.bottom-strip{grid-template-columns:1fr}h1{font-size:52px}.proof-row{grid-template-columns:1fr 1fr}}
 </style>
 <style>.smartvel-logo-link{display:inline-flex;align-items:center;text-decoration:none}.smartvel-logo-link img{display:block}</style>
+
+<style id="travelseo-hero-video-css">
+.visual-main.travel-seo-video-box{
+  background:#ffffff!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.visual-main.travel-seo-video-box:after{
+  display:none!important;
+}
+.travel-seo-hero-video{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  display:block!important;
+  background:#ffffff!important;
+}
+</style>
+
 </head>
 <body>
+<!-- TRAVELSEO_HERO_VIDEO_MARKER -->
 <main class="page">
 <header class="header">
   <a class="smartvel-logo-link" href="https://www.smartvel.com/" target="_blank" rel="noopener noreferrer"><img class="logo" src="smartvel_logo.png" alt="Smartvel logo"></a>
@@ -86,9 +108,15 @@ h1 strong{color:var(--green)}
   </div>
 
   <div class="visual">
-    <div class="visual-main">
-      <img src="travelseo.png" alt="TravelSEO product visual">
-      <div class="overlay"><b>Not a static destination page.</b><span>A scalable content engine designed to attract search traffic and keep travellers engaged once they arrive.</span></div>
+    <div class="visual-main travel-seo-video-box">
+      <video class="travel-seo-hero-video"
+             src="travelseo_hero_video.mp4?v=hero1"
+             poster="travelseo_hero_poster.jpg?v=hero1"
+             autoplay
+             muted
+             loop
+             playsinline
+             preload="auto"></video>
     </div>
     <div class="micro-grid">
       <div class="micro"><b>Keywords</b><span>Built around client markets, routes and SEO priorities.</span></div>

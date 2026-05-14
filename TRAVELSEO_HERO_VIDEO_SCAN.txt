@@ -1,0 +1,9 @@
+TravelSEO hero video update.
+Replaced static travelseo.png hero visual with uploaded MP4.
+No cropping: video uses object-fit: contain.
+No distortion: original video aspect ratio preserved.
+No dark overlay on top of video.
+Replacement count: 1
+Video streams: [(1022, 720, 'video'), (None, None, 'audio')]
+Video size MB: 1.28
+Missing refs in package (expected if already in repo): ['smartvel_logo.png', 'tripplanner.png']
