@@ -1,0 +1,5 @@
+Cleaned actual EntryDocs MP4 files, not a new unused PNG.
+entrydocs_hero_video.mp4 overwritten with border-cleaned video.
+entrydocs_hero_video_alt.mp4 overwritten with border-cleaned video.
+entrydocs.html cache-busted to v=borderfix2.
+missing refs: None
