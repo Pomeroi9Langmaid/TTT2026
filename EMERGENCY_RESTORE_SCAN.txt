@@ -1,0 +1,8 @@
+Emergency restore package.
+Restores index.html from last known-good homepage-video build.
+Includes Avuxi MP4/poster assets only.
+Does not patch the main journey DOM.
+index.html size: 27410
+index has html tag: True
+index has body tag: True
+index mentions Smartvel: True
