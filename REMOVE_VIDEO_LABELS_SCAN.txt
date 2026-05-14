@@ -1,0 +1,2 @@
+exploreandgo.html: {'label_text_removed': True, 'video_still_present': True, 'modified': True}
+tripplanner.html: {'label_text_removed': True, 'video_still_present': True, 'modified': True}
