@@ -565,29 +565,22 @@ border-color:rgba(255,255,255,.22)!important;
 }
 </style>
 
-<style id="avuxi-final-index-patch-css">
-.avuxi-final-film{
-  position:absolute!important;
-  inset:0!important;
-  background:#F7FBFE!important;
+
+
+
+<style id="avuxi-mp4-hero-css">
+.visual-main{
+  position:relative!important;
+  height:405px!important;
+  border-radius:26px!important;
   overflow:hidden!important;
+  border:1px solid rgba(222,231,239,.95)!important;
+  background:#F7FBFE!important;
 }
-.avuxi-final-film .av-frame{
+.visual-main:after{display:none!important;}
+.avuxi-video-hero{
   position:absolute!important;
   inset:0!important;
-  opacity:0;
-  display:flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  background:#F7FBFE!important;
-  animation:avuxiFinalFilm 18s infinite;
-}
-.avuxi-final-film .av-frame:nth-child(1){animation-delay:0s}
-.avuxi-final-film .av-frame:nth-child(2){animation-delay:3.6s}
-.avuxi-final-film .av-frame:nth-child(3){animation-delay:7.2s}
-.avuxi-final-film .av-frame:nth-child(4){animation-delay:10.8s}
-.avuxi-final-film .av-frame:nth-child(5){animation-delay:14.4s}
-.avuxi-final-film img{
   width:100%!important;
   height:100%!important;
   object-fit:contain!important;
@@ -595,41 +588,11 @@ border-color:rgba(255,255,255,.22)!important;
   display:block!important;
   background:#F7FBFE!important;
 }
-.avuxi-final-film .av-progress{
-  position:absolute!important;
-  left:28px!important;
-  right:28px!important;
-  bottom:16px!important;
-  height:3px!important;
-  border-radius:999px!important;
-  background:rgba(0,166,152,.16)!important;
-  overflow:hidden!important;
-  z-index:6!important;
-}
-.avuxi-final-film .av-progress:after{
-  content:"";
-  display:block;
-  width:20%;
-  height:100%;
-  border-radius:999px;
-  background:linear-gradient(90deg,#00A698,#29AAE0);
-  animation:avuxiFinalProgress 18s steps(5) infinite;
-}
-@keyframes avuxiFinalFilm{
-  0%{opacity:0}
-  4%{opacity:1}
-  17%{opacity:1}
-  21%{opacity:0}
-  100%{opacity:0}
-}
-@keyframes avuxiFinalProgress{
-  0%{transform:translateX(0)}
-  100%{transform:translateX(500%)}
-}
 </style>
 
 </head>
 <body>
+<!-- AVUXI_MP4_HERO_FINAL_MARKER -->
 <!-- AVUXI_INDEX_TRUE_FINAL_MARKER -->
 
 <div class='intro'><div class='intro-inner'><img src='smartvel_logo.png'><h1>Powering the<br>traveller journey.</h1><p>Toronto Travel Tech interactive showcase</p><div class='intro-sub'>A guided journey through Smartvel’s travel technology ecosystem</div></div></div>

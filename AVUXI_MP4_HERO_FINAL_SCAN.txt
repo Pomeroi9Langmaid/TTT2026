@@ -1,0 +1,6 @@
+Avuxi final fix uses one MP4, not CSS image carousel.
+First frame/poster is always old-style accommodation map.
+Video then shows Avuxi layers: sightseeing, eating, shopping, nightlife.
+Loop restarts with old map.
+Patched files: {'index.html': True, 'avuxi.html': True}
+MP4 size MB: 0.49
