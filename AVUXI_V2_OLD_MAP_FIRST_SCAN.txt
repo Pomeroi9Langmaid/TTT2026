@@ -1,0 +1,6 @@
+first_frame_old_map: True
+old_blue_cover_removed: True
+duration_seconds: 18
+object_fit: contain
+old_click_film_removed: False
+missing_refs: ['smartvel_logo.png']
