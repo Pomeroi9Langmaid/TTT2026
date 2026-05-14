@@ -1,0 +1,1 @@
+Updated homepage hero rotating blue sector word. Keeps the existing size, font and styling. The blue word now cycles quickly through OTA's, hotels, airlines, airports, travel agencies, rental cars, insurance, finance, cruises and tour operators, then lands on travel companies for about 1.2 seconds before looping again.
