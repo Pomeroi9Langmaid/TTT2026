@@ -351,6 +351,55 @@ box-shadow:0 18px 42px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.12)!impor
 }
 </style>
 
+
+<style id="homepage-stats-box-refocus-v2">
+/* Refocus the structured content band: title + one-line copy + larger numbers */
+.mission-top{
+  display:block!important;
+  margin-bottom:28px!important;
+}
+.mission-top h2{
+  font-size:34px!important;
+  line-height:1.08!important;
+  margin:0 0 10px 0!important;
+}
+.mission-top p{
+  max-width:1280px!important;
+  width:100%!important;
+  font-size:17px!important;
+  line-height:1.35!important;
+  margin:0!important;
+  color:#E6F5FB!important;
+}
+.stats-enhanced{
+  gap:14px!important;
+}
+.stat-enhanced{
+  min-height:142px!important;
+  padding:22px 18px 18px!important;
+}
+.stat-enhanced:before{
+  top:14px!important;
+}
+.stat-enhanced b{
+  margin-top:18px!important;
+  margin-bottom:11px!important;
+  font-size:clamp(52px,3.75vw,74px)!important;
+  line-height:.9!important;
+  letter-spacing:-.06em!important;
+  font-weight:900!important;
+}
+.stat-enhanced span:last-child{
+  font-size:13px!important;
+  line-height:1.22!important;
+  letter-spacing:.035em!important;
+}
+@media(max-width:1200px){
+  .stats-enhanced{grid-template-columns:repeat(3,1fr)!important}
+  .stat-enhanced b{font-size:56px!important}
+}
+</style>
+
 </head>
 <body>
 <!-- SMARTVEL_HOMEPAGE_REBALANCED_MARKER -->
@@ -388,7 +437,7 @@ box-shadow:0 18px 42px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.12)!impor
 
 <section class="mission">
 <div class="mission-inner">
-<div class="mission-top"><h2>Structured travel content, ready to deploy.</h2><p>Smartvel combines verified destination content, live event data, POIs, restaurants, travel requirements and white-label technology into one deployable content layer for modern travel brands.</p></div>
+<div class="mission-top"><h2>Structured travel content, ready to deploy.</h2><p>Smartvel combines verified content, live events, POIs, restaurants, travel requirements and white-label technology in one deployable layer.</p></div>
 <div class="stats stats-enhanced" aria-label="Smartvel content scale">
 <div class="stat stat-enhanced"><b><span class="count-up" data-target="16" data-suffix="K+">0</span></b><span>events published</span></div>
 <div class="stat stat-enhanced"><b><span class="count-up" data-target="12" data-suffix="K+">0</span></b><span>points of interest</span></div>

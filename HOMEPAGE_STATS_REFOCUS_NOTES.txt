@@ -1,0 +1,5 @@
+Updated the homepage 'Structured travel content, ready to deploy' band.
+- Numbers are larger again and visually stronger.
+- Supporting copy is now shorter and placed under the title.
+- Existing stat animation / sweep effects are preserved.
+- index.html is included only to cache-bust smartvel.html in the main journey.
