@@ -564,8 +564,73 @@ background:rgba(255,255,255,.86)!important;
 border-color:rgba(255,255,255,.22)!important;
 }
 </style>
+
+<style id="avuxi-final-index-patch-css">
+.avuxi-final-film{
+  position:absolute!important;
+  inset:0!important;
+  background:#F7FBFE!important;
+  overflow:hidden!important;
+}
+.avuxi-final-film .av-frame{
+  position:absolute!important;
+  inset:0!important;
+  opacity:0;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  background:#F7FBFE!important;
+  animation:avuxiFinalFilm 18s infinite;
+}
+.avuxi-final-film .av-frame:nth-child(1){animation-delay:0s}
+.avuxi-final-film .av-frame:nth-child(2){animation-delay:3.6s}
+.avuxi-final-film .av-frame:nth-child(3){animation-delay:7.2s}
+.avuxi-final-film .av-frame:nth-child(4){animation-delay:10.8s}
+.avuxi-final-film .av-frame:nth-child(5){animation-delay:14.4s}
+.avuxi-final-film img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  display:block!important;
+  background:#F7FBFE!important;
+}
+.avuxi-final-film .av-progress{
+  position:absolute!important;
+  left:28px!important;
+  right:28px!important;
+  bottom:16px!important;
+  height:3px!important;
+  border-radius:999px!important;
+  background:rgba(0,166,152,.16)!important;
+  overflow:hidden!important;
+  z-index:6!important;
+}
+.avuxi-final-film .av-progress:after{
+  content:"";
+  display:block;
+  width:20%;
+  height:100%;
+  border-radius:999px;
+  background:linear-gradient(90deg,#00A698,#29AAE0);
+  animation:avuxiFinalProgress 18s steps(5) infinite;
+}
+@keyframes avuxiFinalFilm{
+  0%{opacity:0}
+  4%{opacity:1}
+  17%{opacity:1}
+  21%{opacity:0}
+  100%{opacity:0}
+}
+@keyframes avuxiFinalProgress{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(500%)}
+}
+</style>
+
 </head>
 <body>
+<!-- AVUXI_INDEX_TRUE_FINAL_MARKER -->
 
 <div class='intro'><div class='intro-inner'><img src='smartvel_logo.png'><h1>Powering the<br>traveller journey.</h1><p>Toronto Travel Tech interactive showcase</p><div class='intro-sub'>A guided journey through Smartvel’s travel technology ecosystem</div></div></div>
 
@@ -598,7 +663,7 @@ border-color:rgba(255,255,255,.22)!important;
 <div class='viewport'>
 <div class='slide active' data-title='Smartvel' data-sub='Company overview and ecosystem'><iframe src='smartvel.html'></iframe></div>
 <div class='slide' data-title='EntryDocs' data-sub='Travel requirements intelligence'><iframe src='entrydocs.html'></iframe></div>
-<div class='slide' data-title='TravelAble' data-sub='Accessible travel support'><iframe src='travelable.html?v=template-restored-video-fixed-1'></iframe></div>
+<div class='slide' data-title='TravelAble' data-sub='Accessible travel support'><iframe src='travelable.html'></iframe></div>
 <div class='slide' data-title='Explore & Go' data-sub='Destination inspiration'><iframe src='exploreandgo.html'></iframe></div>
 <div class='slide' data-title='Trip Planner' data-sub='Destination engagement'><iframe src='tripplanner.html'></iframe></div>
 <div class='slide' data-title='TravelSEO' data-sub='SEO and GEO'><iframe src='travelseo.html'></iframe></div>

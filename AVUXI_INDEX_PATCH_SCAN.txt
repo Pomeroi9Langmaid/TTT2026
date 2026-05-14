@@ -1,0 +1,6 @@
+This package patches index.html AND avuxi.html.
+patched: {'index.html': True, 'avuxi.html': True}
+Reason: the live interactive journey may render Avuxi from index.html, not avuxi.html.
+First frame is avuxi_start_standard_map.jpg.
+Then layers: sightseeing, eating, shopping, nightlife.
+18s total cycle, 3.6s each frame.
