@@ -1,0 +1,5 @@
+This package includes BOTH smartvel.html and index.html.
+Reason: if only smartvel.html is uploaded, the live journey iframe can keep loading the cached old Smartvel page.
+index.html now loads smartvel.html?v=sectors-final-loop-2 to force the updated homepage hero to appear.
+Blue text sequence: OTA's -> hotels -> airlines -> airports -> travel agencies -> rental cars -> insurance -> finance -> cruises -> tour operators -> travel companies.
+It holds briefly on travel companies, then loops again.

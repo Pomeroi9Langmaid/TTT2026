@@ -22,6 +22,10 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--black);font-family
 .kicker{color:var(--dark-blue);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.09em;margin-bottom:16px}
 h1{margin:0 0 20px;font-size:72px;line-height:1.02;letter-spacing:-.065em;font-weight:800}
 h1 strong{color:var(--blue)}
+.hero-rotating-wrap{display:inline-block;position:relative;min-width:10.8ch;vertical-align:baseline}
+.hero-rotating-wrap strong{display:inline-block;white-space:nowrap;transition:opacity .26s ease,transform .26s ease;will-change:opacity,transform}
+.hero-rotating-wrap.is-switching strong{opacity:0;transform:translateY(8px)}
+.hero-rotating-measure{visibility:hidden;display:block;height:0;overflow:hidden;white-space:nowrap;font-weight:800;letter-spacing:-.065em}
 .lead{font-size:20px;line-height:1.48;color:#283241;margin:0 0 24px;max-width:640px}
 .promise{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:26px 0 0}
 .promise-card{background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:22px;padding:18px 20px;box-shadow:0 16px 38px rgba(18,18,18,.06);min-height:120px}
@@ -87,12 +91,12 @@ animation:cleanTickerMove 56s linear infinite!important;
 animation-play-state:paused!important;
 }
 .clean-logo{
-height:68px!important;
-min-width:160px!important;
+height:52px!important;
+min-width:132px!important;
 display:flex!important;
 align-items:center!important;
 justify-content:center!important;
-padding:12px 18px!important;
+padding:7px 14px!important;
 background:rgba(255,255,255,.42)!important;
 border:1px solid rgba(222,231,239,.38)!important;
 border-radius:16px!important;
@@ -100,8 +104,8 @@ box-shadow:0 7px 20px rgba(18,18,18,.035)!important;
 }
 .clean-logo img{
 display:block!important;
-max-height:46px!important;
-max-width:148px!important;
+max-height:36px!important;
+max-width:124px!important;
 object-fit:contain!important;
 }
 .contact .clean-logo-ticker{
@@ -262,6 +266,7 @@ font-size:34px!important;
 .promise{grid-template-columns:repeat(2,1fr)!important}
 .home-video-stage{min-height:420px}
 .home-video-frame{height:330px}
+.hero-rotating-wrap{min-width:10ch}
 }
 </style>
 
@@ -276,7 +281,7 @@ font-size:34px!important;
 <section class="hero">
 <div>
 <div class="kicker">Travel technology & content intelligence</div>
-<h1>AI-powered travel content and solutions for <strong>travel companies.</strong></h1>
+<h1>AI-powered travel content and solutions for <span class="hero-rotating-wrap"><strong id="hero-rotating-sector">OTA's.</strong><span class="hero-rotating-measure">travel companies.</span></span></h1>
 <p class="lead">We provide structured destination content and travel requirement intelligence through APIs and white-label solutions.</p>
 </div>
 
@@ -390,5 +395,45 @@ font-size:34px!important;
 
 <div class="footnote">Figures shown are based on Smartvel corporate/product material and should be used as general company-scale indicators unless client-specific metrics are confirmed.</div>
 </main>
+
+<script>
+(function(){
+  const sequence = [
+    { text: "OTA's.", hold: 850 },
+    { text: "hotels.", hold: 850 },
+    { text: "airlines.", hold: 850 },
+    { text: "airports.", hold: 850 },
+    { text: "travel agencies.", hold: 850 },
+    { text: "rental cars.", hold: 850 },
+    { text: "insurance.", hold: 850 },
+    { text: "finance.", hold: 850 },
+    { text: "cruises.", hold: 850 },
+    { text: "tour operators.", hold: 850 },
+    { text: "travel companies.", hold: 1200 }
+  ];
+  const wrap = document.querySelector('.hero-rotating-wrap');
+  const target = document.getElementById('hero-rotating-sector');
+  const measure = document.querySelector('.hero-rotating-measure');
+  if(!wrap || !target || !measure) return;
+  const longest = sequence.reduce((a,b)=> a.length >= b.text.length ? a : b.text, sequence[0].text);
+  measure.textContent = longest;
+  let index = 0;
+  let timer = null;
+  function queueNext(delay){
+    if(timer) window.clearTimeout(timer);
+    timer = window.setTimeout(swapWord, delay);
+  }
+  function swapWord(){
+    wrap.classList.add('is-switching');
+    window.setTimeout(function(){
+      index = (index + 1) % sequence.length;
+      target.textContent = sequence[index].text;
+      wrap.classList.remove('is-switching');
+      queueNext(sequence[index].hold);
+    }, 220);
+  }
+  queueNext(sequence[0].hold);
+})();
+</script>
 </body>
 </html>
