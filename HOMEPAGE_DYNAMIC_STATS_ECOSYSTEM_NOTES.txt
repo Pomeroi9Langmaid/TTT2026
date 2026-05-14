@@ -1,0 +1,10 @@
+Homepage enhancement package.
+Upload/overwrite smartvel.html and index.html.
+
+Changes:
+- Blue structured content section now has six stronger fact cards: 16K+ events published, 12K+ POIs, 16K+ restaurants, 900+ data sources, 150+ customisable categories, 20+ languages available.
+- Numbers animate from 0 when the section comes into view.
+- Stat cards have subtle professional sweep/lift motion.
+- Journey ecosystem cards now highlight sequentially with a soft lift/glow effect.
+- Existing homepage sector rotation remains in place.
+- index.html cache-busts smartvel.html so Vercel/browser cache should not keep showing the old page.
