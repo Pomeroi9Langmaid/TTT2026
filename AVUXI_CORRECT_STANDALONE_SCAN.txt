@@ -1,0 +1,8 @@
+This is a clean standalone avuxi.html replacement.
+It does not use the old dark text-only page.
+It does not use screenshots of the Avuxi page itself.
+Video first frame: standard Barcelona accommodation map with prices and hotel pin.
+Video then cycles through exact Avuxi map layers: sightseeing, eating, shopping, nightlife.
+Video loops back to standard map every time.
+MP4 size MB: 0.61
+Map source size: 2048x1257

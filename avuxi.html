@@ -3,62 +3,256 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Avuxi – Smartvel</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Avuxi | Smartvel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:Inter,sans-serif;background:#0f172a;color:#e5e7eb}
-.container{max-width:900px;margin:auto;padding:60px 20px}
-h1{font-size:42px;margin-bottom:20px}
-h2{margin-top:40px;color:#22c55e}
-p{font-size:18px;color:#cbd5e1;line-height:1.55}
-.box{background:#1e293b;padding:18px;border-radius:10px;margin-top:10px}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
-.card{background:#111827;padding:16px;border-radius:10px}
-.footer{margin-top:60px;opacity:.6}
-@media(max-width:700px){.grid{grid-template-columns:1fr}}
+:root{
+  --navy:#102033;
+  --blue:#0072A8;
+  --teal:#00A698;
+  --green:#14B86A;
+  --ink:#101820;
+  --muted:#4D5D70;
+  --line:#DCE8F0;
+}
+*{box-sizing:border-box}
+html,body{margin:0;font-family:Poppins,Arial,sans-serif;background:#F3F7FA;color:var(--ink)}
+.page{
+  min-height:100vh;
+  padding:54px 68px 70px;
+  background:
+    radial-gradient(circle at 88% 10%,rgba(41,170,224,.26),transparent 32%),
+    linear-gradient(135deg,#ffffff 0%,#F8FBFD 72%,#EAF6FC 100%);
+}
+.shell{max-width:1420px;margin:0 auto}
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:34px;
+}
+.logo{
+  width:210px;
+  height:auto;
+}
+.logo-fallback{
+  font-size:48px;
+  font-weight:500;
+  letter-spacing:-.05em;
+  color:#006B9B;
+}
+.logo-fallback span{
+  display:block;
+  font-size:18px;
+  color:#29AAE0;
+  font-weight:600;
+  letter-spacing:0;
+  margin-top:-10px;
+}
+.product-pill{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  color:#065A83;
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.product-pill:before{
+  content:"";
+  width:40px;
+  height:4px;
+  border-radius:99px;
+  background:var(--teal);
+}
+.hero{
+  display:grid;
+  grid-template-columns: .92fr 1.08fr;
+  gap:56px;
+  align-items:center;
+}
+.kicker{
+  color:#075D89;
+  font-weight:900;
+  font-size:13px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+h1{
+  margin:0 0 22px;
+  font-size:66px;
+  line-height:.98;
+  letter-spacing:-.07em;
+  font-weight:900;
+}
+h1 strong{color:var(--teal)}
+.lead{
+  max-width:650px;
+  color:#263648;
+  font-size:19px;
+  line-height:1.48;
+  margin:0 0 28px;
+  font-weight:500;
+}
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:16px;
+  max-width:650px;
+}
+.info-card{
+  background:rgba(255,255,255,.82);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:20px;
+  box-shadow:0 18px 45px rgba(17,32,51,.07);
+}
+.info-card h3{
+  margin:0 0 8px;
+  color:#075D89;
+  font-size:17px;
+  line-height:1.15;
+}
+.info-card p{
+  margin:0;
+  color:#526174;
+  font-size:14px;
+  line-height:1.38;
+}
+.visual-card{
+  background:rgba(255,255,255,.86);
+  border:1px solid var(--line);
+  border-radius:36px;
+  padding:22px;
+  box-shadow:0 30px 95px rgba(17,32,51,.12);
+}
+.video-wrap{
+  position:relative;
+  width:100%;
+  aspect-ratio: 1638 / 960;
+  border-radius:26px;
+  overflow:hidden;
+  background:#F7FBFE;
+  border:1px solid var(--line);
+}
+.video-wrap video{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+  background:#F7FBFE;
+}
+.micro-grid{
+  margin-top:18px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.micro{
+  min-height:112px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:18px;
+  background:rgba(255,255,255,.74);
+}
+.micro h4{
+  margin:0 0 12px;
+  font-size:18px;
+  color:var(--teal);
+}
+.micro p{
+  margin:0;
+  font-size:14px;
+  line-height:1.55;
+  color:#607085;
+}
+.bottom{
+  margin-top:44px;
+  border-radius:28px;
+  background:linear-gradient(135deg,#063F5D,#007087 70%,#00A698);
+  color:white;
+  padding:32px;
+}
+.bottom h2{
+  margin:0 0 18px;
+  font-size:34px;
+  line-height:1.05;
+  letter-spacing:-.04em;
+}
+.bottom-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.bottom-card{
+  padding:20px;
+  border-radius:18px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.18);
+}
+.bottom-card b{display:block;margin-bottom:8px;font-size:17px}
+.bottom-card span{font-size:14px;color:rgba(255,255,255,.82);line-height:1.45}
+@media(max-width:1100px){
+  .page{padding:34px 24px}
+  .hero{grid-template-columns:1fr}
+  h1{font-size:48px}
+}
 </style>
 </head>
 <body>
-<div class="container">
+<main class="page">
+  <div class="shell">
+    <header class="top">
+      <div class="logo-fallback">smartvel<span>AI enriched content</span></div>
+      <div class="product-pill">Avuxi</div>
+    </header>
 
-<h1>Location intelligence<br><span style="color:#22c55e;">that guides better decisions</span></h1>
+    <section class="hero">
+      <div>
+        <div class="kicker">Destination intelligence + neighbourhood insight</div>
+        <h1>Help travellers understand <strong>where to stay.</strong></h1>
+        <p class="lead">Avuxi transforms location data into visual neighbourhood intelligence — helping travellers understand which areas are busy, central, vibrant, premium or local before they book.</p>
 
-<p>
-Avuxi transforms location data into actionable insights — helping travellers understand where to stay, what areas are popular, and how destinations are structured.
-</p>
+        <div class="info-grid">
+          <div class="info-card"><h3>Neighbourhood confidence</h3><p>Help users understand unfamiliar destinations more intuitively before making booking decisions.</p></div>
+          <div class="info-card"><h3>Visual location intelligence</h3><p>Heatmap-style overlays communicate atmosphere, popularity and activity density.</p></div>
+          <div class="info-card"><h3>Accommodation relevance</h3><p>Supports OTA's, accommodation platforms and hospitality brands with location-context UX.</p></div>
+          <div class="info-card"><h3>Traveller decision support</h3><p>Reduce uncertainty by helping users compare different parts of a city visually.</p></div>
+        </div>
+      </div>
 
-<h2>Where this matters</h2>
-<p>For OTA’s, hotel platforms, real estate, and travel brands that want to guide users toward better location decisions.</p>
-<div class="box">Hotel search • Map views • Destination pages • Booking flows • Location-based filtering</div>
+      <div class="visual-card">
+        <div class="video-wrap">
+          <video
+            src="avuxi_hero_sequence.mp4?v=cleanstandalone1"
+            poster="avuxi_hero_poster.jpg?v=cleanstandalone1"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"></video>
+        </div>
+        <div class="micro-grid">
+          <div class="micro"><h4>Popular areas</h4><p>Show which parts of a city are busiest or most visited.</p></div>
+          <div class="micro"><h4>Local atmosphere</h4><p>Highlight vibrant districts, nightlife, shopping and cultural areas.</p></div>
+          <div class="micro"><h4>Booking confidence</h4><p>Help travellers feel more comfortable choosing unfamiliar neighbourhoods.</p></div>
+        </div>
+      </div>
+    </section>
 
-<h2>The problem</h2>
-<p>Users don’t just choose a destination — they choose where within it. But location decisions are often unclear.</p>
-<div class="grid">
-<div class="card">Maps lack context</div>
-<div class="card">Users don’t know best areas</div>
-<div class="card">Too many choices create friction</div>
-<div class="card">Decisions slow down conversion</div>
-</div>
-
-<h2>What Avuxi does</h2>
-<p>Avuxi provides structured location intelligence using popularity scores, area insights and map layers.</p>
-<div class="box">
-Heatmaps • Popularity scores • Area descriptions • Smart filters • Integrated into maps and listings
-</div>
-
-<h2>Why companies use it</h2>
-<div class="grid">
-<div class="card">Improve user decision-making</div>
-<div class="card">Increase conversion speed</div>
-<div class="card">Enhance map-based UX</div>
-<div class="card">Differentiate product experience</div>
-</div>
-
-<h2>See it in action</h2>
-<p>Let me show you how Avuxi helps users choose the right place, not just the right destination.</p>
-
-<div class="footer">Smartvel — Avuxi</div>
-
-</div>
+    <section class="bottom">
+      <h2>Turn maps into meaningful destination insight.</h2>
+      <div class="bottom-grid">
+        <div class="bottom-card"><b>Explore</b><span>Move beyond pins and prices with real neighbourhood context.</span></div>
+        <div class="bottom-card"><b>Understand</b><span>Visual layers make activity, popularity and atmosphere easier to read.</span></div>
+        <div class="bottom-card"><b>Decide</b><span>Users choose accommodation with more confidence and less uncertainty.</span></div>
+      </div>
+    </section>
+  </div>
+</main>
 </body>
 </html>
