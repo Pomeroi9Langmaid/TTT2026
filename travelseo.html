@@ -3,186 +3,168 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>TravelSEO – Smartvel</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>TravelSEO | Smartvel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:Inter,sans-serif;background:#0f172a;color:#e5e7eb}
-.container{max-width:900px;margin:auto;padding:60px 20px}
-h1{font-size:42px;margin-bottom:20px}
-h2{margin-top:40px;color:#f97316}
-p{font-size:18px;line-height:1.55;color:#cbd5e1}
-.box{background:#1e293b;padding:18px;border-radius:10px;margin-top:10px}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
-.card{background:#111827;padding:16px;border-radius:10px}
-.footer{margin-top:60px;opacity:.6}
-@media(max-width:700px){.grid{grid-template-columns:1fr}}
+:root{
+  --black:#121212;--dark-blue:#125885;--blue:#29AAE0;--orange:#FF9400;--yellow:#FFC700;
+  --green:#00A698;--red:#FF6262;--bg:#F6F8FB;--muted:#667383;--line:#DEE7EF;--ai:#182033;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--black);font-family:'Poppins',Arial,sans-serif}
+.page{width:100%;max-width:1536px;min-height:100vh;margin:0 auto;padding:34px 48px 34px;position:relative;overflow:hidden}
+.page:before{content:"";position:absolute;right:-190px;top:-180px;width:650px;height:650px;border-radius:50%;background:radial-gradient(circle,rgba(41,170,224,.24),rgba(41,170,224,0) 68%)}
+.page:after{content:"";position:absolute;left:-160px;bottom:-250px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(0,166,152,.16),rgba(0,166,152,0) 70%)}
+.header,.hero,.geo-banner,.proof-row,.bottom-strip,.footnote{position:relative;z-index:1}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px}
+.logo{width:230px;height:auto;display:block}
+.product-label{display:flex;align-items:center;gap:14px;color:var(--dark-blue);font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.product-label span{width:34px;height:4px;border-radius:999px;background:var(--green)}
+.hero{display:grid;grid-template-columns:.92fr 1.12fr;gap:42px;align-items:start}
+.kicker{color:var(--dark-blue);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.09em;margin-bottom:16px}
+h1{margin:0 0 18px;font-size:74px;line-height:1.01;letter-spacing:-.065em;font-weight:800}
+h1 strong{color:var(--green)}
+.lead{font-size:20px;line-height:1.48;color:#283241;margin:0 0 24px;max-width:650px}
+.value-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:25px 0 0}
+.value-card{background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:22px;padding:18px 20px;box-shadow:0 16px 38px rgba(18,18,18,.06);min-height:116px}
+.value-card b{display:block;color:var(--dark-blue);font-size:16px;margin-bottom:8px}
+.value-card span{display:block;color:var(--muted);font-size:13px;line-height:1.38}
+.visual{background:rgba(255,255,255,.78);border:1px solid rgba(222,231,239,.95);border-radius:34px;padding:20px;box-shadow:0 28px 80px rgba(18,18,18,.12)}
+.visual-main{position:relative;height:405px;border-radius:26px;overflow:hidden;border:1px solid var(--line)}
+.visual-main img{width:100%;height:100%;object-fit:cover;object-position:center 35%;display:block}
+.visual-main:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,18,18,.18),rgba(18,18,18,0) 45%)}
+.overlay{position:absolute;left:22px;bottom:22px;background:rgba(255,255,255,.95);border:1px solid rgba(222,231,239,.95);border-radius:18px;padding:15px 17px;max-width:460px;z-index:2}
+.overlay b{display:block;color:var(--black);font-size:18px;margin-bottom:5px}.overlay span{color:var(--muted);font-size:12px;line-height:1.42}
+.micro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
+.micro{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 15px;min-height:86px}
+.micro b{display:block;color:var(--green);font-size:14px;margin-bottom:5px}.micro span{font-size:11px;line-height:1.35;color:var(--muted)}
+.geo-banner{margin-top:28px;border-radius:30px;overflow:hidden;background:linear-gradient(135deg,#121212,#125885);box-shadow:0 26px 78px rgba(18,18,18,.25);color:white}
+.geo-inner{position:relative;padding:28px 32px;display:grid;grid-template-columns:.95fr 1.05fr;gap:32px;align-items:center;overflow:hidden}
+.geo-inner:before{content:"";position:absolute;right:-70px;top:-120px;width:430px;height:430px;border-radius:50%;background:radial-gradient(circle,rgba(41,170,224,.38),rgba(41,170,224,0) 67%)}
+.geo-copy{position:relative;z-index:2}
+.geo-copy h2{font-size:34px;line-height:1.08;letter-spacing:-.045em;margin:0 0 12px;max-width:720px}
+.geo-copy p{margin:0;color:#D9EEF8;font-size:15px;line-height:1.48;max-width:780px}
+.search-box{position:relative;z-index:2;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);border-radius:24px;padding:22px}
+.search-bar{background:white;color:#121212;border-radius:999px;padding:15px 19px;font-weight:700;font-size:15px;margin-bottom:14px}
+.result{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.13);border-radius:17px;padding:14px 15px;margin-top:10px}
+.result b{display:block;font-size:14px;margin-bottom:5px;color:white}.result span{display:block;color:#D9EEF8;font-size:12px;line-height:1.35}
+.proof-row{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:18px}
+.proof{background:#fff;border:1px solid var(--line);border-radius:22px;padding:16px 17px;box-shadow:0 14px 38px rgba(18,18,18,.055);min-height:96px}
+.proof b{display:block;color:var(--dark-blue);font-size:15px;margin-bottom:6px}.proof span{display:block;color:var(--muted);font-size:12px;line-height:1.35}
+.bottom-strip{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:26px;padding:20px 22px;display:grid;grid-template-columns:.7fr 1.3fr;gap:24px;align-items:center;box-shadow:0 18px 50px rgba(18,18,18,.07)}
+.bottom-strip img{width:100%;height:155px;object-fit:cover;object-position:center 40%;border-radius:20px;border:1px solid var(--line)}
+.bottom-copy h2{margin:0 0 7px;font-size:25px;letter-spacing:-.04em;color:var(--dark-blue)}
+.bottom-copy p{margin:0;color:var(--muted);font-size:13px;line-height:1.45}
+.tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}
+.tag{background:#EAF6FC;border:1px solid #CAEAF8;color:#125885;border-radius:999px;padding:8px 11px;font-size:11px;font-weight:800}
+.footnote{margin-top:13px;color:#7A8491;font-size:10px;line-height:1.4}.demo-link{display:inline-flex;align-items:center;justify-content:center;margin-top:14px;background:#29AAE0;color:#fff;border-radius:999px;padding:12px 17px;font-weight:800;font-size:13px;text-decoration:none;box-shadow:0 12px 28px rgba(41,170,224,.22)}
+@media(max-width:1100px){.page{padding:28px 22px}.hero,.geo-inner,.bottom-strip{grid-template-columns:1fr}h1{font-size:52px}.proof-row{grid-template-columns:1fr 1fr}}
 </style>
+<style>.smartvel-logo-link{display:inline-flex;align-items:center;text-decoration:none}.smartvel-logo-link img{display:block}</style>
+
+<style id="travelseo-hero-video-css">
+.visual-main.travel-seo-video-box{
+  background:#ffffff!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.visual-main.travel-seo-video-box:after{
+  display:none!important;
+}
+.travel-seo-hero-video{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  display:block!important;
+  background:#ffffff!important;
+}
+</style>
+
 </head>
 <body>
-<div class="container">
+<!-- TRAVELSEO_HERO_VIDEO_MARKER -->
+<main class="page">
+<header class="header">
+  <a class="smartvel-logo-link" href="https://www.smartvel.com/" target="_blank" rel="noopener noreferrer"><img class="logo" src="smartvel_logo.png" alt="Smartvel logo"></a>
+  <div class="product-label"><span></span> TravelSEO / GEO</div>
+</header>
 
-<h1>Organic travel traffic,<br><span style="color:#f97316;">built around useful destination content</span></h1>
+<section class="hero">
+  <div>
+    <div class="kicker">Search visibility + destination engagement</div>
+    <h1>Be found before travellers <strong>decide.</strong></h1>
+    <p class="lead">TravelSEO creates modular, destination-specific landing pages that combine unique content, updated events, attractions and travel information — built for Google visibility and emerging AI-driven search journeys.</p>
 
-<p>
-TravelSEO helps travel brands create scalable, search-optimised destination pages that attract users earlier in the journey and keep content fresh over time.
-</p>
+    <div class="value-grid">
+      <div class="value-card"><b>SEO-ready landing pages</b><span>Destination pages structured around keyword priorities, search intent and client campaign needs.</span></div>
+      <div class="value-card"><b>GEO-ready content</b><span>Clear, contextual and structured content designed to be understood by AI-driven search engines.</span></div>
+      <div class="value-card"><b>Fresh destination signals</b><span>Events, attractions, experiences and local information help pages stay relevant over time.</span></div>
+      <div class="value-card"><b>Smartvel does the work</b><span>Content creation, structure, destination enrichment and updates are managed by Smartvel.</span></div>
+    </div>
+  </div>
 
-<h2>Where this matters</h2>
-<p>For OTA's, airlines, hotel groups, airports and travel brands that want stronger organic visibility without manually producing destination content at scale.</p>
-<div class="box">SEO destination pages • Campaign landing pages • Route pages • Hotel destination hubs • Travel guide content</div>
+  <div class="visual">
+    <div class="visual-main travel-seo-video-box">
+      <video class="travel-seo-hero-video"
+             src="travelseo_hero_video.mp4?v=hero1"
+             poster="travelseo_hero_poster.jpg?v=hero1"
+             autoplay
+             muted
+             loop
+             playsinline
+             preload="auto"></video>
+    </div>
+    <div class="micro-grid">
+      <div class="micro"><b>Keywords</b><span>Built around client markets, routes and SEO priorities.</span></div>
+      <div class="micro"><b>Modular HTML</b><span>Choose the content blocks and page sections needed.</span></div>
+      <div class="micro"><b>Dynamic content</b><span>Fresh events and destination information improve relevance.</span></div>
+    </div>
+  </div>
+</section>
 
-<h2>The problem</h2>
-<p>Travel search demand is huge, but most destination pages are either thin, generic, outdated, or expensive to maintain.</p>
-<div class="grid">
-<div class="card">Manual content creation does not scale</div>
-<div class="card">Generic pages struggle to rank</div>
-<div class="card">Outdated content weakens relevance</div>
-<div class="card">SEO and UX are often treated separately</div>
-</div>
+<section class="geo-banner">
+  <div class="geo-inner">
+    <div class="geo-copy">
+      <h2>Designed for Google search and AI discovery.</h2>
+      <p>Travel-specific landing pages with unique, up-to-date and structured content help attract qualified traffic. GEO-ready formatting makes destination content easier for AI-based search engines and generative models to interpret and recommend.</p>
+    </div>
+    <div class="search-box">
+      <div class="search-bar">“What to do in Rome this weekend?”</div>
+      <div class="result"><b>Structured destination answer</b><span>Attractions, seasonal events, local experiences and travel tips organised in a format search engines can understand.</span></div>
+      <div class="result"><b>Fresh + evergreen content</b><span>Destination descriptions combined with updated events and points of interest.</span></div>
+    </div>
+  </div>
+</section>
 
-<h2>What TravelSEO does</h2>
-<p>TravelSEO combines keyword-led page structure with Smartvel's destination content, events, POIs, travel tips and modular page sections.</p>
-<div class="box">
-Keyword research • Unique destination text • Modular HTML sections • Dynamic events and attractions • Regular monitoring and updates
-</div>
+<section class="proof-row">
+  <div class="proof"><b>Destination description</b><span>Unique copy adapted to client tone, market and keyword strategy.</span></div>
+  <div class="proof"><b>Main attractions</b><span>POIs, restaurants, events and experiences from Smartvel content.</span></div>
+  <div class="proof"><b>FAQ + Travel Tips</b><span>Useful structured content for travellers and search engines.</span></div>
+  <div class="proof"><b>Campaign ready</b><span>Pages can support routes, themes, seasonal campaigns and offers.</span></div>
+  <div class="proof"><b>SEO + GEO</b><span>Designed for organic search and AI-driven discovery.</span></div>
+</section>
 
-<h2>Why companies use it</h2>
-<div class="grid">
-<div class="card">Grow organic acquisition</div>
-<div class="card">Improve page relevance and authority</div>
-<div class="card">Reduce internal content workload</div>
-<div class="card">Connect SEO traffic to commercial journeys</div>
-</div>
+<section class="bottom-strip">
+  <img src="tripplanner.png" alt="Trip Planner embedded engagement visual">
+  <div class="bottom-copy">
+    <h2>Search traffic is only useful if travellers stay.</h2>
+    <p>TravelSEO pages can include Smartvel planning and destination modules — including Trip Planner — to increase engagement, time on page and the chance of moving from search intent into booking intent.</p>
+    <div class="tags">
+      <span class="tag">Trip Planner stickiness</span>
+      <span class="tag">Events + POIs</span>
+      <span class="tag">Campaign pages</span>
+      <span class="tag">Partner CTAs</span>
+    </div>
+  </div>
+</section>
 
-<h2>See it in action</h2>
-<p>Let me show you how TravelSEO turns destination content into a scalable acquisition layer.</p>
+<div style="position:relative;z-index:1;margin-top:18px;text-align:right;"><a class="demo-link" href="https://demo-las-vegas-seo.cst.smartvel.com/" target="_blank" rel="noopener noreferrer">Open TravelSEO example</a></div>
 
-<div class="footer">Smartvel — TravelSEO</div>
-
-</div>
-
-<!-- MORE_BELOW_PILL_V1 -->
-<style id="more-below-pill-style">
-.more-below-pill{
-  position:fixed;
-  left:50%;
-  bottom:28px;
-  transform:translateX(-50%) translateY(0);
-  z-index:9999;
-  display:flex;
-  align-items:center;
-  gap:9px;
-  padding:10px 15px 10px 16px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.55);
-  background:rgba(14,31,45,.68);
-  color:#fff;
-  font-family:inherit;
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  box-shadow:0 16px 42px rgba(4,18,30,.24), inset 0 1px 0 rgba(255,255,255,.20);
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-  opacity:0;
-  pointer-events:none;
-  transition:opacity .32s ease, transform .32s ease;
-}
-.more-below-pill.is-visible{
-  opacity:1;
-  transform:translateX(-50%) translateY(-6px);
-}
-.more-below-pill.is-hidden{
-  opacity:0;
-  transform:translateX(-50%) translateY(8px);
-}
-.more-below-pill svg{
-  width:14px;
-  height:14px;
-  flex:0 0 auto;
-  animation:moreBelowNudge 1.55s ease-in-out infinite;
-}
-@keyframes moreBelowNudge{
-  0%,100%{transform:translateY(-1px);opacity:.78}
-  50%{transform:translateY(3px);opacity:1}
-}
-@media(max-width:760px){
-  .more-below-pill{
-    bottom:18px;
-    font-size:11px;
-    padding:9px 13px;
-  }
-}
-@media(prefers-reduced-motion:reduce){
-  .more-below-pill,
-  .more-below-pill svg{
-    animation:none!important;
-    transition:none!important;
-  }
-}
-</style>
-<script id="more-below-pill-script">
-(function(){
-  if (window.__moreBelowPillInitialised) return;
-  window.__moreBelowPillInitialised = true;
-
-  function ready(fn){
-    if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", fn);
-    else fn();
-  }
-
-  ready(function(){
-    var pill = document.createElement("div");
-    pill.className = "more-below-pill";
-    pill.setAttribute("aria-hidden", "true");
-    pill.innerHTML = '<span>More below</span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-    document.body.appendChild(pill);
-
-    var dismissed = false;
-
-    function pageCanScroll(){
-      var doc = document.documentElement;
-      var body = document.body;
-      var scrollHeight = Math.max(
-        body ? body.scrollHeight : 0,
-        doc ? doc.scrollHeight : 0
-      );
-      var viewport = window.innerHeight || (doc ? doc.clientHeight : 0);
-      return scrollHeight > viewport + 120;
-    }
-
-    function update(){
-      if(dismissed || !pageCanScroll() || window.scrollY > 36){
-        pill.classList.remove("is-visible");
-        pill.classList.add("is-hidden");
-        return;
-      }
-      pill.classList.remove("is-hidden");
-      pill.classList.add("is-visible");
-    }
-
-    function dismiss(){
-      dismissed = true;
-      pill.classList.remove("is-visible");
-      pill.classList.add("is-hidden");
-    }
-
-    window.setTimeout(update, 450);
-    window.setTimeout(update, 1250);
-    window.addEventListener("resize", update, {passive:true});
-    window.addEventListener("scroll", function(){
-      if(window.scrollY > 36) dismiss();
-    }, {passive:true});
-    window.addEventListener("wheel", dismiss, {passive:true});
-    window.addEventListener("touchmove", dismiss, {passive:true});
-    window.addEventListener("keydown", function(e){
-      if(["ArrowDown","PageDown"," ","End"].indexOf(e.key) !== -1) dismiss();
-    });
-  });
-})();
-</script>
-<!-- /MORE_BELOW_PILL_V1 -->
-
+<div class="footnote">SEO/GEO positioning is based on Smartvel product material. Performance depends on client domain authority, implementation, content strategy, markets, technical SEO and ongoing campaign activity.</div>
+</main>
 </body>
 </html>

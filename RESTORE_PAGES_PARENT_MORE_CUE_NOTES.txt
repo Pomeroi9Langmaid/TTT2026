@@ -1,0 +1,9 @@
+Fix package after the page-level More Below pill issue.
+
+What this does:
+- Restores TravelAble, TravelSEO and Avuxi pages from their latest correct visual packages.
+- Removes the page-level More Below pill from individual pages.
+- Adds a single parent-level More Below cue in index.html instead, so it works across pages without damaging page templates.
+- The cue appears only when the active iframe/page is scrollable and disappears after scroll.
+
+Upload/overwrite every file included in this zip to the GitHub root.
