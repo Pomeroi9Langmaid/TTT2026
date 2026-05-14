@@ -1,0 +1,10 @@
+Added a subtle 'More below' glass pill to each product page.
+Behaviour:
+- Appears only if the page has more content below the first viewport.
+- Sits at bottom centre inside the page/iframe.
+- Fades out as soon as the user scrolls, wheels, touches, or presses a scroll key.
+- Does not appear on pages that do not need scrolling.
+
+Upload/overwrite the included HTML files in the GitHub root.
+Patched files: smartvel.html, smartvel_stats_refocus.html, travelable.html, travelseo.html, avuxi.html
+Missing/not patched: entrydocs.html, exploreandgo.html, tripplanner.html, contact.html
