@@ -64,69 +64,81 @@ h1 strong{color:var(--green)}
 <style>.smartvel-logo-link{display:inline-flex;align-items:center;text-decoration:none}.smartvel-logo-link img{display:block}</style>
 
 <style id="avuxi-heatmap-carousel-css">
-.avuxi-real-map-sequence{
-position:relative!important;
-height:575px!important;
-border-radius:28px!important;
-overflow:hidden!important;
-background:#F7FBFE!important;
-border:1px solid rgba(222,231,239,.94)!important;
-box-shadow:0 28px 80px rgba(10,35,60,.12)!important;
+.visual-main{
+  height:405px!important;
+  border-radius:26px!important;
+  overflow:hidden!important;
+  border:1px solid rgba(222,231,239,.95)!important;
+  background:#f7fbfe!important;
+  position:relative!important;
 }
-.avuxi-real-map-sequence .av-slide{
-position:absolute!important;
-inset:0!important;
-opacity:0;
-animation:avuxiRealFade 35s infinite;
+.visual-main:after{display:none!important}
+.visual-main > img, .visual-main > .overlay{display:none!important}
+.avuxi-real-sequence{
+  position:absolute!important;
+  inset:0!important;
+  background:#f7fbfe!important;
+  overflow:hidden!important;
 }
-.avuxi-real-map-sequence .av-slide:nth-child(1){animation-delay:0s}
-.avuxi-real-map-sequence .av-slide:nth-child(2){animation-delay:7s}
-.avuxi-real-map-sequence .av-slide:nth-child(3){animation-delay:14s}
-.avuxi-real-map-sequence .av-slide:nth-child(4){animation-delay:21s}
-.avuxi-real-map-sequence .av-slide:nth-child(5){animation-delay:28s}
-.avuxi-real-map-sequence img{
-width:100%!important;
-height:100%!important;
-object-fit:cover!important;
-object-position:center center!important;
-display:block!important;
+.avuxi-real-sequence .av-slide{
+  position:absolute!important;
+  inset:0!important;
+  opacity:0;
+  animation:avuxiSequenceFade 35s infinite;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  background:#f7fbfe!important;
 }
-.avuxi-real-map-progress{
-position:absolute!important;
-left:34px!important;
-right:34px!important;
-bottom:24px!important;
-height:3px!important;
-background:rgba(0,166,152,.16)!important;
-border-radius:999px!important;
-z-index:8!important;
-overflow:hidden!important;
+.avuxi-real-sequence .av-slide:nth-child(1){animation-delay:0s}
+.avuxi-real-sequence .av-slide:nth-child(2){animation-delay:7s}
+.avuxi-real-sequence .av-slide:nth-child(3){animation-delay:14s}
+.avuxi-real-sequence .av-slide:nth-child(4){animation-delay:21s}
+.avuxi-real-sequence .av-slide:nth-child(5){animation-delay:28s}
+.avuxi-real-sequence img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  display:block!important;
+  background:#f7fbfe!important;
 }
-.avuxi-real-map-progress:after{
-content:"";
-display:block;
-height:100%;
-width:20%;
-background:linear-gradient(90deg,#00A698,#29AAE0);
-border-radius:999px;
-animation:avuxiRealProgress 35s steps(5) infinite;
+.avuxi-real-sequence .progress{
+  position:absolute!important;
+  left:32px!important;
+  right:32px!important;
+  bottom:18px!important;
+  height:3px!important;
+  border-radius:999px!important;
+  background:rgba(0,166,152,.16)!important;
+  z-index:5!important;
+  overflow:hidden!important;
 }
-@keyframes avuxiRealFade{
-0%{opacity:0;transform:scale(1.002)}
-4%{opacity:1;transform:scale(1)}
-17%{opacity:1;transform:scale(1)}
-21%{opacity:0;transform:scale(1.002)}
-100%{opacity:0}
+.avuxi-real-sequence .progress:after{
+  content:"";
+  display:block;
+  height:100%;
+  width:20%;
+  border-radius:999px;
+  background:linear-gradient(90deg,#00A698,#29AAE0);
+  animation:avuxiSequenceProgress 35s steps(5) infinite;
 }
-@keyframes avuxiRealProgress{
-0%{transform:translateX(0)}
-100%{transform:translateX(500%)}
+@keyframes avuxiSequenceFade{
+  0%{opacity:0}
+  4%{opacity:1}
+  17%{opacity:1}
+  21%{opacity:0}
+  100%{opacity:0}
+}
+@keyframes avuxiSequenceProgress{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(500%)}
 }
 </style>
 
 </head>
 <body>
-<!-- AVUXI_REAL_MAP_SEQUENCE_MARKER -->
+<!-- AVUXI_FULL_VISUAL_REPLACE_MARKER -->
 <main class="page">
 <header class="header">
 <a class="smartvel-logo-link" href="https://www.smartvel.com/" target="_blank" rel="noopener noreferrer"><img class="logo" src="smartvel_logo.png" alt="Smartvel logo"></a>
@@ -148,14 +160,17 @@ animation:avuxiRealProgress 35s steps(5) infinite;
 </div>
 
 <div class="visual">
+<div class="visual-main">
 
-<div class="avuxi-real-map-sequence">
-  <div class="av-slide"><img src="avuxi_sequence_1_standard.png" alt="Standard accommodation map with hotel location only"></div>
-  <div class="av-slide"><img src="avuxi_sequence_2_sightseeing.png" alt="Avuxi sightseeing heatmap layer"></div>
-  <div class="av-slide"><img src="avuxi_sequence_3_eating.png" alt="Avuxi popular eating heatmap layer"></div>
-  <div class="av-slide"><img src="avuxi_sequence_4_shopping.png" alt="Avuxi shopping heatmap layer"></div>
-  <div class="av-slide"><img src="avuxi_sequence_5_nightlife.png" alt="Avuxi nightlife heatmap layer"></div>
-  <div class="avuxi-real-map-progress"></div>
+<div class="avuxi-real-sequence">
+  <div class="av-slide"><img src="avuxi_real_standard.png" alt="Standard accommodation map showing hotel location and price only"></div>
+  <div class="av-slide"><img src="avuxi_real_sightseeing.png" alt="Avuxi popular sightseeing layer"></div>
+  <div class="av-slide"><img src="avuxi_real_eating.png" alt="Avuxi popular eating layer"></div>
+  <div class="av-slide"><img src="avuxi_real_shopping.png" alt="Avuxi popular shopping layer"></div>
+  <div class="av-slide"><img src="avuxi_real_nightlife.png" alt="Avuxi nightlife layer"></div>
+  <div class="progress"></div>
+</div>
+
 </div>
 <div class="micro-grid">
 <div class="micro"><b>Popular areas</b><span>Show which parts of a city are busiest or most visited.</span></div>
