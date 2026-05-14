@@ -1,0 +1,3 @@
+Removed stray black border remnants from EntryDocs hero visual.
+Vertical and bottom horizontal artifacts cleaned.
+No other assets changed.
