@@ -1,0 +1,1 @@
+Opening frame cleaned: no Avuxi icons, legend or controls. Opening standard-map hold is 2.33s before Avuxi layers.
