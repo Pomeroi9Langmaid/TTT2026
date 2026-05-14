@@ -1,0 +1,6 @@
+avuxi visual replaced: True
+no crop: true
+CSS uses object-fit: contain
+first slide: standard accommodation map with hotel pin + price
+following slides: exact user-provided Avuxi screenshots
+missing refs: {'avuxi.html': ['smartvel_logo.png']}
