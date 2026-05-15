@@ -11,7 +11,7 @@
 :root{--black:#121212;--dark-blue:#125885;--blue:#29AAE0;--orange:#FF9400;--yellow:#FFC700;--green:#00A698;--red:#FF6262;--bg:#F6F8FB;--muted:#667383;--line:#DEE7EF}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--bg);color:var(--black);font-family:'Poppins',Arial,sans-serif}
-.page{width:100%;max-width:none;min-height:100vh;margin:0 auto;padding:34px 48px 34px;position:relative;overflow:visible}
+.page{width:100%;max-width:1536px;min-height:100vh;margin:0 auto;padding:34px 48px 34px;position:relative;overflow:visible}
 .page:before{content:"";position:absolute;right:-180px;top:-190px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(41,170,224,.26),rgba(41,170,224,0) 68%)}
 .page:after{content:"";position:absolute;left:-160px;bottom:-240px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(255,148,0,.15),rgba(255,148,0,0) 70%)}
 .header,.hero,.mission,.journey,.bottom-strip,.footnote{position:relative;z-index:1}
@@ -620,10 +620,91 @@ section.mission .stat.stat-enhanced .count-up{font-size:64px!important}
 </style>
 
 
-<style id="SMARTVEL_FULL_WIDTH_FORCE_V6">
-html,body{width:100%!important;max-width:none!important;overflow-x:hidden!important;}
-.page{width:100%!important;max-width:none!important;margin:0!important;}
-.shell,.hero,.mission,.trust,.journey,.engagement,.geo,.bottom-strip{max-width:none!important;}
+<style id="homepage-logo-v14-enhancement">
+/* V14 homepage logo carousel: larger, sharper, stronger brand presence */
+.clean-logo-ticker{
+  margin-top:26px!important;
+  padding:10px 0 8px!important;
+}
+.clean-logo-title{
+  font-size:11px!important;
+  letter-spacing:.16em!important;
+  color:#0b557e!important;
+  margin-bottom:14px!important;
+}
+.clean-logo-track{
+  gap:30px!important;
+  animation-duration:64s!important;
+}
+.clean-logo{
+  height:78px!important;
+  min-width:184px!important;
+  padding:12px 22px!important;
+  background:rgba(255,255,255,.94)!important;
+  border:1px solid rgba(205,220,232,.85)!important;
+  border-radius:22px!important;
+  box-shadow:0 18px 46px rgba(7,34,53,.16), 0 5px 16px rgba(7,34,53,.10)!important;
+}
+.clean-logo img{
+  max-height:54px!important;
+  max-width:164px!important;
+  width:auto!important;
+  object-fit:contain!important;
+  image-rendering:auto!important;
+  filter:contrast(1.08) saturate(1.04)!important;
+}
+.clean-logo img[src*="iberia"],
+.clean-logo img[src*="saudia"],
+.clean-logo img[src*="finnair"],
+.clean-logo img[src*="avianca"],
+.clean-logo img[src*="latam"],
+.clean-logo img[src*="copa"],
+.clean-logo img[src*="accor"],
+.clean-logo img[src*="world2fly"],
+.clean-logo img[src*="trivago"]{
+  max-height:60px!important;
+  max-width:190px!important;
+}
+.clean-logo img[src*="saudia"]{
+  max-height:64px!important;
+  max-width:205px!important;
+}
+@media(max-width:900px){
+  .clean-logo{height:68px!important;min-width:158px!important;padding:10px 18px!important}
+  .clean-logo img{max-height:48px!important;max-width:145px!important}
+}
+</style>
+
+<style id="v15-homepage-video-scroll-cleanup">
+/* V15: remove redundant video badge and make homepage scrolling feel natural */
+html, body {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  scroll-behavior: smooth !important;
+  overscroll-behavior-y: auto !important;
+}
+* {
+  scroll-snap-type: none !important;
+  scroll-snap-align: none !important;
+  scroll-snap-stop: normal !important;
+}
+.home-video-note {
+  display: none !important;
+}
+.home-video-stage {
+  position: relative !important;
+}
+.home-video-frame,
+.home-video-frame video {
+  touch-action: pan-y !important;
+}
+.home-video-frame video {
+  pointer-events: none !important;
+}
+.home-video-open {
+  pointer-events: auto !important;
+  z-index: 5 !important;
+}
 </style>
 </head>
 <body>
@@ -642,7 +723,6 @@ html,body{width:100%!important;max-width:none!important;overflow-x:hidden!import
 </div>
 
 <div class="home-video-stage">
-  <div class="home-video-note">Smartvel introduction</div>
   <div class="home-video-frame">
     <video autoplay muted loop playsinline controls preload="metadata">
       <source src="smartvel_homepage_video.mp4?v=home-video-2" type="video/mp4">
@@ -719,56 +799,56 @@ html,body{width:100%!important;max-width:none!important;overflow-x:hidden!import
   <div class="clean-logo-title">Trusted across airlines, OTA's, hotels, cruises, TMCs, insurance and travel brands</div>
   <div class="clean-logo-window">
     <div class="clean-logo-track">
-      <div class="clean-logo"><img src="logo_avianca.png" alt=""></div>
-<div class="clean-logo"><img src="logo_finnair.png" alt=""></div>
-<div class="clean-logo"><img src="logo_iberia.png" alt=""></div>
-<div class="clean-logo"><img src="logo_latam.png" alt=""></div>
-<div class="clean-logo"><img src="logo_saudia.png" alt=""></div>
-<div class="clean-logo"><img src="logo_air_niugini.png" alt=""></div>
-<div class="clean-logo"><img src="logo_world2fly.png" alt=""></div>
-<div class="clean-logo"><img src="logo_copa.png" alt=""></div>
-<div class="clean-logo"><img src="logo_cocha.png" alt=""></div>
-<div class="clean-logo"><img src="logo_flowo.png" alt=""></div>
-<div class="clean-logo"><img src="logo_ubico.png" alt=""></div>
-<div class="clean-logo"><img src="logo_intermundial.png" alt=""></div>
-<div class="clean-logo"><img src="logo_ponant.png" alt=""></div>
-<div class="clean-logo"><img src="logo_hotel_cristina.png" alt=""></div>
-<div class="clean-logo"><img src="logo_praktik_hotels.png" alt=""></div>
-<div class="clean-logo"><img src="logo_monument.png" alt=""></div>
-<div class="clean-logo"><img src="logo_accor.png" alt=""></div>
-<div class="clean-logo"><img src="logo_roommate.png" alt=""></div>
-<div class="clean-logo"><img src="logo_condes.png" alt=""></div>
-<div class="clean-logo"><img src="logo_palladium.png" alt=""></div>
-<div class="clean-logo"><img src="logo_tap.png" alt=""></div>
-<div class="clean-logo"><img src="logo_dorms.png" alt=""></div>
-<div class="clean-logo"><img src="logo_webjet.png" alt=""></div>
-<div class="clean-logo"><img src="logo_stayforlong.png" alt=""></div>
-<div class="clean-logo"><img src="logo_trivago_deals.png" alt=""></div>
-<div class="clean-logo"><img src="logo_avianca.png" alt=""></div>
-<div class="clean-logo"><img src="logo_finnair.png" alt=""></div>
-<div class="clean-logo"><img src="logo_iberia.png" alt=""></div>
-<div class="clean-logo"><img src="logo_latam.png" alt=""></div>
-<div class="clean-logo"><img src="logo_saudia.png" alt=""></div>
-<div class="clean-logo"><img src="logo_air_niugini.png" alt=""></div>
-<div class="clean-logo"><img src="logo_world2fly.png" alt=""></div>
-<div class="clean-logo"><img src="logo_copa.png" alt=""></div>
-<div class="clean-logo"><img src="logo_cocha.png" alt=""></div>
-<div class="clean-logo"><img src="logo_flowo.png" alt=""></div>
-<div class="clean-logo"><img src="logo_ubico.png" alt=""></div>
-<div class="clean-logo"><img src="logo_intermundial.png" alt=""></div>
-<div class="clean-logo"><img src="logo_ponant.png" alt=""></div>
-<div class="clean-logo"><img src="logo_hotel_cristina.png" alt=""></div>
-<div class="clean-logo"><img src="logo_praktik_hotels.png" alt=""></div>
-<div class="clean-logo"><img src="logo_monument.png" alt=""></div>
-<div class="clean-logo"><img src="logo_accor.png" alt=""></div>
-<div class="clean-logo"><img src="logo_roommate.png" alt=""></div>
-<div class="clean-logo"><img src="logo_condes.png" alt=""></div>
-<div class="clean-logo"><img src="logo_palladium.png" alt=""></div>
-<div class="clean-logo"><img src="logo_tap.png" alt=""></div>
-<div class="clean-logo"><img src="logo_dorms.png" alt=""></div>
-<div class="clean-logo"><img src="logo_webjet.png" alt=""></div>
-<div class="clean-logo"><img src="logo_stayforlong.png" alt=""></div>
-<div class="clean-logo"><img src="logo_trivago_deals.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_iberia.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_saudia.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_finnair.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_avianca.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_latam.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_copa.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_accor.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_tap.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_world2fly.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_ponant.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_trivago_deals.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_webjet.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_stayforlong.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_intermundial.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_palladium.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_roommate.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_praktik_hotels.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_monument.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_condes.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_hotel_cristina.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_cocha.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_flowo.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_ubico.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_air_niugini.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_dorms.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_iberia.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_saudia.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_finnair.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_avianca.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_latam.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_copa.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_accor.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_tap.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_world2fly.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_ponant.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_trivago_deals.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_webjet.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_stayforlong.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_intermundial.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_palladium.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_roommate.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_praktik_hotels.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_monument.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_condes.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_hotel_cristina.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_cocha.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_flowo.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_ubico.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_air_niugini.png" alt=""></div>
+<div class="clean-logo priority-logo"><img src="logo_dorms.png" alt=""></div>
     </div>
   </div>
 </section>
@@ -863,35 +943,6 @@ html,body{width:100%!important;max-width:none!important;overflow-x:hidden!import
 })();
 </script>
 
-
-<style id="smartvel-direct-audio-style">
-.smartvel-direct-audio{position:fixed;top:18px;left:18px;z-index:999999;display:none;gap:8px;background:rgba(5,20,34,.62);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px);border-radius:999px;padding:8px 10px;box-shadow:0 14px 36px rgba(0,0,0,.18)}
-.smartvel-direct-audio button{width:36px;height:36px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;font-size:15px;font-weight:900;display:grid;place-items:center}
-</style>
-<div class="smartvel-direct-audio" id="smartvelDirectAudio">
-  <button type="button" id="smartvelDirectMute" aria-label="Mute or unmute intro">🔊</button>
-  <button type="button" id="smartvelDirectReplay" aria-label="Replay intro">↻</button>
-</div>
-<audio id="smartvelDirectAudioEl" src="homepage_intro.mp3" preload="auto"></audio>
-<script id="smartvel-direct-audio-script">
-(function(){
-  if(window.self !== window.top) return;
-  const panel=document.getElementById('smartvelDirectAudio');
-  const audio=document.getElementById('smartvelDirectAudioEl');
-  const mute=document.getElementById('smartvelDirectMute');
-  const replay=document.getElementById('smartvelDirectReplay');
-  if(!panel||!audio||!mute||!replay) return;
-  panel.style.display='flex';
-  audio.volume=1;
-  function update(){mute.textContent=audio.muted?'🔇':'🔊';}
-  function play(reset){try{if(reset) audio.currentTime=0; audio.play().catch(()=>{});}catch(e){}}
-  mute.onclick=function(){audio.muted=!audio.muted; update(); if(!audio.muted&&audio.paused) play(false);};
-  replay.onclick=function(){play(true);};
-  document.addEventListener('DOMContentLoaded',()=>play(true));
-  window.addEventListener('pageshow',()=>play(true));
-  update();
-})();
-</script>
 
 </body>
 </html>
