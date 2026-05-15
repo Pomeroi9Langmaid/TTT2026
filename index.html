@@ -621,7 +621,8 @@ border-color:rgba(255,255,255,.22)!important;
 
 
 <style id="smartvel-parent-audio-style">
-.smartvel-parent-audio{position:fixed;top:22px;left:220px;z-index:999999;display:flex;gap:8px;align-items:center;background:rgba(5,20,34,.62);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px);border-radius:999px;padding:8px 10px;box-shadow:0 14px 36px rgba(0,0,0,.18)}
+.smartvel-parent-audio{position:fixed;top:22px;left:220px;z-index:999999;display:flex;gap:8px;align-items:center;background:rgba(5,20,34,.62);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px);border-radius:999px;padding:8px 10px;box-shadow:0 14px 36px rgba(0,0,0,.18);opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity .35s ease,transform .35s ease}
+.smartvel-parent-audio.audio-visible{opacity:1;pointer-events:auto;transform:translateY(0)}
 .smartvel-parent-audio button{width:36px;height:36px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;font-size:15px;font-weight:900;display:grid;place-items:center}
 .smartvel-parent-audio span{font-size:11px;font-weight:800;color:rgba(255,255,255,.78);padding-right:6px;max-width:170px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media(max-width:900px){.smartvel-parent-audio{left:16px;top:16px}.smartvel-parent-audio span{display:none}}
@@ -985,6 +986,7 @@ show(0);
     {src:'avuxi_intro.mp3',label:'Avuxi intro'},
     {src:'contact_intro.mp3',label:'Contact intro'}
   ];
+  const panel=document.getElementById('smartvelParentAudio');
   const audio=document.getElementById('smartvelPageAudio');
   const mute=document.getElementById('smartvelAudioMute');
   const replay=document.getElementById('smartvelAudioReplay');
@@ -994,11 +996,14 @@ show(0);
   let currentIndex=-1;
   let currentSrc='';
   let manuallyMuted=false;
-  let userUnlocked=false;
-  let introHasPlayed=false;
+  let introHasBeenRequested=false;
   let lastStartAt=0;
   let lastRequestedIndex=-1;
   let lastRequestedAt=0;
+
+  function showAudioPanel(){
+    if(panel) panel.classList.add('audio-visible');
+  }
 
   function updateIcon(){
     mute.textContent=audio.muted?'🔇':'🔊';
@@ -1028,6 +1033,7 @@ show(0);
       const p=audio.play();
       if(p && p.catch){
         p.catch(function(){
+          showAudioPanel();
           if(label) label.textContent='Tap sound to play';
         });
       }
@@ -1044,7 +1050,6 @@ show(0);
     }
 
     const now=Date.now();
-    // Critical anti-stutter guard: ignore repeated activation calls for the same slide.
     if(!opts.force && i===lastRequestedIndex && now-lastRequestedAt<1400) return;
     lastRequestedIndex=i;
     lastRequestedAt=now;
@@ -1069,11 +1074,21 @@ show(0);
     }
   }
 
-  window.smartvelPlaySlideAudio=function(i){ playIndex(i,{reset:true}); };
+  function startHomepageIntroFromSplash(){
+    if(introHasBeenRequested) return;
+    introHasBeenRequested=true;
+    showAudioPanel();
+    playIndex(0,{force:true,reset:true});
+  }
+
+  window.smartvelPlaySlideAudio=function(i){
+    showAudioPanel();
+    playIndex(i,{reset:true});
+  };
   window.smartvelStopSlideAudio=stopAudio;
+  window.smartvelStartHomepageIntro=startHomepageIntroFromSplash;
 
   mute.addEventListener('click',function(){
-    userUnlocked=true;
     manuallyMuted=!manuallyMuted;
     audio.muted=manuallyMuted;
     updateIcon();
@@ -1083,28 +1098,29 @@ show(0);
   });
 
   replay.addEventListener('click',function(){
-    userUnlocked=true;
     if(currentIndex>=0) playIndex(currentIndex,{force:true,reset:true});
   });
 
-  // First genuine interaction unlocks browser audio once; this avoids needing the user to double-toggle the icon.
-  ['pointerdown','keydown','touchstart'].forEach(function(evt){
+  // Any first page interaction unlocks audio and starts/resumes the current slide intro.
+  ['pointerdown','keydown','touchstart','click'].forEach(function(evt){
     window.addEventListener(evt,function(){
-      userUnlocked=true;
-      if(audio.paused && currentIndex>=0 && !manuallyMuted){
-        playIndex(currentIndex,{force:true,reset:false});
+      if(currentIndex<0) currentIndex=0;
+      if(audio.paused && !manuallyMuted){
+        showAudioPanel();
+        playIndex(currentIndex,{force:true,reset:audio.currentTime<0.05});
       }
     },{once:true,passive:true});
   });
 
-  // Start the Smartvel welcome audio exactly once, after the opening splash has faded.
+  // The splash is silent. The homepage intro is requested as soon as the splash animation finishes.
   window.addEventListener('load',function(){
-    window.setTimeout(function(){
-      if(!introHasPlayed){
-        introHasPlayed=true;
-        playIndex(0,{force:true,reset:true});
-      }
-    },5250);
+    const intro=document.querySelector('.intro');
+    if(intro){
+      intro.addEventListener('animationend',function(){
+        setTimeout(startHomepageIntroFromSplash,80);
+      },{once:true});
+    }
+    setTimeout(startHomepageIntroFromSplash,5350);
   });
 
   window.addEventListener('message',function(event){
