@@ -14,7 +14,7 @@
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--bg);color:var(--black);font-family:'Poppins',Arial,sans-serif}
-.page{width:100%;max-width:1536px;min-height:100vh;margin:0 auto;padding:34px 48px 34px;position:relative;overflow:hidden}
+.page{width:100%;max-width:none;min-height:100vh;margin:0 auto;padding:34px 48px 34px;position:relative;overflow:hidden}
 .page:before{content:"";position:absolute;right:-190px;top:-180px;width:650px;height:650px;border-radius:50%;background:radial-gradient(circle,rgba(41,170,224,.24),rgba(41,170,224,0) 68%)}
 .page:after{content:"";position:absolute;left:-160px;bottom:-250px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(0,166,152,.16),rgba(0,166,152,0) 70%)}
 .header,.hero,.geo-banner,.proof-row,.bottom-strip,.footnote{position:relative;z-index:1}
@@ -84,6 +84,12 @@ h1 strong{color:var(--green)}
 }
 </style>
 
+
+<style id="SMARTVEL_FULL_WIDTH_FORCE_V6">
+html,body{width:100%!important;max-width:none!important;overflow-x:hidden!important;}
+.page{width:100%!important;max-width:none!important;margin:0!important;}
+.shell,.hero,.mission,.trust,.journey,.engagement,.geo,.bottom-strip{max-width:none!important;}
+</style>
 </head>
 <body>
 <!-- TRAVELSEO_HERO_VIDEO_MARKER -->
@@ -207,17 +213,12 @@ h1 strong{color:var(--green)}
   if(!panel||!audio||!mute||!replay) return;
   panel.style.display='flex';
   audio.volume=1;
-  let lastPlayAt=0;
   function update(){mute.textContent=audio.muted?'🔇':'🔊';}
-  function play(reset){
-    const now=Date.now();
-    if(!reset && now-lastPlayAt<1200) return;
-    lastPlayAt=now;
-    try{if(reset) audio.currentTime=0; const p=audio.play(); if(p&&p.catch)p.catch(()=>{});}catch(e){}
-  }
+  function play(reset){try{if(reset) audio.currentTime=0; audio.play().catch(()=>{});}catch(e){}}
   mute.onclick=function(){audio.muted=!audio.muted; update(); if(!audio.muted&&audio.paused) play(false);};
   replay.onclick=function(){play(true);};
-  window.addEventListener('load',()=>play(true),{once:true});
+  document.addEventListener('DOMContentLoaded',()=>play(true));
+  window.addEventListener('pageshow',()=>play(true));
   update();
 })();
 </script>

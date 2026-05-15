@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Smartvel Interactive Journey V5</title><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap' rel='stylesheet'>
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Smartvel Interactive Journey V6 - splash-audio-width-final</title><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap' rel='stylesheet'>
 <style>
 :root{--blue:#29AAE0;--green:#00A698;--orange:#FF9400}
 *{box-sizing:border-box}
@@ -621,10 +621,10 @@ border-color:rgba(255,255,255,.22)!important;
 
 
 <style id="smartvel-parent-audio-style">
-.smartvel-parent-audio{position:fixed;top:22px;left:220px;z-index:999999;display:flex;gap:8px;align-items:center;background:rgba(5,20,34,.62);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px);border-radius:999px;padding:8px 10px;box-shadow:0 14px 36px rgba(0,0,0,.18);opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity .35s ease,transform .35s ease}
-.smartvel-parent-audio.audio-visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+.smartvel-parent-audio{position:fixed;top:22px;left:220px;z-index:999999;display:none;gap:8px;align-items:center;background:rgba(5,20,34,.62);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px);border-radius:999px;padding:8px 10px;box-shadow:0 14px 36px rgba(0,0,0,.18)}
 .smartvel-parent-audio button{width:36px;height:36px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;font-size:15px;font-weight:900;display:grid;place-items:center}
 .smartvel-parent-audio span{font-size:11px;font-weight:800;color:rgba(255,255,255,.78);padding-right:6px;max-width:170px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+body.smartvel-audio-ready .smartvel-parent-audio{display:flex}
 @media(max-width:900px){.smartvel-parent-audio{left:16px;top:16px}.smartvel-parent-audio span{display:none}}
 </style>
 
@@ -670,13 +670,13 @@ border-color:rgba(255,255,255,.22)!important;
 <div class='viewport'>
 <button class='parent-more-cue' id='parentMoreCue' type='button' aria-label='Scroll for more content'><span>More below</span><svg viewBox='0 0 24 24' fill='none' aria-hidden='true'><path d='M6 9l6 6 6-6' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg></button>
 
-<div class='slide active' data-title='Smartvel' data-sub='Company overview and ecosystem'><iframe allow="autoplay" src='smartvel.html?v=final-audio-home'></iframe></div>
-<div class='slide' data-title='EntryDocs' data-sub='Travel requirements intelligence'><iframe allow="autoplay" src='entrydocs.html?v=final-audio-detail'></iframe></div>
-<div class='slide' data-title='TravelAble' data-sub='Accessible travel support'><iframe allow="autoplay" src='travelable.html?v=final-audio-detail'></iframe></div>
-<div class='slide' data-title='Explore & Go' data-sub='Destination inspiration'><iframe allow="autoplay" src='exploreandgo.html?v=final-audio-detail'></iframe></div>
-<div class='slide' data-title='Trip Planner' data-sub='Destination engagement'><iframe allow="autoplay" src='tripplanner.html?v=final-audio-detail'></iframe></div>
-<div class='slide' data-title='TravelSEO' data-sub='SEO and GEO'><iframe allow="autoplay" src='travelseo.html?v=final-audio-detail'></iframe></div>
-<div class='slide' data-title='Avuxi' data-sub='Neighbourhood intelligence'><iframe allow="autoplay" src='avuxi.html?v=final-audio-detail'></iframe></div>
+<div class='slide active' data-title='Smartvel' data-sub='Company overview and ecosystem'><iframe allow="autoplay" src='smartvel.html?v=v6-splash-audio-width-final'></iframe></div>
+<div class='slide' data-title='EntryDocs' data-sub='Travel requirements intelligence'><iframe allow="autoplay" src='entrydocs.html?v=v6-splash-audio-width-final'></iframe></div>
+<div class='slide' data-title='TravelAble' data-sub='Accessible travel support'><iframe allow="autoplay" src='travelable.html?v=v6-splash-audio-width-final'></iframe></div>
+<div class='slide' data-title='Explore & Go' data-sub='Destination inspiration'><iframe allow="autoplay" src='exploreandgo.html?v=v6-splash-audio-width-final'></iframe></div>
+<div class='slide' data-title='Trip Planner' data-sub='Destination engagement'><iframe allow="autoplay" src='tripplanner.html?v=v6-splash-audio-width-final'></iframe></div>
+<div class='slide' data-title='TravelSEO' data-sub='SEO and GEO'><iframe allow="autoplay" src='travelseo.html?v=v6-splash-audio-width-final'></iframe></div>
+<div class='slide' data-title='Avuxi' data-sub='Neighbourhood intelligence'><iframe allow="autoplay" src='avuxi.html?v=v6-splash-audio-width-final'></iframe></div>
 <div class='slide' data-title='Contact' data-sub='Reach out'>
 <div class='contact'><a class='brand-mark-link' href='https://www.smartvel.com/' target='_blank' rel='noopener noreferrer'><img class='brand-mark' src='smartvel_logo.png' alt='Smartvel logo'></a><div class='visual-orbit'></div><div class='route-line'></div>
 <div>
@@ -800,6 +800,7 @@ const ctas=[
 ];
 
 let current=0;
+let splashFinished=false;
 
 function notifySlideAudio(i){
   if(window.smartvelPlaySlideAudio) window.smartvelPlaySlideAudio(i);
@@ -849,7 +850,6 @@ function show(i){
   if(i<0)i=0;
   if(i>=slides.length)i=slides.length-1;
   current=i;
-  setTimeout(()=>notifySlideAudio(i),120);
 
   slides.forEach((s,idx)=>s.classList.toggle('active',idx===i));
   stops.forEach((s,idx)=>{
@@ -870,6 +870,10 @@ function show(i){
   setTimeout(updateParentMoreCue,380);
   setTimeout(updateParentMoreCue,1150);
   requestAnimationFrame(()=>movePlane(i));
+
+  if(splashFinished || i !== 0){
+    setTimeout(()=>notifySlideAudio(i),160);
+  }
 }
 
 
@@ -878,7 +882,7 @@ slides.forEach((slide, idx)=>{
   const frame = slide.querySelector('iframe');
   if(frame){
     frame.addEventListener('load',()=>{
-      if(idx === current) setTimeout(()=>notifySlideAudio(idx),120);
+      if(idx === current && (splashFinished || idx !== 0)) setTimeout(()=>notifySlideAudio(idx),120);
     });
   }
 });
@@ -970,6 +974,11 @@ if(parentMoreCue){
 }
 
 show(0);
+setTimeout(()=>{
+  splashFinished=true;
+  document.body.classList.add('smartvel-audio-ready');
+  notifySlideAudio(0);
+}, 5250);
 </script>
 
 
@@ -986,163 +995,74 @@ show(0);
     {src:'avuxi_intro.mp3',label:'Avuxi intro'},
     {src:'contact_intro.mp3',label:'Contact intro'}
   ];
-  const panel=document.getElementById('smartvelParentAudio');
   const audio=document.getElementById('smartvelPageAudio');
   const mute=document.getElementById('smartvelAudioMute');
   const replay=document.getElementById('smartvelAudioReplay');
   const label=document.getElementById('smartvelAudioLabel');
   if(!audio||!mute||!replay) return;
-
   let currentIndex=-1;
-  let currentSrc='';
   let manuallyMuted=false;
-  let introHasBeenRequested=false;
-  let lastStartAt=0;
-  let lastRequestedIndex=-1;
-  let lastRequestedAt=0;
+  let lastRequested=-1;
+  let lastAt=0;
 
-  function showAudioPanel(){
-    if(panel) panel.classList.add('audio-visible');
-  }
-
-  function updateIcon(){
-    mute.textContent=audio.muted?'🔇':'🔊';
-  }
-
-  function isDetailOverviewActive(){
-    try{
-      const active=document.querySelector('.slide.active iframe');
-      if(!active || !active.contentWindow) return false;
-      const href=active.contentWindow.location.href || '';
-      return /-overview\.html/i.test(href);
-    }catch(e){
-      return false;
-    }
-  }
-
-  function stopAudio(){
-    try{ audio.pause(); audio.currentTime=0; }catch(e){}
-  }
-
-  function setLabel(item){
-    if(label) label.textContent=item ? item.label : 'Intro audio';
-  }
-
-  function attemptPlay(){
-    try{
-      const p=audio.play();
-      if(p && p.catch){
-        p.catch(function(){
-          showAudioPanel();
-          if(label) label.textContent='Tap sound to play';
-        });
-      }
-    }catch(e){}
-  }
-
-  function playIndex(i, opts){
-    opts=opts||{};
-    const item=audioMap[i];
-    if(!item) return;
-    if(isDetailOverviewActive()){
-      stopAudio();
-      return;
-    }
-
-    const now=Date.now();
-    if(!opts.force && i===lastRequestedIndex && now-lastRequestedAt<1400) return;
-    lastRequestedIndex=i;
-    lastRequestedAt=now;
-
-    currentIndex=i;
-    setLabel(item);
-    audio.volume=1;
-    audio.muted=manuallyMuted;
-    updateIcon();
-
-    const resolvedSrc=new URL(item.src, window.location.href).href;
-    if(resolvedSrc!==currentSrc){
-      currentSrc=resolvedSrc;
-      audio.src=item.src;
-      audio.load();
-    }
-
-    if(opts.reset || audio.paused || now-lastStartAt>1200){
-      try{ if(opts.reset || audio.currentTime<0.05) audio.currentTime=0; }catch(e){}
-      lastStartAt=now;
-      attemptPlay();
-    }
-  }
-
-  function startHomepageIntroFromSplash(){
-    if(introHasBeenRequested) return;
-    introHasBeenRequested=true;
-    showAudioPanel();
-    playIndex(0,{force:true,reset:true});
-  }
+  function updateIcon(){ mute.textContent=audio.muted?'🔇':'🔊'; }
+  function setLabel(text){ if(label) label.textContent=text; }
 
   window.smartvelPlaySlideAudio=function(i){
-    showAudioPanel();
-    playIndex(i,{reset:true});
+    const item=audioMap[i];
+    if(!item) return;
+    const now=Date.now();
+    if(i===lastRequested && now-lastAt<900) return;
+    lastRequested=i;
+    lastAt=now;
+    currentIndex=i;
+    try{
+      audio.pause();
+      audio.currentTime=0;
+      if(!audio.src || !audio.src.endsWith(item.src)){
+        audio.src=item.src;
+        audio.load();
+      }
+      audio.volume=1;
+      audio.muted=manuallyMuted;
+      setLabel(item.label);
+      updateIcon();
+      const p=audio.play();
+      if(p && p.catch){
+        p.catch(()=>{ setLabel('Tap sound to play'); });
+      }
+    }catch(e){ setLabel('Tap sound to play'); }
   };
-  window.smartvelStopSlideAudio=stopAudio;
-  window.smartvelStartHomepageIntro=startHomepageIntroFromSplash;
+
+  window.smartvelStopSlideAudio=function(){
+    try{audio.pause();audio.currentTime=0;}catch(e){}
+  };
 
   mute.addEventListener('click',function(){
     manuallyMuted=!manuallyMuted;
     audio.muted=manuallyMuted;
     updateIcon();
     if(!manuallyMuted && audio.paused && currentIndex>=0){
-      playIndex(currentIndex,{force:true,reset:false});
+      try{audio.play().catch(()=>{ setLabel('Tap sound to play'); });}catch(e){}
     }
   });
 
   replay.addEventListener('click',function(){
-    if(currentIndex>=0) playIndex(currentIndex,{force:true,reset:true});
+    lastRequested=-1;
+    if(currentIndex>=0) window.smartvelPlaySlideAudio(currentIndex);
   });
 
-  // Any first page interaction unlocks audio and starts/resumes the current slide intro.
-  ['pointerdown','keydown','touchstart','click'].forEach(function(evt){
-    window.addEventListener(evt,function(){
-      if(currentIndex<0) currentIndex=0;
-      if(audio.paused && !manuallyMuted){
-        showAudioPanel();
-        playIndex(currentIndex,{force:true,reset:audio.currentTime<0.05});
+  ['pointerdown','keydown','touchstart'].forEach(evt=>{
+    document.addEventListener(evt,()=>{
+      if(!manuallyMuted && audio.paused && currentIndex>=0){
+        try{audio.play().catch(()=>{});}catch(e){}
       }
     },{once:true,passive:true});
   });
 
-  // The splash is silent. The homepage intro is requested as soon as the splash animation finishes.
-  window.addEventListener('load',function(){
-    const intro=document.querySelector('.intro');
-    if(intro){
-      intro.addEventListener('animationend',function(){
-        setTimeout(startHomepageIntroFromSplash,80);
-      },{once:true});
-    }
-    setTimeout(startHomepageIntroFromSplash,5350);
-  });
-
-  window.addEventListener('message',function(event){
-    const data=event && event.data;
-    if(data && (data.type==='SMARTVEL_DETAIL_PAGE' || data.type==='SMARTVEL_PAGE_SILENT')){
-      stopAudio();
-      if(label) label.textContent='Silent detail page';
-    }
-  });
-
-  window.setInterval(function(){
-    if(isDetailOverviewActive()){
-      stopAudio();
-      if(label) label.textContent='Silent detail page';
-    }
-  },500);
-
   document.addEventListener('visibilitychange',function(){
-    if(document.hidden) stopAudio();
+    if(document.hidden){try{audio.pause();}catch(e){}}
   });
-
-  updateIcon();
 })();
 </script>
 
