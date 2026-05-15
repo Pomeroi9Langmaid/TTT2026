@@ -1,0 +1,28 @@
+ENTRYDOCS_OVERVIEW_V4_PROPER_PLAYBOOK_SCAN
+
+[OK] index.html
+[OK] entrydocs.html
+[OK] entrydocs-overview.html
+[OK] entrydocs_playbook.pdf
+[OK] entrydocs_product_sheet.pdf
+[OK] entrydocs_hero_video.mp4
+[OK] entrydocs_hero_video_alt.mp4
+[OK] smartvel.html
+[OK] smartvel_stats_refocus.html
+
+[OK] No embedded PDF page screenshots referenced
+[OK] Schedule meeting label used
+[OK] Book walkthrough label removed
+[OK] HubSpot meeting link present
+[OK] Internal demo section present
+[OK] Demo videos referenced
+[OK] Playbook download present
+[OK] Product sheet download present
+[OK] EU Package Travel Directive section present
+[OK] Accuracy section present
+[OK] Customer journey section present
+[OK] Business impact section present
+[OK] Implementation options present
+
+LOCAL LINK / ASSET SCAN
+[OK] No missing local refs in scanned files.
