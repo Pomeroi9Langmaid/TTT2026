@@ -1,0 +1,65 @@
+TTT2026_FINAL_CORRECT_UPDATE_SCAN
+
+[OK] index.html
+[OK] smartvel.html
+[OK] entrydocs.html
+[OK] entrydocs-overview.html
+[OK] travelseo.html
+[OK] travelseo-overview.html
+[OK] exploreandgo.html
+[OK] explorego-overview.html
+[OK] tripplanner.html
+[OK] tripplanner-overview.html
+[OK] travelable.html
+[OK] travelable-overview.html
+[OK] avuxi.html
+[OK] homepage_intro.mp3
+[OK] entrydocs_intro.mp3
+[OK] explorego_intro.mp3
+[OK] tripplanner_intro.mp3
+[OK] travelseo_intro.mp3
+[OK] avuxi_intro.mp3
+[OK] travelable_intro.mp3
+[OK] contact_intro.mp3
+[OK] travelseo_playbook.pdf
+[OK] travelseo_product_sheet.pdf
+[OK] explorego_playbook.pdf
+[OK] explorego_product_sheet.pdf
+[OK] tripplanner_playbook.pdf
+[OK] tripplanner_product_sheet.pdf
+[OK] travelable_playbook.pdf
+[OK] entrydocs_playbook.pdf
+[OK] entrydocs_product_sheet.pdf
+[OK] entrydocs_detail_hero_ultra_realistic.png
+[OK] entrydocs_how_it_works_ultra_realistic.png
+
+[OK] Parent audio controls present
+[OK] Safe parent audio filenames mapped
+[OK] Contact wording updated
+[OK] Parent notifySlideAudio triggers audio
+[OK] All iframes allow autoplay
+[OK] travelseo-overview.html has schedule CTA
+[OK] travelseo-overview.html has playbook download
+[OK] travelseo-overview.html has live environment
+[OK] travelseo-overview.html has product depth
+[OK] explorego-overview.html has schedule CTA
+[OK] explorego-overview.html has playbook download
+[OK] explorego-overview.html has live environment
+[OK] explorego-overview.html has product depth
+[OK] tripplanner-overview.html has schedule CTA
+[OK] tripplanner-overview.html has playbook download
+[OK] tripplanner-overview.html has live environment
+[OK] tripplanner-overview.html has product depth
+[OK] travelable-overview.html has schedule CTA
+[OK] travelable-overview.html has playbook download
+[OK] travelable-overview.html has live environment
+[OK] travelable-overview.html has product depth
+[OK] travelseo.html detail CTA present
+[OK] exploreandgo.html detail CTA present
+[OK] tripplanner.html detail CTA present
+[OK] travelable.html detail CTA present
+[OK] entrydocs.html detail CTA present
+[OK] avuxi.html detail CTA present
+
+LOCAL REFERENCE SCAN
+[OK] No missing local file refs found in root HTML files.

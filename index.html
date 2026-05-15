@@ -619,8 +619,24 @@ border-color:rgba(255,255,255,.22)!important;
 </style>
 <!-- /PARENT_MORE_BELOW_CUE_V1 -->
 
+
+<style id="smartvel-parent-audio-style">
+.smartvel-parent-audio{position:fixed;top:22px;left:220px;z-index:999999;display:flex;gap:8px;align-items:center;background:rgba(5,20,34,.62);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px);border-radius:999px;padding:8px 10px;box-shadow:0 14px 36px rgba(0,0,0,.18)}
+.smartvel-parent-audio button{width:36px;height:36px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;font-size:15px;font-weight:900;display:grid;place-items:center}
+.smartvel-parent-audio span{font-size:11px;font-weight:800;color:rgba(255,255,255,.78);padding-right:6px;max-width:170px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:900px){.smartvel-parent-audio{left:16px;top:16px}.smartvel-parent-audio span{display:none}}
+</style>
+
 </head>
 <body>
+
+<div class="smartvel-parent-audio" id="smartvelParentAudio">
+  <button type="button" id="smartvelAudioMute" aria-label="Mute or unmute page intro">🔊</button>
+  <button type="button" id="smartvelAudioReplay" aria-label="Replay page intro">↻</button>
+  <span id="smartvelAudioLabel">Intro audio</span>
+</div>
+<audio id="smartvelPageAudio" preload="auto"></audio>
+
 
 <div class='intro'><div class='intro-inner'><img src='smartvel_logo.png'><h1>Powering the<br>traveller journey.</h1><p>Toronto Travel Tech interactive showcase</p><div class='intro-ai'>AI-powered travel intelligence for better passenger experiences</div><div class='intro-sub'>A guided journey through Smartvel’s travel technology ecosystem</div></div></div>
 
@@ -653,22 +669,22 @@ border-color:rgba(255,255,255,.22)!important;
 <div class='viewport'>
 <button class='parent-more-cue' id='parentMoreCue' type='button' aria-label='Scroll for more content'><span>More below</span><svg viewBox='0 0 24 24' fill='none' aria-hidden='true'><path d='M6 9l6 6 6-6' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg></button>
 
-<div class='slide active' data-title='Smartvel' data-sub='Company overview and ecosystem'><iframe allow="autoplay" src='smartvel.html?v=toronto-ai-v1'></iframe></div>
-<div class='slide' data-title='EntryDocs' data-sub='Travel requirements intelligence'><iframe allow="autoplay" src='entrydocs.html?v=audio-v10'></iframe></div>
-<div class='slide' data-title='TravelAble' data-sub='Accessible travel support'><iframe allow="autoplay" src='travelable.html?v=parent-more-cue-v1'></iframe></div>
-<div class='slide' data-title='Explore & Go' data-sub='Destination inspiration'><iframe allow="autoplay" src='exploreandgo.html?v=toronto-ai-v1'></iframe></div>
-<div class='slide' data-title='Trip Planner' data-sub='Destination engagement'><iframe allow="autoplay" src='tripplanner.html?v=toronto-ai-v1'></iframe></div>
-<div class='slide' data-title='TravelSEO' data-sub='SEO and GEO'><iframe allow="autoplay" src='travelseo.html?v=restored-parent-cue-v1'></iframe></div>
-<div class='slide' data-title='Avuxi' data-sub='Neighbourhood intelligence'><iframe allow="autoplay" src='avuxi.html?v=restored-parent-cue-v1'></iframe></div>
+<div class='slide active' data-title='Smartvel' data-sub='Company overview and ecosystem'><iframe allow="autoplay" src='smartvel.html?v=final-audio-home'></iframe></div>
+<div class='slide' data-title='EntryDocs' data-sub='Travel requirements intelligence'><iframe allow="autoplay" src='entrydocs.html?v=final-audio-detail'></iframe></div>
+<div class='slide' data-title='TravelAble' data-sub='Accessible travel support'><iframe allow="autoplay" src='travelable.html?v=final-audio-detail'></iframe></div>
+<div class='slide' data-title='Explore & Go' data-sub='Destination inspiration'><iframe allow="autoplay" src='exploreandgo.html?v=final-audio-detail'></iframe></div>
+<div class='slide' data-title='Trip Planner' data-sub='Destination engagement'><iframe allow="autoplay" src='tripplanner.html?v=final-audio-detail'></iframe></div>
+<div class='slide' data-title='TravelSEO' data-sub='SEO and GEO'><iframe allow="autoplay" src='travelseo.html?v=final-audio-detail'></iframe></div>
+<div class='slide' data-title='Avuxi' data-sub='Neighbourhood intelligence'><iframe allow="autoplay" src='avuxi.html?v=final-audio-detail'></iframe></div>
 <div class='slide' data-title='Contact' data-sub='Reach out'>
 <div class='contact'><a class='brand-mark-link' href='https://www.smartvel.com/' target='_blank' rel='noopener noreferrer'><img class='brand-mark' src='smartvel_logo.png' alt='Smartvel logo'></a><div class='visual-orbit'></div><div class='route-line'></div>
 <div>
-<h1>Let’s build better traveller journeys together.</h1>
+<h1>Continue the conversation with Smartvel.</h1>
 <div class='closing-visual'>
   <b>Powering the traveller journey.</b>
   <span>From inspiration and planning to travel requirements, accessibility and destination intelligence — Smartvel helps travel brands create clearer, more useful traveller experiences.</span>
 </div>
-<p>For demos, partnership discussions, product questions or Toronto Travel Tech follow-up conversations, contact Andrew directly.</p>
+<p>If you can see potential in one of Smartvel’s solutions within your business, schedule a meeting or email Andrew Langmaid, CEO of ArrivalGuides — part of the Smartvel Group.</p>
 <div class='contact-actions'><a class='mail left-mail' href='mailto:alangmaid@smartvel.com?subject=Smartvel%20Toronto%20Travel%20Tech%20follow-up'>Email Andrew</a><a class='schedule' href='https://meetings.hubspot.com/alangmaid' target='_blank' rel='noopener noreferrer'>Schedule a meeting</a></div>
 </div>
 
@@ -785,11 +801,12 @@ const ctas=[
 let current=0;
 
 function notifySlideAudio(i){
+  if(window.smartvelPlaySlideAudio) window.smartvelPlaySlideAudio(i);
   slides.forEach((slide, idx)=>{
     const frame = slide.querySelector('iframe');
     if(!frame || !frame.contentWindow) return;
     try{
-      frame.contentWindow.postMessage({type: idx === i ? 'SMARTVEL_ENTRYDOCS_ACTIVE' : 'SMARTVEL_ENTRYDOCS_INACTIVE'}, '*');
+      frame.contentWindow.postMessage({type: idx === i ? 'SMARTVEL_PAGE_ACTIVE' : 'SMARTVEL_PAGE_INACTIVE', index: idx}, '*');
     }catch(e){}
   });
 }
@@ -955,5 +972,65 @@ if(parentMoreCue){
 show(0);
 </script>
 
+
+
+<script id="smartvel-parent-audio-script">
+(function(){
+  const audioMap=[
+    {src:'homepage_intro.mp3',label:'Smartvel intro'},
+    {src:'entrydocs_intro.mp3',label:'EntryDocs intro'},
+    {src:'travelable_intro.mp3',label:'TravelAble intro'},
+    {src:'explorego_intro.mp3',label:'Explore & Go intro'},
+    {src:'tripplanner_intro.mp3',label:'Trip Planner intro'},
+    {src:'travelseo_intro.mp3',label:'TravelSEO intro'},
+    {src:'avuxi_intro.mp3',label:'Avuxi intro'},
+    {src:'contact_intro.mp3',label:'Contact intro'}
+  ];
+  const audio=document.getElementById('smartvelPageAudio');
+  const mute=document.getElementById('smartvelAudioMute');
+  const replay=document.getElementById('smartvelAudioReplay');
+  const label=document.getElementById('smartvelAudioLabel');
+  if(!audio||!mute||!replay) return;
+  let currentIndex=-1;
+  let manuallyMuted=false;
+
+  function updateIcon(){
+    mute.textContent=audio.muted?'🔇':'🔊';
+  }
+  window.smartvelPlaySlideAudio=function(i){
+    const item=audioMap[i];
+    if(!item) return;
+    currentIndex=i;
+    try{
+      audio.pause();
+      audio.src=item.src;
+      audio.currentTime=0;
+      audio.volume=1;
+      audio.muted=manuallyMuted;
+      if(label) label.textContent=item.label;
+      updateIcon();
+      const p=audio.play();
+      if(p && p.catch) p.catch(()=>{});
+    }catch(e){}
+  };
+  window.smartvelStopSlideAudio=function(){
+    try{audio.pause();audio.currentTime=0;}catch(e){}
+  };
+  mute.addEventListener('click',function(){
+    manuallyMuted=!manuallyMuted;
+    audio.muted=manuallyMuted;
+    updateIcon();
+    if(!manuallyMuted && audio.paused && currentIndex>=0){
+      try{audio.play().catch(()=>{});}catch(e){}
+    }
+  });
+  replay.addEventListener('click',function(){
+    if(currentIndex>=0) window.smartvelPlaySlideAudio(currentIndex);
+  });
+  document.addEventListener('visibilitychange',function(){
+    if(document.hidden){try{audio.pause();}catch(e){}}
+  });
+})();
+</script>
 
 </body></html>

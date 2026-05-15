@@ -857,5 +857,35 @@ section.mission .stat.stat-enhanced .count-up{font-size:64px!important}
 })();
 </script>
 
+
+<style id="smartvel-direct-audio-style">
+.smartvel-direct-audio{position:fixed;top:18px;left:18px;z-index:999999;display:none;gap:8px;background:rgba(5,20,34,.62);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px);border-radius:999px;padding:8px 10px;box-shadow:0 14px 36px rgba(0,0,0,.18)}
+.smartvel-direct-audio button{width:36px;height:36px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;font-size:15px;font-weight:900;display:grid;place-items:center}
+</style>
+<div class="smartvel-direct-audio" id="smartvelDirectAudio">
+  <button type="button" id="smartvelDirectMute" aria-label="Mute or unmute intro">🔊</button>
+  <button type="button" id="smartvelDirectReplay" aria-label="Replay intro">↻</button>
+</div>
+<audio id="smartvelDirectAudioEl" src="homepage_intro.mp3" preload="auto"></audio>
+<script id="smartvel-direct-audio-script">
+(function(){
+  if(window.self !== window.top) return;
+  const panel=document.getElementById('smartvelDirectAudio');
+  const audio=document.getElementById('smartvelDirectAudioEl');
+  const mute=document.getElementById('smartvelDirectMute');
+  const replay=document.getElementById('smartvelDirectReplay');
+  if(!panel||!audio||!mute||!replay) return;
+  panel.style.display='flex';
+  audio.volume=1;
+  function update(){mute.textContent=audio.muted?'🔇':'🔊';}
+  function play(reset){try{if(reset) audio.currentTime=0; audio.play().catch(()=>{});}catch(e){}}
+  mute.onclick=function(){audio.muted=!audio.muted; update(); if(!audio.muted&&audio.paused) play(false);};
+  replay.onclick=function(){play(true);};
+  document.addEventListener('DOMContentLoaded',()=>play(true));
+  window.addEventListener('pageshow',()=>play(true));
+  update();
+})();
+</script>
+
 </body>
 </html>

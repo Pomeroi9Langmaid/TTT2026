@@ -118,4 +118,55 @@ z-index:2;
 <section class="proof-row"><div class="proof"><b>All-in-one guide</b><span>Places, restaurants, events, tours and activities in one destination experience.</span></div><div class="proof"><b>Traveller filters</b><span>Content can be filtered by interests, audience, duration and context.</span></div><div class="proof"><b>Managed content</b><span>Smartvel maintains and categorises content so client teams do not have to.</span></div><div class="proof"><b>Partner-ready</b><span>Supports client agreements with tours, activities, tickets or other providers.</span></div><div class="proof"><b>Widget or API</b><span>Deploy as a white-label widget or use Smartvel data inside your own solution.</span></div></section>
 <section class="bottom-strip"><img src="exploreandgo.png" alt="Explore and Go connection visual"><div class="bottom-copy"><h2>Connect inspiration to planning.</h2><p>Trip Planner works naturally after Explore & Go, TravelSEO or campaign landing pages — once travellers are inspired, it gives them a reason to stay, explore and move closer to booking.</p><div class="tags"><span class="tag">Live agenda</span><span class="tag">POIs + restaurants</span><span class="tag">Itineraries</span><span class="tag">Ancillary CTAs</span></div><a class="demo-link" href="https://sales-itineraries.cst.smartvel.com/?lang=en#modal" target="_blank" rel="noopener noreferrer">Open Trip Planner demo</a></div></section>
 <div class="footnote">Metrics and engagement claims should be adapted with client-specific figures where available. The commercial framing is based on Smartvel destination-content and Trip Planner product material.</div>
-</main></body></html>
+</main>
+<style id="smartvel-detail-cta-style">
+.smartvel-detail-cta{width:min(1180px,92vw);margin:34px auto 46px;padding:28px;border-radius:28px;background:linear-gradient(135deg,#061f36,#0b5d88 72%,#29AAE0);color:#fff;box-shadow:0 22px 62px rgba(6,31,54,.20);display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center}
+.smartvel-detail-cta h2{margin:0 0 8px;font-size:28px;line-height:1.12;letter-spacing:-.045em;color:#fff}
+.smartvel-detail-cta p{margin:0;color:rgba(255,255,255,.82);font-size:14px;line-height:1.5;max-width:760px}
+.smartvel-detail-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.smartvel-detail-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:12px 17px;border-radius:999px;font-size:12px;font-weight:900;text-decoration:none;white-space:nowrap}
+.smartvel-detail-actions .primary{background:linear-gradient(135deg,#FF9400,#FFB347);color:#fff}
+.smartvel-detail-actions .secondary{background:#fff;color:#125885}
+.smartvel-detail-actions .ghost{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.24);color:#fff}
+@media(max-width:900px){.smartvel-detail-cta{grid-template-columns:1fr}.smartvel-detail-actions{justify-content:flex-start}}
+</style>
+
+<section class="smartvel-detail-cta">
+  <div>
+    <h2>Want to understand Trip Planner more deeply?</h2>
+    <p>This page gives the quick overview. Use the detailed overview, live environment and supporting material if you want to go deeper or share internally.</p>
+  </div>
+  <div class="smartvel-detail-actions"><a class="primary" href="tripplanner-overview.html">Explore Trip Planner in more detail</a><a class="secondary" href="https://www.iberia.com/es/guia-de-destinos/" target="_blank" rel="noopener noreferrer">Open demo environment</a><a class="ghost" href="tripplanner_playbook.pdf" download>Download playbook</a><a class="ghost" href="tripplanner_product_sheet.pdf" download>Download product sheet</a></div>
+</section>
+
+
+<style id="smartvel-direct-audio-style">
+.smartvel-direct-audio{position:fixed;top:18px;left:18px;z-index:999999;display:none;gap:8px;background:rgba(5,20,34,.62);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px);border-radius:999px;padding:8px 10px;box-shadow:0 14px 36px rgba(0,0,0,.18)}
+.smartvel-direct-audio button{width:36px;height:36px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;font-size:15px;font-weight:900;display:grid;place-items:center}
+</style>
+<div class="smartvel-direct-audio" id="smartvelDirectAudio">
+  <button type="button" id="smartvelDirectMute" aria-label="Mute or unmute intro">🔊</button>
+  <button type="button" id="smartvelDirectReplay" aria-label="Replay intro">↻</button>
+</div>
+<audio id="smartvelDirectAudioEl" src="tripplanner_intro.mp3" preload="auto"></audio>
+<script id="smartvel-direct-audio-script">
+(function(){
+  if(window.self !== window.top) return;
+  const panel=document.getElementById('smartvelDirectAudio');
+  const audio=document.getElementById('smartvelDirectAudioEl');
+  const mute=document.getElementById('smartvelDirectMute');
+  const replay=document.getElementById('smartvelDirectReplay');
+  if(!panel||!audio||!mute||!replay) return;
+  panel.style.display='flex';
+  audio.volume=1;
+  function update(){mute.textContent=audio.muted?'🔇':'🔊';}
+  function play(reset){try{if(reset) audio.currentTime=0; audio.play().catch(()=>{});}catch(e){}}
+  mute.onclick=function(){audio.muted=!audio.muted; update(); if(!audio.muted&&audio.paused) play(false);};
+  replay.onclick=function(){play(true);};
+  document.addEventListener('DOMContentLoaded',()=>play(true));
+  window.addEventListener('pageshow',()=>play(true));
+  update();
+})();
+</script>
+
+</body></html>

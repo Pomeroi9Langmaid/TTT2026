@@ -254,5 +254,56 @@ h1 strong{color:var(--teal)}
     </section>
   </div>
 </main>
+
+<style id="smartvel-detail-cta-style">
+.smartvel-detail-cta{width:min(1180px,92vw);margin:34px auto 46px;padding:28px;border-radius:28px;background:linear-gradient(135deg,#061f36,#0b5d88 72%,#29AAE0);color:#fff;box-shadow:0 22px 62px rgba(6,31,54,.20);display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center}
+.smartvel-detail-cta h2{margin:0 0 8px;font-size:28px;line-height:1.12;letter-spacing:-.045em;color:#fff}
+.smartvel-detail-cta p{margin:0;color:rgba(255,255,255,.82);font-size:14px;line-height:1.5;max-width:760px}
+.smartvel-detail-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.smartvel-detail-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:12px 17px;border-radius:999px;font-size:12px;font-weight:900;text-decoration:none;white-space:nowrap}
+.smartvel-detail-actions .primary{background:linear-gradient(135deg,#FF9400,#FFB347);color:#fff}
+.smartvel-detail-actions .secondary{background:#fff;color:#125885}
+.smartvel-detail-actions .ghost{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.24);color:#fff}
+@media(max-width:900px){.smartvel-detail-cta{grid-template-columns:1fr}.smartvel-detail-actions{justify-content:flex-start}}
+</style>
+
+<section class="smartvel-detail-cta">
+  <div>
+    <h2>Want to understand Avuxi more deeply?</h2>
+    <p>This page gives the quick overview. Use the detailed overview, live environment and supporting material if you want to go deeper or share internally.</p>
+  </div>
+  <div class="smartvel-detail-actions"><a class="secondary" href="https://www.trivago.deals/hotels/spain_08_barcelona/4005796_the-corner-hotel" target="_blank" rel="noopener noreferrer">See Avuxi in action</a></div>
+</section>
+
+
+<style id="smartvel-direct-audio-style">
+.smartvel-direct-audio{position:fixed;top:18px;left:18px;z-index:999999;display:none;gap:8px;background:rgba(5,20,34,.62);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px);border-radius:999px;padding:8px 10px;box-shadow:0 14px 36px rgba(0,0,0,.18)}
+.smartvel-direct-audio button{width:36px;height:36px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;font-size:15px;font-weight:900;display:grid;place-items:center}
+</style>
+<div class="smartvel-direct-audio" id="smartvelDirectAudio">
+  <button type="button" id="smartvelDirectMute" aria-label="Mute or unmute intro">🔊</button>
+  <button type="button" id="smartvelDirectReplay" aria-label="Replay intro">↻</button>
+</div>
+<audio id="smartvelDirectAudioEl" src="avuxi_intro.mp3" preload="auto"></audio>
+<script id="smartvel-direct-audio-script">
+(function(){
+  if(window.self !== window.top) return;
+  const panel=document.getElementById('smartvelDirectAudio');
+  const audio=document.getElementById('smartvelDirectAudioEl');
+  const mute=document.getElementById('smartvelDirectMute');
+  const replay=document.getElementById('smartvelDirectReplay');
+  if(!panel||!audio||!mute||!replay) return;
+  panel.style.display='flex';
+  audio.volume=1;
+  function update(){mute.textContent=audio.muted?'🔇':'🔊';}
+  function play(reset){try{if(reset) audio.currentTime=0; audio.play().catch(()=>{});}catch(e){}}
+  mute.onclick=function(){audio.muted=!audio.muted; update(); if(!audio.muted&&audio.paused) play(false);};
+  replay.onclick=function(){play(true);};
+  document.addEventListener('DOMContentLoaded',()=>play(true));
+  window.addEventListener('pageshow',()=>play(true));
+  update();
+})();
+</script>
+
 </body>
 </html>
