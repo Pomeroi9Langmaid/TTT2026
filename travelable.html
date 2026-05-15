@@ -355,7 +355,7 @@ html,body{width:100%!important;max-width:none!important;overflow-x:hidden!import
 </main>
 
 <style id="smartvel-detail-cta-style">
-.smartvel-detail-cta{width:min(1180px,92vw);margin:34px auto 46px;padding:28px;border-radius:28px;background:linear-gradient(135deg,#061f36,#0b5d88 72%,#29AAE0);color:#fff;box-shadow:0 22px 62px rgba(6,31,54,.20);display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center}
+.smartvel-detail-cta{width:100%;max-width:none;margin:34px 0 46px;padding:28px;border-radius:28px;background:linear-gradient(135deg,#061f36,#0b5d88 72%,#29AAE0);color:#fff;box-shadow:0 22px 62px rgba(6,31,54,.20);display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center}
 .smartvel-detail-cta h2{margin:0 0 8px;font-size:28px;line-height:1.12;letter-spacing:-.045em;color:#fff}
 .smartvel-detail-cta p{margin:0;color:rgba(255,255,255,.82);font-size:14px;line-height:1.5;max-width:760px}
 .smartvel-detail-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
@@ -403,6 +403,17 @@ html,body{width:100%!important;max-width:none!important;overflow-x:hidden!import
   update();
 })();
 </script>
+
+
+<style id="smartvel-full-width-bottom-cta-fix-v16">
+.smartvel-detail-cta{
+  width:100%!important;
+  max-width:none!important;
+  margin-left:0!important;
+  margin-right:0!important;
+  box-sizing:border-box!important;
+}
+</style>
 
 </body>
 </html>
