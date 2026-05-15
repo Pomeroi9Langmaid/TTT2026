@@ -1,0 +1,17 @@
+
+/* Homepage logo enhancement */
+.logo-carousel .logo-card,
+.client-carousel .logo-card,
+.logo-strip .logo-card{
+    transform: scale(1.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.28) !important;
+    border-radius: 18px;
+}
+
+.logo-carousel img,
+.client-carousel img,
+.logo-strip img{
+    max-height: 72px !important;
+    width: auto !important;
+    object-fit: contain;
+}
