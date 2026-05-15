@@ -68,6 +68,49 @@ h1 strong{color:var(--orange)}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(0,193,106,.5)}70%{box-shadow:0 0 0 12px rgba(0,193,106,0)}100%{box-shadow:0 0 0 0 rgba(0,193,106,0)}}
 </style>
 
+<style id="entrydocs-eu-more-v2-style">
+.eu-more-v2{
+  margin-top:18px;
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:18px;
+  background:rgba(255,255,255,.10);
+  overflow:hidden;
+}
+.eu-more-v2 summary{
+  cursor:pointer;
+  list-style:none;
+  padding:15px 17px;
+  color:#fff;
+  font-weight:900;
+  font-size:13px;
+  letter-spacing:.02em;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.eu-more-v2 summary::-webkit-details-marker{display:none}
+.eu-more-v2 summary:after{content:"↓";font-size:14px;transition:transform .2s ease}
+.eu-more-v2[open] summary:after{transform:rotate(180deg)}
+.eu-more-v2-content{
+  padding:0 17px 17px;
+  color:rgba(255,255,255,.86);
+  font-size:13px;
+  line-height:1.5;
+}
+.eu-more-v2-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}
+.eu-more-v2-item{
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.08);
+  border-radius:14px;
+  padding:12px;
+}
+.eu-more-v2-item b{display:block;color:#fff;margin-bottom:5px;font-size:13px}
+.eu-more-v2-note{margin-top:12px;color:rgba(255,255,255,.74);font-size:12px;line-height:1.45}
+@media(max-width:760px){.eu-more-v2-grid{grid-template-columns:1fr}}
+</style>
+
+
 
 
 
@@ -199,7 +242,7 @@ opacity:.65;
 </div>
 </div>
 
-<div class="entry-visual">
+<div class="entry-visual" id="entrydocs-demo">
   
 <div class="product-stage video-carousel-stage">
   <div class="video-slide video-slide-ai">
@@ -237,6 +280,45 @@ opacity:.65;
 </div>
 </section>
 
+<!-- ENTRYDOCS_DETAIL_OVERVIEW_CTA_V2 -->
+<style id="entrydocs-detail-overview-cta-v2-style">
+.entrydocs-detail-overview-cta-v2{
+  width:100%;
+  margin:28px 0 30px;
+  padding:26px 28px;
+  border-radius:28px;
+  border:1px solid rgba(222,231,239,.9);
+  background:
+    radial-gradient(circle at 95% 0%,rgba(255,148,0,.12),transparent 32%),
+    linear-gradient(135deg,rgba(255,255,255,.95),rgba(239,248,253,.92));
+  box-shadow:0 22px 58px rgba(18,18,18,.08);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  position:relative;
+  z-index:1;
+}
+.entrydocs-detail-overview-cta-v2 h3{margin:0 0 7px;color:#125885;font-size:25px;line-height:1.15;letter-spacing:-.04em}
+.entrydocs-detail-overview-cta-v2 p{margin:0;color:#667383;font-size:13px;line-height:1.45;max-width:820px}
+.entrydocs-detail-overview-cta-v2 a{
+  display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;
+  min-height:44px;padding:13px 19px;border-radius:999px;
+  background:linear-gradient(135deg,#FF9400,#FFB14A);
+  color:#fff;font-size:13px;line-height:1;font-weight:900;text-decoration:none;
+  box-shadow:0 15px 32px rgba(255,148,0,.26)
+}
+@media(max-width:760px){.entrydocs-detail-overview-cta-v2{flex-direction:column;align-items:flex-start}}
+</style>
+<section class="entrydocs-detail-overview-cta-v2">
+  <div>
+    <h3>Want the full EntryDocs picture?</h3>
+    <p>Explore how EntryDocs works, what it covers, how requirements are kept accurate, where it fits in the customer journey and the integration options available.</p>
+  </div>
+  <a href="entrydocs-overview.html">Explore EntryDocs in more detail →</a>
+</section>
+<!-- /ENTRYDOCS_DETAIL_OVERVIEW_CTA_V2 -->
+
 <section class="monitor-panel">
   <div class="monitor-copy">
     <div class="live"><span class="pulse"></span> AI monitoring active</div>
@@ -263,6 +345,20 @@ opacity:.65;
         <div class="eu-point">Useful for OTA's, cruise operators, airlines and package travel brands</div>
         <div class="eu-point">Works across web, mobile, email, chatbot and booking flows</div>
       </div>
+
+      <details class="eu-more-v2">
+        <summary>More detail: why this matters for package travel</summary>
+        <div class="eu-more-v2-content">
+          Package travel and linked travel journeys create higher expectations around clear, timely traveller information. EntryDocs helps teams communicate route-specific requirements before booking, after booking and before departure, instead of relying on static help pages or manual support responses.
+          <div class="eu-more-v2-grid">
+            <div class="eu-more-v2-item"><b>Pre-contractual clarity</b>Show travellers the practical requirements that may affect their trip before they commit.</div>
+            <div class="eu-more-v2-item"><b>Consistent journey messaging</b>Use the same maintained information across web, app, email, chatbot and support.</div>
+            <div class="eu-more-v2-item"><b>Multi-leg journeys</b>Support more complex routes, transit points and package-style travel flows.</div>
+            <div class="eu-more-v2-item"><b>Operational readiness</b>Reduce avoidable queries and help travellers prepare correctly before departure.</div>
+          </div>
+          <div class="eu-more-v2-note">EntryDocs supports traveller-information transparency and operational readiness. It does not replace formal legal advice or a company’s own compliance assessment.</div>
+        </div>
+      </details>
     </div>
   </div>
 </section>
@@ -284,65 +380,6 @@ opacity:.65;
 </section>
 
 <div class="footnote">Positioning is informational, not legal advice. EntryDocs supports traveller-information transparency and operational readiness; legal compliance obligations remain with each travel company and should be reviewed with appropriate counsel.</div>
-
-<!-- ENTRYDOCS_DETAIL_OVERVIEW_CTA_V1 -->
-<style id="entrydocs-detail-overview-cta-style">
-.entrydocs-detail-overview-cta{
-  width:min(1180px,92%);
-  margin:34px auto 22px;
-  padding:28px;
-  border-radius:28px;
-  border:1px solid rgba(255,255,255,.52);
-  background:linear-gradient(135deg,rgba(255,255,255,.92),rgba(239,248,253,.88));
-  box-shadow:0 22px 58px rgba(9,35,61,.12);
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:24px;
-}
-.entrydocs-detail-overview-cta h3{
-  margin:0 0 7px;
-  color:#0a3150;
-  font-size:25px;
-  line-height:1.15;
-  letter-spacing:-.035em;
-}
-.entrydocs-detail-overview-cta p{
-  margin:0;
-  color:#53687e;
-  font-size:14px;
-  line-height:1.45;
-  max-width:720px;
-}
-.entrydocs-detail-overview-cta a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  white-space:nowrap;
-  min-height:44px;
-  padding:13px 19px;
-  border-radius:999px;
-  background:linear-gradient(135deg,#ff8a00,#ffac32);
-  color:#fff;
-  font-size:13px;
-  line-height:1;
-  font-weight:900;
-  text-decoration:none;
-  box-shadow:0 15px 32px rgba(255,138,0,.26);
-}
-@media(max-width:760px){
-  .entrydocs-detail-overview-cta{flex-direction:column;align-items:flex-start}
-}
-</style>
-<div class="entrydocs-detail-overview-cta">
-  <div>
-    <h3>Want the full EntryDocs picture?</h3>
-    <p>Explore the detailed overview: how EntryDocs works, what it covers, how requirements are kept accurate, where it fits in the customer journey and the integration options available.</p>
-  </div>
-  <a href="entrydocs-overview.html">Explore EntryDocs in more detail →</a>
-</div>
-<!-- /ENTRYDOCS_DETAIL_OVERVIEW_CTA_V1 -->
-
 </main>
 </body>
 </html>

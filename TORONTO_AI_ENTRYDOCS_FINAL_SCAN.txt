@@ -1,0 +1,38 @@
+TORONTO_AI_ENTRYDOCS_FINAL_SCAN_V2
+
+[OK] index.html
+[OK] smartvel.html
+[OK] smartvel_stats_refocus.html
+[OK] entrydocs.html
+[OK] entrydocs-overview.html
+[OK] entrydocs_playbook.pdf
+[OK] entrydocs_product_sheet.pdf
+[OK] entrydocs_hero_cleaned.png
+[OK] entrydocs_hero_video.mp4
+[OK] entrydocs_hero_video_alt.mp4
+[OK] exploreandgo.html
+[OK] tripplanner.html
+[OK] travelable.html
+[OK] travelseo.html
+[OK] avuxi.html
+[OK] smartvel_logo.png
+[OK] smartvel_homepage_video.mp4
+
+[OK] index parent-level More below cue preserved
+[OK] index AI intro line present
+[OK] index Smartvel iframe cache-busted
+[OK] index EntryDocs iframe cache-busted
+[OK] index ExploreGo iframe cache-busted
+[OK] index TripPlanner iframe cache-busted
+[OK] smartvel AI section present
+[OK] smartvel_stats_refocus AI section present
+[OK] EntryDocs overview HubSpot link present
+[OK] EntryDocs overview demo link points to anchor
+[OK] EntryDocs overview playbook download present
+[OK] EntryDocs overview product sheet download present
+[OK] EntryDocs page has demo anchor
+[OK] EntryDocs page has detailed overview CTA
+[OK] EntryDocs page has EU detail dropdown
+
+LOCAL LINK / ASSET SCAN
+[OK] No missing local refs in scanned included pages.

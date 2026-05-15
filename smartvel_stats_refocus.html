@@ -516,6 +516,109 @@ section.mission .stat.stat-enhanced .count-up{font-size:64px!important}
 }
 </style>
 
+
+<style id="toronto-ai-positioning-v1">
+.ai-intelligence{
+  position:relative;
+  z-index:1;
+  margin:18px 0;
+  padding:28px;
+  border-radius:30px;
+  background:
+    radial-gradient(circle at 92% 0%,rgba(41,170,224,.20),transparent 34%),
+    linear-gradient(135deg,#071724,#0E3A58 58%,#125885);
+  color:#fff;
+  box-shadow:0 24px 70px rgba(8,23,36,.18);
+  overflow:hidden;
+}
+.ai-intelligence:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    repeating-linear-gradient(90deg,rgba(255,255,255,.045) 0 1px,transparent 1px 58px),
+    repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 1px,transparent 1px 58px);
+  pointer-events:none;
+}
+.ai-intelligence-inner{position:relative;z-index:2}
+.ai-intelligence-top{
+  display:grid;
+  grid-template-columns:1fr .82fr;
+  gap:28px;
+  align-items:end;
+  margin-bottom:22px;
+}
+.ai-kicker{
+  color:#8ED8F7;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+.ai-intelligence h2{
+  margin:0;
+  font-size:34px;
+  line-height:1.08;
+  letter-spacing:-.05em;
+}
+.ai-intelligence p{
+  margin:0;
+  color:rgba(255,255,255,.82);
+  font-size:15px;
+  line-height:1.52;
+}
+.ai-cards{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:12px;
+}
+.ai-card{
+  position:relative;
+  min-height:154px;
+  border-radius:20px;
+  padding:18px;
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.17);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12);
+  overflow:hidden;
+}
+.ai-card:before{
+  content:"";
+  position:absolute;
+  left:18px;
+  top:0;
+  width:38px;
+  height:4px;
+  border-radius:999px;
+  background:#FF9400;
+}
+.ai-card:nth-child(2):before{background:#29AAE0}
+.ai-card:nth-child(3):before{background:#00A698}
+.ai-card:nth-child(4):before{background:#FFB14A}
+.ai-card:nth-child(5):before{background:#8ED8F7}
+.ai-card b{
+  display:block;
+  color:#fff;
+  font-size:15px;
+  line-height:1.2;
+  margin:13px 0 8px;
+}
+.ai-card span{
+  display:block;
+  color:rgba(255,255,255,.78);
+  font-size:12px;
+  line-height:1.42;
+}
+@media(max-width:1200px){
+  .ai-intelligence-top{grid-template-columns:1fr}
+  .ai-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px){
+  .ai-cards{grid-template-columns:1fr}
+}
+</style>
+
 </head>
 <body>
 <!-- FORCE_V5_EXACT_FILENAME_STATS_LOADED -->
@@ -527,9 +630,9 @@ section.mission .stat.stat-enhanced .count-up{font-size:64px!important}
 
 <section class="hero">
 <div>
-<div class="kicker">Travel technology & content intelligence</div>
-<h1>AI-powered travel content and solutions for <span class="hero-rotating-wrap"><strong id="hero-rotating-sector">OTA's.</strong><span class="hero-rotating-measure">travel companies.</span></span></h1>
-<p class="lead">We provide structured destination content and travel requirement intelligence through APIs and white-label solutions.</p>
+<div class="kicker">AI, travel intelligence & passenger experience</div>
+<h1>AI-powered travel intelligence for <span class="hero-rotating-wrap"><strong id="hero-rotating-sector">OTA's.</strong><span class="hero-rotating-measure">travel companies.</span></span></h1>
+<p class="lead">Smartvel combines AI monitoring, structured travel content and human validation to help travel companies deliver clearer, more useful passenger experiences across the journey.</p>
 </div>
 
 <div class="home-video-stage">
@@ -565,6 +668,27 @@ section.mission .stat.stat-enhanced .count-up{font-size:64px!important}
 </div>
 </div>
 </section>
+
+
+<section class="ai-intelligence">
+  <div class="ai-intelligence-inner">
+    <div class="ai-intelligence-top">
+      <div>
+        <div class="ai-kicker">Toronto Tech Week focus</div>
+        <h2>AI where it improves the traveller journey. Human validation where accuracy matters.</h2>
+      </div>
+      <p>Smartvel applies AI to make travel information more accurate, scalable, personalised and useful across the passenger journey — while keeping critical requirement and accessibility information grounded in verified sources and expert review.</p>
+    </div>
+    <div class="ai-cards">
+      <div class="ai-card"><b>AI monitoring</b><span>Detects changes across travel requirements, destination information and content signals.</span></div>
+      <div class="ai-card"><b>Structured intelligence</b><span>Turns fragmented sources into usable content and data for web, app, CRM, chatbot and booking journeys.</span></div>
+      <div class="ai-card"><b>Personalised passenger experience</b><span>Delivers relevant information by route, traveller profile, channel and journey stage.</span></div>
+      <div class="ai-card"><b>AI-enriched content at scale</b><span>Supports scalable destination, event and travel-content experiences across markets and languages.</span></div>
+      <div class="ai-card"><b>Human validation</b><span>Keeps high-impact information clear, accurate and safe to use where precision matters.</span></div>
+    </div>
+  </div>
+</section>
+
 
 <section class="journey">
 <div class="journey-title"><h2>One ecosystem, from inspiration to arrival.</h2></div>
