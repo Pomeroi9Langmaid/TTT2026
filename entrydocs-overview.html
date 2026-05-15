@@ -32,10 +32,6 @@
 .impact-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px} .impact{background:#f5f9fc;border:1px solid #e2edf4;border-radius:12px;padding:16px 10px;text-align:center;min-height:145px} .impact i{display:grid;place-items:center;font-size:32px;color:#0b5d88} .impact b{display:block;color:#0b3d66;font-size:12px;line-height:1.2;margin:8px 0 6px} .impact span{display:block;color:#53677a;font-size:10px;line-height:1.25} .quick{margin-top:13px;background:#eaf5fc;border-radius:6px;padding:10px;text-align:center;color:#0b3d66;font-size:12px;font-weight:800} .bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px} .legal{position:relative;min-height:180px} .legal-graphic{position:absolute;right:24px;bottom:18px;font-size:64px;color:#0b5d88;opacity:.85} .integration-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px} .integration{background:#f5f9fc;border:1px solid #e2edf4;border-radius:12px;min-height:106px;padding:16px;text-align:center} .integration i{display:grid;place-items:center;font-size:34px;color:#0b5d88} .integration b{display:block;font-size:13px;color:#0b3d66;margin:5px 0} .integration span{font-size:10px;color:#53677a;line-height:1.25;display:block} .resources{display:grid;grid-template-columns:1fr 1fr;gap:14px} .resource{background:#f8fbfe;border:1px solid #e2edf4;border-radius:14px;padding:18px} .resource h3{margin:0 0 6px;color:#0b3d66;font-size:18px} .resource p{margin:0 0 13px;color:#53677a;font-size:12px;line-height:1.4} .small-note{font-size:11px;color:#667b90;line-height:1.4;margin-top:8px}
 @media(max-width:1160px){.hero-inner,.two-col,.how-cover,.accuracy,.bottom-grid,.resources{grid-template-columns:1fr} .variables{grid-template-columns:repeat(2,1fr)} .impact-grid,.journey-grid,.kpi-grid{grid-template-columns:repeat(2,1fr)} .hero-actions{flex-wrap:wrap} .scene-laptop{position:relative;inset:auto;width:100%;height:280px;margin-left:0} .scene-phone,.scene-passport,.scene-ticket{transform:scale(.85);transform-origin:left top} .scene-phone{top:40px} .scene-passport{top:130px} .scene-ticket{left:210px;bottom:-6px} }
 @media(max-width:760px){.topbar .wrap{flex-direction:column;align-items:flex-start} .hero-actions,.top-actions{flex-wrap:wrap} .hero-actions .btn{font-size:12px} .variables,.cover-grid,.impact-grid,.journey-grid,.channel-row,.kpi-grid,.integration-grid,.flow-steps{grid-template-columns:1fr} .channel{border-right:none;border-bottom:1px solid #dceaf3} .flow-line{display:none} .flow-step b{min-height:auto} .scene-phone,.scene-passport,.scene-ticket{position:relative;left:auto;right:auto;top:auto;bottom:auto;transform:none;margin:12px 0} .scene-laptop{position:relative;inset:auto;height:250px;margin-bottom:10px} .hero-visual{min-height:auto} }
-
-/* V7: detail pages should use the same broad stage width as Contact and must stay silent in the parent journey. */
-.wrap{width:min(1500px,calc(100vw - 72px))!important;max-width:none!important;}
-@media(max-width:900px){.wrap{width:calc(100vw - 28px)!important;}}
 </style>
 
 <style id="entrydocs-v9-real-image-fixes">
@@ -73,32 +69,68 @@
 </style>
 
 
-<script>
-(function(){
-  try{
-    if(window.parent && window.parent !== window){
-      window.parent.postMessage({type:'SMARTVEL_DETAIL_PAGE_ACTIVE'}, '*');
-    }
-  }catch(e){}
-})();
-</script>
+<style id="entrydocs-detail-v23-cleanup">
+/* V23 EntryDocs detailed overview cleanup */
+.hero-video-wrap{
+  min-height:0!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.real-hero-video{
+  width:100%!important;
+  max-width:860px!important;
+  height:auto!important;
+  display:block!important;
+  border-radius:28px!important;
+  object-fit:contain!important;
+  box-shadow:0 30px 70px rgba(7,35,60,.16)!important;
+  background:#fff!important;
+}
 
-<style id="v8-full-width-detail-final">
-.wrap{width:calc(100vw - 72px)!important;max-width:none!important;margin-left:auto!important;margin-right:auto!important;}
-.hero-card,.panel,.contact,.block{max-width:none!important;}
-.smartvel-direct-audio,.ed-audio-panel,.smartvel-parent-audio{display:none!important;}
-@media(max-width:900px){.wrap{width:calc(100vw - 28px)!important;}}
+/* remove any accidental orphan mail button/text in the hero visual */
+.hero-visual a[href^="mailto:"],
+.hero-image-wrap a[href^="mailto:"]{
+  display:none!important;
+}
+
+/* Neater How it works / coverage section: no dead white area on the right */
+.how-cover{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:24px!important;
+  align-items:start!important;
+}
+.real-flow-image-wrap{
+  max-height:430px!important;
+  overflow:hidden!important;
+  border-radius:20px!important;
+  box-shadow:0 18px 44px rgba(7,35,60,.10)!important;
+}
+.real-flow-image{
+  width:100%!important;
+  height:430px!important;
+  object-fit:cover!important;
+  object-position:center center!important;
+}
+.cover-grid{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:14px!important;
+}
+.cover{
+  min-height:96px!important;
+  padding:18px!important;
+  border-radius:18px!important;
+  background:linear-gradient(180deg,#f7fbfe,#eef5fa)!important;
+  box-shadow:0 10px 24px rgba(7,35,60,.055)!important;
+}
+@media(max-width:980px){
+  .how-cover{grid-template-columns:1fr!important}
+  .real-flow-image{height:auto!important;object-fit:contain!important}
+}
 </style>
-<script id="v8-detail-silent-parent-notify">
-(function(){
-  function tellParent(){
-    try{ window.parent.postMessage({type:'SMARTVEL_DETAIL_PAGE_ACTIVE'}, '*'); }catch(e){}
-  }
-  tellParent();
-  window.addEventListener('load', tellParent);
-  setInterval(tellParent, 800);
-})();
-</script>
+
 </head>
 <body>
 <header class="topbar">
@@ -124,9 +156,11 @@
         <a class="btn btn-white" href="entrydocs_product_sheet.pdf" download><svg viewBox="0 0 24 24"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 21h14"/></svg> Download product sheet</a>
       </div>
     </div>
-    <div class="hero-visual hero-image-wrap" aria-label="EntryDocs product visual">
-      <img class="real-hero-image" src="entrydocs_detail_hero_ultra_realistic.png" alt="EntryDocs traveller requirements dashboard with phone, passport and boarding pass">
-    <a class="btn secondary" href="mailto:alangmaid@smartvel.com?subject=Smartvel%20solution%20discussion">Email Andrew</a></div></div>
+    <div class="hero-visual hero-image-wrap hero-video-wrap" aria-label="EntryDocs product video">
+      <video class="real-hero-video" autoplay muted loop playsinline preload="metadata" aria-label="EntryDocs hero video">
+        <source src="entrydocs_detail_hero.mp4?v=23" type="video/mp4">
+      </video>
+    </div></div>
   </div>
 </section>
 <main class="main"><div class="wrap">
