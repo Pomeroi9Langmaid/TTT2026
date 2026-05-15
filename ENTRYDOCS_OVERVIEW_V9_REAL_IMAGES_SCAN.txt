@@ -1,0 +1,21 @@
+ENTRYDOCS_OVERVIEW_V9_REAL_IMAGES_SCAN
+
+[OK] index.html
+[OK] entrydocs.html
+[OK] entrydocs-overview.html
+[OK] entrydocs_detail_hero_ultra_realistic.png
+[OK] entrydocs_how_it_works_ultra_realistic.png
+[OK] entrydocs_playbook.pdf
+[OK] entrydocs_product_sheet.pdf
+
+[OK] Ultra-realistic hero image referenced
+[OK] Ultra-realistic How it works image referenced
+[OK] Old CSS mock-up hero is no longer used in the hero markup
+[OK] How it works image placed before What EntryDocs covers
+[OK] Finnair live environment link preserved
+[OK] Schedule meeting link preserved
+[OK] Bottom cross-solution buttons still removed
+
+UPLOAD NOTE
+[OK] Upload/overwrite all files in this zip to GitHub root.
+[OK] The two new PNG files must be uploaded with entrydocs-overview.html.
