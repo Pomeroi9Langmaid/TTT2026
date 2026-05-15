@@ -54,6 +54,129 @@ linear-gradient(135deg,#08111b,#12243a)}
 .card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:30px;padding:34px}
 .mail{display:inline-flex;padding:13px 18px;border-radius:999px;background:linear-gradient(135deg,var(--orange),#ffb347);color:#fff;text-decoration:none;font-weight:800}
 
+
+/* V21 universal logo carousel fix: prevents clipping, improves visibility, supports airline-wide marks */
+.clean-logo-ticker,
+.logo-ticker,
+.client-logo-ticker,
+.logo-carousel,
+.client-carousel,
+.logo-strip {
+    width:100%!important;
+    max-width:none!important;
+    overflow:hidden!important;
+    padding:12px 0 10px!important;
+}
+
+.clean-logo-track,
+.logo-track,
+.client-logo-track,
+.logo-carousel-track,
+.client-carousel-track {
+    display:flex!important;
+    align-items:center!important;
+    gap:30px!important;
+    width:max-content!important;
+    overflow:visible!important;
+}
+
+.clean-logo,
+.logo-card,
+.client-logo-card,
+.logo-tile,
+.brand-logo-card {
+    flex:0 0 auto!important;
+    width:190px!important;
+    min-width:190px!important;
+    height:74px!important;
+    padding:10px 20px!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    overflow:visible!important;
+    background:rgba(255,255,255,.88)!important;
+    border:1px solid rgba(10,77,118,.18)!important;
+    border-radius:20px!important;
+    box-shadow:0 14px 34px rgba(10,47,75,.18),0 5px 15px rgba(0,0,0,.10)!important;
+}
+
+.clean-logo img,
+.logo-card img,
+.client-logo-card img,
+.logo-tile img,
+.brand-logo-card img {
+    display:block!important;
+    position:static!important;
+    transform:none!important;
+    left:auto!important;
+    right:auto!important;
+    top:auto!important;
+    bottom:auto!important;
+    width:auto!important;
+    height:auto!important;
+    max-width:160px!important;
+    max-height:52px!important;
+    min-width:0!important;
+    min-height:0!important;
+    object-fit:contain!important;
+    object-position:center center!important;
+    margin:0 auto!important;
+    overflow:visible!important;
+    clip-path:none!important;
+    filter:none!important;
+    image-rendering:auto!important;
+}
+
+/* Wider airline marks need horizontal room; narrow/tall marks need height without crop */
+.clean-logo.priority-logo,
+.logo-card.priority-logo,
+.client-logo-card.priority-logo,
+.logo-tile.priority-logo,
+.brand-logo-card.priority-logo {
+    width:210px!important;
+    min-width:210px!important;
+}
+
+.clean-logo.priority-logo img,
+.logo-card.priority-logo img,
+.client-logo-card.priority-logo img,
+.logo-tile.priority-logo img,
+.brand-logo-card.priority-logo img {
+    max-width:180px!important;
+    max-height:56px!important;
+}
+
+/* Specific safeguards for known awkward assets */
+img[src*="niugini"],
+img[alt*="Niugini"],
+img[alt*="Air Niugini"] {
+    max-width:150px!important;
+    max-height:58px!important;
+    object-fit:contain!important;
+    object-position:center center!important;
+}
+
+img[src*="saudia"],
+img[alt*="Saudia"],
+img[alt*="SAUDIA"] {
+    max-width:172px!important;
+    max-height:58px!important;
+}
+
+img[src*="iberia"],
+img[alt*="Iberia"] {
+    max-width:172px!important;
+    max-height:54px!important;
+}
+
+img[src*="avianca"],
+img[alt*="Avianca"],
+img[src*="tap"],
+img[alt*="TAP"] {
+    max-width:166px!important;
+    max-height:54px!important;
+}
+
 </style>
 <style id='v5-upgrades'>
 .stop.active i{
