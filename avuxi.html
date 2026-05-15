@@ -201,6 +201,35 @@ h1 strong{color:var(--teal)}
   .hero{grid-template-columns:1fr}
   h1{font-size:48px}
 }
+
+/* V22: hide embedded page-level audio buttons so they never sit over logos/content.
+   Audio controls remain handled by the parent shell/top bar. */
+.audio-control,
+.audio-controls,
+.audio-toggle,
+.audio-pill,
+.sound-control,
+.sound-controls,
+.sound-toggle,
+.voice-control,
+.voice-controls,
+.voice-toggle,
+#contentAudioControl,
+#pageAudioControl,
+#audioControl,
+#audioControls,
+#soundControl,
+#soundControls,
+button[aria-label*="audio" i],
+button[aria-label*="sound" i],
+button[title*="audio" i],
+button[title*="sound" i] {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+}
+
 </style>
 
 <style id="SMARTVEL_FULL_WIDTH_FORCE_V6">
@@ -286,10 +315,7 @@ html,body{width:100%!important;max-width:none!important;overflow-x:hidden!import
 .smartvel-direct-audio{position:fixed;top:18px;left:18px;z-index:999999;display:none;gap:8px;background:rgba(5,20,34,.62);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px);border-radius:999px;padding:8px 10px;box-shadow:0 14px 36px rgba(0,0,0,.18)}
 .smartvel-direct-audio button{width:36px;height:36px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;font-size:15px;font-weight:900;display:grid;place-items:center}
 </style>
-<div class="smartvel-direct-audio" id="smartvelDirectAudio">
-  <button type="button" id="smartvelDirectMute" aria-label="Mute or unmute intro">🔊</button>
-  <button type="button" id="smartvelDirectReplay" aria-label="Replay intro">↻</button>
-</div>
+<!-- V22 removed embedded audio control -->
 <audio id="smartvelDirectAudioEl" src="avuxi_intro.mp3" preload="auto"></audio>
 <script id="smartvel-direct-audio-script">
 (function(){

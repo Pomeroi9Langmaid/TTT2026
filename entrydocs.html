@@ -66,6 +66,35 @@ h1 strong{color:var(--orange)}
 .demo-link{display:inline-flex;align-items:center;justify-content:center;background:var(--orange);color:#fff;border-radius:999px;padding:13px 18px;font-weight:800;font-size:13px;text-decoration:none;box-shadow:0 12px 28px rgba(255,148,0,.24);white-space:nowrap}
 .footnote{margin-top:13px;color:#7A8491;font-size:10px;line-height:1.4}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(0,193,106,.5)}70%{box-shadow:0 0 0 12px rgba(0,193,106,0)}100%{box-shadow:0 0 0 0 rgba(0,193,106,0)}}
+
+/* V22: hide embedded page-level audio buttons so they never sit over logos/content.
+   Audio controls remain handled by the parent shell/top bar. */
+.audio-control,
+.audio-controls,
+.audio-toggle,
+.audio-pill,
+.sound-control,
+.sound-controls,
+.sound-toggle,
+.voice-control,
+.voice-controls,
+.voice-toggle,
+#contentAudioControl,
+#pageAudioControl,
+#audioControl,
+#audioControls,
+#soundControl,
+#soundControls,
+button[aria-label*="audio" i],
+button[aria-label*="sound" i],
+button[title*="audio" i],
+button[title*="sound" i] {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+}
+
 </style>
 
 <style id="entrydocs-eu-more-v2-style">
@@ -280,15 +309,7 @@ html,body{width:100%!important;max-width:none!important;overflow-x:hidden!import
 
 <!-- ENTRYDOCS_AUDIO_INTRO_V10 -->
 <audio id="edIntroAudio" src="ED.mp3" preload="auto" playsinline></audio>
-<div class="ed-audio-panel is-paused" id="edAudioPanel" aria-label="EntryDocs audio controls">
-  <button class="ed-audio-btn" id="edAudioMute" type="button" aria-label="Mute EntryDocs intro audio" title="Mute / unmute">
-    <svg id="edIconSound" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z"></path><path d="M16 9.5a4 4 0 0 1 0 5"></path><path d="M18.5 7a7 7 0 0 1 0 10"></path></svg>
-  </button>
-  <button class="ed-audio-btn" id="edAudioReplay" type="button" aria-label="Replay EntryDocs intro audio" title="Replay intro">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.34-5.66"></path><path d="M4 4v6h6"></path></svg>
-  </button>
-  <span class="ed-audio-status" aria-hidden="true"></span>
-</div>
+<!-- V22 removed embedded audio control -->
 <!-- /ENTRYDOCS_AUDIO_INTRO_V10 -->
 
 <!-- ENTRYDOCS_VIDEO_BORDER_FIX_MARKER -->

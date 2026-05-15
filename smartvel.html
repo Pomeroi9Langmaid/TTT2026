@@ -207,6 +207,35 @@ img[alt*="TAP"] {
     max-height:54px!important;
 }
 
+
+/* V22: hide embedded page-level audio buttons so they never sit over logos/content.
+   Audio controls remain handled by the parent shell/top bar. */
+.audio-control,
+.audio-controls,
+.audio-toggle,
+.audio-pill,
+.sound-control,
+.sound-controls,
+.sound-toggle,
+.voice-control,
+.voice-controls,
+.voice-toggle,
+#contentAudioControl,
+#pageAudioControl,
+#audioControl,
+#audioControls,
+#soundControl,
+#soundControls,
+button[aria-label*="audio" i],
+button[aria-label*="sound" i],
+button[title*="audio" i],
+button[title*="sound" i] {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+}
+
 </style>
 
 <style id="clean-below-logo-ticker-css">
