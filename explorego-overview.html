@@ -26,7 +26,38 @@ h1{font-size:clamp(42px,5vw,72px);line-height:1.02;letter-spacing:-.065em;margin
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px} .card{background:#f7fbfe;border:1px solid #e2edf4;border-radius:18px;padding:20px;min-height:150px} .card h3{margin:0 0 8px;color:#0b3d66;font-size:17px;letter-spacing:-.025em} .card p{font-size:13px;line-height:1.42}
 .impact{display:grid;grid-template-columns:1fr 1fr;gap:22px} ul{margin:0;padding-left:20px;color:#3e5368;line-height:1.65;font-size:14px} .contact{background:linear-gradient(135deg,#061f36,#0b5d88);color:white;border-radius:28px;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:18px;margin:20px 0 50px} .contact h2{margin:0 0 8px;font-size:28px;letter-spacing:-.04em} .contact p{margin:0;color:rgba(255,255,255,.82);font-size:14px;line-height:1.5}
 @media(max-width:980px){.hero-card,.impact{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.contact{flex-direction:column;align-items:flex-start}}
+
+/* V7: detail pages should use the same broad stage width as Contact and must stay silent in the parent journey. */
+.wrap{width:min(1500px,calc(100vw - 72px))!important;max-width:none!important;}
+@media(max-width:900px){.wrap{width:calc(100vw - 28px)!important;}}
 </style>
+
+<script>
+(function(){
+  try{
+    if(window.parent && window.parent !== window){
+      window.parent.postMessage({type:'SMARTVEL_DETAIL_PAGE_ACTIVE'}, '*');
+    }
+  }catch(e){}
+})();
+</script>
+
+<style id="v8-full-width-detail-final">
+.wrap{width:calc(100vw - 72px)!important;max-width:none!important;margin-left:auto!important;margin-right:auto!important;}
+.hero-card,.panel,.contact,.block{max-width:none!important;}
+.smartvel-direct-audio,.ed-audio-panel,.smartvel-parent-audio{display:none!important;}
+@media(max-width:900px){.wrap{width:calc(100vw - 28px)!important;}}
+</style>
+<script id="v8-detail-silent-parent-notify">
+(function(){
+  function tellParent(){
+    try{ window.parent.postMessage({type:'SMARTVEL_DETAIL_PAGE_ACTIVE'}, '*'); }catch(e){}
+  }
+  tellParent();
+  window.addEventListener('load', tellParent);
+  setInterval(tellParent, 800);
+})();
+</script>
 </head>
 <body>
 <header class="top"><div class="wrap"><div style="display:flex;align-items:center;gap:18px"><img src="smartvel_logo.png" class="logo" alt="Smartvel"><div class="crumb"><a href="index.html">Smartvel</a><span>›</span><a href="exploreandgo.html">Explore &amp; Go</a><span>›</span><strong>Detailed overview</strong></div></div><a class="btn primary" href="https://meetings.hubspot.com/alangmaid" target="_blank" rel="noopener noreferrer">Schedule meeting</a></div></header>
@@ -42,14 +73,4 @@ h1{font-size:clamp(42px,5vw,72px);line-height:1.02;letter-spacing:-.065em;margin
 <li>A more modern discovery experience for travellers.</li>
 <li>Clearer bridge between inspiration and booking.</li></ul></div><div><h2>How to use this page</h2><p>This overview gives enough context to understand the solution quickly. Use the live environment to see the product in action, and download the supporting playbook and product sheet if you want to share more detail internally.</p></div></div><div class="contact"><div><h2>Interested in exploring Explore &amp; Go?</h2><p>Schedule a short conversation to discuss your use case, integration route and whether this solution fits your business.</p></div><div class="actions"><a class="btn primary" href="https://meetings.hubspot.com/alangmaid" target="_blank" rel="noopener noreferrer">Schedule meeting</a><a class="btn secondary" href="mailto:alangmaid@smartvel.com?subject=Explore &amp; Go%20discussion">Email Andrew</a></div></div></div></section>
 </main>
-
-<script id="smartvel-silent-detail-page">
-(function(){
-  try{
-    if(window.self !== window.top){
-      parent.postMessage({type:'SMARTVEL_DETAIL_PAGE'}, '*');
-    }
-  }catch(e){}
-})();
-</script>
 </body></html>

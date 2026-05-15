@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Smartvel Interactive Journey V6 - splash-audio-width-final</title><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap' rel='stylesheet'>
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Smartvel Interactive Journey V9 - hard-stop-audio-on-navigation</title><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap' rel='stylesheet'>
 <style>
 :root{--blue:#29AAE0;--green:#00A698;--orange:#FF9400}
 *{box-sizing:border-box}
@@ -621,11 +621,12 @@ border-color:rgba(255,255,255,.22)!important;
 
 
 <style id="smartvel-parent-audio-style">
-.smartvel-parent-audio{position:fixed;top:22px;left:220px;z-index:999999;display:none;gap:8px;align-items:center;background:rgba(5,20,34,.62);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px);border-radius:999px;padding:8px 10px;box-shadow:0 14px 36px rgba(0,0,0,.18)}
+.smartvel-parent-audio{position:fixed;top:28px;right:300px;left:auto;z-index:999999;display:none;gap:8px;align-items:center;background:rgba(5,20,34,.62);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px);border-radius:999px;padding:8px 10px;box-shadow:0 14px 36px rgba(0,0,0,.18)}
 .smartvel-parent-audio button{width:36px;height:36px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;font-size:15px;font-weight:900;display:grid;place-items:center}
 .smartvel-parent-audio span{font-size:11px;font-weight:800;color:rgba(255,255,255,.78);padding-right:6px;max-width:170px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 body.smartvel-audio-ready .smartvel-parent-audio{display:flex}
-@media(max-width:900px){.smartvel-parent-audio{left:16px;top:16px}.smartvel-parent-audio span{display:none}}
+body.smartvel-detail-page .smartvel-parent-audio{display:none!important}
+@media(max-width:1200px){.smartvel-parent-audio{right:180px}.smartvel-parent-audio span{max-width:120px}}@media(max-width:900px){.smartvel-parent-audio{right:16px;top:16px}.smartvel-parent-audio span{display:none}}
 </style>
 
 </head>
@@ -670,13 +671,13 @@ body.smartvel-audio-ready .smartvel-parent-audio{display:flex}
 <div class='viewport'>
 <button class='parent-more-cue' id='parentMoreCue' type='button' aria-label='Scroll for more content'><span>More below</span><svg viewBox='0 0 24 24' fill='none' aria-hidden='true'><path d='M6 9l6 6 6-6' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg></button>
 
-<div class='slide active' data-title='Smartvel' data-sub='Company overview and ecosystem'><iframe allow="autoplay" src='smartvel.html?v=v6-splash-audio-width-final'></iframe></div>
-<div class='slide' data-title='EntryDocs' data-sub='Travel requirements intelligence'><iframe allow="autoplay" src='entrydocs.html?v=v6-splash-audio-width-final'></iframe></div>
-<div class='slide' data-title='TravelAble' data-sub='Accessible travel support'><iframe allow="autoplay" src='travelable.html?v=v6-splash-audio-width-final'></iframe></div>
-<div class='slide' data-title='Explore & Go' data-sub='Destination inspiration'><iframe allow="autoplay" src='exploreandgo.html?v=v6-splash-audio-width-final'></iframe></div>
-<div class='slide' data-title='Trip Planner' data-sub='Destination engagement'><iframe allow="autoplay" src='tripplanner.html?v=v6-splash-audio-width-final'></iframe></div>
-<div class='slide' data-title='TravelSEO' data-sub='SEO and GEO'><iframe allow="autoplay" src='travelseo.html?v=v6-splash-audio-width-final'></iframe></div>
-<div class='slide' data-title='Avuxi' data-sub='Neighbourhood intelligence'><iframe allow="autoplay" src='avuxi.html?v=v6-splash-audio-width-final'></iframe></div>
+<div class='slide active' data-title='Smartvel' data-sub='Company overview and ecosystem'><iframe allow="autoplay" src='smartvel.html?v=v9-hard-stop-audio-nav'></iframe></div>
+<div class='slide' data-title='EntryDocs' data-sub='Travel requirements intelligence'><iframe allow="autoplay" src='entrydocs.html?v=v9-hard-stop-audio-nav'></iframe></div>
+<div class='slide' data-title='TravelAble' data-sub='Accessible travel support'><iframe allow="autoplay" src='travelable.html?v=v9-hard-stop-audio-nav'></iframe></div>
+<div class='slide' data-title='Explore & Go' data-sub='Destination inspiration'><iframe allow="autoplay" src='exploreandgo.html?v=v9-hard-stop-audio-nav'></iframe></div>
+<div class='slide' data-title='Trip Planner' data-sub='Destination engagement'><iframe allow="autoplay" src='tripplanner.html?v=v9-hard-stop-audio-nav'></iframe></div>
+<div class='slide' data-title='TravelSEO' data-sub='SEO and GEO'><iframe allow="autoplay" src='travelseo.html?v=v9-hard-stop-audio-nav'></iframe></div>
+<div class='slide' data-title='Avuxi' data-sub='Neighbourhood intelligence'><iframe allow="autoplay" src='avuxi.html?v=v9-hard-stop-audio-nav'></iframe></div>
 <div class='slide' data-title='Contact' data-sub='Reach out'>
 <div class='contact'><a class='brand-mark-link' href='https://www.smartvel.com/' target='_blank' rel='noopener noreferrer'><img class='brand-mark' src='smartvel_logo.png' alt='Smartvel logo'></a><div class='visual-orbit'></div><div class='route-line'></div>
 <div>
@@ -801,8 +802,44 @@ const ctas=[
 
 let current=0;
 let splashFinished=false;
+let lastDetailState=false;
+
+function isCurrentDetailPage(){
+  return activeFrameLooksLikeDetail(current);
+}
+
+function refreshDetailState(){
+  const detail = isCurrentDetailPage();
+  document.body.classList.toggle('smartvel-detail-page', detail);
+  if(detail && window.smartvelStopSlideAudio) window.smartvelStopSlideAudio();
+  lastDetailState = detail;
+  return detail;
+}
+
+function activeFrameLooksLikeDetail(i){
+  const slide=slides[i];
+  const frame=slide ? slide.querySelector('iframe') : null;
+  if(!frame) return false;
+  try{
+    const href=frame.contentWindow && frame.contentWindow.location ? frame.contentWindow.location.href : frame.src;
+    return /(-overview\.html|overview\.html)/i.test(href || frame.src || '');
+  }catch(e){
+    return /(-overview\.html|overview\.html)/i.test(frame.src || '');
+  }
+}
+
+function setParentAudioVisibleForCurrent(i){
+  const detail=activeFrameLooksLikeDetail(i);
+  document.body.classList.toggle('smartvel-detail-page', detail);
+  if(detail && window.smartvelStopSlideAudio) window.smartvelStopSlideAudio();
+  lastDetailState = detail;
+  return !detail;
+}
 
 function notifySlideAudio(i){
+  if(!setParentAudioVisibleForCurrent(i)) return;
+  // Ensure only the new active slide can speak.
+  if(window.smartvelStopSlideAudio) window.smartvelStopSlideAudio(false);
   if(window.smartvelPlaySlideAudio) window.smartvelPlaySlideAudio(i);
   slides.forEach((slide, idx)=>{
     const frame = slide.querySelector('iframe');
@@ -849,6 +886,13 @@ function updateCta(i){
 function show(i){
   if(i<0)i=0;
   if(i>=slides.length)i=slides.length-1;
+
+  // Hard-stop any currently playing parent audio before changing page/slide.
+  // This prevents the previous page voiceover continuing over the next page.
+  if(window.smartvelStopSlideAudio){
+    window.smartvelStopSlideAudio(true);
+  }
+
   current=i;
 
   slides.forEach((s,idx)=>s.classList.toggle('active',idx===i));
@@ -882,7 +926,12 @@ slides.forEach((slide, idx)=>{
   const frame = slide.querySelector('iframe');
   if(frame){
     frame.addEventListener('load',()=>{
-      if(idx === current && (splashFinished || idx !== 0)) setTimeout(()=>notifySlideAudio(idx),120);
+      if(idx === current){
+        setTimeout(()=>{
+          const isDetail = !setParentAudioVisibleForCurrent(idx);
+          if(!isDetail && (splashFinished || idx !== 0)) notifySlideAudio(idx);
+        },120);
+      }
     });
   }
 });
@@ -890,6 +939,25 @@ slides.forEach((slide, idx)=>{
 stops.forEach((s,i)=>s.onclick=()=>show(i));
 prev.onclick=()=>show(current-1);
 next.onclick=()=>show(current===slides.length-1?0:current+1);
+
+
+window.addEventListener('message',function(e){
+  const data=e && e.data ? e.data : {};
+  if(data.type === 'SMARTVEL_DETAIL_PAGE_ACTIVE'){
+    document.body.classList.add('smartvel-detail-page');
+    lastDetailState = true;
+    if(window.smartvelStopSlideAudio) window.smartvelStopSlideAudio();
+  }
+});
+
+setInterval(function(){
+  const wasDetail = lastDetailState;
+  const nowDetail = refreshDetailState();
+  if(nowDetail && !wasDetail){
+    if(window.smartvelStopSlideAudio) window.smartvelStopSlideAudio();
+  }
+}, 350);
+
 
 document.addEventListener('keydown',e=>{
   if(e.key==='ArrowRight')next.click();
@@ -1034,8 +1102,17 @@ setTimeout(()=>{
     }catch(e){ setLabel('Tap sound to play'); }
   };
 
-  window.smartvelStopSlideAudio=function(){
-    try{audio.pause();audio.currentTime=0;}catch(e){}
+  window.smartvelStopSlideAudio=function(clearCurrent){
+    try{
+      audio.pause();
+      audio.currentTime=0;
+      if(clearCurrent){
+        currentIndex=-1;
+        lastRequested=-1;
+        lastAt=0;
+        setLabel('Intro audio');
+      }
+    }catch(e){}
   };
 
   mute.addEventListener('click',function(){

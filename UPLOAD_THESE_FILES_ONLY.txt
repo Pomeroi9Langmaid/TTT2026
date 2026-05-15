@@ -1,1 +1,6 @@
-Upload these files over the existing files in the GitHub repo root. This build hides splash audio controls until the splash finishes, starts homepage_intro.mp3 when slide 1 appears, and forces solution pages full width. Build marker: v6-splash-audio-width-final
+Upload these files over the existing repo root.
+
+V9 fixes:
+- Hard-stops current MP3 immediately on slide/page navigation.
+- Resets previous audio before loading the next page intro.
+- Keeps V8 detail-page silent/full-width fixes.
