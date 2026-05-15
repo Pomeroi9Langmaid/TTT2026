@@ -381,7 +381,7 @@ opacity:.65;
     <h3>Want the full EntryDocs picture?</h3>
     <p>Explore how EntryDocs works, what it covers, how requirements are kept accurate, where it fits in the customer journey and the integration options available.</p>
   </div>
-  <a href="entrydocs-overview.html?v=v9-real-images">Explore EntryDocs in more detail →</a>
+  <a href="entrydocs-overview.html?v=v9-real-images" onclick="try{parent.postMessage({type:'SMARTVEL_PAGE_SILENT'},'*')}catch(e){}">Explore EntryDocs in more detail →</a>
 </section>
 <!-- /ENTRYDOCS_DETAIL_OVERVIEW_CTA_V2 -->
 
@@ -505,8 +505,7 @@ opacity:.65;
   // so it does not play while hidden on initial site load.
   const inIframe = window.self !== window.top;
   if(!inIframe){
-    window.addEventListener('pageshow', function(){ playIntro(true); });
-    document.addEventListener('DOMContentLoaded', function(){ playIntro(true); });
+    window.addEventListener('load', function(){ playIntro(true); }, {once:true});
   }
 
   window.addEventListener('message', function(event){
@@ -548,7 +547,7 @@ opacity:.65;
     <h2>Want to understand EntryDocs more deeply?</h2>
     <p>This page gives the quick overview. Use the detailed overview, live environment and supporting material if you want to go deeper or share internally.</p>
   </div>
-  <div class="smartvel-detail-actions"><a class="primary" href="entrydocs-overview.html">Explore EntryDocs in more detail</a><a class="secondary" href="https://www.finnair.com/fi-en/travel-documents/travel-requirements-for-your-trip" target="_blank" rel="noopener noreferrer">View EntryDocs in action</a><a class="ghost" href="entrydocs_playbook.pdf" download>Download playbook</a><a class="ghost" href="entrydocs_product_sheet.pdf" download>Download product sheet</a></div>
+  <div class="smartvel-detail-actions"><a class="primary" href="entrydocs-overview.html" onclick="try{parent.postMessage({type:'SMARTVEL_PAGE_SILENT'},'*')}catch(e){}">Explore EntryDocs in more detail</a><a class="secondary" href="https://www.finnair.com/fi-en/travel-documents/travel-requirements-for-your-trip" target="_blank" rel="noopener noreferrer">View EntryDocs in action</a><a class="ghost" href="entrydocs_playbook.pdf" download>Download playbook</a><a class="ghost" href="entrydocs_product_sheet.pdf" download>Download product sheet</a></div>
 </section>
 
 </body>

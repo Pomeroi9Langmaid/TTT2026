@@ -295,12 +295,17 @@ h1 strong{color:var(--teal)}
   if(!panel||!audio||!mute||!replay) return;
   panel.style.display='flex';
   audio.volume=1;
+  let lastPlayAt=0;
   function update(){mute.textContent=audio.muted?'🔇':'🔊';}
-  function play(reset){try{if(reset) audio.currentTime=0; audio.play().catch(()=>{});}catch(e){}}
+  function play(reset){
+    const now=Date.now();
+    if(!reset && now-lastPlayAt<1200) return;
+    lastPlayAt=now;
+    try{if(reset) audio.currentTime=0; const p=audio.play(); if(p&&p.catch)p.catch(()=>{});}catch(e){}
+  }
   mute.onclick=function(){audio.muted=!audio.muted; update(); if(!audio.muted&&audio.paused) play(false);};
   replay.onclick=function(){play(true);};
-  document.addEventListener('DOMContentLoaded',()=>play(true));
-  window.addEventListener('pageshow',()=>play(true));
+  window.addEventListener('load',()=>play(true),{once:true});
   update();
 })();
 </script>
