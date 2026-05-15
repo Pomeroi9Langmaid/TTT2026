@@ -564,61 +564,6 @@ background:rgba(255,255,255,.86)!important;
 border-color:rgba(255,255,255,.22)!important;
 }
 </style>
-
-<!-- PARENT_MORE_BELOW_CUE_V1 -->
-<style id="parent-more-below-cue-style">
-.parent-more-cue{
-  position:absolute;
-  left:50%;
-  bottom:18px;
-  transform:translateX(-50%) translateY(8px);
-  z-index:40;
-  display:flex;
-  align-items:center;
-  gap:8px;
-  border:1px solid rgba(255,255,255,.34);
-  border-radius:999px;
-  padding:10px 15px 10px 16px;
-  background:rgba(9,23,35,.66);
-  color:#fff;
-  font-family:Poppins,sans-serif;
-  font-size:11px;
-  line-height:1;
-  font-weight:800;
-  letter-spacing:.105em;
-  text-transform:uppercase;
-  box-shadow:0 18px 46px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.18);
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-  opacity:0;
-  pointer-events:none;
-  cursor:pointer;
-  transition:opacity .28s ease, transform .28s ease, border-color .28s ease;
-}
-.parent-more-cue.visible{
-  opacity:1;
-  pointer-events:auto;
-  transform:translateX(-50%) translateY(0);
-}
-.parent-more-cue:hover{
-  border-color:rgba(41,170,224,.72);
-  transform:translateX(-50%) translateY(-2px);
-}
-.parent-more-cue svg{
-  width:14px;
-  height:14px;
-  animation:parentMoreCueNudge 1.45s ease-in-out infinite;
-}
-@keyframes parentMoreCueNudge{
-  0%,100%{transform:translateY(-1px);opacity:.72}
-  50%{transform:translateY(3px);opacity:1}
-}
-@media(prefers-reduced-motion:reduce){
-  .parent-more-cue,.parent-more-cue svg{animation:none!important;transition:none!important}
-}
-</style>
-<!-- /PARENT_MORE_BELOW_CUE_V1 -->
-
 </head>
 <body>
 
@@ -651,15 +596,13 @@ border-color:rgba(255,255,255,.22)!important;
 </div>
 
 <div class='viewport'>
-<button class='parent-more-cue' id='parentMoreCue' type='button' aria-label='Scroll for more content'><span>More below</span><svg viewBox='0 0 24 24' fill='none' aria-hidden='true'><path d='M6 9l6 6 6-6' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg></button>
-
-<div class='slide active' data-title='Smartvel' data-sub='Company overview and ecosystem'><iframe src='smartvel.html?v=parent-more-cue-v1'></iframe></div>
-<div class='slide' data-title='EntryDocs' data-sub='Travel requirements intelligence'><iframe src='entrydocs.html?v=parent-more-cue-v1'></iframe></div>
-<div class='slide' data-title='TravelAble' data-sub='Accessible travel support'><iframe src='travelable.html?v=restored-parent-cue-v1'></iframe></div>
-<div class='slide' data-title='Explore & Go' data-sub='Destination inspiration'><iframe src='exploreandgo.html?v=parent-more-cue-v1'></iframe></div>
-<div class='slide' data-title='Trip Planner' data-sub='Destination engagement'><iframe src='tripplanner.html?v=parent-more-cue-v1'></iframe></div>
-<div class='slide' data-title='TravelSEO' data-sub='SEO and GEO'><iframe src='travelseo.html?v=restored-parent-cue-v1'></iframe></div>
-<div class='slide' data-title='Avuxi' data-sub='Neighbourhood intelligence'><iframe src='avuxi.html?v=restored-parent-cue-v1'></iframe></div>
+<div class='slide active' data-title='Smartvel' data-sub='Company overview and ecosystem'><iframe src='smartvel.html?v=force-v5-exact-filename'></iframe></div>
+<div class='slide' data-title='EntryDocs' data-sub='Travel requirements intelligence'><iframe src='entrydocs.html?v=overview-cta-v1'></iframe></div>
+<div class='slide' data-title='TravelAble' data-sub='Accessible travel support'><iframe src='travelable.html'></iframe></div>
+<div class='slide' data-title='Explore & Go' data-sub='Destination inspiration'><iframe src='exploreandgo.html'></iframe></div>
+<div class='slide' data-title='Trip Planner' data-sub='Destination engagement'><iframe src='tripplanner.html'></iframe></div>
+<div class='slide' data-title='TravelSEO' data-sub='SEO and GEO'><iframe src='travelseo.html'></iframe></div>
+<div class='slide' data-title='Avuxi' data-sub='Neighbourhood intelligence'><iframe src='avuxi.html'></iframe></div>
 <div class='slide' data-title='Contact' data-sub='Reach out'>
 <div class='contact'><a class='brand-mark-link' href='https://www.smartvel.com/' target='_blank' rel='noopener noreferrer'><img class='brand-mark' src='smartvel_logo.png' alt='Smartvel logo'></a><div class='visual-orbit'></div><div class='route-line'></div>
 <div>
@@ -835,10 +778,6 @@ function show(i){
   next.textContent=i===slides.length-1?'Restart':'Next';
 
   updateCta(i);
-  parentCueDismissed=false;
-  bindParentMoreCueFrame();
-  setTimeout(updateParentMoreCue,380);
-  setTimeout(updateParentMoreCue,1150);
   requestAnimationFrame(()=>movePlane(i));
 }
 
@@ -851,82 +790,8 @@ document.addEventListener('keydown',e=>{
   if(e.key==='ArrowLeft')prev.click();
 });
 
-window.addEventListener('resize',()=>{movePlane(current);updateParentMoreCue();});
-window.addEventListener('load',()=>{movePlane(current);bindParentMoreCueFrame();setTimeout(updateParentMoreCue,700);});
-
-
-const parentMoreCue=document.getElementById('parentMoreCue');
-let parentCueDismissed=false;
-let parentCueBoundFrame=null;
-
-function activeFrame(){
-  const active=slides[current];
-  return active ? active.querySelector('iframe') : null;
-}
-
-function frameScrollInfo(){
-  const frame=activeFrame();
-  if(!frame || !frame.contentWindow || !frame.contentDocument) return null;
-  const doc=frame.contentDocument.documentElement;
-  const body=frame.contentDocument.body;
-  const scrollTop=frame.contentWindow.scrollY || doc.scrollTop || (body?body.scrollTop:0) || 0;
-  const scrollHeight=Math.max(doc.scrollHeight, body?body.scrollHeight:0);
-  const clientHeight=frame.contentWindow.innerHeight || doc.clientHeight;
-  return {frame, scrollTop, scrollHeight, clientHeight};
-}
-
-function updateParentMoreCue(){
-  if(!parentMoreCue) return;
-  let info=null;
-  try{ info=frameScrollInfo(); }catch(e){ info=null; }
-  const canScroll=info && info.scrollHeight > info.clientHeight + 120;
-  const nearTop=info && info.scrollTop < 42;
-  if(!parentCueDismissed && canScroll && nearTop){
-    parentMoreCue.classList.add('visible');
-  }else{
-    parentMoreCue.classList.remove('visible');
-  }
-}
-
-function bindParentMoreCueFrame(){
-  const frame=activeFrame();
-  if(!frame || frame===parentCueBoundFrame) return;
-  parentCueBoundFrame=frame;
-  try{
-    frame.addEventListener('load',()=>{
-      parentCueDismissed=false;
-      setTimeout(updateParentMoreCue,350);
-      setTimeout(updateParentMoreCue,1100);
-    });
-    if(frame.contentWindow){
-      frame.contentWindow.addEventListener('scroll',()=>{
-        if((frame.contentWindow.scrollY || 0)>42) parentCueDismissed=true;
-        updateParentMoreCue();
-      },{passive:true});
-      frame.contentWindow.addEventListener('wheel',()=>{
-        parentCueDismissed=true;
-        updateParentMoreCue();
-      },{passive:true});
-      frame.contentWindow.addEventListener('touchmove',()=>{
-        parentCueDismissed=true;
-        updateParentMoreCue();
-      },{passive:true});
-    }
-  }catch(e){}
-}
-
-if(parentMoreCue){
-  parentMoreCue.addEventListener('click',()=>{
-    try{
-      const info=frameScrollInfo();
-      if(info && info.frame && info.frame.contentWindow){
-        parentCueDismissed=true;
-        parentMoreCue.classList.remove('visible');
-        info.frame.contentWindow.scrollBy({top:Math.min(520, info.clientHeight*.62), behavior:'smooth'});
-      }
-    }catch(e){}
-  });
-}
+window.addEventListener('resize',()=>movePlane(current));
+window.addEventListener('load',()=>movePlane(current));
 
 show(0);
 </script>
