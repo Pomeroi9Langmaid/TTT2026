@@ -1,0 +1,8 @@
+DETAIL PAGE AUDIO REMOVED
+
+Changes:
+- Removed autoplay audio from all detailed overview pages
+- Audio now only exists on the primary solution pages
+- Confirmed Email Andrew CTA exists on detailed pages
+
+This prevents repeated narration when drilling deeper into solutions.
