@@ -1,0 +1,31 @@
+ENTRYDOCS_OVERVIEW_V7_REPLICA_STYLE_SCAN
+
+[OK] index.html
+[OK] entrydocs.html
+[OK] entrydocs-overview.html
+[OK] entrydocs_playbook.pdf
+[OK] entrydocs_product_sheet.pdf
+[OK] smartvel.html
+[OK] smartvel_stats_refocus.html
+
+[OK] Bottom cross-solution buttons removed
+[OK] Bottom CTA band removed
+[OK] Schedule meeting label used
+[OK] Book walkthrough label removed
+[OK] Finnair live environment link present
+[OK] Hero buttons one-line desktop
+[OK] Hero visual includes laptop/dashboard
+[OK] Hero visual includes phone
+[OK] Hero visual includes passport and ticket
+[OK] SVG icons used throughout content sections
+[OK] Why/What section matches mock-up structure
+[OK] How it works / covers paired layout present
+[OK] Accuracy KPI strip present
+[OK] Journey and business impact sections present
+[OK] Package Travel Directive content present
+[OK] No PDF page screenshots used
+
+STYLE NOTE
+[OK] This is rebuilt to follow the approved mock-up layout and visual language: top hero with laptop/phone/passport/ticket, icon cards, two-column information blocks, KPI strip, journey strip, business impact cards, and no bottom cross-solution button row.
+[OK] It is not a pasted screenshot; it is web-native HTML/CSS using inline SVG icons, so it remains editable and responsive.
+[OK] Upload/overwrite the files in this zip without deleting existing repository files.
