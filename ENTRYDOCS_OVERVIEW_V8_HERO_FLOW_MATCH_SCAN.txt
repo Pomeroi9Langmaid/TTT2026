@@ -1,0 +1,10 @@
+ENTRYDOCS_OVERVIEW_V8_HERO_FLOW_MATCH_SCAN
+
+[OK] Hero visual rebuilt to match the approved mock-up style more closely: large laptop dashboard, left foreground phone, right passport, bottom boarding pass.
+[OK] How it works rebuilt to match the approved mock-up style more closely: 3-step dashed flow line, orange numbered circles, phone/laptop/phone visuals with relevant UI states.
+[OK] Buttons remain on one line on desktop.
+[OK] Finnair live environment link preserved.
+[OK] Schedule meeting link preserved.
+[OK] No bottom cross-solution buttons.
+[OK] No bottom CTA band.
+[OK] Resources and detailed content retained.
