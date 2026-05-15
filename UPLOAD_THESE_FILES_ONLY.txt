@@ -1,6 +1,9 @@
-Upload these files over the existing repo root.
+Upload these two files over the existing repo root.
 
-V9 fixes:
-- Hard-stops current MP3 immediately on slide/page navigation.
-- Resets previous audio before loading the next page intro.
-- Keeps V8 detail-page silent/full-width fixes.
+V10 fixes:
+- Moves parent audio controls into a safe top-bar centre position so they do not cover page titles, Smartvel logo, Interactive Journey, or CTA buttons.
+- Enhances homepage logo carousel: larger logo cards, larger logos, stronger shadow/glow.
+
+Files included:
+- index.html
+- smartvel.html

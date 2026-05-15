@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Smartvel Interactive Journey V9 - hard-stop-audio-on-navigation</title><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap' rel='stylesheet'>
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Smartvel Interactive Journey V11 - start-button-audio</title><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap' rel='stylesheet'>
 <style>
 :root{--blue:#29AAE0;--green:#00A698;--orange:#FF9400}
 *{box-sizing:border-box}
@@ -38,18 +38,22 @@ linear-gradient(180deg,#08111b,#111d2b)}
 .hint{font-size:12px;opacity:.65}
 .intro{position:fixed;inset:0;background:
 radial-gradient(circle at center, rgba(41,170,224,.2), transparent 45%),
-linear-gradient(180deg,#08111b,#111d2b);display:flex;align-items:center;justify-content:center;z-index:100;animation:fade 5.2s forwards}
+linear-gradient(180deg,#08111b,#111d2b);display:flex;align-items:center;justify-content:center;z-index:100;opacity:1;visibility:visible;transition:opacity .75s ease, visibility .75s ease}
+.intro.hide{opacity:0;visibility:hidden;pointer-events:none}
 .intro-inner{text-align:center}
 .intro img{width:240px;margin-bottom:24px}
 .intro h1{font-size:76px;line-height:.94;letter-spacing:-.07em;margin:0 0 12px}
 .intro p{opacity:.7}.intro-ai{margin-top:10px;font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.intro-start{margin-top:32px;display:inline-flex;align-items:center;gap:10px;border:0;border-radius:999px;padding:15px 24px;background:linear-gradient(135deg,var(--blue),var(--green));color:#fff;font-family:Poppins,sans-serif;font-size:13px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;box-shadow:0 20px 60px rgba(41,170,224,.28);transition:transform .2s ease, box-shadow .2s ease}
+.intro-start:hover{transform:translateY(-2px);box-shadow:0 24px 70px rgba(41,170,224,.38)}
+.intro-start:active{transform:translateY(0)}
 .contact{width:100%;height:100%;display:grid;grid-template-columns:1fr .9fr;gap:40px;padding:60px;background:
 radial-gradient(circle at top right, rgba(41,170,224,.2), transparent 35%),
 linear-gradient(135deg,#08111b,#12243a)}
 .contact h1{font-size:72px;line-height:.94;letter-spacing:-.07em}
 .card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:30px;padding:34px}
 .mail{display:inline-flex;padding:13px 18px;border-radius:999px;background:linear-gradient(135deg,var(--orange),#ffb347);color:#fff;text-decoration:none;font-weight:800}
-@keyframes fade{0%,62%{opacity:1}100%{opacity:0;visibility:hidden}}
+
 </style>
 <style id='v5-upgrades'>
 .stop.active i{
@@ -621,12 +625,15 @@ border-color:rgba(255,255,255,.22)!important;
 
 
 <style id="smartvel-parent-audio-style">
-.smartvel-parent-audio{position:fixed;top:28px;right:300px;left:auto;z-index:999999;display:none;gap:8px;align-items:center;background:rgba(5,20,34,.62);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px);border-radius:999px;padding:8px 10px;box-shadow:0 14px 36px rgba(0,0,0,.18)}
-.smartvel-parent-audio button{width:36px;height:36px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;font-size:15px;font-weight:900;display:grid;place-items:center}
-.smartvel-parent-audio span{font-size:11px;font-weight:800;color:rgba(255,255,255,.78);padding-right:6px;max-width:170px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* V10: keep audio controls in the unused centre of the parent top bar.
+   This prevents overlap with the Smartvel logo, page titles, CTA buttons and iframe content. */
+.smartvel-parent-audio{position:fixed;top:36px;left:50%;transform:translateX(-50%);right:auto;z-index:999999;display:none;gap:8px;align-items:center;background:rgba(5,20,34,.72);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(14px);border-radius:999px;padding:7px 10px;box-shadow:0 16px 42px rgba(0,0,0,.22);max-width:260px}
+.smartvel-parent-audio button{width:34px;height:34px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;font-size:14px;font-weight:900;display:grid;place-items:center;line-height:1}
+.smartvel-parent-audio span{font-size:10.5px;font-weight:800;color:rgba(255,255,255,.82);padding-right:6px;max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 body.smartvel-audio-ready .smartvel-parent-audio{display:flex}
 body.smartvel-detail-page .smartvel-parent-audio{display:none!important}
-@media(max-width:1200px){.smartvel-parent-audio{right:180px}.smartvel-parent-audio span{max-width:120px}}@media(max-width:900px){.smartvel-parent-audio{right:16px;top:16px}.smartvel-parent-audio span{display:none}}
+@media(max-width:1200px){.smartvel-parent-audio{left:auto;right:230px;transform:none}.smartvel-parent-audio span{max-width:110px}}
+@media(max-width:900px){.smartvel-parent-audio{right:18px;top:22px}.smartvel-parent-audio span{display:none}}
 </style>
 
 </head>
@@ -640,7 +647,7 @@ body.smartvel-detail-page .smartvel-parent-audio{display:none!important}
 <audio id="smartvelPageAudio" preload="auto"></audio>
 
 
-<div class='intro'><div class='intro-inner'><img src='smartvel_logo.png'><h1>Powering the<br>traveller journey.</h1><p>Toronto Travel Tech interactive showcase</p><div class='intro-ai'>AI-powered travel intelligence for better passenger experiences</div><div class='intro-sub'>A guided journey through Smartvel’s travel technology ecosystem</div></div></div>
+<div class='intro' id='introSplash'><div class='intro-inner'><img src='smartvel_logo.png'><h1>Powering the<br>traveller journey.</h1><p>Toronto Travel Tech interactive showcase</p><div class='intro-ai'>AI-powered travel intelligence for better passenger experiences</div><div class='intro-sub'>A guided journey through Smartvel’s travel technology ecosystem</div><button class='intro-start' id='startJourney' type='button'>Start interactive journey <span>→</span></button></div></div>
 
 <div class='app'>
 <aside class='side'>
@@ -671,13 +678,13 @@ body.smartvel-detail-page .smartvel-parent-audio{display:none!important}
 <div class='viewport'>
 <button class='parent-more-cue' id='parentMoreCue' type='button' aria-label='Scroll for more content'><span>More below</span><svg viewBox='0 0 24 24' fill='none' aria-hidden='true'><path d='M6 9l6 6 6-6' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/></svg></button>
 
-<div class='slide active' data-title='Smartvel' data-sub='Company overview and ecosystem'><iframe allow="autoplay" src='smartvel.html?v=v9-hard-stop-audio-nav'></iframe></div>
-<div class='slide' data-title='EntryDocs' data-sub='Travel requirements intelligence'><iframe allow="autoplay" src='entrydocs.html?v=v9-hard-stop-audio-nav'></iframe></div>
-<div class='slide' data-title='TravelAble' data-sub='Accessible travel support'><iframe allow="autoplay" src='travelable.html?v=v9-hard-stop-audio-nav'></iframe></div>
-<div class='slide' data-title='Explore & Go' data-sub='Destination inspiration'><iframe allow="autoplay" src='exploreandgo.html?v=v9-hard-stop-audio-nav'></iframe></div>
-<div class='slide' data-title='Trip Planner' data-sub='Destination engagement'><iframe allow="autoplay" src='tripplanner.html?v=v9-hard-stop-audio-nav'></iframe></div>
-<div class='slide' data-title='TravelSEO' data-sub='SEO and GEO'><iframe allow="autoplay" src='travelseo.html?v=v9-hard-stop-audio-nav'></iframe></div>
-<div class='slide' data-title='Avuxi' data-sub='Neighbourhood intelligence'><iframe allow="autoplay" src='avuxi.html?v=v9-hard-stop-audio-nav'></iframe></div>
+<div class='slide active' data-title='Smartvel' data-sub='Company overview and ecosystem'><iframe allow="autoplay" src='smartvel.html?v=v11-start-button-audio'></iframe></div>
+<div class='slide' data-title='EntryDocs' data-sub='Travel requirements intelligence'><iframe allow="autoplay" src='entrydocs.html?v=v11-start-button-audio'></iframe></div>
+<div class='slide' data-title='TravelAble' data-sub='Accessible travel support'><iframe allow="autoplay" src='travelable.html?v=v11-start-button-audio'></iframe></div>
+<div class='slide' data-title='Explore & Go' data-sub='Destination inspiration'><iframe allow="autoplay" src='exploreandgo.html?v=v11-start-button-audio'></iframe></div>
+<div class='slide' data-title='Trip Planner' data-sub='Destination engagement'><iframe allow="autoplay" src='tripplanner.html?v=v11-start-button-audio'></iframe></div>
+<div class='slide' data-title='TravelSEO' data-sub='SEO and GEO'><iframe allow="autoplay" src='travelseo.html?v=v11-start-button-audio'></iframe></div>
+<div class='slide' data-title='Avuxi' data-sub='Neighbourhood intelligence'><iframe allow="autoplay" src='avuxi.html?v=v11-start-button-audio'></iframe></div>
 <div class='slide' data-title='Contact' data-sub='Reach out'>
 <div class='contact'><a class='brand-mark-link' href='https://www.smartvel.com/' target='_blank' rel='noopener noreferrer'><img class='brand-mark' src='smartvel_logo.png' alt='Smartvel logo'></a><div class='visual-orbit'></div><div class='route-line'></div>
 <div>
@@ -1042,11 +1049,25 @@ if(parentMoreCue){
 }
 
 show(0);
-setTimeout(()=>{
+const introSplash=document.getElementById('introSplash');
+const startJourney=document.getElementById('startJourney');
+function startInteractiveJourney(){
+  if(splashFinished) return;
   splashFinished=true;
   document.body.classList.add('smartvel-audio-ready');
+  if(introSplash) introSplash.classList.add('hide');
+  // This is deliberately called directly inside the click event so the browser
+  // treats the homepage voiceover as user-initiated audio.
   notifySlideAudio(0);
-}, 5250);
+  setTimeout(()=>{
+    bindParentMoreCueFrame();
+    updateParentMoreCue();
+  },260);
+}
+if(startJourney){
+  startJourney.addEventListener('click',startInteractiveJourney);
+}
+
 </script>
 
 
