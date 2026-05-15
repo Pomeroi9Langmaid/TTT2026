@@ -128,6 +128,68 @@ html,body{width:100%!important;max-width:none!important;overflow-x:hidden!import
 .page{width:100%!important;max-width:none!important;margin:0!important;}
 .shell,.hero,.mission,.trust,.journey,.engagement,.geo,.bottom-strip{max-width:none!important;}
 </style>
+<style id="global-full-width-v24">
+
+/* V24 GLOBAL FULL-WIDTH ENFORCEMENT
+   All pages, including detailed overview pages, must use the full available content width. */
+html,
+body {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  overflow-x: hidden !important;
+}
+
+.page,
+.main,
+.wrap,
+.container,
+.content,
+.shell,
+.stage,
+.hero,
+.hero-inner,
+.block,
+.section,
+.topbar .wrap,
+.main > .wrap,
+section > .wrap,
+.smartvel-detail-cta,
+.bottom-strip,
+.proof-row,
+.monitor-panel,
+.eu-banner,
+.hero-shell,
+.solution-page,
+.solution-wrap,
+.overview-page,
+.overview-wrap {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.wrap,
+.container,
+.main > .wrap,
+section > .wrap {
+  padding-left: 48px !important;
+  padding-right: 48px !important;
+}
+
+@media (max-width: 900px) {
+  .wrap,
+  .container,
+  .main > .wrap,
+  section > .wrap {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+}
+
+</style>
 </head>
 <body>
 <!-- TRIPPLANNER_VIDEO_LABEL_REMOVED -->
@@ -171,7 +233,7 @@ html,body{width:100%!important;max-width:none!important;overflow-x:hidden!import
     <h2>Want to understand Trip Planner more deeply?</h2>
     <p>This page gives the quick overview. Use the detailed overview, live environment and supporting material if you want to go deeper or share internally.</p>
   </div>
-  <div class="smartvel-detail-actions"><a class="primary" href="tripplanner-overview.html">Explore Trip Planner in more detail</a><a class="secondary" href="https://www.iberia.com/es/guia-de-destinos/" target="_blank" rel="noopener noreferrer">Open demo environment</a><a class="ghost" href="tripplanner_playbook.pdf" download>Download playbook</a><a class="ghost" href="tripplanner_product_sheet.pdf" download>Download product sheet</a></div>
+  <div class="smartvel-detail-actions"><a class="primary" href="tripplanner-overview.html?v=24">Explore Trip Planner in more detail</a><a class="secondary" href="https://www.iberia.com/es/guia-de-destinos/" target="_blank" rel="noopener noreferrer">Open demo environment</a><a class="ghost" href="tripplanner_playbook.pdf" download>Download playbook</a><a class="ghost" href="tripplanner_product_sheet.pdf" download>Download product sheet</a></div>
 </section>
 
 

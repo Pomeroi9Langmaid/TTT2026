@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#06365d;--deep:#061f36;--blue:#0b5d88;--cyan:#29aae0;--orange:#ff9400;--ink:#0d2033;--muted:#566b80;--line:#dceaf3;--soft:#f6fafd;--shadow:0 20px 54px rgba(6,31,54,.12)}
-*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:#fff} a{text-decoration:none;color:inherit} svg{width:1em;height:1em;stroke:currentColor;stroke-width:1.9;fill:none;stroke-linecap:round;stroke-linejoin:round} .wrap{width:min(1320px,92vw);margin:0 auto}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:#fff} a{text-decoration:none;color:inherit} svg{width:1em;height:1em;stroke:currentColor;stroke-width:1.9;fill:none;stroke-linecap:round;stroke-linejoin:round} .wrap{width:100%!important;max-width:none!important;margin:0!important;padding-left:48px!important;padding-right:48px!important}
 .topbar{background:linear-gradient(100deg,#05233d,#0b5d88 70%,#0879aa);color:#fff;box-shadow:0 10px 28px rgba(5,35,58,.18)} .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 0} .brand{display:flex;align-items:center;gap:22px} .logo{width:150px;filter:brightness(0) invert(1)} .crumb{display:flex;gap:10px;align-items:center;font-size:12px;font-weight:800;color:rgba(255,255,255,.82)} .crumb span{opacity:.55}
 .top-actions,.hero-actions{display:flex;align-items:center;gap:10px} .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;border:1px solid transparent;min-height:40px;padding:11px 18px;font-size:12px;font-weight:900;line-height:1;white-space:nowrap;transition:transform .16s ease,box-shadow .16s ease} .btn:hover{transform:translateY(-1px)} .btn-orange{background:linear-gradient(135deg,#ff9400,#ffb347);color:#fff;box-shadow:0 12px 26px rgba(255,148,0,.25)} .btn-blue{background:linear-gradient(135deg,#0b5d88,#29aae0);color:#fff;box-shadow:0 12px 26px rgba(41,170,224,.20)} .btn-white{background:#fff;color:#0b5d88;border-color:#bed7e7} .btn-ghost{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.26)} .btn svg{font-size:17px}
 .hero{position:relative;background:linear-gradient(180deg,#f8fbfe,#fff);border-bottom:1px solid #e7f1f7;overflow:hidden} .hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(11,93,136,.045) 0 1px,transparent 1px 64px),repeating-linear-gradient(0deg,rgba(11,93,136,.035) 0 1px,transparent 1px 64px);opacity:.55;pointer-events:none} .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:.92fr 1.08fr;gap:42px;align-items:center;padding:54px 0 44px} .eyebrow{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#0b5d88;margin-bottom:18px} h1{margin:0;font-size:clamp(42px,4.9vw,70px);line-height:1.03;letter-spacing:-.065em;font-weight:900;color:#10233a} h1 strong{color:var(--orange)} .lede{margin:18px 0 0;max-width:580px;color:#344c64;font-size:16px;line-height:1.48;font-weight:500} .hero-note{margin-top:22px;font-size:13px;color:#41586f;font-weight:600} .hero-actions{flex-wrap:nowrap;margin-top:18px} .hero-actions .btn{padding:10px 14px;font-size:11.5px;min-width:0}
@@ -131,6 +131,68 @@
 }
 </style>
 
+<style id="global-full-width-v24">
+
+/* V24 GLOBAL FULL-WIDTH ENFORCEMENT
+   All pages, including detailed overview pages, must use the full available content width. */
+html,
+body {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  overflow-x: hidden !important;
+}
+
+.page,
+.main,
+.wrap,
+.container,
+.content,
+.shell,
+.stage,
+.hero,
+.hero-inner,
+.block,
+.section,
+.topbar .wrap,
+.main > .wrap,
+section > .wrap,
+.smartvel-detail-cta,
+.bottom-strip,
+.proof-row,
+.monitor-panel,
+.eu-banner,
+.hero-shell,
+.solution-page,
+.solution-wrap,
+.overview-page,
+.overview-wrap {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.wrap,
+.container,
+.main > .wrap,
+section > .wrap {
+  padding-left: 48px !important;
+  padding-right: 48px !important;
+}
+
+@media (max-width: 900px) {
+  .wrap,
+  .container,
+  .main > .wrap,
+  section > .wrap {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+}
+
+</style>
 </head>
 <body>
 <header class="topbar">
