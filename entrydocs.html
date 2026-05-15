@@ -217,8 +217,74 @@ opacity:.65;
 </style>
 
 <style>.smartvel-logo-link{display:inline-flex;align-items:center;text-decoration:none}.smartvel-logo-link img{display:block}</style>
+
+<style id="entrydocs-audio-v10">
+.ed-audio-panel{
+  position:fixed;
+  top:14px;
+  left:14px;
+  z-index:99999;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:7px;
+  border-radius:999px;
+  background:rgba(4,22,38,.82);
+  border:1px solid rgba(255,255,255,.20);
+  box-shadow:0 14px 34px rgba(3,18,32,.22);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+}
+.ed-audio-btn{
+  width:34px;
+  height:34px;
+  border:0;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  color:#fff;
+  background:rgba(255,255,255,.13);
+  transition:transform .16s ease, background .16s ease;
+}
+.ed-audio-btn:hover{transform:translateY(-1px);background:rgba(41,170,224,.32)}
+.ed-audio-btn svg{width:17px;height:17px;stroke:currentColor;stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.ed-audio-status{
+  max-width:0;
+  overflow:hidden;
+  white-space:nowrap;
+  color:rgba(255,255,255,.78);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  transition:max-width .2s ease, padding-right .2s ease;
+}
+.ed-audio-panel:hover .ed-audio-status,
+.ed-audio-panel.show-status .ed-audio-status{max-width:150px;padding-right:6px}
+.ed-audio-panel.is-playing .ed-audio-status::after{content:'Playing intro'}
+.ed-audio-panel.is-muted .ed-audio-status::after{content:'Muted'}
+.ed-audio-panel.is-paused .ed-audio-status::after{content:'Audio ready'}
+.ed-audio-panel.needs-click .ed-audio-status::after{content:'Tap replay'}
+@media(max-width:760px){.ed-audio-panel{top:10px;left:10px}.ed-audio-btn{width:32px;height:32px}}
+</style>
+
 </head>
 <body>
+
+<!-- ENTRYDOCS_AUDIO_INTRO_V10 -->
+<audio id="edIntroAudio" src="ED.mp3" preload="auto" playsinline></audio>
+<div class="ed-audio-panel is-paused" id="edAudioPanel" aria-label="EntryDocs audio controls">
+  <button class="ed-audio-btn" id="edAudioMute" type="button" aria-label="Mute EntryDocs intro audio" title="Mute / unmute">
+    <svg id="edIconSound" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z"></path><path d="M16 9.5a4 4 0 0 1 0 5"></path><path d="M18.5 7a7 7 0 0 1 0 10"></path></svg>
+  </button>
+  <button class="ed-audio-btn" id="edAudioReplay" type="button" aria-label="Replay EntryDocs intro audio" title="Replay intro">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.34-5.66"></path><path d="M4 4v6h6"></path></svg>
+  </button>
+  <span class="ed-audio-status" aria-hidden="true"></span>
+</div>
+<!-- /ENTRYDOCS_AUDIO_INTRO_V10 -->
+
 <!-- ENTRYDOCS_VIDEO_BORDER_FIX_MARKER -->
 <!-- ENTRYDOCS_FILENAME_FIX_MARKER -->
 <!-- ENTRYDOCS_VIDEO_CAROUSEL_MARKER -->
@@ -381,5 +447,88 @@ opacity:.65;
 
 <div class="footnote">Positioning is informational, not legal advice. EntryDocs supports traveller-information transparency and operational readiness; legal compliance obligations remain with each travel company and should be reviewed with appropriate counsel.</div>
 </main>
+
+<script id="entrydocs-audio-v10-script">
+(function(){
+  const audio = document.getElementById('edIntroAudio');
+  const panel = document.getElementById('edAudioPanel');
+  const muteBtn = document.getElementById('edAudioMute');
+  const replayBtn = document.getElementById('edAudioReplay');
+  const soundIcon = document.getElementById('edIconSound');
+  if(!audio || !panel || !muteBtn || !replayBtn) return;
+
+  const ICON_SOUND = '<path d="M4 9v6h4l5 4V5L8 9H4Z"></path><path d="M16 9.5a4 4 0 0 1 0 5"></path><path d="M18.5 7a7 7 0 0 1 0 10"></path>';
+  const ICON_MUTED = '<path d="M4 9v6h4l5 4V5L8 9H4Z"></path><path d="m17 9 4 4m0-4-4 4"></path>';
+
+  audio.volume = 1;
+  audio.muted = false;
+  audio.setAttribute('data-entrydocs-intro','true');
+
+  function updateState(state){
+    panel.classList.remove('is-playing','is-paused','is-muted','needs-click','show-status');
+    if(audio.muted) panel.classList.add('is-muted');
+    else panel.classList.add(state || (audio.paused ? 'is-paused' : 'is-playing'));
+    if(soundIcon) soundIcon.innerHTML = audio.muted ? ICON_MUTED : ICON_SOUND;
+    muteBtn.setAttribute('aria-label', audio.muted ? 'Unmute EntryDocs intro audio' : 'Mute EntryDocs intro audio');
+  }
+
+  async function playIntro(reset){
+    try{
+      audio.volume = 1;
+      if(reset) audio.currentTime = 0;
+      audio.muted = false;
+      await audio.play();
+      updateState('is-playing');
+      return true;
+    }catch(err){
+      updateState('needs-click');
+      panel.classList.add('show-status');
+      return false;
+    }
+  }
+
+  muteBtn.addEventListener('click', function(){
+    audio.muted = !audio.muted;
+    updateState(audio.paused ? 'is-paused' : 'is-playing');
+  });
+
+  replayBtn.addEventListener('click', function(){
+    playIntro(true);
+  });
+
+  audio.addEventListener('play', function(){updateState('is-playing')});
+  audio.addEventListener('pause', function(){updateState('is-paused')});
+  audio.addEventListener('ended', function(){updateState('is-paused')});
+
+  // If opened as a normal standalone page, try to play immediately.
+  // If inside the main interactive journey iframe, wait for the parent to activate the EntryDocs slide,
+  // so it does not play while hidden on initial site load.
+  const inIframe = window.self !== window.top;
+  if(!inIframe){
+    window.addEventListener('pageshow', function(){ playIntro(true); });
+    document.addEventListener('DOMContentLoaded', function(){ playIntro(true); });
+  }
+
+  window.addEventListener('message', function(event){
+    const data = event && event.data;
+    if(data && data.type === 'SMARTVEL_ENTRYDOCS_ACTIVE'){
+      playIntro(true);
+    }
+    if(data && data.type === 'SMARTVEL_ENTRYDOCS_INACTIVE'){
+      try{ audio.pause(); audio.currentTime = 0; updateState('is-paused'); }catch(e){}
+    }
+  });
+
+  // Browser fallback: if a direct unmuted play is blocked, the first click/tap/key inside the page starts it.
+  ['pointerdown','keydown','touchstart'].forEach(function(evt){
+    window.addEventListener(evt, function(){
+      if(audio.paused) playIntro(false);
+    }, {once:true, passive:true});
+  });
+
+  updateState('is-paused');
+})();
+</script>
+
 </body>
 </html>

@@ -1,0 +1,20 @@
+ENTRYDOCS_AUDIO_AUTOPLAY_V10_SCAN
+
+[OK] index.html
+[OK] entrydocs.html
+[OK] ED.mp3
+
+[OK] Audio file copied as ED.mp3
+[OK] EntryDocs page references ED.mp3
+[OK] Mute and replay buttons present
+[OK] Audio set to unmuted volume 1 in script
+[OK] Standalone EntryDocs page tries to play on open
+[OK] Iframe waits for active EntryDocs slide message
+[OK] Parent sends EntryDocs active message on slide change
+[OK] Parent iframe allows autoplay
+[OK] Hidden EntryDocs iframe is reset when not active
+
+NOTE
+[OK] The audio is intentionally loaded only on entrydocs.html, not on every solution page.
+[OK] In the interactive journey, the parent sends an activation message when the EntryDocs slide is selected so the audio restarts from the beginning each time.
+[OK] Direct browser autoplay can still be blocked by Chrome/Safari policies until the first user interaction; the replay button provides the fallback.
