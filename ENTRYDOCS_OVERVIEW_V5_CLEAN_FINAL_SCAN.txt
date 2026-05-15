@@ -1,0 +1,28 @@
+ENTRYDOCS_OVERVIEW_V5_CLEAN_FINAL_SCAN
+
+[OK] index.html
+[OK] entrydocs.html
+[OK] entrydocs-overview.html
+[OK] entrydocs_playbook.pdf
+[OK] entrydocs_product_sheet.pdf
+[OK] entrydocs_hero_video.mp4
+[OK] entrydocs_hero_video_alt.mp4
+[OK] smartvel.html
+[OK] smartvel_stats_refocus.html
+
+[OK] Hero visual replaced with clean web-native mock-up
+[OK] Schedule meeting label used
+[OK] Book walkthrough label removed
+[OK] Live EntryDocs action label used
+[OK] Finnair live environment link present
+[OK] Copy email removed
+[OK] Hero buttons desktop one-line rule present
+[OK] Playbook download present
+[OK] Product sheet download present
+[OK] No PDF screenshot thumbnails used
+[OK] EntryDocs page wording updated
+
+DELTA PACKAGE NOTE
+[OK] This zip intentionally includes only changed/new files plus EntryDocs PDFs/videos.
+[OK] Existing repo assets such as logos, homepage video, Explore & Go, TripPlanner, TravelAble, TravelSEO and Avuxi files are not duplicated here.
+[OK] Upload/overwrite the files in this package without deleting existing repo files.
