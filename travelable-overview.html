@@ -154,6 +154,68 @@ p{color:var(--muted);line-height:1.52}
   .device-main img,.device-secondary img,.device-phone img{height:auto}
 }
 </style>
+
+<style id="travelable-v28-premium-imagery-fix">
+/* V28 premium imagery pass: remove text-heavy/cropped slide visuals and make sections look cinematic */
+.hero-bg{
+  object-position:center 48%!important;
+  filter:saturate(1.08) contrast(1.04) brightness(.95)!important;
+}
+.hero-inner{
+  min-height:500px!important;
+}
+.step img{
+  height:132px!important;
+  object-fit:cover!important;
+  filter:saturate(1.06) contrast(1.04)!important;
+}
+.step{
+  min-height:292px!important;
+}
+.category img{
+  height:118px!important;
+  object-fit:cover!important;
+  filter:saturate(1.06) contrast(1.04)!important;
+}
+.category{
+  min-height:264px!important;
+}
+.product-composite{
+  min-height:400px!important;
+  overflow:hidden!important;
+}
+.device-main img,
+.device-secondary img,
+.device-phone img{
+  object-fit:cover!important;
+  object-position:center center!important;
+  filter:saturate(1.06) contrast(1.04)!important;
+}
+.device-main{
+  width:50%!important;
+}
+.device-secondary{
+  right:96px!important;
+  width:34%!important;
+}
+.device-phone{
+  right:30px!important;
+  width:96px!important;
+}
+.composite-note{
+  background:rgba(255,255,255,.96)!important;
+  backdrop-filter:blur(8px)!important;
+}
+.category:nth-child(n) img,
+.step:nth-child(n) img{
+  object-position:center center!important;
+}
+@media(max-width:1280px){
+  .step img{height:150px!important}
+  .category img{height:138px!important}
+}
+</style>
+
 </head>
 <body>
 <!-- TRAVELABLE_OVERVIEW_REFINED_V27_MARKER -->
@@ -171,7 +233,7 @@ p{color:var(--muted);line-height:1.52}
 </header>
 
 <section class="hero">
-  <img class="hero-bg" src="travelable_wheelchair_airport.jpg" alt="Traveller at airport using accessibility information">
+  <img class="hero-bg" src="travelable_ultra_hero.jpg" alt="Traveller at airport using accessibility information">
   <div class="wrap hero-inner">
     <div>
       <div class="eyebrow">TravelAble</div>
@@ -215,23 +277,23 @@ p{color:var(--muted);line-height:1.52}
       <h2>The traveller journey, made clearer</h2>
       <p>TravelAble is strongest when accessibility information appears at the moments where travellers need reassurance.</p>
     </div>
-    <div class="step"><div class="num">1</div><img src="travelable_real_traveller.jpg" alt="Traveller reviewing accessibility information"><b>Inspiration</b><em>Can I travel confidently?</em><span>Make accessibility visible before the traveller has to ask.</span></div>
-    <div class="step"><div class="num">2</div><img src="travelable_phone_future.jpg" alt="Mobile accessibility interface"><b>Booking</b><em>Is this route suitable?</em><span>Present practical information in the booking and decision flow.</span></div>
-    <div class="step"><div class="num">3</div><img src="travelable_airport_team.jpg" alt="Airport assistance environment"><b>Pre-trip</b><em>What support exists?</em><span>Help travellers prepare with clearer route, venue and assistance details.</span></div>
-    <div class="step"><div class="num">4</div><img src="travelable_slide_future.png" alt="Accessible route guidance interface"><b>In-trip</b><em>What is available now?</em><span>Support orientation, assistance and location-specific information.</span></div>
-    <div class="step"><div class="num">5</div><img src="travelable_visual_traveller.png" alt="Confident traveller experience"><b>Confidence</b><em>Less stress, better experience.</em><span>Reduce friction by making the journey easier to understand.</span></div>
+    <div class="step"><div class="num">1</div><img src="travelable_ultra_inspiration.jpg" alt="Traveller reviewing accessibility information"><b>Inspiration</b><em>Can I travel confidently?</em><span>Make accessibility visible before the traveller has to ask.</span></div>
+    <div class="step"><div class="num">2</div><img src="travelable_ultra_booking.jpg" alt="Mobile accessibility interface"><b>Booking</b><em>Is this route suitable?</em><span>Present practical information in the booking and decision flow.</span></div>
+    <div class="step"><div class="num">3</div><img src="travelable_ultra_pretrip.jpg" alt="Airport assistance environment"><b>Pre-trip</b><em>What support exists?</em><span>Help travellers prepare with clearer route, venue and assistance details.</span></div>
+    <div class="step"><div class="num">4</div><img src="travelable_ultra_intrip.jpg" alt="Accessible route guidance interface"><b>In-trip</b><em>What is available now?</em><span>Support orientation, assistance and location-specific information.</span></div>
+    <div class="step"><div class="num">5</div><img src="travelable_ultra_confidence.jpg" alt="Confident traveller experience"><b>Confidence</b><em>Less stress, better experience.</em><span>Reduce friction by making the journey easier to understand.</span></div>
   </div>
 </section>
 
 <section class="section categories">
   <div class="wrap category-grid">
     <div class="category-title"><h2>Comprehensive accessibility categories</h2></div>
-    <div class="category"><img src="travelable_wheelchair_airport.jpg" alt="Step-free access"><div class="inner"><b>Mobility</b><span>Step-free access, lifts, accessible bathrooms and mobility support details.</span></div></div>
-    <div class="category"><img src="travelable_slide_insights.png" alt="Accessibility information insight"><div class="inner"><b>Visual</b><span>Readable content, clear information and relevant support indicators.</span></div></div>
-    <div class="category"><img src="travelable_airport_team.jpg" alt="Airport support information"><div class="inner"><b>Hearing</b><span>Visual alerts, assistance information and communication support.</span></div></div>
-    <div class="category"><img src="travelable_phone_future.jpg" alt="Calm mobile guidance"><div class="inner"><b>Neurodiverse</b><span>Quiet areas, sensory-friendly notes and predictable journey information.</span></div></div>
-    <div class="category"><img src="travelable_visual_benefits.png" alt="TravelAble benefit visual"><div class="inner"><b>Dietary & medical</b><span>Relevant traveller support information where available and appropriate.</span></div></div>
-    <div class="category"><img src="travelable_visual_governance.png" alt="Governance and support"><div class="inner"><b>Companion support</b><span>Information that can help travellers, carers and support teams plan ahead.</span></div></div>
+    <div class="category"><img src="travelable_cat_mobility.jpg" alt="Step-free access"><div class="inner"><b>Mobility</b><span>Step-free access, lifts, accessible bathrooms and mobility support details.</span></div></div>
+    <div class="category"><img src="travelable_cat_visual.jpg" alt="Accessibility information insight"><div class="inner"><b>Visual</b><span>Readable content, clear information and relevant support indicators.</span></div></div>
+    <div class="category"><img src="travelable_cat_hearing.jpg" alt="Airport support information"><div class="inner"><b>Hearing</b><span>Visual alerts, assistance information and communication support.</span></div></div>
+    <div class="category"><img src="travelable_cat_neuro.jpg" alt="Calm mobile guidance"><div class="inner"><b>Neurodiverse</b><span>Quiet areas, sensory-friendly notes and predictable journey information.</span></div></div>
+    <div class="category"><img src="travelable_cat_medical.jpg" alt="TravelAble benefit visual"><div class="inner"><b>Dietary & medical</b><span>Relevant traveller support information where available and appropriate.</span></div></div>
+    <div class="category"><img src="travelable_cat_companion.jpg" alt="Governance and support"><div class="inner"><b>Companion support</b><span>Information that can help travellers, carers and support teams plan ahead.</span></div></div>
   </div>
 </section>
 
@@ -249,9 +311,9 @@ p{color:var(--muted);line-height:1.52}
     </div>
     <div class="product-composite" aria-label="TravelAble product experience visual">
       <div class="composite-note"><b>Customer-facing accessibility intelligence</b><span>Designed to surface practical accessibility information inside existing traveller journeys.</span></div>
-      <div class="device-main"><img src="travelable_visual_platform.png" alt="TravelAble accessibility dashboard"></div>
-      <div class="device-secondary"><img src="travelable_slide_platform.png" alt="TravelAble product interface"></div>
-      <div class="device-phone"><img src="travelable_phone_future.jpg" alt="TravelAble mobile interface"></div>
+      <div class="device-main"><img src="travelable_product_dashboard.jpg" alt="TravelAble accessibility dashboard"></div>
+      <div class="device-secondary"><img src="travelable_product_interface.jpg" alt="TravelAble product interface"></div>
+      <div class="device-phone"><img src="travelable_product_mobile.jpg" alt="TravelAble mobile interface"></div>
     </div>
   </div>
 </section>
@@ -281,7 +343,7 @@ p{color:var(--muted);line-height:1.52}
 </section>
 
 <section class="final-cta">
-  <img src="travelable_slide_airlines_airports.png" alt="Accessible travel journey visual">
+  <img src="travelable_ultra_hero.jpg" alt="Accessible travel journey visual">
   <div class="wrap final-inner">
     <div>
       <h2>Build more accessible traveller experiences with confidence.</h2>
