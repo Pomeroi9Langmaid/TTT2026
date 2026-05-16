@@ -1,0 +1,155 @@
+TTT2026 v75 hard link fix
+
+Targets:
+- ALL Trip Planner demo/action URLs -> https://sales-itineraries.cst.smartvel.com/?lang=en#modal
+- ALL Explore & Go / Trip Planner Email Andrew links -> mailto:alangmaid@smartvel.com
+- HTML and inline JS/config searched, not just normal anchors.
+
+Files included:
+['exploreandgo.html', 'index 2.html', 'index.html', 'tripplanner-overview.html', 'tripplanner.html', 'tripplanner_video_preview.html', 'tripplanner_video_test.html']
+
+Post-patch scan:
+{
+  "exploreandgo.html": {
+    "changed": true,
+    "trip_demo_exact_count": 1,
+    "sales_urls": [
+      "https://sales-itineraries.cst.smartvel.com/?lang=en#modal"
+    ],
+    "email_mailto_count": 0,
+    "bad_raw_email_hrefs": [],
+    "anchors": [
+      [
+        "https://smartvel-sales-explorego.cst.smartvel.com/?market=world#modal",
+        "Open Explore & Go demo"
+      ],
+      [
+        "https://sales-itineraries.cst.smartvel.com/?lang=en#modal",
+        "Open demo environment"
+      ]
+    ],
+    "v75_marker": true
+  },
+  "index 2.html": {
+    "changed": true,
+    "trip_demo_exact_count": 1,
+    "sales_urls": [
+      "https://sales-itineraries.cst.smartvel.com/?lang=en#modal"
+    ],
+    "email_mailto_count": 2,
+    "bad_raw_email_hrefs": [],
+    "anchors": [
+      [
+        "mailto:alangmaid@smartvel.com",
+        "Email Andrew"
+      ],
+      [
+        "https://meetings.hubspot.com/alangmaid",
+        "Schedule a meeting"
+      ],
+      [
+        "mailto:alangmaid@smartvel.com",
+        "Andrew Langmaid CEO \u2013 ArrivalGuides, part of Smartvel"
+      ]
+    ],
+    "v75_marker": true
+  },
+  "index.html": {
+    "changed": true,
+    "trip_demo_exact_count": 1,
+    "sales_urls": [
+      "https://sales-itineraries.cst.smartvel.com/?lang=en#modal"
+    ],
+    "email_mailto_count": 2,
+    "bad_raw_email_hrefs": [],
+    "anchors": [
+      [
+        "mailto:alangmaid@smartvel.com",
+        "Email Andrew"
+      ],
+      [
+        "https://meetings.hubspot.com/alangmaid",
+        "Schedule a meeting"
+      ],
+      [
+        "mailto:alangmaid@smartvel.com",
+        "Andrew Langmaid CEO \u2013 ArrivalGuides, part of Smartvel"
+      ]
+    ],
+    "v75_marker": true
+  },
+  "tripplanner-overview.html": {
+    "changed": false,
+    "trip_demo_exact_count": 0,
+    "sales_urls": [],
+    "email_mailto_count": 1,
+    "bad_raw_email_hrefs": [],
+    "anchors": [
+      [
+        "tripplanner.html",
+        "Trip Planner"
+      ],
+      [
+        "https://meetings.hubspot.com/alangmaid",
+        "Schedule meeting"
+      ],
+      [
+        "https://meetings.hubspot.com/alangmaid",
+        "Schedule meeting"
+      ],
+      [
+        "https://meetings.hubspot.com/alangmaid",
+        "Schedule meeting"
+      ],
+      [
+        "mailto:alangmaid@smartvel.com",
+        "Email Andrew"
+      ]
+    ],
+    "v75_marker": false
+  },
+  "tripplanner.html": {
+    "changed": true,
+    "trip_demo_exact_count": 2,
+    "sales_urls": [
+      "https://sales-itineraries.cst.smartvel.com/?lang=en#modal"
+    ],
+    "email_mailto_count": 0,
+    "bad_raw_email_hrefs": [],
+    "anchors": [
+      [
+        "https://sales-itineraries.cst.smartvel.com/?lang=en#modal",
+        "Open Trip Planner demo"
+      ],
+      [
+        "tripplanner-overview.html?v=75",
+        "Explore Trip Planner in more detail"
+      ],
+      [
+        "https://sales-itineraries.cst.smartvel.com/?lang=en#modal",
+        "Open demo environment"
+      ]
+    ],
+    "v75_marker": true
+  },
+  "tripplanner_video_preview.html": {
+    "changed": false,
+    "trip_demo_exact_count": 0,
+    "sales_urls": [],
+    "email_mailto_count": 0,
+    "bad_raw_email_hrefs": [],
+    "anchors": [],
+    "v75_marker": false
+  },
+  "tripplanner_video_test.html": {
+    "changed": false,
+    "trip_demo_exact_count": 0,
+    "sales_urls": [],
+    "email_mailto_count": 0,
+    "bad_raw_email_hrefs": [],
+    "anchors": [],
+    "v75_marker": false
+  }
+}
+
+Upload these files to repo root only.
