@@ -1,0 +1,29 @@
+TTT2026 v47 Smartvel homepage explicit card visuals
+
+Directly patches smartvel.html.
+
+Fixes:
+- Removes pseudo-element image hacks.
+- Rebuilds AI cards using explicit HTML:
+  card-copy above, card-visual below.
+- Rebuilds journey cards using explicit HTML:
+  card-copy above, card-visual below.
+- Keeps original homepage layout, mission/stats section, bottom strip and hero video.
+- Does not add imagery to promise cards, stats cards or bottom value cards.
+- No image/text overlap by structure, not by guesswork.
+
+Deep scan:
+- v47 marker present: True
+- explicit card structure present: True
+- card-copy count: 21
+- card-visual count: 15
+- mission section present: True
+- ai section present: True
+- journey section present: True
+- bottom strip present: True
+- hero video still present: True
+- old bad visual CSS/refs found: []
+- missing image/video refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.
