@@ -1,0 +1,16 @@
+TTT2026 v37 TravelAble main page premium rebuild
+
+This patch directly updates travelable.html.
+
+Deep scan:
+- v37 rebuild marker present: True
+- v37 hero asset referenced: True
+- old v35/v36 image refs still present: []
+- missing referenced TravelAble assets: []
+- files missing while building patch: []
+
+Files included:
+travelable.html
+index.html
+travelable_v37_premium_hero.jpg
+travelable_v37_premium_hero.png

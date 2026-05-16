@@ -312,7 +312,7 @@ section > .wrap {
 </style>
 </head>
 <body>
-<!-- TRAVELABLE_HTML_V36_PATCHED -->
+<!-- TRAVELABLE_HTML_V37_PREMIUM_REBUILD -->
 <!-- TRAVELABLE_TEMPLATE_RESTORED_VIDEO_FIXED_MARKER -->
 <!-- TRAVELABLE_CINEMATIC_HERO_MARKER -->
 <main class="page">
@@ -412,73 +412,200 @@ section > .wrap {
 
 </section>
 
-
-
-<!-- TRAVELABLE_MAINPAGE_PREMIUM_IMAGERY_V36 -->
-<style id="travelable-v36-premium-mainpage">
-.travelable-premium-hero{
-position:relative;border-radius:34px;overflow:hidden;min-height:520px;
-box-shadow:0 28px 80px rgba(6,31,54,.18);margin:34px 0;background:#061f36}
-.travelable-premium-hero img{
-position:absolute;inset:0;width:100%;height:100%;object-fit:cover!important;object-position:center center!important}
-.travelable-premium-overlay{
-position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,21,36,.94),rgba(4,21,36,.55))}
-.travelable-premium-copy{
-position:relative;z-index:2;max-width:760px;padding:70px;color:#fff}
-.travelable-premium-copy h2{
-font-size:64px;line-height:1.02;letter-spacing:-.05em;margin:0 0 18px;color:#fff}
-.travelable-premium-copy p{
-font-size:20px;line-height:1.55;color:rgba(255,255,255,.88);margin:0}
-.travelable-premium-grid{
-display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:36px 0}
-.travelable-premium-card{
-position:relative;overflow:hidden;border-radius:28px;min-height:360px;
-box-shadow:0 22px 58px rgba(6,31,54,.14);background:#061f36}
-.travelable-premium-card img{
-position:absolute;inset:0;width:100%;height:100%;object-fit:cover!important;object-position:center center!important}
-.travelable-premium-card:after{
-content:"";position:absolute;inset:0;
-background:linear-gradient(180deg,rgba(6,31,54,.1),rgba(6,31,54,.82))}
-.travelable-premium-card .copy{
-position:absolute;left:28px;right:28px;bottom:24px;z-index:2;color:#fff}
-.travelable-premium-card h3{
-font-size:34px;line-height:1.1;margin:0 0 10px;color:#fff}
-.travelable-premium-card p{
-color:rgba(255,255,255,.86);font-size:15px;margin:0;line-height:1.45}
-@media(max-width:900px){
-.travelable-premium-grid{grid-template-columns:1fr}
-.travelable-premium-copy{padding:36px}
-.travelable-premium-copy h2{font-size:42px}
+<!-- TRAVELABLE_MAINPAGE_PREMIUM_REBUILD_V37 -->
+<style id="travelable-v37-premium-mainpage">
+.travelable-v37-showcase{
+  margin:32px 0 34px;
+  border-radius:34px;
+  overflow:hidden;
+  background:linear-gradient(135deg,#ffffff,#eef8fc);
+  border:1px solid rgba(220,234,243,.96);
+  box-shadow:0 28px 80px rgba(6,31,54,.14);
+}
+.travelable-v37-hero{
+  display:grid;
+  grid-template-columns:minmax(420px,.78fr) minmax(540px,1.22fr);
+  min-height:560px;
+  align-items:stretch;
+  background:radial-gradient(circle at 85% 10%,rgba(41,170,224,.16),transparent 36%),linear-gradient(135deg,#ffffff,#f5fbfe);
+}
+.travelable-v37-copy{
+  padding:64px 56px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.travelable-v37-copy .eyebrow{
+  color:#0b7091;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin-bottom:16px;
+}
+.travelable-v37-copy h2{
+  margin:0 0 18px;
+  font-size:clamp(44px,4.6vw,76px);
+  line-height:1.02;
+  letter-spacing:-.065em;
+  color:#061f36;
+}
+.travelable-v37-copy h2 span{
+  color:#29AAE0;
+}
+.travelable-v37-copy p{
+  margin:0;
+  max-width:620px;
+  font-size:18px;
+  line-height:1.55;
+  color:#40576c;
+}
+.travelable-v37-actions{
+  margin-top:26px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.travelable-v37-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  min-height:44px;
+  padding:12px 18px;
+  font-size:12px;
+  font-weight:900;
+  text-decoration:none;
+  line-height:1;
+}
+.travelable-v37-btn.primary{
+  background:linear-gradient(135deg,#2ee6dd,#25b8c8);
+  color:#05233d;
+  box-shadow:0 14px 30px rgba(0,166,152,.22);
+}
+.travelable-v37-btn.secondary{
+  background:#fff;
+  color:#0b3d66;
+  border:1px solid #cfe1ed;
+}
+.travelable-v37-visual{
+  position:relative;
+  min-height:560px;
+  overflow:hidden;
+}
+.travelable-v37-visual img{
+  width:100%;
+  height:100%;
+  min-height:560px;
+  object-fit:cover!important;
+  object-position:center center!important;
+  display:block;
+}
+.travelable-v37-proof{
+  display:grid;
+  grid-template-columns:1.08fr repeat(3,.64fr);
+  gap:0;
+  border-top:1px solid #dceaf3;
+  background:#fff;
+}
+.travelable-v37-proof-intro,
+.travelable-v37-proof-card{
+  padding:26px 28px;
+  border-right:1px solid #dceaf3;
+}
+.travelable-v37-proof-card:last-child{border-right:0}
+.travelable-v37-proof-intro h3{
+  margin:0 0 10px;
+  font-size:26px;
+  line-height:1.1;
+  letter-spacing:-.04em;
+  color:#0a3458;
+}
+.travelable-v37-proof-intro p,
+.travelable-v37-proof-card p{
+  margin:0;
+  color:#546b7f;
+  font-size:13px;
+  line-height:1.45;
+}
+.travelable-v37-proof-card b{
+  display:block;
+  color:#0b3d66;
+  font-size:15px;
+  margin-bottom:8px;
+}
+.travelable-v37-icon{
+  width:38px;
+  height:38px;
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+  margin-bottom:12px;
+  background:linear-gradient(135deg,#e9fbfa,#f8fbfe);
+  color:#0b7f9f;
+  box-shadow:inset 0 0 0 1px #dceaf3;
+  font-size:22px;
+}
+@media(max-width:1100px){
+  .travelable-v37-hero{grid-template-columns:1fr}
+  .travelable-v37-visual{min-height:420px}
+  .travelable-v37-visual img{min-height:420px}
+  .travelable-v37-proof{grid-template-columns:1fr 1fr}
+  .travelable-v37-proof-intro{grid-column:1/-1}
+}
+@media(max-width:720px){
+  .travelable-v37-copy{padding:36px 28px}
+  .travelable-v37-proof{grid-template-columns:1fr}
+  .travelable-v37-proof-intro,
+  .travelable-v37-proof-card{border-right:0;border-bottom:1px solid #dceaf3}
 }
 </style>
 
-<section class="travelable-premium-hero">
-<img src="travelable_v35_hero.jpg?v=36" alt="Accessible travel journey">
-<div class="travelable-premium-overlay"></div>
-<div class="travelable-premium-copy">
-<h2>Accessibility information should feel reassuring, not complicated.</h2>
-<p>TravelAble helps travel brands surface clearer accessibility guidance before, during and throughout the traveller journey — helping travellers prepare earlier and travel with more confidence.</p>
-</div>
-</section>
+<section class="travelable-v37-showcase" aria-label="TravelAble premium overview">
+  <div class="travelable-v37-hero">
+    <div class="travelable-v37-copy">
+      <div class="eyebrow">Accessible travel support</div>
+      <h2>Smarter guidance. More confidence. <span>Every journey.</span></h2>
+      <p>TravelAble helps airlines communicate accessibility and PRM information more clearly across the travel journey, so passengers understand what support is available, what they need to prepare, and how the process works before they travel.</p>
+      <div class="travelable-v37-actions">
+        <a class="travelable-v37-btn primary" href="travelable-overview.html?v=37">Explore how it works →</a>
+        <a class="travelable-v37-btn secondary" href="https://microsites-stage.cst.smartvel.com/smartvel-sales-travelable/?view=results&or=LHR&dt=MAD&tm=round&arl=Iberia&oc=true&tc=electric&oe=false" target="_blank" rel="noopener noreferrer">Open TravelAble microsite ↗</a>
+      </div>
+    </div>
+    <div class="travelable-v37-visual">
+      <img src="travelable_v37_premium_hero.jpg?v=37" alt="Premium TravelAble assisted travel interface and airport accessibility guidance">
+    </div>
+  </div>
 
-<section class="travelable-premium-grid">
-<div class="travelable-premium-card">
-<img src="travelable_v35_support.jpg?v=36" alt="Support inside the traveller journey">
-<div class="copy">
-<h3>Support inside the journey</h3>
-<p>Present mobility, sensory and assistance guidance in the moments where travellers actually need reassurance.</p>
-</div>
-</div>
-
-<div class="travelable-premium-card">
-<img src="travelable_v35_confidence.jpg?v=36" alt="Confidence before departure">
-<div class="copy">
-<h3>Confidence before departure</h3>
-<p>Reduce uncertainty with clearer accessibility information before travellers even arrive at the airport or destination.</p>
-</div>
-</div>
+  <div class="travelable-v37-proof">
+    <div class="travelable-v37-proof-intro">
+      <h3>Built for real journeys. Designed for airline accessibility communication.</h3>
+      <p>At this stage, TravelAble is focused on airlines, with a solution designed to evolve over time to support airports and other travel operators as the product develops.</p>
+    </div>
+    <div class="travelable-v37-proof-card">
+      <div class="travelable-v37-icon">✓</div>
+      <b>Plan with clarity</b>
+      <p>Help passengers understand accessibility support before they book and travel.</p>
+    </div>
+    <div class="travelable-v37-proof-card">
+      <div class="travelable-v37-icon">✈</div>
+      <b>Travel with confidence</b>
+      <p>Surface journey-stage information before departure, at the airport and in transit.</p>
+    </div>
+    <div class="travelable-v37-proof-card">
+      <div class="travelable-v37-icon">♿</div>
+      <b>Support PRM needs</b>
+      <p>Make mobility, sensory and assistance guidance easier to find and understand.</p>
+    </div>
+  </div>
 </section>
-<!-- /TRAVELABLE_MAINPAGE_PREMIUM_IMAGERY_V36 -->
+<!-- /TRAVELABLE_MAINPAGE_PREMIUM_REBUILD_V37 -->
+
+
+
+
+
+
 
 <section class="trust">
 <div class="trust-inner">
@@ -531,7 +658,7 @@ color:rgba(255,255,255,.86);font-size:15px;margin:0;line-height:1.45}
     <h2>Want to understand TravelAble more deeply?</h2>
     <p>This page gives the quick overview. Use the detailed overview, live environment and supporting material if you want to go deeper or share internally.</p>
   </div>
-  <div class="smartvel-detail-actions"><a class="primary" href="travelable-overview.html?v=36">Explore TravelAble in more detail</a><a class="secondary" href="https://microsites-stage.cst.smartvel.com/smartvel-sales-travelable/?view=results&or=LHR&dt=MAD&tm=round&arl=Iberia&oc=true&tc=electric&oe=false" target="_blank" rel="noopener noreferrer">Open demo environment</a><a class="ghost" href="travelable_playbook.pdf" download>Download playbook</a></div>
+  <div class="smartvel-detail-actions"><a class="primary" href="travelable-overview.html?v=37">Explore TravelAble in more detail</a><a class="secondary" href="https://microsites-stage.cst.smartvel.com/smartvel-sales-travelable/?view=results&or=LHR&dt=MAD&tm=round&arl=Iberia&oc=true&tc=electric&oe=false" target="_blank" rel="noopener noreferrer">Open demo environment</a><a class="ghost" href="travelable_playbook.pdf" download>Download playbook</a></div>
 </section>
 
 
