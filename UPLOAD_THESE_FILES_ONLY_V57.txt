@@ -1,0 +1,23 @@
+TTT2026 v57 EntryDocs contained value cards
+
+Directly patches entrydocs.html.
+
+Fixes:
+- Replaces the oversized EntryDocs cinematic strip with four contained cards.
+- Card sizing now matches the TravelAble-style card scale.
+- Uses the approved EntryDocs imagery, split into four cards:
+  Reliable pre-trip guidance / Route and traveller logic / Smartvel-managed updates / Low internal workload.
+- Keeps the rest of EntryDocs intact.
+- Updates index.html EntryDocs iframe to v=57.
+
+Deep scan:
+- v57 marker present: True
+- contained value showcase present: True
+- card count in showcase: 4
+- old oversized strip ref removed: True
+- hero visual still present: True
+- following demo section still present: True
+- missing image/video refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.
