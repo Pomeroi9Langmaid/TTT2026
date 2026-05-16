@@ -1,0 +1,19 @@
+TTT2026 v68 Trip Planner approved journey section
+
+Directly patches tripplanner.html.
+
+Fixes:
+- Replaces the Trip Planner "From browsing to active trip planning" section with the approved attached image.
+- Removes the old flow/cards inside that section.
+- Keeps the rest of Trip Planner unchanged.
+- Updates index.html Trip Planner reference to v=68 where present.
+
+Deep scan:
+- v68 marker present: True
+- approved Trip Planner journey section present: True
+- approved image ref present: True
+- journey image count: 1
+- old broken flow/card terms inside journey: ['CTA']
+- missing image/video refs: []
+
+Upload these files to repo root only.
