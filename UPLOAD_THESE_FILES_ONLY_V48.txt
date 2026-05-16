@@ -1,0 +1,21 @@
+TTT2026 v48 Smartvel homepage clean relevant visuals
+
+Directly patches smartvel.html.
+
+Fixes:
+- Removes text/title labels from the visual images.
+- Keeps explicit card-copy above card-visual structure.
+- Replaces v46 visual files with cleaner, text-free, more relevant support visuals.
+- Keeps original homepage structure and hero video.
+- Keeps bottom value cards clean.
+- No pseudo-element overlay hacks.
+
+Deep scan:
+- v48 marker present: True
+- explicit card structure present: True
+- old image refs/titles found: ['Destination inspiration', 'Trip planning', 'Conversion support', 'Pre-travel clarity', 'In-destination intelligence']
+- hero video still present: True
+- missing image/video refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.
