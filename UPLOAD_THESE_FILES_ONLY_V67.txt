@@ -1,0 +1,19 @@
+TTT2026 v67 Explore & Go approved journey section
+
+Directly patches exploreandgo.html.
+
+Fixes:
+- Replaces the broken Explore & Go journey/card layout with the approved image section.
+- Removes the v65/v66 card CSS from the journey section.
+- Keeps the rest of Explore & Go unchanged.
+- Updates index.html Explore & Go reference to v=67.
+
+Deep scan:
+- v67 marker present: True
+- approved journey section present: True
+- approved image ref present: True
+- journey image count: 1
+- old broken flow/card terms inside journey: []
+- missing image/video refs: []
+
+Upload these files to repo root only.
