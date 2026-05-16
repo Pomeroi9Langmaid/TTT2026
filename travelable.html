@@ -6,543 +6,246 @@
 <title>TravelAble | Smartvel</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--black:#121212;--dark-blue:#125885;--blue:#29AAE0;--orange:#FF9400;--yellow:#FFC700;--green:#00A698;--red:#FF6262;--bg:#F6F8FB;--muted:#667383;--line:#DEE7EF}
+:root{
+  --black:#121212;
+  --dark-blue:#125885;
+  --navy:#061f36;
+  --blue:#29AAE0;
+  --orange:#FF9400;
+  --green:#00A698;
+  --bg:#F6F8FB;
+  --muted:#667383;
+  --line:#DEE7EF;
+}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--bg);color:var(--black);font-family:'Poppins',Arial,sans-serif}
-.page{width:100%;max-width:none;min-height:100vh;margin:0 auto;padding:34px 48px;position:relative;overflow:hidden}
-.page:before{content:"";position:absolute;right:-190px;top:-180px;width:650px;height:650px;border-radius:50%;background:radial-gradient(circle,rgba(41,170,224,.23),rgba(41,170,224,0) 68%)}
-.page:after{content:"";position:absolute;left:-160px;bottom:-250px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(0,166,152,.16),rgba(0,166,152,0) 70%)}
-.header,.hero,.trust,.proof-row,.bottom-strip,.footnote{position:relative;z-index:1}
-.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px}
+body{overflow-x:hidden}
+.page{width:100%;max-width:none;min-height:100vh;margin:0 auto;padding:34px 48px 42px;position:relative;overflow:hidden;background:linear-gradient(135deg,#f7fbfe,#ffffff 55%,#eef8fc)}
+.page:before{content:"";position:absolute;right:-190px;top:-180px;width:650px;height:650px;border-radius:50%;background:radial-gradient(circle,rgba(41,170,224,.21),rgba(41,170,224,0) 68%)}
+.page:after{content:"";position:absolute;left:-160px;bottom:-250px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(0,166,152,.14),rgba(0,166,152,0) 70%)}
+.header,.hero,.journey,.micro-panel,.footnote{position:relative;z-index:1}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
 .logo{width:230px;height:auto;display:block}
-.product-label{display:flex;align-items:center;gap:14px;color:var(--dark-blue);font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.product-label{display:flex;align-items:center;gap:14px;color:var(--dark-blue);font-size:15px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
 .product-label span{width:34px;height:4px;border-radius:999px;background:var(--blue)}
-.hero{display:grid;grid-template-columns:.92fr 1.12fr;gap:42px;align-items:start}
-.kicker{color:var(--dark-blue);font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.09em;margin-bottom:16px}
-h1{margin:0 0 18px;font-size:74px;line-height:1.01;letter-spacing:-.065em;font-weight:800}
+
+.hero-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:34px;
+  background:#fff;
+  border:1px solid var(--line);
+  box-shadow:0 30px 80px rgba(6,31,54,.13);
+}
+.hero{
+  display:grid;
+  grid-template-columns:minmax(520px,.82fr) minmax(620px,1.18fr);
+  min-height:520px;
+}
+.hero-copy{
+  padding:64px 54px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.94) 76%,rgba(255,255,255,.7) 100%);
+  z-index:2;
+}
+.kicker{color:var(--dark-blue);font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px}
+h1{margin:0 0 18px;font-size:70px;line-height:1.02;letter-spacing:-.065em;font-weight:900;color:#0b1722}
 h1 strong{color:var(--blue)}
-.lead{font-size:20px;line-height:1.48;color:#283241;margin:0 0 24px;max-width:650px}
-.value-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:25px}
-.value-card{background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:22px;padding:18px 20px;box-shadow:0 16px 38px rgba(18,18,18,.06);min-height:116px}
-.value-card b{display:block;color:var(--dark-blue);font-size:16px;margin-bottom:8px}
-.value-card span{display:block;color:var(--muted);font-size:13px;line-height:1.38}
-.visual{background:rgba(255,255,255,.78);border:1px solid rgba(222,231,239,.95);border-radius:34px;padding:20px;box-shadow:0 28px 80px rgba(18,18,18,.12)}
-.visual-main{position:relative;height:405px;border-radius:26px;overflow:hidden;border:1px solid var(--line);background:white}
-.visual-main img{width:100%;height:100%;object-fit:cover;object-position:center 24%;display:block}
-.visual-main:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,18,18,.14),rgba(18,18,18,0) 46%)}
-.overlay{position:absolute;left:22px;bottom:22px;background:rgba(255,255,255,.95);border:1px solid rgba(222,231,239,.95);border-radius:18px;padding:15px 17px;max-width:460px;z-index:2}
-.overlay b{display:block;color:var(--black);font-size:18px;margin-bottom:5px}
-.overlay span{color:var(--muted);font-size:12px;line-height:1.42}
-.micro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}
-.micro{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 15px;min-height:86px}
-.micro b{display:block;color:var(--blue);font-size:14px;margin-bottom:5px}
-.micro span{font-size:11px;line-height:1.35;color:var(--muted)}
-.trust{margin-top:28px;border-radius:30px;overflow:hidden;background:linear-gradient(135deg,#121212,#125885);box-shadow:0 26px 78px rgba(18,18,18,.24);color:white}
-.trust-inner{position:relative;padding:28px 32px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;overflow:hidden}
-.trust-inner:before{content:"";position:absolute;right:-70px;top:-120px;width:430px;height:430px;border-radius:50%;background:radial-gradient(circle,rgba(41,170,224,.40),rgba(41,170,224,0) 67%)}
-.trust h2{position:relative;z-index:2;font-size:34px;line-height:1.08;letter-spacing:-.045em;margin:0 0 12px}
-.trust p{position:relative;z-index:2;margin:0;color:#D9EEF8;font-size:15px;line-height:1.48;max-width:760px}
-.flow{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.step{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:18px}
-.step b{display:block;font-size:16px;margin-bottom:6px}
-.step span{display:block;color:#D9EEF8;font-size:12px;line-height:1.35}
-.proof-row{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:18px}
-.proof{background:#fff;border:1px solid var(--line);border-radius:22px;padding:16px 17px;box-shadow:0 14px 38px rgba(18,18,18,.055);min-height:96px}
-.proof b{display:block;color:var(--dark-blue);font-size:15px;margin-bottom:6px}
-.proof span{display:block;color:var(--muted);font-size:12px;line-height:1.35}
-.bottom-strip{margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:26px;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px;box-shadow:0 18px 50px rgba(18,18,18,.07)}
-.bottom-copy h2{margin:0 0 7px;font-size:25px;letter-spacing:-.04em;color:var(--dark-blue)}
-.bottom-copy p{margin:0;color:var(--muted);font-size:13px;line-height:1.45;max-width:820px}
-.demo-link{display:inline-flex;align-items:center;justify-content:center;background:var(--blue);color:#fff;border-radius:999px;padding:13px 18px;font-weight:800;font-size:13px;text-decoration:none;box-shadow:0 12px 28px rgba(41,170,224,.22);white-space:nowrap}
-.footnote{margin-top:13px;color:#7A8491;font-size:10px;line-height:1.4}
-@media(max-width:1100px){.page{padding:28px 22px}.hero,.trust-inner{grid-template-columns:1fr}h1{font-size:52px}.proof-row,.flow{grid-template-columns:1fr 1fr}.bottom-strip{flex-direction:column;align-items:flex-start}}
+.lead{font-size:19px;line-height:1.5;color:#283241;margin:0 0 26px;max-width:660px}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:46px;border-radius:999px;padding:12px 20px;
+  font-size:13px;font-weight:900;text-decoration:none;border:1px solid transparent;
+}
+.btn.primary{background:#06294a;color:#fff;box-shadow:0 14px 30px rgba(6,31,54,.22)}
+.btn.secondary{background:#fff;color:#0b3d66;border-color:#cfdce7;box-shadow:0 10px 25px rgba(6,31,54,.06)}
+.hero-visual{position:relative;min-height:520px;overflow:hidden}
+.hero-visual img{width:100%;height:100%;min-height:520px;object-fit:cover;object-position:center center;display:block}
+.hero-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.18),rgba(255,255,255,0) 38%)}
+.guidance-panel{
+  position:absolute;right:34px;top:58px;width:310px;
+  background:rgba(255,255,255,.86);backdrop-filter:blur(12px);
+  border:1px solid rgba(220,231,239,.9);border-radius:24px;
+  box-shadow:0 24px 60px rgba(6,31,54,.18);
+  padding:22px;
+}
+.guidance-panel b{display:block;color:#0a3458;font-size:15px;margin-bottom:14px}
+.guide-row{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.74);border:1px solid #e0ebf2;border-radius:18px;padding:12px;margin-top:10px}
+.guide-icon{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#e9fbfa;color:#0b7f9f;font-weight:900}
+.guide-row span{display:block;font-size:13px;color:#0a3458;font-weight:800}
+.guide-row small{display:block;font-size:10px;color:#667383}
 
-/* V22: hide embedded page-level audio buttons so they never sit over logos/content.
-   Audio controls remain handled by the parent shell/top bar. */
-.audio-control,
-.audio-controls,
-.audio-toggle,
-.audio-pill,
-.sound-control,
-.sound-controls,
-.sound-toggle,
-.voice-control,
-.voice-controls,
-.voice-toggle,
-#contentAudioControl,
-#pageAudioControl,
-#audioControl,
-#audioControls,
-#soundControl,
-#soundControls,
-button[aria-label*="audio" i],
-button[aria-label*="sound" i],
-button[title*="audio" i],
-button[title*="sound" i] {
-    display: none !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-    opacity: 0 !important;
+.benefits{
+  display:grid;
+  grid-template-columns:1.1fr repeat(4,.62fr);
+  gap:0;
+  border-top:1px solid var(--line);
+  background:#fff;
 }
+.benefit-intro,.benefit{
+  padding:26px 28px;
+  border-right:1px solid var(--line);
+}
+.benefit:last-child{border-right:0}
+.benefit-intro h2{margin:0 0 10px;font-size:26px;line-height:1.1;letter-spacing:-.04em;color:#0a3458}
+.benefit-intro p,.benefit p{margin:0;color:#53687d;font-size:13px;line-height:1.45}
+.benefit-icon{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;margin-bottom:12px;background:#e9fbfa;color:#0b7f9f;font-size:20px;font-weight:900}
+.benefit:nth-child(4) .benefit-icon{background:#f0ecff;color:#6d48d8}
+.benefit:nth-child(5) .benefit-icon{background:#fff1dc;color:#ff9400}
+.benefit b{display:block;color:#0b3d66;font-size:15px;margin-bottom:8px}
 
-</style>
-<style>.smartvel-logo-link{display:inline-flex;align-items:center;text-decoration:none}.smartvel-logo-link img{display:block}</style>
+.journey{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  margin-top:26px;
+}
+.journey-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:24px;
+  background:#fff;
+  border:1px solid var(--line);
+  box-shadow:0 18px 48px rgba(6,31,54,.09);
+}
+.journey-card img{
+  width:100%;height:190px;object-fit:cover;object-position:center center;display:block;
+}
+.journey-body{padding:18px 20px 22px}
+.tag{
+  position:absolute;left:18px;top:162px;
+  background:rgba(6,31,54,.86);color:#fff;
+  border-radius:999px;padding:6px 10px;
+  font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;
+}
+.journey-card h3{margin:0 0 8px;font-size:20px;line-height:1.16;letter-spacing:-.025em;color:#0b3d66}
+.journey-card p{margin:0;color:#53687d;font-size:13px;line-height:1.45}
+.arrow{position:absolute;right:20px;bottom:22px;font-size:25px;color:#061f36;font-weight:900}
 
+.micro-panel{
+  margin-top:28px;
+  border-radius:28px;
+  overflow:hidden;
+  background:linear-gradient(100deg,#061f36,#125885 82%,#29AAE0);
+  color:#fff;
+  box-shadow:0 18px 50px rgba(6,31,54,.12);
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:24px;
+  align-items:center;
+  padding:30px 34px;
+}
+.micro-panel h2{margin:0 0 8px;font-size:30px;line-height:1.1;letter-spacing:-.04em;color:#fff}
+.micro-panel p{margin:0;color:rgba(255,255,255,.86);font-size:14px;line-height:1.45;max-width:760px}
+.micro-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+.micro-actions .btn.primary{background:#ff9400;color:#fff}
+.micro-actions .btn.secondary{background:#fff;color:#0b3d66}
 
-
-
-<style id="travelable-cinematic-hero-css">
-.travelable-cinema{
-position:relative!important;
-height:520px!important;
-border-radius:34px!important;
-overflow:hidden!important;
-background:linear-gradient(135deg,#F7FCFF,#FFFFFF 58%,#EEF8FD)!important;
-border:1px solid rgba(222,231,239,.95)!important;
-box-shadow:0 30px 90px rgba(10,35,60,.13)!important;
+.footnote{font-size:11px;color:#6f7f8f;margin-top:16px}
+@media(max-width:1200px){
+  .hero{grid-template-columns:1fr}
+  .hero-copy{padding:48px 40px}
+  .benefits{grid-template-columns:1fr 1fr}
+  .benefit-intro{grid-column:1/-1}
+  .journey{grid-template-columns:1fr 1fr}
 }
-.travelable-frame{
-position:absolute!important;
-inset:24px!important;
-border-radius:28px!important;
-overflow:hidden!important;
-background:#fff!important;
-box-shadow:0 22px 70px rgba(10,35,60,.12)!important;
-border:1px solid rgba(222,231,239,.9)!important;
-}
-.ta-slide{
-position:absolute!important;
-inset:0!important;
-opacity:0;
-animation:taSlideFade 32s infinite;
-display:grid!important;
-grid-template-columns:.88fr 1.12fr!important;
-gap:26px!important;
-align-items:center!important;
-padding:30px!important;
-}
-.ta-slide:nth-child(1){animation-delay:0s}
-.ta-slide:nth-child(2){animation-delay:8s}
-.ta-slide:nth-child(3){animation-delay:16s}
-.ta-slide:nth-child(4){animation-delay:24s}
-.ta-copy{position:relative;z-index:2}
-.ta-kicker{
-font-size:11px!important;
-font-weight:900!important;
-letter-spacing:.13em!important;
-text-transform:uppercase!important;
-color:#125885!important;
-margin-bottom:10px!important;
-}
-.ta-copy h3{
-margin:0 0 10px!important;
-font-size:31px!important;
-line-height:1.05!important;
-letter-spacing:-.05em!important;
-color:#071018!important;
-}
-.ta-copy p{
-margin:0 0 14px!important;
-font-size:13px!important;
-line-height:1.48!important;
-color:#4E5C6B!important;
-max-width:385px!important;
-}
-.ta-points{
-display:grid!important;
-gap:8px!important;
-margin-top:14px!important;
-}
-.ta-points span{
-display:flex!important;
-align-items:flex-start!important;
-gap:8px!important;
-font-size:11px!important;
-line-height:1.35!important;
-color:#334155!important;
-}
-.ta-points span:before{
-content:"";
-width:8px;
-height:8px;
-border-radius:50%;
-background:linear-gradient(135deg,#29AAE0,#00A698);
-flex:0 0 auto;
-margin-top:4px;
-}
-.ta-visual{
-position:relative!important;
-z-index:1!important;
-height:350px!important;
-border-radius:24px!important;
-overflow:hidden!important;
-background:#F5FAFE!important;
-border:1px solid rgba(222,231,239,.9)!important;
-box-shadow:0 18px 50px rgba(10,35,60,.10)!important;
-display:flex!important;
-align-items:center!important;
-justify-content:center!important;
-}
-.ta-visual img{
-width:100%!important;
-height:100%!important;
-object-fit:cover!important;
-object-position:center center!important;
-filter:saturate(1.03) contrast(1.01)!important;
-}
-.ta-visual.phone img{object-position:center center!important}
-.ta-badge{
-position:absolute!important;
-right:18px!important;
-bottom:18px!important;
-z-index:3!important;
-padding:10px 13px!important;
-border-radius:999px!important;
-background:rgba(255,255,255,.92)!important;
-border:1px solid rgba(222,231,239,.9)!important;
-box-shadow:0 12px 32px rgba(10,35,60,.12)!important;
-font-size:11px!important;
-font-weight:900!important;
-color:#125885!important;
-letter-spacing:.08em!important;
-text-transform:uppercase!important;
-}
-.travelable-progress{
-position:absolute!important;
-left:28px!important;
-right:28px!important;
-bottom:22px!important;
-height:3px!important;
-border-radius:999px!important;
-background:rgba(18,88,133,.12)!important;
-overflow:hidden!important;
-z-index:5!important;
-}
-.travelable-progress:after{
-content:"";
-display:block;
-height:100%;
-width:25%;
-background:linear-gradient(90deg,#29AAE0,#00A698);
-border-radius:999px;
-animation:taProgress 32s steps(4) infinite;
-}
-@keyframes taSlideFade{
-0%{opacity:0;transform:translateY(8px) scale(.996)}
-4%{opacity:1;transform:translateY(0) scale(1)}
-22%{opacity:1;transform:translateY(0) scale(1)}
-26%{opacity:0;transform:translateY(-8px) scale(1.004)}
-100%{opacity:0}
-}
-@keyframes taProgress{
-0%{transform:translateX(0)}
-100%{transform:translateX(400%)}
+@media(max-width:760px){
+  .page{padding:24px}
+  .header{flex-direction:column;align-items:flex-start;gap:18px}
+  h1{font-size:48px}
+  .hero-copy{padding:36px 28px}
+  .hero-visual,.hero-visual img{min-height:360px}
+  .guidance-panel{position:relative;right:auto;top:auto;width:auto;margin:20px}
+  .benefits,.journey,.micro-panel{grid-template-columns:1fr}
+  .micro-actions{justify-content:flex-start}
 }
 </style>
-
-
-<style id="SMARTVEL_FULL_WIDTH_FORCE_V6">
-html,body{width:100%!important;max-width:none!important;overflow-x:hidden!important;}
-.page{width:100%!important;max-width:none!important;margin:0!important;}
-.shell,.hero,.mission,.trust,.journey,.engagement,.geo,.bottom-strip{max-width:none!important;}
-</style>
-<style id="global-full-width-v24">
-
-/* V24 GLOBAL FULL-WIDTH ENFORCEMENT
-   All pages, including detailed overview pages, must use the full available content width. */
-html,
-body {
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
-  overflow-x: hidden !important;
-}
-
-.page,
-.main,
-.wrap,
-.container,
-.content,
-.shell,
-.stage,
-.hero,
-.hero-inner,
-.block,
-.section,
-.topbar .wrap,
-.main > .wrap,
-section > .wrap,
-.smartvel-detail-cta,
-.bottom-strip,
-.proof-row,
-.monitor-panel,
-.eu-banner,
-.hero-shell,
-.solution-page,
-.solution-wrap,
-.overview-page,
-.overview-wrap {
-  width: 100% !important;
-  max-width: none !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  box-sizing: border-box !important;
-}
-
-.wrap,
-.container,
-.main > .wrap,
-section > .wrap {
-  padding-left: 48px !important;
-  padding-right: 48px !important;
-}
-
-@media (max-width: 900px) {
-  .wrap,
-  .container,
-  .main > .wrap,
-  section > .wrap {
-    padding-left: 22px !important;
-    padding-right: 22px !important;
-  }
-}
-
-</style>
-
-<style id="travelable-v38-real-hero-fix">
-/* V38: repair main TravelAble page without recursive embedded webpage screenshots */
-.visual-main img{
-  content:url("travelable_v38_assisted_travel_hero.jpg?v=38")!important;
-  object-fit:cover!important;
-  object-position:center center!important;
-  filter:saturate(1.05) contrast(1.04)!important;
-}
-.visual-main{
-  background:#061f36!important;
-  box-shadow:0 26px 70px rgba(6,31,54,.15)!important;
-}
-.visual-main:after{
-  background:linear-gradient(90deg,rgba(6,31,54,.05),rgba(6,31,54,.00) 42%,rgba(6,31,54,.08))!important;
-}
-.visual{
-  box-shadow:0 30px 84px rgba(6,31,54,.14)!important;
-}
-.value-card{
-  box-shadow:0 18px 44px rgba(6,31,54,.07)!important;
-}
-.trust{
-  margin-top:34px!important;
-}
-.ta-visual img[src*="travelable_phone_future"],
-.ta-visual img[src*="travelable_visual_traveller"],
-.ta-visual img[src*="travelable_airport_team"]{
-  object-fit:cover!important;
-  object-position:center center!important;
-}
-</style>
-
 </head>
 <body>
-<!-- TRAVELABLE_HTML_V38_REAL_HERO_FIX -->
-<!-- TRAVELABLE_TEMPLATE_RESTORED_VIDEO_FIXED_MARKER -->
-<!-- TRAVELABLE_CINEMATIC_HERO_MARKER -->
+<!-- TRAVELABLE_HTML_V39_FULL_REBUILD -->
 <main class="page">
-<header class="header">
-<a class="smartvel-logo-link" href="https://www.smartvel.com/" target="_blank" rel="noopener noreferrer"><img class="logo" src="smartvel_logo.png" alt="Smartvel logo"></a>
-<div class="product-label"><span></span> TravelAble</div>
-</header>
+  <header class="header">
+    <img src="smartvel_logo.png" alt="Smartvel" class="logo">
+    <div class="product-label"><span></span>TravelAble</div>
+  </header>
 
-<section class="hero">
-<div>
-<div class="kicker">Accessible travel support</div>
-<h1>Make assisted travel <strong>clearer.</strong></h1>
-<p class="lead">TravelAble helps airlines communicate accessibility and PRM information more clearly across the traveller journey — helping passengers understand what support is available, what they need to prepare, and how the process works before they travel.</p>
-
-<div class="value-grid">
-<div class="value-card"><b>Journey-specific guidance</b><span>Information can be personalised by route, airline, airport, aircraft and traveller needs.</span></div>
-<div class="value-card"><b>Wheelchair + battery rules</b><span>Support for wheelchair type, battery details, mobility equipment and related travel conditions.</span></div>
-<div class="value-card"><b>Airport + airline details</b><span>What to expect before the flight, at the airport, onboard and on arrival.</span></div>
-<div class="value-card"><b>Reduced uncertainty</b><span>Give travellers clearer self-service answers before they contact customer support.</span></div>
-</div>
-</div>
-
-
-
-<div class="travelable-cinema">
-  <div class="travelable-frame">
-
-    <div class="ta-slide">
-      <div class="ta-copy">
-        <div class="ta-kicker">Clear benefits for travel teams</div>
-        <h3>Useful for airline accessibility and support teams.</h3>
-        <p>TravelAble gives teams a clearer way to communicate accessibility information across the digital journey.</p>
-        <div class="ta-points">
-          <span>Less friction in assistance and SSR selection</span>
-          <span>Fewer repetitive queries and reduced pre-trip anxiety</span>
-          <span>Better alignment with handling and operational processes</span>
-          <span>Consistent, inclusive communication</span>
+  <section class="hero-card">
+    <div class="hero">
+      <div class="hero-copy">
+        <div class="kicker">Accessible travel support</div>
+        <h1>Smarter guidance. More confidence. <strong>Every journey.</strong></h1>
+        <p class="lead">TravelAble helps airlines communicate accessibility and PRM information more clearly across the travel journey, so passengers understand what support is available, what they need to prepare, and how the process works before they travel.</p>
+        <div class="actions">
+          <a class="btn primary" href="travelable-overview.html?v=39">Explore how it works →</a>
+          <a class="btn secondary" href="https://microsites-stage.cst.smartvel.com/smartvel-sales-travelable/?view=results&or=LHR&dt=MAD&tm=round&arl=Iberia&oc=true&tc=electric&oe=false" target="_blank" rel="noopener noreferrer">Open TravelAble microsite ↗</a>
         </div>
       </div>
-      <div class="ta-visual">
-        <img src="travelable_airport_team.jpg" alt="Airline and airport team">
+
+      <div class="hero-visual">
+        <img src="travelable_v39_hero_visual.jpg?v=39" alt="Passenger using accessibility guidance at an airport">
+        <aside class="guidance-panel" aria-label="Accessibility guidance examples">
+          <b>Accessibility guidance</b>
+          <div class="guide-row"><div class="guide-icon">♿</div><div><span>Mobility</span><small>Step-free route guidance</small></div></div>
+          <div class="guide-row"><div class="guide-icon">◉</div><div><span>Hearing</span><small>Assistance information</small></div></div>
+          <div class="guide-row"><div class="guide-icon">◐</div><div><span>Visual</span><small>Clear signage and support</small></div></div>
+          <div class="guide-row"><div class="guide-icon">⌁</div><div><span>Quiet areas</span><small>Calmer airport spaces</small></div></div>
+        </aside>
       </div>
     </div>
 
-    <div class="ta-slide">
-      <div class="ta-copy">
-        <div class="ta-kicker">Governance, technology and compliance</div>
-        <h3>Official structured PRM information.</h3>
-        <p>TravelAble is based on official airline and airport sources and is continuously monitored to keep information up to date.</p>
-        <div class="ta-points">
-          <span>Structured content, not scattered policy text</span>
-          <span>Designed to align with WCAG 2.0 AA</span>
-          <span>Supports consistent accessibility communication</span>
-        </div>
+    <div class="benefits">
+      <div class="benefit-intro">
+        <h2>Built for real journeys. Designed for airline accessibility communication.</h2>
+        <p>At this stage, TravelAble is focused on airlines, with a solution designed to evolve over time to support airports and other travel operators as the product develops.</p>
       </div>
-      <div class="ta-visual">
-        <img src="travelable_wheelchair_airport.jpg" alt="Wheelchair user in airport">
-      </div>
+      <div class="benefit"><div class="benefit-icon">✓</div><b>Plan with clarity</b><p>Help passengers understand accessibility support before they book and travel.</p></div>
+      <div class="benefit"><div class="benefit-icon">✈</div><b>Travel with confidence</b><p>Surface journey-stage information before departure, at the airport and in transit.</p></div>
+      <div class="benefit"><div class="benefit-icon">?</div><b>Reduce uncertainty</b><p>Give passengers clearer self-service answers before they contact support.</p></div>
+      <div class="benefit"><div class="benefit-icon">♿</div><b>Support PRM needs</b><p>Make mobility, sensory and assistance guidance easier to find and understand.</p></div>
     </div>
+  </section>
 
-    <div class="ta-slide">
-      <div class="ta-copy">
-        <div class="ta-kicker">Validated with those who need it most</div>
-        <h3>Built with real travellers.</h3>
-        <p>TravelAble was shaped through interviews with wheelchair users and accessibility associations, identifying real friction points throughout the journey.</p>
-        <div class="ta-points">
-          <span>Uncertainty during security and boarding</span>
-          <span>Risks in equipment handling</span>
-          <span>Communication gaps between teams and travellers</span>
-        </div>
-      </div>
-      <div class="ta-visual">
-        <img src="travelable_real_traveller.jpg" alt="Traveller using a wheelchair">
-      </div>
+  <section class="journey">
+    <article class="journey-card">
+      <img src="travelable_v39_card_1.jpg?v=39" alt="Traveller preparing before departure">
+      <div class="tag">Before travel</div>
+      <div class="journey-body"><h3>Plan accessible journeys</h3><p>Check mobility, assistance and facility information before you go.</p><div class="arrow">→</div></div>
+    </article>
+    <article class="journey-card">
+      <img src="travelable_v39_card_2.jpg?v=39" alt="Airport navigation">
+      <div class="tag">At the airport</div>
+      <div class="journey-body"><h3>Navigate with confidence</h3><p>Step-free routes, lifts, quiet spaces and real-time guidance when it matters.</p><div class="arrow">→</div></div>
+    </article>
+    <article class="journey-card">
+      <img src="travelable_v39_card_3.jpg?v=39" alt="Passenger onboard and in transit">
+      <div class="tag">Onboard & in transit</div>
+      <div class="journey-body"><h3>Support that continues</h3><p>Accessibility does not stop at the airport. Support every leg of the journey.</p><div class="arrow">→</div></div>
+    </article>
+    <article class="journey-card">
+      <img src="travelable_v39_card_4.jpg?v=39" alt="Travel support team">
+      <div class="tag">Travel teams</div>
+      <div class="journey-body"><h3>Tools for travel teams</h3><p>Equip teams with better information and faster, more confident responses.</p><div class="arrow">→</div></div>
+    </article>
+  </section>
+
+  <section class="micro-panel">
+    <div>
+      <h2>Want to understand TravelAble more deeply?</h2>
+      <p>This page gives the quick overview. Use the detailed overview, live environment and supporting material if you want to go deeper or share internally.</p>
     </div>
-
-    <div class="ta-slide">
-      <div class="ta-copy">
-        <div class="ta-kicker">Future of TravelAble</div>
-        <h3>From PRM to broader accessibility coverage.</h3>
-        <p>TravelAble starts with PRM and evolves toward wider coverage across visual, auditory, cognitive and hidden disabilities.</p>
-        <div class="ta-points">
-          <span>Medical equipment filters, including oxygen devices</span>
-          <span>More personalised journey guidance</span>
-          <span>Deeper connection support across travel stages</span>
-        </div>
-      </div>
-      <div class="ta-visual phone">
-        <img src="travelable_phone_future.jpg" alt="TravelAble accessibility phone interface">
-      </div>
+    <div class="micro-actions">
+      <a class="btn primary" href="travelable-overview.html?v=39">Explore TravelAble in more detail</a>
+      <a class="btn secondary" href="https://microsites-stage.cst.smartvel.com/smartvel-sales-travelable/?view=results&or=LHR&dt=MAD&tm=round&arl=Iberia&oc=true&tc=electric&oe=false" target="_blank" rel="noopener noreferrer">Open demo environment</a>
+      <a class="btn secondary" href="travelable_playbook.pdf" download>Download playbook</a>
     </div>
+  </section>
 
-    <div class="ta-badge">TravelAble</div>
-    <div class="travelable-progress"></div>
-  </div>
-</div>
-
-</section>
-
-
-
-
-
-
-
-
-<section class="trust">
-<div class="trust-inner">
-<div>
-<h2>Confidence for travellers. Clarity for travel teams.</h2>
-<p>Accessible travel information is often fragmented across airline policies, airport pages and support channels. TravelAble brings that information into one branded experience so travellers can prepare with more confidence.</p>
-</div>
-
-<div class="flow">
-<div class="step"><b>Search</b><span>Traveller enters route, airline and assistance context.</span></div>
-<div class="step"><b>Personalise</b><span>Guidance adapts to wheelchair, battery and mobility needs.</span></div>
-<div class="step"><b>Prepare</b><span>Traveller receives clear journey-stage information.</span></div>
-</div>
-</div>
-</section>
-
-<section class="proof-row">
-<div class="proof"><b>Airline guidance</b><span>Carrier-specific rules, assistance flows and mobility equipment policies.</span></div>
-<div class="proof"><b>Airport guidance</b><span>Departure, arrival, meeting-point and infrastructure information.</span></div>
-<div class="proof"><b>Battery information</b><span>Support for electric wheelchair and mobility-device battery details.</span></div>
-<div class="proof"><b>Self-service UX</b><span>Helps travellers find answers before support teams are contacted.</span></div>
-<div class="proof"><b>White-label</b><span>Designed to sit inside client web, app or customer support journeys.</span></div>
-</section>
-
-<section class="bottom-strip">
-<div class="bottom-copy">
-<h2>See the TravelAble microsite in action.</h2>
-<p>Open the current Phase 1 microsite view with a London Heathrow to Madrid example, including Iberia and electric wheelchair context.</p>
-</div>
-<a class="demo-link" href="https://microsites-stage.cst.smartvel.com/smartvel-sales-travelable/?view=results&or=LHR&dt=MAD&tm=round&arl=Iberia&oc=true&tc=electric&oe=false" target="_blank" rel="noopener noreferrer">Open TravelAble microsite</a>
-</section>
-
-<div class="footnote">TravelAble positioning is informational and support-focused. Accessibility information and airline/airport policies should be reviewed and maintained through the relevant operational data sources.</div>
+  <p class="footnote">TravelAble positioning is informational and support-focused. Accessibility information and airline or airport policies should be reviewed and maintained through the relevant operational data sources.</p>
 </main>
-
-<style id="smartvel-detail-cta-style">
-.smartvel-detail-cta{width:100%;max-width:none;margin:34px 0 46px;padding:28px;border-radius:28px;background:linear-gradient(135deg,#061f36,#0b5d88 72%,#29AAE0);color:#fff;box-shadow:0 22px 62px rgba(6,31,54,.20);display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center}
-.smartvel-detail-cta h2{margin:0 0 8px;font-size:28px;line-height:1.12;letter-spacing:-.045em;color:#fff}
-.smartvel-detail-cta p{margin:0;color:rgba(255,255,255,.82);font-size:14px;line-height:1.5;max-width:760px}
-.smartvel-detail-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-.smartvel-detail-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:12px 17px;border-radius:999px;font-size:12px;font-weight:900;text-decoration:none;white-space:nowrap}
-.smartvel-detail-actions .primary{background:linear-gradient(135deg,#FF9400,#FFB347);color:#fff}
-.smartvel-detail-actions .secondary{background:#fff;color:#125885}
-.smartvel-detail-actions .ghost{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.24);color:#fff}
-@media(max-width:900px){.smartvel-detail-cta{grid-template-columns:1fr}.smartvel-detail-actions{justify-content:flex-start}}
-</style>
-
-<section class="smartvel-detail-cta">
-  <div>
-    <h2>Want to understand TravelAble more deeply?</h2>
-    <p>This page gives the quick overview. Use the detailed overview, live environment and supporting material if you want to go deeper or share internally.</p>
-  </div>
-  <div class="smartvel-detail-actions"><a class="primary" href="travelable-overview.html?v=38">Explore TravelAble in more detail</a><a class="secondary" href="https://microsites-stage.cst.smartvel.com/smartvel-sales-travelable/?view=results&or=LHR&dt=MAD&tm=round&arl=Iberia&oc=true&tc=electric&oe=false" target="_blank" rel="noopener noreferrer">Open demo environment</a><a class="ghost" href="travelable_playbook.pdf" download>Download playbook</a></div>
-</section>
-
-
-<style id="smartvel-direct-audio-style">
-.smartvel-direct-audio{position:fixed;top:18px;left:18px;z-index:999999;display:none;gap:8px;background:rgba(5,20,34,.62);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px);border-radius:999px;padding:8px 10px;box-shadow:0 14px 36px rgba(0,0,0,.18)}
-.smartvel-direct-audio button{width:36px;height:36px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;font-size:15px;font-weight:900;display:grid;place-items:center}
-</style>
-<!-- V22 removed embedded audio control -->
-<audio id="smartvelDirectAudioEl" src="travelable_intro.mp3" preload="auto"></audio>
-<script id="smartvel-direct-audio-script">
-(function(){
-  if(window.self !== window.top) return;
-  const panel=document.getElementById('smartvelDirectAudio');
-  const audio=document.getElementById('smartvelDirectAudioEl');
-  const mute=document.getElementById('smartvelDirectMute');
-  const replay=document.getElementById('smartvelDirectReplay');
-  if(!panel||!audio||!mute||!replay) return;
-  panel.style.display='flex';
-  audio.volume=1;
-  function update(){mute.textContent=audio.muted?'🔇':'🔊';}
-  function play(reset){try{if(reset) audio.currentTime=0; audio.play().catch(()=>{});}catch(e){}}
-  mute.onclick=function(){audio.muted=!audio.muted; update(); if(!audio.muted&&audio.paused) play(false);};
-  replay.onclick=function(){play(true);};
-  document.addEventListener('DOMContentLoaded',()=>play(true));
-  window.addEventListener('pageshow',()=>play(true));
-  update();
-})();
-</script>
-
-
-<style id="smartvel-full-width-bottom-cta-fix-v16">
-.smartvel-detail-cta{
-  width:100%!important;
-  max-width:none!important;
-  margin-left:0!important;
-  margin-right:0!important;
-  box-sizing:border-box!important;
-}
-</style>
-
 </body>
 </html>

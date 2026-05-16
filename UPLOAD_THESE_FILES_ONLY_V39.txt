@@ -1,0 +1,19 @@
+TTT2026 v39 TravelAble full rebuild
+
+This replaces travelable.html with a proper page structure based on the approved mock-up direction.
+
+Deep scan:
+- v39 marker present: True
+- old broken markers/refs still present: []
+- image refs in travelable.html: ['smartvel_logo.png', 'travelable_v39_card_1.jpg?v=39', 'travelable_v39_card_2.jpg?v=39', 'travelable_v39_card_3.jpg?v=39', 'travelable_v39_card_4.jpg?v=39', 'travelable_v39_hero_visual.jpg?v=39']
+- missing image refs: []
+- missing files while building patch: []
+
+Files included:
+travelable.html
+index.html
+travelable_v39_hero_visual.jpg
+travelable_v39_card_1.jpg
+travelable_v39_card_2.jpg
+travelable_v39_card_3.jpg
+travelable_v39_card_4.jpg
