@@ -210,8 +210,43 @@ section > .wrap {
 }
 </style>
 
+
+<style id="tripplanner-v70-remove-white-journey-wrapper">
+/* V70: remove old white journey wrapper behind approved section image */
+.tripplanner-approved-journey-v68,
+section.tripplanner-approved-journey-v68,
+.journey.tripplanner-approved-journey-v68{
+  background:transparent!important;
+  background-color:transparent!important;
+  padding:0!important;
+  border:0!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+  overflow:visible!important;
+}
+
+.tripplanner-approved-journey-v68::before,
+.tripplanner-approved-journey-v68::after,
+section.tripplanner-approved-journey-v68::before,
+section.tripplanner-approved-journey-v68::after,
+.journey.tripplanner-approved-journey-v68::before,
+.journey.tripplanner-approved-journey-v68::after{
+  content:none!important;
+  display:none!important;
+}
+
+.tripplanner-approved-journey-v68 img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  border-radius:30px!important;
+  box-shadow:0 26px 70px rgba(7,35,60,.16)!important;
+}
+</style>
+
 </head>
 <body>
+<!-- TRIPPLANNER_HTML_V70_REMOVE_WHITE_JOURNEY_WRAPPER -->
 <!-- TRIPPLANNER_HTML_V68_APPROVED_JOURNEY_SECTION -->
 <!-- TRIPPLANNER_VIDEO_LABEL_REMOVED -->
 <!-- TRIPPLANNER_FULL_LENGTH_VIDEO_MARKER -->

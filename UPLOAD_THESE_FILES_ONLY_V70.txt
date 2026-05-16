@@ -1,0 +1,25 @@
+TTT2026 v70 remove white journey wrappers
+
+Directly patches:
+- exploreandgo.html
+- tripplanner.html
+- index.html
+
+Fixes:
+- Removes old white/card journey wrapper behind the approved Explore & Go image section.
+- Removes old white/card journey wrapper behind the approved Trip Planner image section.
+- Keeps the approved image sections themselves unchanged.
+- Updates index.html refs to:
+  exploreandgo.html?v=70
+  tripplanner.html?v=70
+
+Deep scan:
+- Explore & Go v70 marker present: True
+- Trip Planner v70 marker present: True
+- Explore & Go approved image still present: True
+- Trip Planner approved image still present: True
+- index Explore & Go ref updated: True
+- index Trip Planner ref updated: True
+- missing files while building patch: []
+
+Upload these files to repo root only.

@@ -218,8 +218,43 @@ section > .wrap {
 }
 </style>
 
+
+<style id="explorego-v70-remove-white-journey-wrapper">
+/* V70: remove old white journey wrapper behind approved section image */
+.explorego-approved-journey-v67,
+section.explorego-approved-journey-v67,
+.journey.explorego-approved-journey-v67{
+  background:transparent!important;
+  background-color:transparent!important;
+  padding:0!important;
+  border:0!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+  overflow:visible!important;
+}
+
+.explorego-approved-journey-v67::before,
+.explorego-approved-journey-v67::after,
+section.explorego-approved-journey-v67::before,
+section.explorego-approved-journey-v67::after,
+.journey.explorego-approved-journey-v67::before,
+.journey.explorego-approved-journey-v67::after{
+  content:none!important;
+  display:none!important;
+}
+
+.explorego-approved-journey-v67 img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  border-radius:30px!important;
+  box-shadow:0 26px 70px rgba(7,35,60,.16)!important;
+}
+</style>
+
 </head>
 <body>
+<!-- EXPLOREGO_HTML_V70_REMOVE_WHITE_JOURNEY_WRAPPER -->
 <!-- EXPLOREGO_HTML_V67_APPROVED_JOURNEY_SECTION -->
 <!-- EXPLOREGO_VIDEO_LABEL_REMOVED -->
 <!-- EXPLOREGO_BRIGHT_VIDEO_MARKER -->
