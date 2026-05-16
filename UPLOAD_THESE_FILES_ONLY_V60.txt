@@ -1,0 +1,22 @@
+TTT2026 v60 EntryDocs undistorted images
+
+Directly patches entrydocs.html.
+
+Fixes:
+- Keeps the corrected card size/text structure from v59.
+- Replaces skewed/stretched image assets with properly cropped, proportional image assets.
+- No forced non-proportional resizing.
+- Text remains real HTML below each image.
+- Hero and following sections remain intact.
+- Updates index.html EntryDocs iframe to v=60.
+
+Deep scan:
+- v60 marker present: True
+- v60 image refs present: True
+- old v59 image refs removed: True
+- card count: 4
+- image count in card section: 4
+- missing image/video refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.
