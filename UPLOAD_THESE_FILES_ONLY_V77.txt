@@ -1,0 +1,65 @@
+TTT2026 v77 Trip Planner demo URL exact fix
+
+Required Trip Planner demo/action URL:
+https://sales-itineraries.cst.smartvel.com/?
+
+Fixes:
+- Replaced Trip Planner demo/action URLs with exact requested URL.
+- Preserved Trip Planner slide iframe as local page:
+  tripplanner.html?v=73
+- Preserved Explore & Go slide iframe as local page:
+  exploreandgo.html?v=73
+
+Deep scan:
+{
+  "tripplanner.html": {
+    "changed": true,
+    "sales_urls_found": [
+      "https://sales-itineraries.cst.smartvel.com/?"
+    ],
+    "iframes": [],
+    "trip_demo_anchor_labels": [
+      [
+        "https://sales-itineraries.cst.smartvel.com/?",
+        "Open Trip Planner demo"
+      ],
+      [
+        "tripplanner-overview.html?v=75",
+        "Explore Trip Planner in more detail"
+      ],
+      [
+        "https://sales-itineraries.cst.smartvel.com/?",
+        "Open demo environment"
+      ]
+    ]
+  },
+  "tripplanner-overview.html": {
+    "changed": false,
+    "sales_urls_found": [],
+    "iframes": [],
+    "trip_demo_anchor_labels": [
+      [
+        "tripplanner.html",
+        "Trip Planner"
+      ]
+    ]
+  },
+  "index.html": {
+    "changed": true,
+    "sales_urls_found": [
+      "https://sales-itineraries.cst.smartvel.com/?"
+    ],
+    "iframes": [
+      "smartvel.html?v=74",
+      "entrydocs.html?v=v11-start-button-audio",
+      "travelable.html?v=30",
+      "exploreandgo.html?v=73",
+      "tripplanner.html?v=73",
+      "travelseo.html?v=v11-start-button-audio",
+      "avuxi.html?v=74"
+    ],
+    "trip_demo_anchor_labels": []
+  }
+}
+
+Upload these files to repo root only.

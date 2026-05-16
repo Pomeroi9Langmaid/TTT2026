@@ -1,0 +1,16 @@
+TTT2026 v76 repair broken slide iframe sources
+
+Actual failure fixed:
+- v75 corrupted the main index slide iframe source / route handling.
+- Explore & Go and Trip Planner slides were no longer loading local HTML pages.
+- This caused the main page area to try loading mail/google/external content.
+
+Hard repairs:
+- Explore & Go slide iframe source: exploreandgo.html?v=73
+- Trip Planner slide iframe source: tripplanner.html?v=73
+- Bad iframe refs remaining: []
+- Trip Planner demo URL remains available as external CTA: True
+- Explore & Go demo URL remains available as external CTA: True
+- Email Andrew links remain mailto: True
+
+Upload these files to repo root only.
