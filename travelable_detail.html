@@ -10,7 +10,6 @@
 <style>
 :root{
   --navy:#061f36;
-  --deep:#041827;
   --blue:#125885;
   --cyan:#29AAE0;
   --teal:#00A698;
@@ -39,10 +38,8 @@ img{max-width:100%;display:block}
 .btn:hover{transform:translateY(-1px)}
 .btn-teal{background:linear-gradient(135deg,#2ee6dd,#25b8c8);color:#05233d;box-shadow:0 14px 30px rgba(0,166,152,.22)}
 .btn-orange{background:linear-gradient(135deg,#ff9400,#ffb347);color:#fff;box-shadow:0 14px 28px rgba(255,148,0,.25)}
-.btn-white{background:#fff;color:#0b5d88;border-color:#bed7e7}
 .btn-ghost{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.26)}
 .section{border-bottom:1px solid #e5eef5;background:#fff}
-.section-soft{background:linear-gradient(180deg,#f8fbfe,#fff)}
 h1,h2,h3,p{margin-top:0}
 h1{font-size:clamp(48px,5vw,78px);line-height:1.02;letter-spacing:-.066em;font-weight:900;margin-bottom:20px}
 h1 strong{color:var(--aqua)}
@@ -51,8 +48,8 @@ h3{font-size:18px;line-height:1.18;letter-spacing:-.025em;margin-bottom:7px;colo
 p{color:var(--muted);line-height:1.52}
 .hero{position:relative;background:#061f36;color:#fff;overflow:hidden}
 .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,18,31,.96) 0%,rgba(5,28,47,.86) 36%,rgba(5,28,47,.48) 64%,rgba(5,28,47,.25) 100%);z-index:2;pointer-events:none}
-.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 44%;opacity:.78;filter:saturate(1.03) contrast(1.02)}
-.hero-inner{position:relative;z-index:3;display:grid;grid-template-columns:minmax(520px,.95fr) minmax(320px,.48fr);gap:56px;align-items:center;min-height:475px;padding-top:48px;padding-bottom:48px}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 48%;opacity:.78;filter:saturate(1.06) contrast(1.04) brightness(.95)}
+.hero-inner{position:relative;z-index:3;display:grid;grid-template-columns:minmax(520px,.95fr) minmax(320px,.48fr);gap:56px;align-items:center;min-height:500px;padding-top:48px;padding-bottom:48px}
 .eyebrow{font-size:17px;font-weight:800;color:#48ddd5;margin-bottom:14px}
 .lede{font-size:18px;line-height:1.5;color:rgba(255,255,255,.92);max-width:760px;margin-bottom:24px}
 .hero-panel{justify-self:end;width:100%;max-width:390px;background:rgba(5,20,35,.82);border:1px solid rgba(255,255,255,.16);border-radius:24px;padding:22px;box-shadow:0 28px 80px rgba(0,0,0,.34);backdrop-filter:blur(10px)}
@@ -63,7 +60,6 @@ p{color:var(--muted);line-height:1.52}
 .ui-list{display:grid;gap:10px}
 .ui-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 12px;border-radius:14px;background:rgba(255,255,255,.08);font-size:12px}
 .ui-row i{font-style:normal;color:#7df1e9;font-weight:900}
-
 .value-band{display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:stretch;padding-top:28px;padding-bottom:28px}
 .value-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border:1px solid #dceaf3;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 14px 40px rgba(6,31,54,.06)}
 .value-card{padding:20px 18px;border-right:1px solid #dceaf3;min-height:128px}
@@ -71,49 +67,43 @@ p{color:var(--muted);line-height:1.52}
 .icon{width:38px;height:38px;border-radius:14px;color:#0b7f9f;display:grid;place-items:center;margin-bottom:10px;font-size:25px}
 .value-card b,.category b,.tool-copy b,.integration b,.trust b,.step b{display:block;color:#0b3d66;font-size:14px;margin-bottom:7px}
 .value-card span,.category span,.tool-copy span,.integration span,.trust span,.step span{display:block;color:#53687d;font-size:12px;line-height:1.42}
-
 .journey{padding-top:34px;padding-bottom:34px}
 .journey-grid{display:grid;grid-template-columns:260px repeat(5,minmax(0,1fr));gap:18px;align-items:stretch}
-.side-title p{font-size:13px;line-height:1.5;margin:0;max-width:260px}
-.step{position:relative;background:#fff;border:1px solid #dceaf3;border-radius:20px;padding:14px;box-shadow:0 14px 36px rgba(6,31,54,.07);min-height:285px;overflow:hidden}
-.step img{height:128px;width:100%;object-fit:cover;border-radius:14px;margin-bottom:14px}
-.step:nth-child(2) img{object-position:center 36%}
-.step:nth-child(3) img{object-position:center center}
-.step:nth-child(4) img{object-position:center 42%}
-.step:nth-child(5) img{object-position:center 20%}
-.step:nth-child(6) img{object-position:center 32%}
+.side-title p{font-size:13px;line-height:1.5;margin:0;max-width:280px}
+.step{position:relative;background:#fff;border:1px solid #dceaf3;border-radius:20px;padding:14px;box-shadow:0 14px 36px rgba(6,31,54,.07);min-height:292px;overflow:hidden}
+.step img{height:132px;width:100%;object-fit:cover;border-radius:14px;margin-bottom:14px;filter:saturate(1.06) contrast(1.04)}
 .num{position:absolute;top:10px;left:24px;width:34px;height:34px;border-radius:50%;background:#15969b;color:#fff;display:grid;place-items:center;font-size:14px;font-weight:900;box-shadow:0 8px 18px rgba(0,166,152,.22);z-index:2}
 .step em{display:block;font-style:normal;font-size:12px;color:#0d2033;font-weight:800;margin-bottom:5px}
-
-.categories{padding-top:34px;padding-bottom:38px}
+.categories{padding-top:34px;padding-bottom:38px;background:linear-gradient(180deg,#fff,#fbfdff)}
 .category-grid{display:grid;grid-template-columns:260px repeat(6,minmax(0,1fr));gap:14px;align-items:stretch}
-.category{background:#fff;border:1px solid #dceaf3;border-radius:18px;overflow:hidden;box-shadow:0 12px 32px rgba(6,31,54,.06);min-height:248px}
-.category img{height:104px;width:100%;object-fit:cover}
-.category:nth-child(2) img{object-position:center 42%}
-.category:nth-child(3) img{object-position:center 45%}
-.category:nth-child(4) img{object-position:center 35%}
-.category:nth-child(5) img{object-position:center 38%}
-.category:nth-child(6) img{object-position:center 50%}
-.category:nth-child(7) img{object-position:center 42%}
+.category{background:#fff;border:1px solid #dceaf3;border-radius:18px;overflow:hidden;box-shadow:0 12px 32px rgba(6,31,54,.06);min-height:262px}
+.category-visual{height:116px;display:grid;place-items:center;background:radial-gradient(circle at 72% 22%,rgba(66,222,216,.18),transparent 34%),linear-gradient(135deg,#f7fbfe,#eef7fb);border-bottom:1px solid #e4eef5;position:relative;overflow:hidden}
+.category-visual:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(18,88,133,.055) 0 1px,transparent 1px 28px),repeating-linear-gradient(0deg,rgba(18,88,133,.035) 0 1px,transparent 1px 28px);opacity:.8}
+.cat-icon{position:relative;z-index:1;width:62px;height:62px;border-radius:22px;background:#fff;box-shadow:0 14px 32px rgba(6,31,54,.12);display:grid;place-items:center;color:#0b7f9f;font-size:35px}
 .category .inner{padding:15px}
-
 .tools{padding-top:42px;padding-bottom:42px;background:linear-gradient(180deg,#f8fbfe,#fff)}
-.tools-grid{display:grid;grid-template-columns:260px minmax(280px,.75fr) minmax(500px,1.25fr);gap:32px;align-items:center}
+.tools-grid{display:grid;grid-template-columns:260px minmax(300px,.82fr) minmax(540px,1.18fr);gap:32px;align-items:center}
 .tool-stack{display:grid;gap:16px}
 .tool-copy{display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:start;border-bottom:1px solid #dceaf3;padding-bottom:16px}
 .tool-copy:last-child{border-bottom:0;padding-bottom:0}
-.product-composite{position:relative;min-height:380px;border:1px solid #dceaf3;border-radius:28px;background:radial-gradient(circle at 74% 16%,rgba(41,170,224,.17),transparent 34%),linear-gradient(135deg,#fff,#f3f9fd);box-shadow:var(--shadow);overflow:hidden;padding:30px}
+.product-composite{position:relative;min-height:410px;border:1px solid #dceaf3;border-radius:28px;background:radial-gradient(circle at 74% 16%,rgba(41,170,224,.17),transparent 34%),linear-gradient(135deg,#fff,#f3f9fd);box-shadow:var(--shadow);overflow:hidden;padding:30px}
 .product-composite:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(18,88,133,.035) 0 1px,transparent 1px 52px),repeating-linear-gradient(0deg,rgba(18,88,133,.028) 0 1px,transparent 1px 52px);pointer-events:none}
-.device-main{position:absolute;left:36px;bottom:32px;width:48%;border-radius:18px;box-shadow:0 26px 58px rgba(6,31,54,.18);z-index:2}
-.device-main img{height:260px;width:100%;object-fit:cover;border-radius:18px}
-.device-secondary{position:absolute;right:110px;bottom:42px;width:32%;border-radius:18px;box-shadow:0 20px 44px rgba(6,31,54,.13);z-index:3}
-.device-secondary img{height:230px;width:100%;object-fit:cover;border-radius:18px}
-.device-phone{position:absolute;right:36px;top:42px;width:88px;border-radius:22px;box-shadow:0 18px 40px rgba(6,31,54,.17);z-index:4}
-.device-phone img{height:260px;width:100%;object-fit:cover;border-radius:22px}
-.composite-note{position:absolute;left:34px;top:28px;z-index:5;background:rgba(255,255,255,.92);border:1px solid #dceaf3;border-radius:16px;padding:12px 14px;max-width:300px;box-shadow:0 12px 28px rgba(6,31,54,.08)}
+.product-window{position:absolute;left:36px;right:36px;bottom:34px;height:245px;border-radius:24px;background:#fff;border:1px solid #dceaf3;box-shadow:0 26px 58px rgba(6,31,54,.16);overflow:hidden;z-index:2}
+.product-window-top{height:42px;background:linear-gradient(90deg,#05233d,#0b5d88);display:flex;align-items:center;gap:8px;padding:0 18px}
+.dot{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.55)}
+.product-body{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;padding:18px;background:linear-gradient(180deg,#fff,#f7fbfe);height:203px}
+.metric-box{border:1px solid #e1edf5;border-radius:16px;padding:14px;background:#fff;box-shadow:0 8px 20px rgba(6,31,54,.045)}
+.metric-box b{display:block;color:#0b3d66;font-size:13px;margin-bottom:10px}
+.bar{height:9px;border-radius:999px;background:#e6f0f6;margin:8px 0;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#00A698,#29AAE0)}
+.mobile-card{position:absolute;right:48px;top:34px;width:126px;height:230px;border-radius:28px;background:#101820;border:8px solid #101820;box-shadow:0 22px 48px rgba(6,31,54,.20);z-index:5;overflow:hidden}
+.mobile-screen{height:100%;background:#fff;border-radius:20px;padding:15px 12px}
+.mobile-pill{height:8px;width:54px;border-radius:999px;background:#dceaf3;margin:0 auto 18px}
+.mobile-line{height:9px;border-radius:999px;background:#dceaf3;margin:10px 0}
+.mobile-choice{height:34px;border:1px solid #dceaf3;border-radius:12px;margin:10px 0;background:#f7fbfe;display:flex;align-items:center;padding:0 9px;color:#0b5d88;font-size:10px;font-weight:800}
+.composite-note{position:absolute;left:34px;top:28px;z-index:5;background:rgba(255,255,255,.96);border:1px solid #dceaf3;border-radius:16px;padding:12px 14px;max-width:320px;box-shadow:0 12px 28px rgba(6,31,54,.08)}
 .composite-note b{font-size:13px;color:#0b3d66;display:block;margin-bottom:4px}
 .composite-note span{font-size:11px;color:#53687d;line-height:1.4;display:block}
-
 .integrations{padding-top:32px;padding-bottom:34px}
 .integration-grid{display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:start}
 .integration-row{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin-bottom:16px}
@@ -121,15 +111,13 @@ p{color:var(--muted);line-height:1.52}
 .integration,.trust{background:#fff;border:1px solid #dceaf3;border-radius:18px;padding:17px 14px;text-align:center;box-shadow:0 12px 30px rgba(6,31,54,.055);min-height:116px}
 .trust{min-height:132px;background:linear-gradient(180deg,#fff,#f8fbfe)}
 .integration .icon,.trust .icon{margin:0 auto 10px}
-
 .final-cta{position:relative;overflow:hidden;background:#05233d;color:#fff}
-.final-cta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 48%;opacity:.44}
+.final-cta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 48%;opacity:.42}
 .final-cta:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#05233d 0%,rgba(5,35,61,.9) 50%,rgba(5,35,61,.58) 100%);z-index:1}
 .final-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;padding-top:44px;padding-bottom:44px}
 .final-inner h2{font-size:34px;line-height:1.12;letter-spacing:-.045em;margin-bottom:8px;color:#fff}
 .final-inner p{margin:0;color:rgba(255,255,255,.86)}
 .footnote{font-size:11px;color:#6f7f8f;padding:18px 48px 30px;background:#fff}
-
 @media(max-width:1280px){
   .value-grid{grid-template-columns:repeat(3,1fr)}
   .value-card:nth-child(3){border-right:0}
@@ -149,84 +137,22 @@ p{color:var(--muted);line-height:1.52}
   .value-card{border-right:0;border-bottom:1px solid #dceaf3}
   .value-card:last-child{border-bottom:0}
   .step,.category{min-height:auto}
-  .product-composite{min-height:auto;padding:18px;display:grid;gap:14px}
-  .product-composite>*{position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;width:100%!important}
-  .device-main img,.device-secondary img,.device-phone img{height:auto}
+  .product-composite{min-height:520px}
+  .product-window{left:18px;right:18px;bottom:22px}
+  .mobile-card{right:24px;top:105px}
 }
 </style>
-
-<style id="travelable-v28-premium-imagery-fix">
-/* V28 premium imagery pass: remove text-heavy/cropped slide visuals and make sections look cinematic */
-.hero-bg{
-  object-position:center 48%!important;
-  filter:saturate(1.08) contrast(1.04) brightness(.95)!important;
-}
-.hero-inner{
-  min-height:500px!important;
-}
-.step img{
-  height:132px!important;
-  object-fit:cover!important;
-  filter:saturate(1.06) contrast(1.04)!important;
-}
-.step{
-  min-height:292px!important;
-}
-.category img{
-  height:118px!important;
-  object-fit:cover!important;
-  filter:saturate(1.06) contrast(1.04)!important;
-}
-.category{
-  min-height:264px!important;
-}
-.product-composite{
-  min-height:400px!important;
-  overflow:hidden!important;
-}
-.device-main img,
-.device-secondary img,
-.device-phone img{
-  object-fit:cover!important;
-  object-position:center center!important;
-  filter:saturate(1.06) contrast(1.04)!important;
-}
-.device-main{
-  width:50%!important;
-}
-.device-secondary{
-  right:96px!important;
-  width:34%!important;
-}
-.device-phone{
-  right:30px!important;
-  width:96px!important;
-}
-.composite-note{
-  background:rgba(255,255,255,.96)!important;
-  backdrop-filter:blur(8px)!important;
-}
-.category:nth-child(n) img,
-.step:nth-child(n) img{
-  object-position:center center!important;
-}
-@media(max-width:1280px){
-  .step img{height:150px!important}
-  .category img{height:138px!important}
-}
-</style>
-
 </head>
 <body>
-<!-- TRAVELABLE_OVERVIEW_REFINED_V27_MARKER -->
+<!-- TRAVELABLE_OVERVIEW_CORRECTED_V29_MARKER -->
 <header class="topbar">
   <div class="wrap">
     <div class="brand">
       <img src="smartvel_logo.png" alt="Smartvel" class="logo">
-      <div class="crumb"><a href="index.html?v=27">Smartvel</a><span>›</span><a href="travelable.html?v=27">TravelAble</a><span>›</span><strong>Detailed overview</strong></div>
+      <div class="crumb"><a href="index.html?v=29">Smartvel</a><span>›</span><a href="travelable.html?v=29">TravelAble</a><span>›</span><strong>Detailed overview</strong></div>
     </div>
     <div class="actions">
-      <a class="btn btn-ghost" href="travelable.html?v=27">Back to TravelAble</a>
+      <a class="btn btn-ghost" href="travelable.html?v=29">Back to TravelAble</a>
       <a class="btn btn-orange" href="https://meetings.hubspot.com/alangmaid" target="_blank" rel="noopener noreferrer">Schedule meeting</a>
     </div>
   </div>
@@ -280,7 +206,7 @@ p{color:var(--muted);line-height:1.52}
     <div class="step"><div class="num">1</div><img src="travelable_ultra_inspiration.jpg" alt="Traveller reviewing accessibility information"><b>Inspiration</b><em>Can I travel confidently?</em><span>Make accessibility visible before the traveller has to ask.</span></div>
     <div class="step"><div class="num">2</div><img src="travelable_ultra_booking.jpg" alt="Mobile accessibility interface"><b>Booking</b><em>Is this route suitable?</em><span>Present practical information in the booking and decision flow.</span></div>
     <div class="step"><div class="num">3</div><img src="travelable_ultra_pretrip.jpg" alt="Airport assistance environment"><b>Pre-trip</b><em>What support exists?</em><span>Help travellers prepare with clearer route, venue and assistance details.</span></div>
-    <div class="step"><div class="num">4</div><img src="travelable_ultra_intrip.jpg" alt="Accessible route guidance interface"><b>In-trip</b><em>What is available now?</em><span>Support orientation, assistance and location-specific information.</span></div>
+    <div class="step"><div class="num">4</div><img src="travelable_ultra_intrip.jpg" alt="Accessible in-trip guidance"><b>In-trip</b><em>What is available now?</em><span>Support orientation, assistance and location-specific information.</span></div>
     <div class="step"><div class="num">5</div><img src="travelable_ultra_confidence.jpg" alt="Confident traveller experience"><b>Confidence</b><em>Less stress, better experience.</em><span>Reduce friction by making the journey easier to understand.</span></div>
   </div>
 </section>
@@ -288,12 +214,12 @@ p{color:var(--muted);line-height:1.52}
 <section class="section categories">
   <div class="wrap category-grid">
     <div class="category-title"><h2>Comprehensive accessibility categories</h2></div>
-    <div class="category"><img src="travelable_cat_mobility.jpg" alt="Step-free access"><div class="inner"><b>Mobility</b><span>Step-free access, lifts, accessible bathrooms and mobility support details.</span></div></div>
-    <div class="category"><img src="travelable_cat_visual.jpg" alt="Accessibility information insight"><div class="inner"><b>Visual</b><span>Readable content, clear information and relevant support indicators.</span></div></div>
-    <div class="category"><img src="travelable_cat_hearing.jpg" alt="Airport support information"><div class="inner"><b>Hearing</b><span>Visual alerts, assistance information and communication support.</span></div></div>
-    <div class="category"><img src="travelable_cat_neuro.jpg" alt="Calm mobile guidance"><div class="inner"><b>Neurodiverse</b><span>Quiet areas, sensory-friendly notes and predictable journey information.</span></div></div>
-    <div class="category"><img src="travelable_cat_medical.jpg" alt="TravelAble benefit visual"><div class="inner"><b>Dietary & medical</b><span>Relevant traveller support information where available and appropriate.</span></div></div>
-    <div class="category"><img src="travelable_cat_companion.jpg" alt="Governance and support"><div class="inner"><b>Companion support</b><span>Information that can help travellers, carers and support teams plan ahead.</span></div></div>
+    <div class="category"><div class="category-visual"><div class="cat-icon">♿</div></div><div class="inner"><b>Mobility</b><span>Step-free access, lifts, accessible bathrooms and mobility support details.</span></div></div>
+    <div class="category"><div class="category-visual"><div class="cat-icon">◐</div></div><div class="inner"><b>Visual</b><span>Readable content, clear information and relevant support indicators.</span></div></div>
+    <div class="category"><div class="category-visual"><div class="cat-icon">◉</div></div><div class="inner"><b>Hearing</b><span>Visual alerts, assistance information and communication support.</span></div></div>
+    <div class="category"><div class="category-visual"><div class="cat-icon">⌁</div></div><div class="inner"><b>Neurodiverse</b><span>Quiet areas, sensory-friendly notes and predictable journey information.</span></div></div>
+    <div class="category"><div class="category-visual"><div class="cat-icon">✚</div></div><div class="inner"><b>Dietary & medical</b><span>Relevant traveller support information where available and appropriate.</span></div></div>
+    <div class="category"><div class="category-visual"><div class="cat-icon">👥</div></div><div class="inner"><b>Companion support</b><span>Information that can help travellers, carers and support teams plan ahead.</span></div></div>
   </div>
 </section>
 
@@ -311,9 +237,15 @@ p{color:var(--muted);line-height:1.52}
     </div>
     <div class="product-composite" aria-label="TravelAble product experience visual">
       <div class="composite-note"><b>Customer-facing accessibility intelligence</b><span>Designed to surface practical accessibility information inside existing traveller journeys.</span></div>
-      <div class="device-main"><img src="travelable_product_dashboard.jpg" alt="TravelAble accessibility dashboard"></div>
-      <div class="device-secondary"><img src="travelable_product_interface.jpg" alt="TravelAble product interface"></div>
-      <div class="device-phone"><img src="travelable_product_mobile.jpg" alt="TravelAble mobile interface"></div>
+      <div class="mobile-card"><div class="mobile-screen"><div class="mobile-pill"></div><div class="mobile-line"></div><div class="mobile-choice">Mobility</div><div class="mobile-choice">Hearing</div><div class="mobile-choice">Quiet areas</div><div class="mobile-line"></div></div></div>
+      <div class="product-window">
+        <div class="product-window-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="product-body">
+          <div class="metric-box"><b>Accessibility profile</b><div class="bar"><i style="width:82%"></i></div><div class="bar"><i style="width:66%"></i></div><div class="bar"><i style="width:74%"></i></div></div>
+          <div class="metric-box"><b>Traveller needs</b><div class="bar"><i style="width:72%"></i></div><div class="bar"><i style="width:58%"></i></div><div class="bar"><i style="width:84%"></i></div></div>
+          <div class="metric-box"><b>Journey touchpoints</b><div class="bar"><i style="width:64%"></i></div><div class="bar"><i style="width:76%"></i></div><div class="bar"><i style="width:69%"></i></div></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
