@@ -310,9 +310,42 @@ section > .wrap {
 }
 
 </style>
+
+<style id="travelable-v38-real-hero-fix">
+/* V38: repair main TravelAble page without recursive embedded webpage screenshots */
+.visual-main img{
+  content:url("travelable_v38_assisted_travel_hero.jpg?v=38")!important;
+  object-fit:cover!important;
+  object-position:center center!important;
+  filter:saturate(1.05) contrast(1.04)!important;
+}
+.visual-main{
+  background:#061f36!important;
+  box-shadow:0 26px 70px rgba(6,31,54,.15)!important;
+}
+.visual-main:after{
+  background:linear-gradient(90deg,rgba(6,31,54,.05),rgba(6,31,54,.00) 42%,rgba(6,31,54,.08))!important;
+}
+.visual{
+  box-shadow:0 30px 84px rgba(6,31,54,.14)!important;
+}
+.value-card{
+  box-shadow:0 18px 44px rgba(6,31,54,.07)!important;
+}
+.trust{
+  margin-top:34px!important;
+}
+.ta-visual img[src*="travelable_phone_future"],
+.ta-visual img[src*="travelable_visual_traveller"],
+.ta-visual img[src*="travelable_airport_team"]{
+  object-fit:cover!important;
+  object-position:center center!important;
+}
+</style>
+
 </head>
 <body>
-<!-- TRAVELABLE_HTML_V37_PREMIUM_REBUILD -->
+<!-- TRAVELABLE_HTML_V38_REAL_HERO_FIX -->
 <!-- TRAVELABLE_TEMPLATE_RESTORED_VIDEO_FIXED_MARKER -->
 <!-- TRAVELABLE_CINEMATIC_HERO_MARKER -->
 <main class="page">
@@ -325,7 +358,7 @@ section > .wrap {
 <div>
 <div class="kicker">Accessible travel support</div>
 <h1>Make assisted travel <strong>clearer.</strong></h1>
-<p class="lead">TravelAble centralises accessibility information across the journey — helping travellers understand airline, airport, wheelchair and mobility-equipment guidance before they travel.</p>
+<p class="lead">TravelAble helps airlines communicate accessibility and PRM information more clearly across the traveller journey — helping passengers understand what support is available, what they need to prepare, and how the process works before they travel.</p>
 
 <div class="value-grid">
 <div class="value-card"><b>Journey-specific guidance</b><span>Information can be personalised by route, airline, airport, aircraft and traveller needs.</span></div>
@@ -343,7 +376,7 @@ section > .wrap {
     <div class="ta-slide">
       <div class="ta-copy">
         <div class="ta-kicker">Clear benefits for travel teams</div>
-        <h3>Useful for airlines, airports and support teams.</h3>
+        <h3>Useful for airline accessibility and support teams.</h3>
         <p>TravelAble gives teams a clearer way to communicate accessibility information across the digital journey.</p>
         <div class="ta-points">
           <span>Less friction in assistance and SSR selection</span>
@@ -412,194 +445,6 @@ section > .wrap {
 
 </section>
 
-<!-- TRAVELABLE_MAINPAGE_PREMIUM_REBUILD_V37 -->
-<style id="travelable-v37-premium-mainpage">
-.travelable-v37-showcase{
-  margin:32px 0 34px;
-  border-radius:34px;
-  overflow:hidden;
-  background:linear-gradient(135deg,#ffffff,#eef8fc);
-  border:1px solid rgba(220,234,243,.96);
-  box-shadow:0 28px 80px rgba(6,31,54,.14);
-}
-.travelable-v37-hero{
-  display:grid;
-  grid-template-columns:minmax(420px,.78fr) minmax(540px,1.22fr);
-  min-height:560px;
-  align-items:stretch;
-  background:radial-gradient(circle at 85% 10%,rgba(41,170,224,.16),transparent 36%),linear-gradient(135deg,#ffffff,#f5fbfe);
-}
-.travelable-v37-copy{
-  padding:64px 56px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-.travelable-v37-copy .eyebrow{
-  color:#0b7091;
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  margin-bottom:16px;
-}
-.travelable-v37-copy h2{
-  margin:0 0 18px;
-  font-size:clamp(44px,4.6vw,76px);
-  line-height:1.02;
-  letter-spacing:-.065em;
-  color:#061f36;
-}
-.travelable-v37-copy h2 span{
-  color:#29AAE0;
-}
-.travelable-v37-copy p{
-  margin:0;
-  max-width:620px;
-  font-size:18px;
-  line-height:1.55;
-  color:#40576c;
-}
-.travelable-v37-actions{
-  margin-top:26px;
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-}
-.travelable-v37-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:999px;
-  min-height:44px;
-  padding:12px 18px;
-  font-size:12px;
-  font-weight:900;
-  text-decoration:none;
-  line-height:1;
-}
-.travelable-v37-btn.primary{
-  background:linear-gradient(135deg,#2ee6dd,#25b8c8);
-  color:#05233d;
-  box-shadow:0 14px 30px rgba(0,166,152,.22);
-}
-.travelable-v37-btn.secondary{
-  background:#fff;
-  color:#0b3d66;
-  border:1px solid #cfe1ed;
-}
-.travelable-v37-visual{
-  position:relative;
-  min-height:560px;
-  overflow:hidden;
-}
-.travelable-v37-visual img{
-  width:100%;
-  height:100%;
-  min-height:560px;
-  object-fit:cover!important;
-  object-position:center center!important;
-  display:block;
-}
-.travelable-v37-proof{
-  display:grid;
-  grid-template-columns:1.08fr repeat(3,.64fr);
-  gap:0;
-  border-top:1px solid #dceaf3;
-  background:#fff;
-}
-.travelable-v37-proof-intro,
-.travelable-v37-proof-card{
-  padding:26px 28px;
-  border-right:1px solid #dceaf3;
-}
-.travelable-v37-proof-card:last-child{border-right:0}
-.travelable-v37-proof-intro h3{
-  margin:0 0 10px;
-  font-size:26px;
-  line-height:1.1;
-  letter-spacing:-.04em;
-  color:#0a3458;
-}
-.travelable-v37-proof-intro p,
-.travelable-v37-proof-card p{
-  margin:0;
-  color:#546b7f;
-  font-size:13px;
-  line-height:1.45;
-}
-.travelable-v37-proof-card b{
-  display:block;
-  color:#0b3d66;
-  font-size:15px;
-  margin-bottom:8px;
-}
-.travelable-v37-icon{
-  width:38px;
-  height:38px;
-  border-radius:14px;
-  display:grid;
-  place-items:center;
-  margin-bottom:12px;
-  background:linear-gradient(135deg,#e9fbfa,#f8fbfe);
-  color:#0b7f9f;
-  box-shadow:inset 0 0 0 1px #dceaf3;
-  font-size:22px;
-}
-@media(max-width:1100px){
-  .travelable-v37-hero{grid-template-columns:1fr}
-  .travelable-v37-visual{min-height:420px}
-  .travelable-v37-visual img{min-height:420px}
-  .travelable-v37-proof{grid-template-columns:1fr 1fr}
-  .travelable-v37-proof-intro{grid-column:1/-1}
-}
-@media(max-width:720px){
-  .travelable-v37-copy{padding:36px 28px}
-  .travelable-v37-proof{grid-template-columns:1fr}
-  .travelable-v37-proof-intro,
-  .travelable-v37-proof-card{border-right:0;border-bottom:1px solid #dceaf3}
-}
-</style>
-
-<section class="travelable-v37-showcase" aria-label="TravelAble premium overview">
-  <div class="travelable-v37-hero">
-    <div class="travelable-v37-copy">
-      <div class="eyebrow">Accessible travel support</div>
-      <h2>Smarter guidance. More confidence. <span>Every journey.</span></h2>
-      <p>TravelAble helps airlines communicate accessibility and PRM information more clearly across the travel journey, so passengers understand what support is available, what they need to prepare, and how the process works before they travel.</p>
-      <div class="travelable-v37-actions">
-        <a class="travelable-v37-btn primary" href="travelable-overview.html?v=37">Explore how it works →</a>
-        <a class="travelable-v37-btn secondary" href="https://microsites-stage.cst.smartvel.com/smartvel-sales-travelable/?view=results&or=LHR&dt=MAD&tm=round&arl=Iberia&oc=true&tc=electric&oe=false" target="_blank" rel="noopener noreferrer">Open TravelAble microsite ↗</a>
-      </div>
-    </div>
-    <div class="travelable-v37-visual">
-      <img src="travelable_v37_premium_hero.jpg?v=37" alt="Premium TravelAble assisted travel interface and airport accessibility guidance">
-    </div>
-  </div>
-
-  <div class="travelable-v37-proof">
-    <div class="travelable-v37-proof-intro">
-      <h3>Built for real journeys. Designed for airline accessibility communication.</h3>
-      <p>At this stage, TravelAble is focused on airlines, with a solution designed to evolve over time to support airports and other travel operators as the product develops.</p>
-    </div>
-    <div class="travelable-v37-proof-card">
-      <div class="travelable-v37-icon">✓</div>
-      <b>Plan with clarity</b>
-      <p>Help passengers understand accessibility support before they book and travel.</p>
-    </div>
-    <div class="travelable-v37-proof-card">
-      <div class="travelable-v37-icon">✈</div>
-      <b>Travel with confidence</b>
-      <p>Surface journey-stage information before departure, at the airport and in transit.</p>
-    </div>
-    <div class="travelable-v37-proof-card">
-      <div class="travelable-v37-icon">♿</div>
-      <b>Support PRM needs</b>
-      <p>Make mobility, sensory and assistance guidance easier to find and understand.</p>
-    </div>
-  </div>
-</section>
-<!-- /TRAVELABLE_MAINPAGE_PREMIUM_REBUILD_V37 -->
 
 
 
@@ -658,7 +503,7 @@ section > .wrap {
     <h2>Want to understand TravelAble more deeply?</h2>
     <p>This page gives the quick overview. Use the detailed overview, live environment and supporting material if you want to go deeper or share internally.</p>
   </div>
-  <div class="smartvel-detail-actions"><a class="primary" href="travelable-overview.html?v=37">Explore TravelAble in more detail</a><a class="secondary" href="https://microsites-stage.cst.smartvel.com/smartvel-sales-travelable/?view=results&or=LHR&dt=MAD&tm=round&arl=Iberia&oc=true&tc=electric&oe=false" target="_blank" rel="noopener noreferrer">Open demo environment</a><a class="ghost" href="travelable_playbook.pdf" download>Download playbook</a></div>
+  <div class="smartvel-detail-actions"><a class="primary" href="travelable-overview.html?v=38">Explore TravelAble in more detail</a><a class="secondary" href="https://microsites-stage.cst.smartvel.com/smartvel-sales-travelable/?view=results&or=LHR&dt=MAD&tm=round&arl=Iberia&oc=true&tc=electric&oe=false" target="_blank" rel="noopener noreferrer">Open demo environment</a><a class="ghost" href="travelable_playbook.pdf" download>Download playbook</a></div>
 </section>
 
 

@@ -1,0 +1,20 @@
+TTT2026 v38 TravelAble real hero fix
+
+This patch directly repairs travelable.html.
+
+What it does:
+- Removes the broken recursive webpage-inside-webpage v37 section.
+- Removes any v35/v36 inserted blocks.
+- Replaces the existing main visual image via live page CSS with a cropped assisted-travel airport hero.
+- Keeps the original page structure instead of stacking another fake page into it.
+- Updates copy to TravelAble airline-first / PRM positioning.
+
+Deep scan:
+- v37 recursive block removed: True
+- old v35/v36 blocks removed: True
+- v38 image ref present: True
+- recursive full-page mockup refs present: False
+- missing while building patch: []
+- TravelAble v37/v38 refs in HTML: ['travelable_v38_assisted_travel_hero.jpg?v=38']
+
+Upload these files to repo root only.
