@@ -194,8 +194,50 @@ section > .wrap {
 }
 
 </style>
+
+<style id="explorego-v65-image-flow-cards">
+/* V65 Explore & Go: use approved aligned card images in the journey flow. */
+.journey .journey-inner{
+  grid-template-columns:.9fr 1.35fr!important;
+  gap:34px!important;
+  align-items:center!important;
+}
+.explorego-image-flow-v65{
+  display:grid!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  gap:14px!important;
+  align-items:stretch!important;
+}
+.explorego-image-flow-v65 .image-step{
+  padding:0!important;
+  min-height:238px!important;
+  height:238px!important;
+  overflow:hidden!important;
+  border-radius:22px!important;
+  background:#111!important;
+  border:1px solid rgba(255,255,255,.18)!important;
+  box-shadow:0 18px 42px rgba(0,0,0,.18)!important;
+}
+.explorego-image-flow-v65 .image-step img{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center center!important;
+}
+@media(max-width:1200px){
+  .journey .journey-inner{
+    grid-template-columns:1fr!important;
+  }
+  .explorego-image-flow-v65{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+</style>
+
 </head>
 <body>
+<!-- EXPLOREGO_HTML_V65_IMAGE_FLOW_CARDS -->
 <!-- EXPLOREGO_VIDEO_LABEL_REMOVED -->
 <!-- EXPLOREGO_BRIGHT_VIDEO_MARKER -->
 <!-- EXPLOREGO_VIDEO_HERO_MARKER -->
@@ -244,11 +286,19 @@ section > .wrap {
 <p>Explore & Go is designed to create emotional destination discovery moments while guiding travellers towards deeper engagement, route exploration and conversion opportunities.</p>
 </div>
 
-<div class="flow">
-<div class="step"><b>Dream</b><span>Travel imagery and destination storytelling spark inspiration.</span></div>
-<div class="step"><b>Discover</b><span>Users explore routes, themes, regions and destination ideas.</span></div>
-<div class="step"><b>Engage</b><span>Interactive content keeps travellers browsing and planning longer.</span></div>
-<div class="step"><b>Convert</b><span>CTA's and integrations guide users towards booking journeys.</span></div>
+<div class="flow explorego-image-flow-v65">
+  <article class="step image-step">
+    <img src="explore_go_dream_square_aligned.png?v=65" alt="Dream: destination inspiration visual">
+  </article>
+  <article class="step image-step">
+    <img src="explore_go_discover_square_aligned.png?v=65" alt="Discover: route and destination discovery visual">
+  </article>
+  <article class="step image-step">
+    <img src="explore_go_engage_square_aligned.png?v=65" alt="Engage: interactive destination content visual">
+  </article>
+  <article class="step image-step">
+    <img src="explore_go_convert_square_aligned.png?v=65" alt="Convert: booking journey conversion visual">
+  </article>
 </div>
 </div>
 </section>

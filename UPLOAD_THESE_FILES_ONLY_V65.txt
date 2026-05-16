@@ -1,0 +1,20 @@
+TTT2026 v65 Explore & Go image flow cards
+
+Directly patches exploreandgo.html.
+
+Fixes:
+- Replaces the text-only Dream / Discover / Engage / Convert flow cards with the approved aligned Explore & Go images.
+- Keeps the existing journey section copy on the left.
+- Uses controlled card sizing so the images flow cleanly inside the existing section.
+- Updates index.html Explore & Go iframe/reference to v=65 where present.
+
+Deep scan:
+- v65 marker present: True
+- image flow class present: True
+- all four approved image refs present: True
+- image count in new flow: 4
+- old text step titles removed inside flow: True
+- missing image/video refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.
