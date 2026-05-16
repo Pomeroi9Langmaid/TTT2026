@@ -1,0 +1,23 @@
+TTT2026 v58 EntryDocs card rhythm
+
+Directly patches entrydocs.html.
+
+Fixes:
+- Keeps the four EntryDocs cinematic cards.
+- Makes cards taller and closer to TravelAble-style proportions.
+- Adds proper spacing above and below the card row.
+- Reduces the heavy bottom overlay.
+- Keeps the hero and following sections intact.
+- Updates index.html EntryDocs iframe to v=58.
+
+Deep scan:
+- v58 marker present: True
+- showcase v58 present: True
+- card count in showcase: 4
+- CSS height 330px present: True
+- hero visual still present: True
+- following demo section still present: True
+- missing image/video refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.
