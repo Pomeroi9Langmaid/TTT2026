@@ -1,0 +1,22 @@
+TTT2026 v62 EntryDocs detailed overview approved cards
+
+Directly patches entrydocs-overview.html.
+
+Fixes:
+- Uses the approved EntryDocs card imagery from the uploaded screenshot.
+- Adds it to the EntryDocs detailed overview after the How it works / What EntryDocs covers section.
+- Keeps the existing How it works image and coverage cards intact.
+- Adds a controlled full-width card visual section with proper spacing and rounded container.
+- Keeps the accuracy section and following content intact.
+
+Deep scan:
+- v62 marker present: True
+- approved cards section present: True
+- approved image ref present: True
+- How it works / cover section kept: True
+- What EntryDocs covers kept: True
+- How we keep requirements accurate kept: True
+- missing image/video refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.
