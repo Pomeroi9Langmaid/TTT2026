@@ -1240,97 +1240,102 @@ section > .wrap {
 
 </style>
 
-<style id="smartvel-homepage-v43-enhance-existing">
-/* V43: enhance existing homepage structure with professional imagery, without replacing layout or hero video */
-.promise-card,
-.ai-card,
+<style id="smartvel-homepage-v44-controlled-visuals">
+/* V44: keep original homepage structure; add controlled image headers only where layout supports them */
 .step,
-.value-card,
-.stat{
+.bottom-strip .value-card{
   position:relative!important;
   overflow:hidden!important;
 }
-.promise-card:before,
-.ai-card:before,
-.step:before,
-.value-card:before{
+
+/* Journey cards: clean editorial headers, then normal text below. No text overlays. */
+.journey .steps{
+  align-items:stretch!important;
+}
+.journey .step{
+  padding:0 18px 20px!important;
+  min-height:212px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:flex-start!important;
+  box-shadow:0 18px 42px rgba(6,31,54,.16)!important;
+}
+.journey .step:before{
   content:""!important;
   display:block!important;
-  height:86px!important;
-  margin:-18px -18px 14px!important;
+  height:92px!important;
+  margin:0 -18px 16px!important;
   background-size:cover!important;
   background-position:center center!important;
   border-radius:18px 18px 0 0!important;
   filter:saturate(1.04) contrast(1.03)!important;
 }
-.promise-card:nth-child(1):before{background-image:linear-gradient(180deg,rgba(6,31,54,.08),rgba(6,31,54,.18)),url("home_v43_img_search.jpg?v=43")!important}
-.promise-card:nth-child(2):before{background-image:linear-gradient(180deg,rgba(6,31,54,.08),rgba(6,31,54,.18)),url("home_v43_img_plan.jpg?v=43")!important}
-.promise-card:nth-child(3):before{background-image:linear-gradient(180deg,rgba(6,31,54,.08),rgba(6,31,54,.18)),url("home_v43_img_prepare.jpg?v=43")!important}
-.promise-card:nth-child(4):before{background-image:linear-gradient(180deg,rgba(6,31,54,.08),rgba(6,31,54,.18)),url("home_v43_img_support.jpg?v=43")!important}
-
-.ai-card:before{
-  height:78px!important;
-  margin:-20px -20px 14px!important;
-  opacity:.88!important;
+.journey .step:nth-child(1):before{background-image:linear-gradient(180deg,rgba(6,31,54,.06),rgba(6,31,54,.28)),url("home_v44_inspire.jpg?v=44")!important}
+.journey .step:nth-child(2):before{background-image:linear-gradient(180deg,rgba(6,31,54,.06),rgba(6,31,54,.28)),url("home_v44_plan.jpg?v=44")!important}
+.journey .step:nth-child(3):before{background-image:linear-gradient(180deg,rgba(6,31,54,.06),rgba(6,31,54,.28)),url("home_v44_convert.jpg?v=44")!important}
+.journey .step:nth-child(4):before{background-image:linear-gradient(180deg,rgba(6,31,54,.06),rgba(6,31,54,.28)),url("home_v44_prepare.jpg?v=44")!important}
+.journey .step:nth-child(5):before{background-image:linear-gradient(180deg,rgba(6,31,54,.06),rgba(6,31,54,.28)),url("home_v44_experience.jpg?v=44")!important}
+.journey .step i{
+  position:absolute!important;
+  top:104px!important;
+  left:18px!important;
+  z-index:2!important;
 }
-.ai-card:nth-child(1):before{background-image:linear-gradient(180deg,rgba(6,31,54,.12),rgba(6,31,54,.45)),url("home_v43_img_prepare.jpg?v=43")!important}
-.ai-card:nth-child(2):before{background-image:linear-gradient(180deg,rgba(6,31,54,.12),rgba(6,31,54,.45)),url("home_v43_img_plan.jpg?v=43")!important}
-.ai-card:nth-child(3):before{background-image:linear-gradient(180deg,rgba(6,31,54,.12),rgba(6,31,54,.45)),url("home_v43_img_support.jpg?v=43")!important}
-.ai-card:nth-child(4):before{background-image:linear-gradient(180deg,rgba(6,31,54,.12),rgba(6,31,54,.45)),url("home_v43_img_inspire.jpg?v=43")!important}
-.ai-card:nth-child(5):before{background-image:linear-gradient(180deg,rgba(6,31,54,.12),rgba(6,31,54,.45)),url("home_v43_img_experience.jpg?v=43")!important}
-
-.step:before{
-  height:92px!important;
-  margin:-18px -18px 14px!important;
+.journey .step b{
+  margin-top:8px!important;
+  display:block!important;
+  position:relative!important;
+  z-index:2!important;
 }
-.step:nth-child(1):before{background-image:linear-gradient(180deg,rgba(6,31,54,.10),rgba(6,31,54,.42)),url("home_v43_img_inspire.jpg?v=43")!important}
-.step:nth-child(2):before{background-image:linear-gradient(180deg,rgba(6,31,54,.10),rgba(6,31,54,.42)),url("home_v43_img_plan.jpg?v=43")!important}
-.step:nth-child(3):before{background-image:linear-gradient(180deg,rgba(6,31,54,.10),rgba(6,31,54,.42)),url("home_v43_img_search.jpg?v=43")!important}
-.step:nth-child(4):before{background-image:linear-gradient(180deg,rgba(6,31,54,.10),rgba(6,31,54,.42)),url("home_v43_img_prepare.jpg?v=43")!important}
-.step:nth-child(5):before{background-image:linear-gradient(180deg,rgba(6,31,54,.10),rgba(6,31,54,.42)),url("home_v43_img_experience.jpg?v=43")!important}
-
-.value-card:before{
-  height:70px!important;
-  margin:-18px -18px 12px!important;
+.journey .step span{
+  display:block!important;
+  position:relative!important;
+  z-index:2!important;
+  line-height:1.38!important;
 }
-.value-card:nth-child(1):before{background-image:linear-gradient(180deg,rgba(6,31,54,.08),rgba(6,31,54,.22)),url("home_v43_img_support.jpg?v=43")!important}
-.value-card:nth-child(2):before{background-image:linear-gradient(180deg,rgba(6,31,54,.08),rgba(6,31,54,.22)),url("home_v43_img_plan.jpg?v=43")!important}
-.value-card:nth-child(3):before{background-image:linear-gradient(180deg,rgba(6,31,54,.08),rgba(6,31,54,.22)),url("home_v43_img_prepare.jpg?v=43")!important}
-.value-card:nth-child(4):before{background-image:linear-gradient(180deg,rgba(6,31,54,.08),rgba(6,31,54,.22)),url("home_v43_img_search.jpg?v=43")!important}
 
+/* Bottom cards: subtle image headers, not noisy overlays. */
+.bottom-strip{
+  align-items:stretch!important;
+}
+.bottom-strip .value-card{
+  padding:0 18px 18px!important;
+  min-height:158px!important;
+  box-shadow:0 18px 38px rgba(6,31,54,.08)!important;
+}
+.bottom-strip .value-card:before{
+  content:""!important;
+  display:block!important;
+  height:68px!important;
+  margin:0 -18px 14px!important;
+  background-size:cover!important;
+  background-position:center center!important;
+  border-radius:18px 18px 0 0!important;
+  filter:saturate(1.03) contrast(1.02)!important;
+}
+.bottom-strip .value-card:nth-child(1):before{background-image:linear-gradient(180deg,rgba(255,255,255,.02),rgba(6,31,54,.22)),url("home_v44_whitelabel.jpg?v=44")!important}
+.bottom-strip .value-card:nth-child(2):before{background-image:linear-gradient(180deg,rgba(255,255,255,.02),rgba(6,31,54,.22)),url("home_v44_widget_api.jpg?v=44")!important}
+.bottom-strip .value-card:nth-child(3):before{background-image:linear-gradient(180deg,rgba(255,255,255,.02),rgba(6,31,54,.22)),url("home_v44_managed.jpg?v=44")!important}
+.bottom-strip .value-card:nth-child(4):before{background-image:linear-gradient(180deg,rgba(255,255,255,.02),rgba(6,31,54,.22)),url("home_v44_seo.jpg?v=44")!important}
+
+.promise-card:before,
+.ai-card:before,
+.stat:before{
+  content:none!important;
+  display:none!important;
+}
+
+/* Keep stats/AI sections clean and readable. */
 .promise-card,
-.value-card{
-  box-shadow:0 18px 44px rgba(6,31,54,.08)!important;
-}
 .ai-card,
-.step{
-  box-shadow:0 18px 42px rgba(6,31,54,.14)!important;
-}
-.promise-card b,
-.ai-card b,
-.step b,
-.value-card b{
-  position:relative!important;
-  z-index:2!important;
-}
-.promise-card span,
-.ai-card span,
-.step span,
-.value-card span{
-  position:relative!important;
-  z-index:2!important;
-}
-.ai-intelligence,
-.journey,
-.bottom-strip,
-.mission{
-  margin-top:28px!important;
+.stat{
+  background-clip:padding-box!important;
 }
 </style>
 
 </head>
 <body>
-<!-- SMARTVEL_HTML_V43_ENHANCE_EXISTING -->
+<!-- SMARTVEL_HTML_V44_CONTROLLED_VISUALS -->
 <!-- FORCE_V5_EXACT_FILENAME_STATS_LOADED -->
 <!-- SMARTVEL_HOMEPAGE_REBALANCED_MARKER -->
 <!-- SMARTVEL_HOMEPAGE_VIDEO_MARKER -->
@@ -1348,10 +1353,10 @@ section > .wrap {
 <div class="home-video-stage">
   <div class="home-video-frame">
     <video autoplay muted loop playsinline controls preload="metadata">
-      <source src="smartvel_homepage_video.mp4?v=43" type="video/mp4">
+      <source src="smartvel_homepage_video.mp4?v=44" type="video/mp4">
     </video>
   </div>
-  <a class="home-video-open" href="smartvel_homepage_video.mp4?v=43" target="_blank" rel="noopener noreferrer">Open full video</a>
+  <a class="home-video-open" href="smartvel_homepage_video.mp4?v=44" target="_blank" rel="noopener noreferrer">Open full video</a>
 </div>
 
 <div class="promise">

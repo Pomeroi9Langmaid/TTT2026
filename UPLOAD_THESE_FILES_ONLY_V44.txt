@@ -1,0 +1,29 @@
+TTT2026 v44 Smartvel homepage controlled visual enhancement
+
+This corrects v43.
+
+Directly patches smartvel.html.
+Keeps the original homepage structure and hero video.
+
+Fixes:
+- Removes noisy v43 image overlays.
+- Keeps original mission/stats section.
+- Keeps original AI intelligence section clean.
+- Keeps original journey section.
+- Keeps original bottom strip.
+- Adds controlled image headers ONLY to the journey cards and bottom value cards.
+- Does not inject imagery into small promise/stat/AI cards where it becomes cluttered.
+- Updates index.html Smartvel iframe to v=44.
+
+Deep scan:
+- v44 marker present: True
+- mission section present: True
+- ai section present: True
+- journey section present: True
+- bottom strip present: True
+- hero video still present: True
+- old/bad v43/v42 terms still found: []
+- missing image/video refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.
