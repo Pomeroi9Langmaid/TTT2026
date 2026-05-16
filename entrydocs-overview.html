@@ -69,68 +69,6 @@
 </style>
 
 
-<style id="entrydocs-detail-v23-cleanup">
-/* V23 EntryDocs detailed overview cleanup */
-.hero-video-wrap{
-  min-height:0!important;
-  display:flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-}
-.real-hero-video{
-  width:100%!important;
-  max-width:860px!important;
-  height:auto!important;
-  display:block!important;
-  border-radius:28px!important;
-  object-fit:contain!important;
-  box-shadow:0 30px 70px rgba(7,35,60,.16)!important;
-  background:#fff!important;
-}
-
-/* remove any accidental orphan mail button/text in the hero visual */
-.hero-visual a[href^="mailto:"],
-.hero-image-wrap a[href^="mailto:"]{
-  display:none!important;
-}
-
-/* Neater How it works / coverage section: no dead white area on the right */
-.how-cover{
-  display:grid!important;
-  grid-template-columns:1fr 1fr!important;
-  gap:24px!important;
-  align-items:start!important;
-}
-.real-flow-image-wrap{
-  max-height:430px!important;
-  overflow:hidden!important;
-  border-radius:20px!important;
-  box-shadow:0 18px 44px rgba(7,35,60,.10)!important;
-}
-.real-flow-image{
-  width:100%!important;
-  height:430px!important;
-  object-fit:cover!important;
-  object-position:center center!important;
-}
-.cover-grid{
-  display:grid!important;
-  grid-template-columns:1fr 1fr!important;
-  gap:14px!important;
-}
-.cover{
-  min-height:96px!important;
-  padding:18px!important;
-  border-radius:18px!important;
-  background:linear-gradient(180deg,#f7fbfe,#eef5fa)!important;
-  box-shadow:0 10px 24px rgba(7,35,60,.055)!important;
-}
-@media(max-width:980px){
-  .how-cover{grid-template-columns:1fr!important}
-  .real-flow-image{height:auto!important;object-fit:contain!important}
-}
-</style>
-
 <style id="global-full-width-v24">
 
 /* V24 GLOBAL FULL-WIDTH ENFORCEMENT
@@ -194,37 +132,36 @@ section > .wrap {
 
 </style>
 
-<style id="entrydocs-detail-v62-approved-cards">
-/* V62 EntryDocs detailed overview: approved value-card visual treatment */
-.entrydocs-detail-approved-cards-v62{
-  margin-top:26px!important;
-  margin-bottom:36px!important;
+
+<style id="entrydocs-detail-v64-new-how-covers">
+/* V64: replace old How it works / What EntryDocs covers with approved new visual section. */
+.entrydocs-detail-new-how-covers-v64{
+  margin-top:28px!important;
+  margin-bottom:38px!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
 }
-.entrydocs-detail-approved-cards-v62 .approved-cards-inner-v62{
+.entrydocs-detail-new-visual-v64{
   width:100%!important;
   overflow:hidden!important;
   border-radius:26px!important;
-  box-shadow:0 24px 60px rgba(7,35,60,.13)!important;
   background:#061f36!important;
-  border:1px solid rgba(7,35,60,.08)!important;
+  box-shadow:0 24px 64px rgba(7,35,60,.14)!important;
 }
-.entrydocs-detail-approved-cards-v62 img{
+.entrydocs-detail-new-visual-v64 img{
   display:block!important;
   width:100%!important;
   height:auto!important;
   object-fit:contain!important;
 }
-@media(max-width:980px){
-  .entrydocs-detail-approved-cards-v62{
-    margin-top:20px!important;
-  }
-}
 </style>
 
 </head>
 <body>
-<!-- ENTRYDOCS_DETAIL_HTML_V63_DUPLICATE_FIXED -->
-<!-- ENTRYDOCS_DETAIL_HTML_V62_APPROVED_CARDS -->
+<!-- ENTRYDOCS_DETAIL_HTML_V64_NEW_HOW_COVERS -->
+<!-- ENTRYDOCS_DETAIL_HTML_V64_NEW_HOW_COVERS -->
 <header class="topbar">
   <div class="wrap">
     <div class="brand">
@@ -250,20 +187,20 @@ section > .wrap {
     </div>
     <div class="hero-visual hero-image-wrap hero-video-wrap" aria-label="EntryDocs product video">
       <video class="real-hero-video" autoplay muted loop playsinline preload="metadata" aria-label="EntryDocs hero video">
-        <source src="entrydocs_detail_hero.mp4?v=62" type="video/mp4">
+        <source src="entrydocs_detail_hero.mp4?v=64" type="video/mp4">
       </video>
     </div></div>
   </div>
 </section>
 <main class="main"><div class="wrap">
 <section class="block"><div class="two-col"><div class="icon-head"><div class="round-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.2a2.5 2.5 0 0 1 4.8 1.1c0 2.4-2.4 2.2-2.4 4.3"/><path d="M12 18h.01"/></svg></div><div><h2>Why it matters</h2><p>Travel requirements are one of the most confusing parts of international travel. Unclear or incomplete information leads to anxiety, support queries, missed bookings and lost trust.</p></div></div><div class="icon-head"><div class="round-icon"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.4 7.9-8 9-4.6-1.1-8-4-8-9V6l8-3Z"/><path d="m8.5 12 2.4 2.4 4.8-5"/></svg></div><div><h2>What EntryDocs does</h2><p>EntryDocs provides structured, rule-based travel requirements data that is continuously monitored, human-validated and personalised for every traveller and itinerary.</p></div></div></div><div class="variables"><div class="variable"><div class="vicon"><svg viewBox="0 0 24 24"><path d="M3 11.5 21 4l-7.5 17-3-7-7.5-2.5Z"/><path d="M21 4 10.5 14"/></svg></div><b>Origin & destination</b><span>Every country, plus transit and connection stops</span></div><div class="variable"><div class="vicon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg></div><b>Nationality</b><span>Requirements vary by passport across 195+ nationalities</span></div><div class="variable"><div class="vicon"><svg viewBox="0 0 24 24"><path d="M4 11.5 12 5l8 6.5"/><path d="M6.5 10.5V20h11v-9.5"/><path d="M10 20v-5h4v5"/></svg></div><b>Country of residence</b><span>Affects visa eligibility and entry conditions</span></div><div class="variable"><div class="vicon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 21c1.5-4.3 13.5-4.3 15 0"/></svg></div><b>Age</b><span>Different rules for children, minors and adults</span></div><div class="variable"><div class="vicon"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M9 7V5h6v2M4 12h16"/></svg></div><b>Purpose of travel</b><span>Tourism, business or other purposes</span></div></div></section>
-<section class="block"><div class="how-cover"><div>
-          <h2 class="section-title">How it works</h2>
-          <div class="real-flow-image-wrap">
-            <img class="real-flow-image" src="entrydocs_how_it_works_ultra_realistic.png" alt="Three-step EntryDocs process: trip details, processing variables and tailored requirements">
-          </div>
-        </div>
-        <div><h2 class="section-title">What EntryDocs covers</h2><div class="cover-grid"><div class="cover"><i><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h5M8 16h8"/><circle cx="17" cy="16" r="1"/></svg></i> Visa information</div><div class="cover"><i><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M9 12h6M12 9c1.1 1.4 1.1 4.6 0 6M12 9c-1.1 1.4-1.1 4.6 0 6"/></svg></i> Passport and travel documentation</div><div class="cover"><i><svg viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/><circle cx="12" cy="12" r="8"/></svg></i> Health and vaccination requirements</div><div class="cover"><i><svg viewBox="0 0 24 24"><path d="M13 4c3.5.8 6.2 3.5 7 7l-6.5 6.5-7-7L13 4Z"/><path d="M7 14l-3 1 5 5 1-3"/><circle cx="14.5" cy="9.5" r="1.5"/></svg></i> Transit conditions</div><div class="cover"><i><svg viewBox="0 0 24 24"><path d="M8 8 4 12l4 4M16 8l4 4-4 4M14 5l-4 14"/></svg></i> Electronic visa application links</div><div class="cover"><i><svg viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.4 7.9-8 9-4.6-1.1-8-4-8-9V6l8-3Z"/><path d="M12 8v8M8 12h8"/></svg></i> Insurance requirements</div></div></div></div></section>
+
+<section class="block entrydocs-detail-new-how-covers-v64">
+  <div class="entrydocs-detail-new-visual-v64">
+    <img src="entrydocs_detail_v64_new_how_covers_visual.jpg?v=64" alt="New EntryDocs detailed overview visuals showing guidance, traveller logic, managed updates and low internal workload">
+  </div>
+</section>
+
 
 <section class="block"><h2 class="section-title">How we keep requirements accurate</h2><div class="accuracy"><div><h3>Trusted sources</h3><div class="check-list"><div class="check"><span><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="m8 12 3 3 5-6"/></svg></span>Official government and embassy websites</div><div class="check"><span><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="m8 12 3 3 5-6"/></svg></span>Border and immigration authorities</div><div class="check"><span><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="m8 12 3 3 5-6"/></svg></span>International health organisations</div><div class="check"><span><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="m8 12 3 3 5-6"/></svg></span>Official visa platforms</div></div></div><div><h3>Our process</h3><div class="check-list"><div class="check"><span><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="m8 12 3 3 5-6"/></svg></span>Automated monitoring of regulatory changes</div><div class="check"><span><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="m8 12 3 3 5-6"/></svg></span>Human validation by travel experts</div><div class="check"><span><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="m8 12 3 3 5-6"/></svg></span>Travel Requirements Content Team</div><div class="check"><span><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="m8 12 3 3 5-6"/></svg></span>Clear, traveller-friendly wording</div></div></div><div class="kpi-grid"><div class="kpi"><i><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg></i><b>190+</b><span>countries covered</span></div><div class="kpi"><i><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 21c1.5-4.3 13.5-4.3 15 0"/></svg></i><b>100%</b><span>human validated</span></div><div class="kpi"><i><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg></i><b>24/7</b><span>monitoring</span></div><div class="kpi"><i><svg viewBox="0 0 24 24"><path d="M3 11.5 21 4l-7.5 17-3-7-7.5-2.5Z"/><path d="M21 4 10.5 14"/></svg></i><b>25+</b><span>languages</span></div></div></div></section>
 <section class="block"><h2 class="section-title">Where EntryDocs fits in the customer journey</h2><div class="journey-grid"><div class="journey"><i><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg></i><b>Before booking</b><span>Reduce friction and uncertainty</span></div><div class="journey"><i><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="m8 12 3 3 5-6"/></svg></i><b>Post-booking</b><span>Reassure travellers and reduce support queries</span></div><div class="journey"><i><svg viewBox="0 0 24 24"><path d="M3 11.5 21 4l-7.5 17-3-7-7.5-2.5Z"/><path d="M21 4 10.5 14"/></svg></i><b>Pre-travel</b><span>Improve readiness and reduce last-minute issues</span></div><div class="journey"><i><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg></i><b>At scale</b><span>Keep information consistent across channels</span></div></div><div class="channel-row"><div class="channel"><i><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M9 21h6M12 17v4"/></svg></i>Website & booking flow</div><div class="channel"><i><svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg></i>Mobile app</div><div class="channel"><i><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="M8 9h8M8 13h6"/></svg></i>Chatbot / API</div><div class="channel"><i><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></i>Confirmation email</div><div class="channel"><i><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></i>Pre-departure email</div><div class="channel"><i><svg viewBox="0 0 24 24"><path d="M5 14v-2a7 7 0 0 1 14 0v2"/><path d="M5 14h3v5H5zM16 14h3v5h-3z"/><path d="M16 19c0 1-1.8 2-4 2"/></svg></i>Customer support</div></div></section>

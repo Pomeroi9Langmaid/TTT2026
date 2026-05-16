@@ -1,0 +1,21 @@
+TTT2026 v64 EntryDocs detailed overview replacement
+
+Directly patches entrydocs-overview.html.
+
+Fixes:
+- Removes the OLD How it works / What EntryDocs covers section.
+- Replaces it with the NEW approved visual section.
+- Does not duplicate the section underneath.
+- Keeps the following How we keep requirements accurate section intact.
+- Updates index.html EntryDocs overview reference to v=64.
+
+Deep scan:
+- v64 marker present: True
+- new section present: True
+- new image ref present: True
+- old how-cover block removed: True
+- old how-it-works image removed: True
+- accuracy section kept: True
+- missing image/video refs: []
+
+Upload these files to repo root only.
