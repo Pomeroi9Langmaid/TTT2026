@@ -1,9 +1,19 @@
-Upload these two files over the existing repo root.
+Upload only these files to the GitHub repo root. Do not upload the whole project export.
 
-V10 fixes:
-- Moves parent audio controls into a safe top-bar centre position so they do not cover page titles, Smartvel logo, Interactive Journey, or CTA buttons.
-- Enhances homepage logo carousel: larger logo cards, larger logos, stronger shadow/glow.
+travelable-overview.html
+travelable-detail.html
+travelable-detailed-overview.html
+travelable_details.html
+travelable_detail.html
+travelable-overview-v26.html
+travelable.html
+index.html
+travelable_v32_inspiration.jpg
+travelable_v32_booking.jpg
+travelable_v32_pretrip.jpg
+travelable_v32_intrip.jpg
+travelable_v32_confidence.jpg
+TRAVELABLE_V32_DEEPSCAN_CONTACT_SHEET.jpg
+README_V32_DEEPSCAN.txt
 
-Files included:
-- index.html
-- smartvel.html
+Missing/not included:
