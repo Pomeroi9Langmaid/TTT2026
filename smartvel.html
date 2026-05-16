@@ -1240,67 +1240,119 @@ section > .wrap {
 
 </style>
 
-<style id="smartvel-homepage-v45-journey-only">
-/* V45: keep original homepage structure. Add clean, meaningful imagery ONLY to journey cards. */
+<style id="smartvel-homepage-v46-bottom-half-visuals">
+/* V46: original homepage structure. Visuals are bottom-half only, never over titles/copy. */
+
+/* AI cards: text remains top, professional visual sits bottom. */
+.ai-card{
+  position:relative!important;
+  overflow:hidden!important;
+  min-height:230px!important;
+  padding:22px 20px 126px!important;
+  background:rgba(255,255,255,.08)!important;
+}
+.ai-card:before{
+  content:""!important;
+  position:absolute!important;
+  left:0!important;
+  right:0!important;
+  bottom:0!important;
+  height:108px!important;
+  display:block!important;
+  background-size:cover!important;
+  background-position:center center!important;
+  border-radius:0 0 18px 18px!important;
+  opacity:.96!important;
+  z-index:1!important;
+}
+.ai-card:after{
+  content:""!important;
+  position:absolute!important;
+  left:0!important;
+  right:0!important;
+  bottom:0!important;
+  height:108px!important;
+  background:linear-gradient(180deg,rgba(6,31,54,0),rgba(6,31,54,.22))!important;
+  z-index:2!important;
+  pointer-events:none!important;
+}
+.ai-card:nth-child(1):before{background-image:url("home_v46_ai_monitoring.jpg?v=46")!important}
+.ai-card:nth-child(2):before{background-image:url("home_v46_ai_structured.jpg?v=46")!important}
+.ai-card:nth-child(3):before{background-image:url("home_v46_ai_personalised.jpg?v=46")!important}
+.ai-card:nth-child(4):before{background-image:url("home_v46_ai_scale.jpg?v=46")!important}
+.ai-card:nth-child(5):before{background-image:url("home_v46_ai_human.jpg?v=46")!important}
+.ai-card b,
+.ai-card span{
+  position:relative!important;
+  z-index:4!important;
+}
+
+/* Journey cards: image is bottom half, copy stays top. */
 .journey .steps{
   align-items:stretch!important;
 }
 .journey .step{
   position:relative!important;
   overflow:hidden!important;
-  padding:0 18px 20px!important;
-  min-height:218px!important;
-  display:flex!important;
-  flex-direction:column!important;
-  justify-content:flex-start!important;
+  min-height:265px!important;
+  padding:20px 18px 140px!important;
+  display:block!important;
   box-shadow:0 18px 42px rgba(6,31,54,.16)!important;
 }
 .journey .step:before{
   content:""!important;
+  position:absolute!important;
+  left:0!important;
+  right:0!important;
+  bottom:0!important;
+  height:128px!important;
   display:block!important;
-  height:94px!important;
-  margin:0 -18px 16px!important;
   background-size:cover!important;
   background-position:center center!important;
-  border-radius:18px 18px 0 0!important;
-  filter:saturate(1.03) contrast(1.03)!important;
+  border-radius:0 0 18px 18px!important;
+  opacity:.98!important;
+  z-index:1!important;
 }
-.journey .step:nth-child(1):before{background-image:url("home_v45_journey_inspire.jpg?v=45")!important}
-.journey .step:nth-child(2):before{background-image:url("home_v45_journey_plan.jpg?v=45")!important}
-.journey .step:nth-child(3):before{background-image:url("home_v45_journey_convert.jpg?v=45")!important}
-.journey .step:nth-child(4):before{background-image:url("home_v45_journey_prepare.jpg?v=45")!important}
-.journey .step:nth-child(5):before{background-image:url("home_v45_journey_experience.jpg?v=45")!important}
-.journey .step i{
+.journey .step:after{
+  content:""!important;
   position:absolute!important;
-  top:108px!important;
-  left:18px!important;
+  left:0!important;
+  right:0!important;
+  bottom:0!important;
+  height:128px!important;
+  background:linear-gradient(180deg,rgba(6,31,54,0),rgba(6,31,54,.22))!important;
   z-index:2!important;
+  pointer-events:none!important;
+}
+.journey .step:nth-child(1):before{background-image:url("home_v46_journey_inspire.jpg?v=46")!important}
+.journey .step:nth-child(2):before{background-image:url("home_v46_journey_plan.jpg?v=46")!important}
+.journey .step:nth-child(3):before{background-image:url("home_v46_journey_convert.jpg?v=46")!important}
+.journey .step:nth-child(4):before{background-image:url("home_v46_journey_prepare.jpg?v=46")!important}
+.journey .step:nth-child(5):before{background-image:url("home_v46_journey_experience.jpg?v=46")!important}
+
+.journey .step i,
+.journey .step b,
+.journey .step span{
+  position:relative!important;
+  z-index:4!important;
 }
 .journey .step b{
-  margin-top:8px!important;
   display:block!important;
-  position:relative!important;
-  z-index:2!important;
-  color:#fff!important;
+  margin-bottom:8px!important;
 }
 .journey .step span{
   display:block!important;
-  position:relative!important;
-  z-index:2!important;
   line-height:1.38!important;
-  color:rgba(255,255,255,.82)!important;
 }
 
-/* Explicitly prevent accidental imagery on dense text cards. */
+/* Prevent any accidental image injection on other dense cards */
 .promise-card:before,
-.ai-card:before,
 .value-card:before,
 .stat:before{
   content:none!important;
   display:none!important;
 }
 .promise-card,
-.ai-card,
 .value-card,
 .stat{
   background-clip:padding-box!important;
@@ -1309,7 +1361,7 @@ section > .wrap {
 
 </head>
 <body>
-<!-- SMARTVEL_HTML_V45_JOURNEY_ONLY -->
+<!-- SMARTVEL_HTML_V46_BOTTOM_HALF_VISUALS -->
 <!-- FORCE_V5_EXACT_FILENAME_STATS_LOADED -->
 <!-- SMARTVEL_HOMEPAGE_REBALANCED_MARKER -->
 <!-- SMARTVEL_HOMEPAGE_VIDEO_MARKER -->
@@ -1327,10 +1379,10 @@ section > .wrap {
 <div class="home-video-stage">
   <div class="home-video-frame">
     <video autoplay muted loop playsinline controls preload="metadata">
-      <source src="smartvel_homepage_video.mp4?v=45" type="video/mp4">
+      <source src="smartvel_homepage_video.mp4?v=46" type="video/mp4">
     </video>
   </div>
-  <a class="home-video-open" href="smartvel_homepage_video.mp4?v=45" target="_blank" rel="noopener noreferrer">Open full video</a>
+  <a class="home-video-open" href="smartvel_homepage_video.mp4?v=46" target="_blank" rel="noopener noreferrer">Open full video</a>
 </div>
 
 <div class="promise">

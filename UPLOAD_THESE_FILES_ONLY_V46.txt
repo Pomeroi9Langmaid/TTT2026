@@ -1,0 +1,24 @@
+TTT2026 v46 Smartvel homepage bottom-half visuals
+
+Directly patches smartvel.html.
+Keeps original homepage structure and hero video.
+
+Fixes:
+- Removes old v43/v44/v45 bad visual injections.
+- Journey cards now keep text at the top and place visuals in the bottom half only.
+- AI cards now receive relevant bottom-half visuals matching each title:
+  AI monitoring / Structured intelligence / Personalised passenger experience / AI-enriched content at scale / Human validation.
+- Promise cards, stats cards and bottom value cards remain clean.
+- No image/text overlap by design.
+
+Deep scan:
+- v46 marker present: True
+- mission section present: True
+- ai section present: True
+- journey section present: True
+- hero video still present: True
+- old bad terms still found: []
+- missing image/video refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.
