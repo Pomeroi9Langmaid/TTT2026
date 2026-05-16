@@ -370,74 +370,107 @@ section > .wrap {
 
 
 
-<style id="entrydocs-v58-entry-card-rhythm">
-/* V58 EntryDocs: TravelAble-style card rhythm, taller cards, readable overlays, proper spacing. */
-.entrydocs-value-showcase-v57,
-.entrydocs-value-showcase-v58{
+
+<style id="entrydocs-v59-redesigned-value-cards">
+/* V59 EntryDocs: fully rebuilt card section. Image-only top + HTML copy below. */
+.entrydocs-value-cards-v59{
   width:100%!important;
-  margin:44px 0 42px!important;
-  padding:0 8px!important;
-  box-sizing:border-box!important;
+  margin:42px 0 44px!important;
+  padding:0!important;
 }
-.entrydocs-value-card-row{
+.entrydocs-value-heading{
+  max-width:980px!important;
+  margin:0 0 22px!important;
+}
+.entrydocs-value-heading h2{
+  margin:0 0 8px!important;
+  font-size:32px!important;
+  line-height:1.05!important;
+  letter-spacing:-.04em!important;
+  color:#0b3d66!important;
+}
+.entrydocs-value-heading p{
+  margin:0!important;
+  max-width:820px!important;
+  color:#53687d!important;
+  font-size:15px!important;
+  line-height:1.5!important;
+}
+.entrydocs-card-grid-v59{
   display:grid!important;
   grid-template-columns:repeat(4,minmax(0,1fr))!important;
   gap:20px!important;
   align-items:stretch!important;
 }
-.entrydocs-cinematic-card{
-  position:relative!important;
-  height:330px!important;
+.entrydocs-info-card{
+  background:#fff!important;
+  border:1px solid #dceaf3!important;
   border-radius:24px!important;
   overflow:hidden!important;
-  background:#061f36!important;
-  box-shadow:0 20px 48px rgba(6,31,54,.16)!important;
-  border:1px solid rgba(255,255,255,.12)!important;
+  box-shadow:0 18px 44px rgba(6,31,54,.10)!important;
+  min-height:338px!important;
+  display:flex!important;
+  flex-direction:column!important;
 }
-.entrydocs-cinematic-card img{
+.entrydocs-card-image{
+  height:168px!important;
+  width:100%!important;
+  overflow:hidden!important;
+  background:#eef6fb!important;
+}
+.entrydocs-card-image img{
   width:100%!important;
   height:100%!important;
   object-fit:cover!important;
+  object-position:center center!important;
   display:block!important;
-  filter:saturate(1.03) contrast(1.02)!important;
+  filter:saturate(1.02) contrast(1.02)!important;
 }
-/* Per-card crop tuning */
-.entrydocs-cinematic-card:nth-child(1) img{object-position:center center!important;}
-.entrydocs-cinematic-card:nth-child(2) img{object-position:center center!important;}
-.entrydocs-cinematic-card:nth-child(3) img{object-position:center center!important;}
-.entrydocs-cinematic-card:nth-child(4) img{object-position:center center!important;}
-
-/* If the source image already has text, do not add extra overlays; just make crop usable. */
-.entrydocs-cinematic-card::after{
-  content:""!important;
-  position:absolute!important;
-  left:0!important;
-  right:0!important;
-  bottom:0!important;
-  height:42%!important;
-  background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.18))!important;
-  pointer-events:none!important;
+.entrydocs-info-card:nth-child(1) .entrydocs-card-image img{object-position:center center!important;}
+.entrydocs-info-card:nth-child(2) .entrydocs-card-image img{object-position:center center!important;}
+.entrydocs-info-card:nth-child(3) .entrydocs-card-image img{object-position:center center!important;}
+.entrydocs-info-card:nth-child(4) .entrydocs-card-image img{object-position:center center!important;}
+.entrydocs-card-copy{
+  padding:20px 22px 24px!important;
+  flex:1!important;
 }
-
-/* Prevent the following section from crowding the cards */
-.entrydocs-value-showcase-v57 + section,
-.entrydocs-value-showcase-v58 + section{
-  margin-top:34px!important;
+.entrydocs-card-copy .accent-line{
+  display:block!important;
+  width:44px!important;
+  height:4px!important;
+  border-radius:999px!important;
+  margin:0 0 16px!important;
+  background:#1e8fff!important;
 }
-
+.entrydocs-card-copy .accent-line.teal{background:#00a698!important;}
+.entrydocs-card-copy .accent-line.yellow{background:#ffb000!important;}
+.entrydocs-card-copy .accent-line.coral{background:#ff6262!important;}
+.entrydocs-card-copy h3{
+  margin:0 0 10px!important;
+  color:#0b3d66!important;
+  font-size:20px!important;
+  line-height:1.12!important;
+  letter-spacing:-.025em!important;
+}
+.entrydocs-card-copy p{
+  margin:0!important;
+  color:#53687d!important;
+  font-size:14px!important;
+  line-height:1.45!important;
+}
+.entrydocs-value-cards-v59 + section{
+  margin-top:36px!important;
+}
 @media(max-width:1200px){
-  .entrydocs-value-card-row{
+  .entrydocs-card-grid-v59{
     grid-template-columns:repeat(2,minmax(0,1fr))!important;
-  }
-  .entrydocs-cinematic-card{
-    height:310px!important;
   }
 }
 </style>
 
 </head>
 <body>
-<!-- ENTRYDOCS_HTML_V58_CARD_RHYTHM -->
+<!-- ENTRYDOCS_HTML_V59_REDESIGNED_VALUE_CARDS -->
 
 <!-- ENTRYDOCS_AUDIO_INTRO_V10 -->
 <audio id="edIntroAudio" src="ED.mp3" preload="auto" playsinline></audio>
@@ -501,12 +534,44 @@ section > .wrap {
 </section>
 
 
-<section class="entrydocs-value-showcase entrydocs-value-showcase-v58">
-  <div class="entrydocs-value-card-row">
-    <div class="entrydocs-cinematic-card"><img src="entrydocs_v57_card_guidance.jpg?v=58" alt="Reliable pre-trip guidance"></div>
-    <div class="entrydocs-cinematic-card"><img src="entrydocs_v57_card_logic.jpg?v=58" alt="Route and traveller logic"></div>
-    <div class="entrydocs-cinematic-card"><img src="entrydocs_v57_card_updates.jpg?v=58" alt="Smartvel-managed updates"></div>
-    <div class="entrydocs-cinematic-card"><img src="entrydocs_v57_card_workload.jpg?v=58" alt="Low internal workload"></div>
+<section class="entrydocs-value-cards-v59">
+  <div class="entrydocs-value-heading">
+    <h2>Entry requirements, handled clearly before travel.</h2>
+    <p>EntryDocs turns complex travel-document, route and passenger rules into clear, maintained guidance for travellers and internal teams.</p>
+  </div>
+  <div class="entrydocs-card-grid-v59">
+    <article class="entrydocs-info-card">
+      <div class="entrydocs-card-image"><img src="entrydocs_v59_visual_guidance.jpg?v=59" alt="Passport, map and pre-trip checklist"></div>
+      <div class="entrydocs-card-copy">
+        <span class="accent-line"></span>
+        <h3>Reliable pre-trip guidance</h3>
+        <p>Visa, passport, health, ticket and destination-document requirements before travel.</p>
+      </div>
+    </article>
+    <article class="entrydocs-info-card">
+      <div class="entrydocs-card-image"><img src="entrydocs_v59_visual_logic.jpg?v=59" alt="EntryDocs route and traveller requirement logic"></div>
+      <div class="entrydocs-card-copy">
+        <span class="accent-line teal"></span>
+        <h3>Route and traveller logic</h3>
+        <p>Information adapts by origin, destination, nationality, residency, age, transit and trip type.</p>
+      </div>
+    </article>
+    <article class="entrydocs-info-card">
+      <div class="entrydocs-card-image"><img src="entrydocs_v59_visual_updates.jpg?v=59" alt="EntryDocs operational alerts and requirement updates on mobile"></div>
+      <div class="entrydocs-card-copy">
+        <span class="accent-line yellow"></span>
+        <h3>Smartvel-managed updates</h3>
+        <p>Official-source monitoring, operational alerts and validated requirement updates.</p>
+      </div>
+    </article>
+    <article class="entrydocs-info-card">
+      <div class="entrydocs-card-image"><img src="entrydocs_v59_visual_workload.jpg?v=59" alt="EntryDocs API and widget deployment diagram"></div>
+      <div class="entrydocs-card-copy">
+        <span class="accent-line coral"></span>
+        <h3>Low internal workload</h3>
+        <p>Deploy via widget or API across web, mobile, booking, CRM, chatbot or customer support journeys.</p>
+      </div>
+    </article>
   </div>
 </section>
 

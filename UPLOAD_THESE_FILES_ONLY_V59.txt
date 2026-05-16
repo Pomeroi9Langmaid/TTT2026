@@ -1,0 +1,27 @@
+TTT2026 v59 EntryDocs redesigned value cards
+
+Directly patches entrydocs.html.
+
+Fixes:
+- Completely rebuilds the EntryDocs value card section.
+- Uses image-only crops from the approved EntryDocs artwork.
+- Text is now real HTML below each image, not baked into/cropped inside the image.
+- Four clean cards:
+  Reliable pre-trip guidance / Route and traveller logic / Smartvel-managed updates / Low internal workload.
+- Removes old oversized strip and previous cramped card attempts.
+- Keeps hero and following EntryDocs sections intact.
+- Updates index.html EntryDocs iframe to v=59.
+
+Deep scan:
+- v59 marker present: True
+- redesigned section present: True
+- card count: 4
+- image count in card section: 4
+- all v59 image refs present: True
+- old bad sections/refs found: []
+- hero visual still present: True
+- following section still present: True
+- missing image/video refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.
