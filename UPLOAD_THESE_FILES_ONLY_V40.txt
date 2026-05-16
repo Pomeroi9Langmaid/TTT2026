@@ -1,0 +1,18 @@
+TTT2026 v40 TravelAble card cleanup
+
+Directly patches travelable.html.
+
+Fixes:
+- Removes top "Explore how it works" button.
+- Keeps bottom "Explore TravelAble in more detail" CTA.
+- Removes duplicate overlay tags from the four journey cards.
+- Adds card spacing/height cleanup so images and text are not cramped/skewed.
+
+Deep scan:
+- v40 marker present: True
+- top button removed: True
+- bottom detail CTA present: True
+- duplicate overlay tag labels removed: True
+- missing files while building patch: []
+
+Upload these files to repo root only.

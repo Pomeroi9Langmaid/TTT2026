@@ -165,9 +165,58 @@ h1 strong{color:var(--blue)}
   .micro-actions{justify-content:flex-start}
 }
 </style>
+
+<style id="travelable-v40-card-cleanup">
+/* V40: clean duplicated journey-card labels and fix cramped/skewed card feel */
+.actions .btn.secondary{
+  min-width:210px;
+}
+.journey{
+  align-items:stretch!important;
+}
+.journey-card{
+  display:flex!important;
+  flex-direction:column!important;
+  min-height:360px!important;
+}
+.journey-card img{
+  height:178px!important;
+  object-fit:cover!important;
+  object-position:center center!important;
+  flex:0 0 auto!important;
+}
+.journey-body{
+  position:relative!important;
+  padding:22px 22px 26px!important;
+  min-height:168px!important;
+  display:flex!important;
+  flex-direction:column!important;
+}
+.journey-card h3{
+  margin:0 0 10px!important;
+  font-size:21px!important;
+  line-height:1.16!important;
+}
+.journey-card p{
+  padding-right:28px!important;
+  line-height:1.48!important;
+}
+.journey-card .arrow{
+  right:22px!important;
+  bottom:24px!important;
+  line-height:1!important;
+}
+.tag{
+  display:none!important;
+}
+@media(max-width:1200px){
+  .journey-card{min-height:340px!important}
+}
+</style>
+
 </head>
 <body>
-<!-- TRAVELABLE_HTML_V39_FULL_REBUILD -->
+<!-- TRAVELABLE_HTML_V40_CARD_CLEANUP -->
 <main class="page">
   <header class="header">
     <img src="smartvel_logo.png" alt="Smartvel" class="logo">
@@ -181,13 +230,12 @@ h1 strong{color:var(--blue)}
         <h1>Smarter guidance. More confidence. <strong>Every journey.</strong></h1>
         <p class="lead">TravelAble helps airlines communicate accessibility and PRM information more clearly across the travel journey, so passengers understand what support is available, what they need to prepare, and how the process works before they travel.</p>
         <div class="actions">
-          <a class="btn primary" href="travelable-overview.html?v=39">Explore how it works →</a>
           <a class="btn secondary" href="https://microsites-stage.cst.smartvel.com/smartvel-sales-travelable/?view=results&or=LHR&dt=MAD&tm=round&arl=Iberia&oc=true&tc=electric&oe=false" target="_blank" rel="noopener noreferrer">Open TravelAble microsite ↗</a>
         </div>
       </div>
 
       <div class="hero-visual">
-        <img src="travelable_v39_hero_visual.jpg?v=39" alt="Passenger using accessibility guidance at an airport">
+        <img src="travelable_v39_hero_visual.jpg?v=40" alt="Passenger using accessibility guidance at an airport">
         <aside class="guidance-panel" aria-label="Accessibility guidance examples">
           <b>Accessibility guidance</b>
           <div class="guide-row"><div class="guide-icon">♿</div><div><span>Mobility</span><small>Step-free route guidance</small></div></div>
@@ -212,23 +260,19 @@ h1 strong{color:var(--blue)}
 
   <section class="journey">
     <article class="journey-card">
-      <img src="travelable_v39_card_1.jpg?v=39" alt="Traveller preparing before departure">
-      <div class="tag">Before travel</div>
+      <img src="travelable_v39_card_1.jpg?v=40" alt="Traveller preparing before departure">
       <div class="journey-body"><h3>Plan accessible journeys</h3><p>Check mobility, assistance and facility information before you go.</p><div class="arrow">→</div></div>
     </article>
     <article class="journey-card">
-      <img src="travelable_v39_card_2.jpg?v=39" alt="Airport navigation">
-      <div class="tag">At the airport</div>
+      <img src="travelable_v39_card_2.jpg?v=40" alt="Airport navigation">
       <div class="journey-body"><h3>Navigate with confidence</h3><p>Step-free routes, lifts, quiet spaces and real-time guidance when it matters.</p><div class="arrow">→</div></div>
     </article>
     <article class="journey-card">
-      <img src="travelable_v39_card_3.jpg?v=39" alt="Passenger onboard and in transit">
-      <div class="tag">Onboard & in transit</div>
+      <img src="travelable_v39_card_3.jpg?v=40" alt="Passenger onboard and in transit">
       <div class="journey-body"><h3>Support that continues</h3><p>Accessibility does not stop at the airport. Support every leg of the journey.</p><div class="arrow">→</div></div>
     </article>
     <article class="journey-card">
-      <img src="travelable_v39_card_4.jpg?v=39" alt="Travel support team">
-      <div class="tag">Travel teams</div>
+      <img src="travelable_v39_card_4.jpg?v=40" alt="Travel support team">
       <div class="journey-body"><h3>Tools for travel teams</h3><p>Equip teams with better information and faster, more confident responses.</p><div class="arrow">→</div></div>
     </article>
   </section>
@@ -239,7 +283,7 @@ h1 strong{color:var(--blue)}
       <p>This page gives the quick overview. Use the detailed overview, live environment and supporting material if you want to go deeper or share internally.</p>
     </div>
     <div class="micro-actions">
-      <a class="btn primary" href="travelable-overview.html?v=39">Explore TravelAble in more detail</a>
+      <a class="btn primary" href="travelable-overview.html?v=40">Explore TravelAble in more detail</a>
       <a class="btn secondary" href="https://microsites-stage.cst.smartvel.com/smartvel-sales-travelable/?view=results&or=LHR&dt=MAD&tm=round&arl=Iberia&oc=true&tc=electric&oe=false" target="_blank" rel="noopener noreferrer">Open demo environment</a>
       <a class="btn secondary" href="travelable_playbook.pdf" download>Download playbook</a>
     </div>
