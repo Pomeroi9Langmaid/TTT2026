@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Avuxi Detailed Overview | Smartvel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#061f36;
+  --blue:#125885;
+  --sky:#29AAE0;
+  --teal:#00A698;
+  --orange:#FF9400;
+  --ink:#101820;
+  --muted:#53687d;
+  --line:#dceaf3;
+  --bg:#f5f8fb;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);font-family:Poppins,Arial,sans-serif;color:var(--ink);overflow-x:hidden}
+.page{width:100%;max-width:none;margin:0;padding:34px 48px 48px;background:linear-gradient(135deg,#f7fbfe,#fff 62%,#edf8fb)}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:30px}
+.logo{width:225px;height:auto}
+.logo-fallback{font-size:46px;font-weight:500;letter-spacing:-.05em;color:#006B9B}
+.logo-fallback span{display:block;font-size:17px;color:#29AAE0;font-weight:600;margin-top:-8px;letter-spacing:0}
+.product-label{display:flex;align-items:center;gap:14px;color:#0b5d88;font-size:14px;font-weight:900;letter-spacing:.11em;text-transform:uppercase}
+.product-label span{width:36px;height:4px;border-radius:99px;background:var(--teal)}
+
+.hero{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:stretch}
+.hero-copy{background:#fff;border:1px solid var(--line);border-radius:34px;padding:54px 48px;box-shadow:0 24px 70px rgba(6,31,54,.10)}
+.kicker{color:#0b5d88;font-weight:900;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
+h1{font-size:62px;line-height:1.01;letter-spacing:-.065em;margin:0 0 20px;font-weight:900;color:#0a1722}
+h1 strong{color:var(--teal)}
+.lead{font-size:19px;line-height:1.5;color:#2b3b4d;margin:0 0 24px;max-width:760px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border-radius:999px;padding:12px 18px;font-size:12px;font-weight:900;text-decoration:none}
+.btn.primary{background:#06294a;color:#fff}
+.btn.secondary{background:#eef7fb;color:#0b5d88;border:1px solid #cfe3ee}
+
+.hero-visual{position:relative;overflow:hidden;border-radius:34px;background:linear-gradient(135deg,#061f36,#0b5d88 68%,#00A698);box-shadow:0 28px 80px rgba(6,31,54,.16);padding:28px;min-height:520px}
+.map-panel{height:100%;min-height:464px;border-radius:26px;overflow:hidden;position:relative;background:#061f36;border:1px solid rgba(255,255,255,.18)}
+.map-bg{position:absolute;inset:0;background:
+  radial-gradient(circle at 62% 40%,rgba(255,148,0,.62),transparent 19%),
+  radial-gradient(circle at 43% 58%,rgba(0,166,152,.58),transparent 18%),
+  radial-gradient(circle at 72% 68%,rgba(41,170,224,.52),transparent 16%),
+  linear-gradient(135deg,#071e32,#0e4b69 56%,#103c4e);
+filter:saturate(1.1)}
+.map-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:48px 48px;opacity:.5}
+.score-card{position:absolute;left:28px;bottom:28px;width:330px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-radius:22px;padding:20px;box-shadow:0 20px 50px rgba(0,0,0,.22)}
+.score-card b{display:block;color:#0b3d66;font-size:17px;margin-bottom:8px}
+.score-line{height:10px;border-radius:99px;background:#dceaf3;overflow:hidden;margin:10px 0}
+.score-line span{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#00A698,#FF9400)}
+.score-card p{margin:0;color:#53687d;font-size:12px;line-height:1.45}
+.floating-layer{position:absolute;right:28px;top:28px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.22);color:#fff;border-radius:20px;padding:18px;width:260px;backdrop-filter:blur(10px)}
+.floating-layer h3{margin:0 0 12px;font-size:18px}
+.layer{display:flex;align-items:center;gap:10px;margin:10px 0;color:rgba(255,255,255,.88);font-size:13px}
+.dot{width:12px;height:12px;border-radius:50%;background:var(--orange)}
+.layer:nth-child(3) .dot{background:var(--teal)}
+.layer:nth-child(4) .dot{background:var(--sky)}
+.layer:nth-child(5) .dot{background:#fff}
+
+.block{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:30px;padding:30px;box-shadow:0 18px 50px rgba(6,31,54,.07)}
+.section-head{display:flex;justify-content:space-between;gap:22px;align-items:end;margin-bottom:22px}
+.section-head h2{margin:0;font-size:36px;line-height:1.06;letter-spacing:-.045em;color:#0b3d66}
+.section-head p{margin:0;color:var(--muted);font-size:14px;line-height:1.5;max-width:660px}
+
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.feature{border-radius:24px;overflow:hidden;background:#f8fbfe;border:1px solid var(--line);box-shadow:0 14px 34px rgba(6,31,54,.06)}
+.feature-visual{height:150px;background:linear-gradient(135deg,#061f36,#125885);position:relative;overflow:hidden}
+.feature-visual:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 62% 44%,rgba(255,148,0,.55),transparent 28%),radial-gradient(circle at 35% 60%,rgba(0,166,152,.45),transparent 25%)}
+.feature-visual.grid:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px);background-size:34px 34px}
+.feature-copy{padding:20px}
+.feature-copy h3{margin:0 0 8px;font-size:19px;line-height:1.12;color:#0b3d66;letter-spacing:-.025em}
+.feature-copy p{margin:0;color:var(--muted);font-size:13px;line-height:1.45}
+
+.compare{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:stretch}
+.compare-card{border-radius:24px;padding:24px;background:#f6f9fc;border:1px solid var(--line)}
+.compare-card.good{background:linear-gradient(135deg,#061f36,#0b5d88);color:#fff}
+.compare-card h3{margin:0 0 14px;font-size:22px;color:#0b3d66}
+.compare-card.good h3{color:#fff}
+.compare-card ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px;line-height:1.65}
+.compare-card.good ul{color:rgba(255,255,255,.86)}
+.arrow{display:grid;place-items:center;font-size:36px;font-weight:900;color:#0b5d88}
+
+.benefit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.benefit{border-radius:22px;padding:22px;background:linear-gradient(180deg,#fff,#f7fbfe);border:1px solid var(--line);min-height:140px}
+.benefit i{display:grid;place-items:center;width:42px;height:42px;border-radius:16px;background:#e7fbf7;color:#008a7e;font-style:normal;font-weight:900;margin-bottom:14px}
+.benefit b{display:block;color:#0b3d66;font-size:16px;margin-bottom:7px}
+.benefit span{display:block;color:var(--muted);font-size:13px;line-height:1.45}
+
+.smartvel-panel{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.partner{border-radius:24px;padding:24px;border:1px solid var(--line);background:#f8fbfe}
+.partner.dark{background:linear-gradient(135deg,#061f36,#125885);color:#fff;border:0}
+.partner h3{margin:0 0 12px;font-size:24px;color:#0b3d66}
+.partner.dark h3{color:#fff}
+.partner p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}
+.partner.dark p{color:rgba(255,255,255,.84)}
+.partner ul{margin:16px 0 0;padding-left:18px;color:var(--muted);font-size:13px;line-height:1.65}
+.partner.dark ul{color:rgba(255,255,255,.84)}
+
+.cta{margin-top:28px;border-radius:28px;background:linear-gradient(135deg,#061f36,#0b5d88 74%,#00A698);color:#fff;padding:30px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.cta h2{margin:0 0 8px;font-size:30px;letter-spacing:-.045em}
+.cta p{margin:0;color:rgba(255,255,255,.82);font-size:14px;line-height:1.5;max-width:800px}
+.cta a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border-radius:999px;padding:12px 18px;background:#fff;color:#0b5d88;font-size:12px;font-weight:900;text-decoration:none}
+
+@media(max-width:1150px){
+  .hero,.smartvel-panel,.compare{grid-template-columns:1fr}
+  .feature-grid,.benefit-grid{grid-template-columns:repeat(2,1fr)}
+  .arrow{display:none}
+}
+@media(max-width:760px){
+  .page{padding:24px}
+  .feature-grid,.benefit-grid{grid-template-columns:1fr}
+  h1{font-size:44px}
+  .section-head{display:block}
+}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="header">
+    <div class="logo-fallback">smartvel<span>AI enriched content</span></div>
+    <div class="product-label"><span></span>AVUXI detailed overview</div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="kicker">Location scoring + heatmap intelligence</div>
+      <h1>Turn maps into meaningful <strong>location context.</strong></h1>
+      <p class="lead">AVUXI helps travel brands replace generic maps with richer location intelligence, giving travellers clearer context about where accommodation is located and what surrounds it.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://www.trivago.deals/hotels/spain_08_barcelona/4005796_the-corner-hotel" target="_blank" rel="noopener noreferrer">See Avuxi in action</a>
+        <a class="btn secondary" href="avuxi.html?v=69">Back to overview</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="map-panel">
+        <div class="map-bg"></div>
+        <div class="map-grid"></div>
+        <div class="floating-layer">
+          <h3>Map layers</h3>
+          <div class="layer"><span class="dot"></span>Sightseeing</div>
+          <div class="layer"><span class="dot"></span>Eating</div>
+          <div class="layer"><span class="dot"></span>Shopping</div>
+          <div class="layer"><span class="dot"></span>Nightlife + transport</div>
+        </div>
+        <div class="score-card">
+          <b>Location score</b>
+          <div class="score-line"><span style="width:88%"></span></div>
+          <p>TopPlace™ scores accommodation locations against popular areas and nearby points of interest.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="section-head">
+      <h2>The most relevant information for any single location.</h2>
+      <p>AVUXI’s Location Page is designed for OTA's and metasearch sites that want to help users make faster, more confident accommodation decisions by replacing a basic map with meaningful location content.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature"><div class="feature-visual grid"></div><div class="feature-copy"><h3>Heatmaps</h3><p>Customised map layers showing Sightseeing, Eating, Shopping, Nightlife, POI's and public transport.</p></div></article>
+      <article class="feature"><div class="feature-visual grid"></div><div class="feature-copy"><h3>Location scores</h3><p>Ratings for hotels and apartments in relation to popular areas and nearby top-rated POIs.</p></div></article>
+      <article class="feature"><div class="feature-visual grid"></div><div class="feature-copy"><h3>Map layers</h3><p>Contextual layers turn a generic map into a clearer decision-support experience.</p></div></article>
+      <article class="feature"><div class="feature-visual grid"></div><div class="feature-copy"><h3>Transport + POIs</h3><p>Nearby transport and points of interest help travellers understand practical location value.</p></div></article>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="section-head">
+      <h2>Move from a generic map to decision-ready location intelligence.</h2>
+      <p>AVUXI adds context to the accommodation selection moment, helping travellers understand whether a hotel or apartment fits their needs before they book.</p>
+    </div>
+    <div class="compare">
+      <div class="compare-card">
+        <h3>Default map</h3>
+        <ul>
+          <li>Basic pins and surrounding streets</li>
+          <li>Limited context for unfamiliar cities</li>
+          <li>Harder to compare neighbourhoods</li>
+          <li>More uncertainty during accommodation selection</li>
+        </ul>
+      </div>
+      <div class="arrow">→</div>
+      <div class="compare-card good">
+        <h3>AVUXI Location Page</h3>
+        <ul>
+          <li>Popularity and relevance scores</li>
+          <li>Heatmaps for activities and neighbourhood value</li>
+          <li>Top-rated POIs and transport context</li>
+          <li>Faster, more confident traveller decisions</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="section-head">
+      <h2>Business value for accommodation and travel platforms.</h2>
+      <p>AVUXI is built to add value to the customer decision-making process while improving the standard map experience.</p>
+    </div>
+    <div class="benefit-grid">
+      <div class="benefit"><i>↗</i><b>Conversion rates</b><span>Help users understand location value and move more confidently toward booking.</span></div>
+      <div class="benefit"><i>€</i><b>Profitability</b><span>Improve self-service decision making and reduce avoidable support/search friction.</span></div>
+      <div class="benefit"><i>★</i><b>Average price</b><span>Support premium accommodation choices by explaining location quality.</span></div>
+      <div class="benefit"><i>♡</i><b>User loyalty</b><span>Create a more helpful digital experience that travellers trust and return to.</span></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="section-head">
+      <h2>AVUXI + Smartvel: innovation serving the traveller experience.</h2>
+      <p>Together, AVUXI location intelligence and Smartvel destination content can create richer, more useful digital travel experiences.</p>
+    </div>
+    <div class="smartvel-panel">
+      <div class="partner">
+        <h3>AVUXI</h3>
+        <p>AVUXI provides enriched maps and contextualised location data, highlighting points of interest and mapping location context for a more immersive, customer-oriented experience.</p>
+        <ul>
+          <li>Worldwide coverage for hotels and apartments</li>
+          <li>Full suite of TopPlace™ products</li>
+          <li>Location scores, map layers, POIs and transport</li>
+          <li>Customisable widgets and templates</li>
+        </ul>
+      </div>
+      <div class="partner dark">
+        <h3>Smartvel</h3>
+        <p>Smartvel adds real-time destination content and AI-supported curation so travel brands can keep users informed and engaged across the journey.</p>
+        <ul>
+          <li>Up-to-date destination insights</li>
+          <li>Events, activities and local highlights</li>
+          <li>Easy integration into existing platforms</li>
+          <li>Enhanced user experience across Smartvel solutions</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div>
+      <h2>Use location context to help travellers decide faster.</h2>
+      <p>AVUXI makes the accommodation map useful, commercial and easier to understand — supporting OTA's, hotels, metasearch, travel agencies, mobility and real estate use cases.</p>
+    </div>
+    <a href="avuxi.html?v=69">Back to Avuxi overview</a>
+  </section>
+</main>
+</body>
+</html>

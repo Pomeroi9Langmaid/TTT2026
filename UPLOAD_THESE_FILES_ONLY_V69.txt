@@ -1,0 +1,35 @@
+TTT2026 v69 approved sections + AVUXI detailed overview
+
+Directly patches:
+- exploreandgo.html
+- tripplanner.html
+- avuxi.html
+- avuxi-overview.html
+- index.html
+
+Fixes:
+- Keeps Explore & Go using the approved uploaded journey section exactly as image replacement.
+- Keeps Trip Planner using the approved uploaded journey section exactly as image replacement.
+- Adds missing AVUXI detailed overview page based on uploaded AVUXI product sheet:
+  Location Page, TopPlace, heatmaps, location scoring, POIs, transport, traveller decision support, business impact, AVUXI + Smartvel positioning.
+- Adds "Explore Avuxi in more detail" CTA on avuxi.html.
+- Updates index.html references:
+  Explore & Go -> exploreandgo.html?v=67
+  Trip Planner -> tripplanner.html?v=68
+  Avuxi -> avuxi.html?v=69
+
+Deep scan:
+- Explore & Go v67 marker present: True
+- Explore & Go approved image ref present: True
+- Trip Planner v68 marker present: True
+- Trip Planner approved image ref present: True
+- AVUXI overview page exists: True
+- AVUXI CTA link present: True
+- AVUXI detail includes core product sheet terms: True
+- index Explore & Go ref updated: True
+- index Trip Planner ref updated: True
+- index Avuxi ref updated: True
+- missing required image refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.
