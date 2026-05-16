@@ -1,0 +1,30 @@
+TTT2026 v45 Smartvel homepage journey-only visual enhancement
+
+This corrects v44.
+
+Directly patches smartvel.html.
+Keeps original homepage structure and hero video.
+
+Fixes:
+- Removes all v43/v44 noisy/random imagery.
+- Keeps promise cards clean.
+- Keeps stats clean.
+- Keeps AI cards clean.
+- Keeps bottom value cards clean.
+- Adds controlled, purpose-built visual headers ONLY to the journey cards:
+  Inspire / Plan / Convert / Prepare / Experience.
+- No image/text overlap.
+- No mismatched imagery in White-label / Widget or API / Managed updates / SEO + GEO.
+
+Deep scan:
+- v45 marker present: True
+- mission section present: True
+- ai section present: True
+- journey section present: True
+- bottom strip present: True
+- hero video still present: True
+- old/bad v43/v44/v42 terms still found: []
+- missing image/video refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.

@@ -1240,21 +1240,16 @@ section > .wrap {
 
 </style>
 
-<style id="smartvel-homepage-v44-controlled-visuals">
-/* V44: keep original homepage structure; add controlled image headers only where layout supports them */
-.step,
-.bottom-strip .value-card{
-  position:relative!important;
-  overflow:hidden!important;
-}
-
-/* Journey cards: clean editorial headers, then normal text below. No text overlays. */
+<style id="smartvel-homepage-v45-journey-only">
+/* V45: keep original homepage structure. Add clean, meaningful imagery ONLY to journey cards. */
 .journey .steps{
   align-items:stretch!important;
 }
 .journey .step{
+  position:relative!important;
+  overflow:hidden!important;
   padding:0 18px 20px!important;
-  min-height:212px!important;
+  min-height:218px!important;
   display:flex!important;
   flex-direction:column!important;
   justify-content:flex-start!important;
@@ -1263,21 +1258,21 @@ section > .wrap {
 .journey .step:before{
   content:""!important;
   display:block!important;
-  height:92px!important;
+  height:94px!important;
   margin:0 -18px 16px!important;
   background-size:cover!important;
   background-position:center center!important;
   border-radius:18px 18px 0 0!important;
-  filter:saturate(1.04) contrast(1.03)!important;
+  filter:saturate(1.03) contrast(1.03)!important;
 }
-.journey .step:nth-child(1):before{background-image:linear-gradient(180deg,rgba(6,31,54,.06),rgba(6,31,54,.28)),url("home_v44_inspire.jpg?v=44")!important}
-.journey .step:nth-child(2):before{background-image:linear-gradient(180deg,rgba(6,31,54,.06),rgba(6,31,54,.28)),url("home_v44_plan.jpg?v=44")!important}
-.journey .step:nth-child(3):before{background-image:linear-gradient(180deg,rgba(6,31,54,.06),rgba(6,31,54,.28)),url("home_v44_convert.jpg?v=44")!important}
-.journey .step:nth-child(4):before{background-image:linear-gradient(180deg,rgba(6,31,54,.06),rgba(6,31,54,.28)),url("home_v44_prepare.jpg?v=44")!important}
-.journey .step:nth-child(5):before{background-image:linear-gradient(180deg,rgba(6,31,54,.06),rgba(6,31,54,.28)),url("home_v44_experience.jpg?v=44")!important}
+.journey .step:nth-child(1):before{background-image:url("home_v45_journey_inspire.jpg?v=45")!important}
+.journey .step:nth-child(2):before{background-image:url("home_v45_journey_plan.jpg?v=45")!important}
+.journey .step:nth-child(3):before{background-image:url("home_v45_journey_convert.jpg?v=45")!important}
+.journey .step:nth-child(4):before{background-image:url("home_v45_journey_prepare.jpg?v=45")!important}
+.journey .step:nth-child(5):before{background-image:url("home_v45_journey_experience.jpg?v=45")!important}
 .journey .step i{
   position:absolute!important;
-  top:104px!important;
+  top:108px!important;
   left:18px!important;
   z-index:2!important;
 }
@@ -1286,48 +1281,27 @@ section > .wrap {
   display:block!important;
   position:relative!important;
   z-index:2!important;
+  color:#fff!important;
 }
 .journey .step span{
   display:block!important;
   position:relative!important;
   z-index:2!important;
   line-height:1.38!important;
+  color:rgba(255,255,255,.82)!important;
 }
 
-/* Bottom cards: subtle image headers, not noisy overlays. */
-.bottom-strip{
-  align-items:stretch!important;
-}
-.bottom-strip .value-card{
-  padding:0 18px 18px!important;
-  min-height:158px!important;
-  box-shadow:0 18px 38px rgba(6,31,54,.08)!important;
-}
-.bottom-strip .value-card:before{
-  content:""!important;
-  display:block!important;
-  height:68px!important;
-  margin:0 -18px 14px!important;
-  background-size:cover!important;
-  background-position:center center!important;
-  border-radius:18px 18px 0 0!important;
-  filter:saturate(1.03) contrast(1.02)!important;
-}
-.bottom-strip .value-card:nth-child(1):before{background-image:linear-gradient(180deg,rgba(255,255,255,.02),rgba(6,31,54,.22)),url("home_v44_whitelabel.jpg?v=44")!important}
-.bottom-strip .value-card:nth-child(2):before{background-image:linear-gradient(180deg,rgba(255,255,255,.02),rgba(6,31,54,.22)),url("home_v44_widget_api.jpg?v=44")!important}
-.bottom-strip .value-card:nth-child(3):before{background-image:linear-gradient(180deg,rgba(255,255,255,.02),rgba(6,31,54,.22)),url("home_v44_managed.jpg?v=44")!important}
-.bottom-strip .value-card:nth-child(4):before{background-image:linear-gradient(180deg,rgba(255,255,255,.02),rgba(6,31,54,.22)),url("home_v44_seo.jpg?v=44")!important}
-
+/* Explicitly prevent accidental imagery on dense text cards. */
 .promise-card:before,
 .ai-card:before,
+.value-card:before,
 .stat:before{
   content:none!important;
   display:none!important;
 }
-
-/* Keep stats/AI sections clean and readable. */
 .promise-card,
 .ai-card,
+.value-card,
 .stat{
   background-clip:padding-box!important;
 }
@@ -1335,7 +1309,7 @@ section > .wrap {
 
 </head>
 <body>
-<!-- SMARTVEL_HTML_V44_CONTROLLED_VISUALS -->
+<!-- SMARTVEL_HTML_V45_JOURNEY_ONLY -->
 <!-- FORCE_V5_EXACT_FILENAME_STATS_LOADED -->
 <!-- SMARTVEL_HOMEPAGE_REBALANCED_MARKER -->
 <!-- SMARTVEL_HOMEPAGE_VIDEO_MARKER -->
@@ -1353,10 +1327,10 @@ section > .wrap {
 <div class="home-video-stage">
   <div class="home-video-frame">
     <video autoplay muted loop playsinline controls preload="metadata">
-      <source src="smartvel_homepage_video.mp4?v=44" type="video/mp4">
+      <source src="smartvel_homepage_video.mp4?v=45" type="video/mp4">
     </video>
   </div>
-  <a class="home-video-open" href="smartvel_homepage_video.mp4?v=44" target="_blank" rel="noopener noreferrer">Open full video</a>
+  <a class="home-video-open" href="smartvel_homepage_video.mp4?v=45" target="_blank" rel="noopener noreferrer">Open full video</a>
 </div>
 
 <div class="promise">
