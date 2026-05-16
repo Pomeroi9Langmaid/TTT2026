@@ -1,0 +1,27 @@
+REPLACE the old accessibility intelligence image reference with:
+
+travelable_v34_accessibility_intelligence.png
+
+Recommended replacement target:
+- Customer-facing accessibility intelligence section
+- Large dashboard/browser illustration block
+
+If your HTML currently references:
+- travelable_v31_access_context.jpg
+OR
+- any older accessibility intelligence image
+
+replace it with:
+travelable_v34_accessibility_intelligence.png
+
+Suggested HTML:
+<img src="travelable_v34_accessibility_intelligence.png?v=34"
+     alt="Customer-facing accessibility intelligence dashboard"
+     class="travelable-feature-visual">
+
+This visual is:
+- cleaner
+- realistic UI-driven
+- consistent with Smartvel branding
+- no broken/cropped imagery
+- suitable for premium presentation
