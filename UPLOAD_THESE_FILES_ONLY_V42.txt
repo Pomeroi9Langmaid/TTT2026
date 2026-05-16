@@ -1,0 +1,21 @@
+TTT2026 v42 Smartvel homepage premium story patch
+
+Directly patches smartvel.html.
+Keeps the homepage hero video untouched.
+
+Fixes:
+- Replaces the heavy stats/numbers/text section below the hero.
+- Adds premium TravelAble-style solution cards.
+- Adds clearer journey-stage storytelling.
+- Keeps logos and existing hero video.
+- Updates index.html Smartvel iframe to v=42.
+
+Deep scan:
+- v42 marker present: True
+- old mission section removed: True
+- hero video still present: True
+- new story present: True
+- missing image/video refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.
