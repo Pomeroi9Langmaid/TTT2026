@@ -1,0 +1,27 @@
+TTT2026 v74 link fixes
+
+Fixes:
+- Trip Planner demo/action buttons now point to:
+  https://sales-itineraries.cst.smartvel.com/?lang=en#modal
+- Explore & Go / Trip Planner Email Andrew links now point to:
+  mailto:alangmaid@smartvel.com
+- index.html iframe refs updated:
+  exploreandgo.html?v=74
+  tripplanner.html?v=74
+
+Files patched:
+['tripplanner.html', 'tripplanner-overview.html', 'exploreandgo.html', 'index.html']
+
+Deep scan:
+{'tripplanner.html': {'changed': True, 'trip_demo_count': 2, 'email_mailto_count': 0, 'plain_email_href_count': 0}, 'tripplanner-overview.html': {'changed': True, 'trip_demo_count': 0, 'email_mailto_count': 1, 'plain_email_href_count': 0}, 'exploreandgo.html': {'changed': False, 'trip_demo_count': 0, 'email_mailto_count': 0, 'plain_email_href_count': 0}, 'index.html': {'changed': True, 'trip_demo_count': 1, 'email_mailto_count': 2, 'plain_email_href_count': 0}}
+
+Trip Planner relevant links found:
+{'tripplanner.html': [('https://sales-itineraries.cst.smartvel.com/?lang=en#modal', 'Open Trip Planner demo'), ('tripplanner-overview.html?v=24', 'Explore Trip Planner in more detail'), ('https://sales-itineraries.cst.smartvel.com/?lang=en#modal', 'Open demo environment'), ('tripplanner_playbook.pdf', 'Download playbook'), ('tripplanner_product_sheet.pdf', 'Download product sheet')], 'tripplanner-overview.html': [('tripplanner.html', 'Trip Planner'), ('tripplanner_playbook.pdf', 'Download playbook'), ('tripplanner_product_sheet.pdf', 'Download product sheet')], 'index.html': []}
+
+Email Andrew links found:
+{'exploreandgo.html': [], 'tripplanner.html': [], 'tripplanner-overview.html': [('https://meetings.hubspot.com/alangmaid', 'Schedule meeting'), ('https://meetings.hubspot.com/alangmaid', 'Schedule meeting'), ('https://meetings.hubspot.com/alangmaid', 'Schedule meeting'), ('mailto:alangmaid@smartvel.com', 'Email Andrew')], 'index.html': [('mailto:alangmaid@smartvel.com', 'Email Andrew'), ('mailto:alangmaid@smartvel.com', 'Andrew Langmaid CEO – ArrivalGuides, part of Smartvel')]}
+
+Missing files while building patch:
+[]
+
+Upload these files to repo root only.
