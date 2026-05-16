@@ -1,0 +1,30 @@
+TTT2026 v49 Smartvel homepage real visuals only
+
+Directly patches smartvel.html.
+
+Fixes:
+- Removes fake generated diagram visuals from AI and journey cards.
+- Keeps AI section clean and text-led.
+- Keeps original homepage structure and hero video.
+- Keeps bottom value cards clean.
+- Adds only real product/solution imagery to the journey cards where it is meaningful:
+  Inspire = TravelSEO / destination content
+  Plan = Trip Planner
+  Convert = clean CTA/partner-link visual, no fake diagram title
+  Prepare = EntryDocs + TravelAble
+  Experience = Avuxi / destination intelligence
+- No pseudo-element image hacks.
+- No text duplicated inside images.
+
+Deep scan:
+- v49 marker present: True
+- fake v43-v48 image refs removed: True
+- mission section present: True
+- ai section present: True
+- journey section present: True
+- bottom strip present: True
+- hero video still present: True
+- missing image/video refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.

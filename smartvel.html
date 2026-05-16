@@ -1240,129 +1240,105 @@ section > .wrap {
 
 </style>
 
-<style id="smartvel-homepage-v48-clean-relevant-visuals">
-/* V47: explicit card structure only. No pseudo-element visual overlays. */
-.explicit-card::before,
-.explicit-card::after,
+<style id="smartvel-homepage-v49-real-visuals-only">
+/* V49: no fake diagram images. Keep AI cards clean. Use real product/solution imagery only where meaningful. */
 .ai-card::before,
 .ai-card::after,
-.step::before,
-.step::after,
+.promise-card::before,
+.promise-card::after,
 .value-card::before,
 .value-card::after,
-.promise-card::before,
-.promise-card::after {
+.stat::before,
+.stat::after,
+.step::before,
+.step::after{
   content:none!important;
   display:none!important;
 }
 
-/* AI section: copy top, visual bottom, fixed separation */
-.ai-cards.explicit-visual-cards{
-  align-items:stretch!important;
-}
-.ai-card.explicit-card{
-  display:flex!important;
-  flex-direction:column!important;
-  justify-content:space-between!important;
-  min-height:250px!important;
-  padding:0!important;
-  overflow:hidden!important;
-  background:rgba(255,255,255,.09)!important;
-  border:1px solid rgba(255,255,255,.16)!important;
-  box-shadow:0 18px 42px rgba(6,31,54,.16)!important;
-}
-.ai-card.explicit-card .card-copy{
-  padding:22px 20px 14px!important;
-  min-height:118px!important;
-  position:relative!important;
-  z-index:3!important;
-}
-.ai-card.explicit-card .card-copy b,
-.ai-card.explicit-card .card-copy span{
-  display:block!important;
-  position:static!important;
-}
-.ai-card.explicit-card .card-copy b{
-  margin:0 0 9px!important;
-}
-.ai-card.explicit-card .card-visual{
-  height:116px!important;
-  min-height:116px!important;
-  width:100%!important;
-  overflow:hidden!important;
-  border-top:1px solid rgba(255,255,255,.12)!important;
-  background:#061f36!important;
-}
-.ai-card.explicit-card .card-visual img{
-  width:100%!important;
-  height:100%!important;
-  object-fit:cover!important;
-  object-position:center center!important;
-  display:block!important;
+.ai-card{
+  min-height:auto!important;
+  padding:20px!important;
 }
 
-/* Journey section: copy top, visual bottom, no overlap */
-.journey .steps.explicit-visual-cards{
+/* Journey cards: text top, visual bottom, no overlap */
+.smartvel-v49-journey-cards{
   align-items:stretch!important;
 }
-.journey .step.explicit-card{
+.smartvel-v49-card{
   display:flex!important;
   flex-direction:column!important;
   justify-content:space-between!important;
-  min-height:265px!important;
+  min-height:280px!important;
   padding:0!important;
   overflow:hidden!important;
   background:rgba(255,255,255,.08)!important;
   border:1px solid rgba(255,255,255,.14)!important;
   box-shadow:0 18px 42px rgba(6,31,54,.16)!important;
 }
-.journey .step.explicit-card .card-copy{
+.smartvel-v49-card .card-copy{
   padding:20px 18px 16px!important;
   min-height:124px!important;
-  position:relative!important;
-  z-index:3!important;
 }
-.journey .step.explicit-card .card-copy i,
-.journey .step.explicit-card .card-copy b,
-.journey .step.explicit-card .card-copy span{
+.smartvel-v49-card .card-copy i,
+.smartvel-v49-card .card-copy b,
+.smartvel-v49-card .card-copy span{
   display:block!important;
   position:static!important;
 }
-.journey .step.explicit-card .card-copy i{
+.smartvel-v49-card .card-copy i{
   margin:0 0 12px!important;
 }
-.journey .step.explicit-card .card-copy b{
+.smartvel-v49-card .card-copy b{
   margin:0 0 8px!important;
 }
-.journey .step.explicit-card .card-copy span{
+.smartvel-v49-card .card-copy span{
   line-height:1.38!important;
 }
-.journey .step.explicit-card .card-visual{
-  height:132px!important;
-  min-height:132px!important;
+.smartvel-v49-card .card-visual{
+  height:140px!important;
+  min-height:140px!important;
   width:100%!important;
   overflow:hidden!important;
   border-top:1px solid rgba(255,255,255,.11)!important;
   background:#061f36!important;
 }
-.journey .step.explicit-card .card-visual img{
+.smartvel-v49-card .card-visual img{
   width:100%!important;
   height:100%!important;
   object-fit:cover!important;
   object-position:center center!important;
   display:block!important;
 }
-
-/* Keep bottom cards clean */
-.bottom-strip .value-card{
-  padding:18px!important;
-  min-height:auto!important;
+.smartvel-v49-card .card-visual.split{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:1px!important;
+}
+.smartvel-v49-card .card-visual.minimal{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  background:
+    radial-gradient(circle at 82% 0%,rgba(41,170,224,.28),transparent 45%),
+    linear-gradient(135deg,#061f36,#125885)!important;
+}
+.smartvel-v49-card .card-visual.minimal span{
+  display:inline-flex!important;
+  padding:12px 18px!important;
+  border-radius:999px!important;
+  background:rgba(255,255,255,.12)!important;
+  border:1px solid rgba(255,255,255,.24)!important;
+  color:#fff!important;
+  font-size:12px!important;
+  font-weight:900!important;
+  letter-spacing:.04em!important;
 }
 </style>
 
 </head>
 <body>
-<!-- SMARTVEL_HTML_V48_CLEAN_RELEVANT_VISUALS -->
+<!-- SMARTVEL_HTML_V49_REAL_VISUALS_ONLY -->
 <!-- FORCE_V5_EXACT_FILENAME_STATS_LOADED -->
 <!-- SMARTVEL_HOMEPAGE_REBALANCED_MARKER -->
 <!-- SMARTVEL_HOMEPAGE_VIDEO_MARKER -->
@@ -1380,10 +1356,10 @@ section > .wrap {
 <div class="home-video-stage">
   <div class="home-video-frame">
     <video autoplay muted loop playsinline controls preload="metadata">
-      <source src="smartvel_homepage_video.mp4?v=48" type="video/mp4">
+      <source src="smartvel_homepage_video.mp4?v=49" type="video/mp4">
     </video>
   </div>
-  <a class="home-video-open" href="smartvel_homepage_video.mp4?v=48" target="_blank" rel="noopener noreferrer">Open full video</a>
+  <a class="home-video-open" href="smartvel_homepage_video.mp4?v=49" target="_blank" rel="noopener noreferrer">Open full video</a>
 </div>
 
 <div class="promise">
@@ -1420,53 +1396,42 @@ section > .wrap {
       </div>
       <p>Smartvel applies AI to make travel information more accurate, scalable, personalised and useful across the passenger journey — while keeping critical requirement and accessibility information grounded in verified sources and expert review.</p>
     </div>
-    <div class="ai-cards explicit-visual-cards">
-      <div class="ai-card explicit-card">
-        <div class="card-copy"><b>AI monitoring</b><span>Detects changes across travel requirements, destination information and content signals.</span></div>
-        <div class="card-visual"><img src="home_v48_ai_monitoring.jpg?v=48" alt="AI monitoring signals"></div>
-      </div>
-      <div class="ai-card explicit-card">
-        <div class="card-copy"><b>Structured intelligence</b><span>Turns fragmented sources into usable content and data for web, app, CRM, chatbot and booking journeys.</span></div>
-        <div class="card-visual"><img src="home_v48_ai_structured.jpg?v=48" alt="Structured intelligence data flow"></div>
-      </div>
-      <div class="ai-card explicit-card">
-        <div class="card-copy"><b>Personalised passenger experience</b><span>Delivers relevant information by route, traveller profile, channel and journey stage.</span></div>
-        <div class="card-visual"><img src="home_v48_ai_personalised.jpg?v=48" alt="Personalised passenger experience"></div>
-      </div>
-      <div class="ai-card explicit-card">
-        <div class="card-copy"><b>AI-enriched content at scale</b><span>Supports scalable destination, event and travel-content experiences across markets and languages.</span></div>
-        <div class="card-visual"><img src="home_v48_ai_scale.jpg?v=48" alt="AI enriched content at scale"></div>
-      </div>
-      <div class="ai-card explicit-card">
-        <div class="card-copy"><b>Human validation</b><span>Keeps high-impact information clear, accurate and safe to use where precision matters.</span></div>
-        <div class="card-visual"><img src="home_v48_ai_human.jpg?v=48" alt="Human validation workflow"></div>
-      </div>
+    <div class="ai-cards">
+      <div class="ai-card"><b>AI monitoring</b><span>Detects changes across travel requirements, destination information and content signals.</span></div>
+      <div class="ai-card"><b>Structured intelligence</b><span>Turns fragmented sources into usable content and data for web, app, CRM, chatbot and booking journeys.</span></div>
+      <div class="ai-card"><b>Personalised passenger experience</b><span>Delivers relevant information by route, traveller profile, channel and journey stage.</span></div>
+      <div class="ai-card"><b>AI-enriched content at scale</b><span>Supports scalable destination, event and travel-content experiences across markets and languages.</span></div>
+      <div class="ai-card"><b>Human validation</b><span>Keeps high-impact information clear, accurate and safe to use where precision matters.</span></div>
     </div>
   </div>
 </section>
 
+
 <section class="journey">
   <div class="journey-title"><h2>One ecosystem, from inspiration to arrival.</h2></div>
-  <div class="steps explicit-visual-cards">
-    <div class="step explicit-card">
+  <div class="steps smartvel-v49-journey-cards">
+    <div class="step smartvel-v49-card">
       <div class="card-copy"><i></i><b>Inspire</b><span>Explore & Go, TravelSEO and destination content create demand.</span></div>
-      <div class="card-visual"><img src="home_v48_journey_inspire.jpg?v=48" alt="Destination inspiration"></div>
+      <div class="card-visual"><img src="travelseo_hero_poster.jpg?v=49" alt="Destination content and discovery page"></div>
     </div>
-    <div class="step explicit-card">
+    <div class="step smartvel-v49-card">
       <div class="card-copy"><i></i><b>Plan</b><span>Trip Planner, POIs, restaurants, events and itineraries keep users engaged.</span></div>
-      <div class="card-visual"><img src="home_v48_journey_plan.jpg?v=48" alt="Trip planning"></div>
+      <div class="card-visual"><img src="tripplanner_thumbnail.jpg?v=49" alt="Trip Planner map and itinerary interface"></div>
     </div>
-    <div class="step explicit-card">
+    <div class="step smartvel-v49-card">
       <div class="card-copy"><i></i><b>Convert</b><span>Promos, CTAs and partner integrations turn intent into action.</span></div>
-      <div class="card-visual"><img src="home_v48_journey_convert.jpg?v=48" alt="Conversion support"></div>
+      <div class="card-visual minimal"><span>Offers · CTAs · Partner links</span></div>
     </div>
-    <div class="step explicit-card">
+    <div class="step smartvel-v49-card">
       <div class="card-copy"><i></i><b>Prepare</b><span>EntryDocs and TravelAble reduce friction before departure.</span></div>
-      <div class="card-visual"><img src="home_v48_journey_prepare.jpg?v=48" alt="Pre-travel clarity"></div>
+      <div class="card-visual split">
+        <img src="entrydocs_hero_cleaned.png?v=49" alt="EntryDocs travel requirements">
+        <img src="travelable_v39_hero_visual.jpg?v=49" alt="TravelAble PRM support">
+      </div>
     </div>
-    <div class="step explicit-card">
+    <div class="step smartvel-v49-card">
       <div class="card-copy"><i></i><b>Experience</b><span>Relevant content supports travellers during and after the trip.</span></div>
-      <div class="card-visual"><img src="home_v48_journey_experience.jpg?v=48" alt="In-destination intelligence"></div>
+      <div class="card-visual"><img src="avuxi_hero_poster.jpg?v=49" alt="Destination intelligence and neighbourhood relevance"></div>
     </div>
   </div>
 </section>
