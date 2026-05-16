@@ -1,0 +1,16 @@
+TTT2026 v34 TravelAble actual HTML patch
+
+This package DOES patch the HTML.
+
+Fix:
+- Replaces the previous generated CSS/product-composite mockup with:
+  travelable_v34_accessibility_intelligence.png?v=34
+
+Deep scan:
+- new image present in travelable-overview.html: True
+- old product-composite class still present: False
+- marker present: True
+- image refs: ['smartvel_logo.png', 'travelable_v31_access_context.jpg', 'travelable_v31_assistance.jpg', 'travelable_v31_hero.jpg', 'travelable_v31_mobile_context.jpg', 'travelable_v34_accessibility_intelligence.png?v=34']
+- missing while building patch: []
+
+Upload these files to the repo root.
