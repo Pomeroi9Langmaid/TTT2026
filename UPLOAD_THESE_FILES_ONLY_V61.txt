@@ -1,0 +1,25 @@
+TTT2026 v61 EntryDocs correct card section
+
+Directly patches entrydocs.html.
+
+Fixes:
+- Uses latest approved generated EntryDocs visual as the source.
+- Rebuilds the four cards using correctly composed card image crops.
+- Keeps image top + real HTML text below.
+- Removes previous broken oversized/skewed card attempts.
+- Keeps hero and following EntryDocs sections intact.
+- Updates index.html EntryDocs iframe to v=61.
+
+Deep scan:
+- v61 marker present: True
+- v61 card section present: True
+- card count: 4
+- image count in section: 4
+- all v61 image refs present: True
+- old broken refs found: []
+- hero visual still present: True
+- following section still present: True
+- missing image/video refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.
