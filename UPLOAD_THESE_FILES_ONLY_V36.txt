@@ -1,0 +1,12 @@
+TTT2026 v36 TravelAble main page ACTUAL HTML patch
+
+This package patches travelable.html directly.
+
+Deep scan:
+- premium section marker present: True
+- travelable.html marker present: True
+- image refs in travelable.html: ['travelable_v35_confidence.jpg?v=36', 'travelable_v35_hero.jpg?v=36', 'travelable_v35_support.jpg?v=36']
+- all referenced v35 images included: True
+- missing while building patch: []
+
+Upload these files to repo root only.
