@@ -1,0 +1,23 @@
+TTT2026 v52 Smartvel homepage cinematic journey cards
+
+Directly patches smartvel.html.
+
+Fixes:
+- Updates "One ecosystem, from inspiration to arrival" with the approved cinematic five-card visual treatment.
+- Uses cropped JPGs from the successful cinematic composite.
+- Keeps the journey card text over the image, bottom-left, with gradient readability.
+- Removes previous cleanup CSS that hid journey images.
+- Keeps the uploaded audience PNGs in the audience cards.
+- Keeps original homepage structure and hero video.
+
+Deep scan:
+- v52 marker present: True
+- journey-v52 present: True
+- journey image count: 5
+- all cinematic refs present: True
+- old/bad visual refs or hiding CSS found: []
+- hero video still present: True
+- missing image/video refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.

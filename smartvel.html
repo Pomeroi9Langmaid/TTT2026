@@ -1240,78 +1240,105 @@ section > .wrap {
 
 </style>
 
-<style id="smartvel-homepage-v50-audience-images-only">
-/* V50: Keep ecosystem cards text-only. Use uploaded PNGs only in audience cards. */
-.journey .step::before,
-.journey .step::after,
-.ai-card::before,
-.ai-card::after,
-.value-card::before,
-.value-card::after,
-.stat::before,
-.stat::after{
+
+<style id="smartvel-homepage-v52-cinematic-journey">
+/* V52: cinematic journey cards using the approved visual direction. */
+.journey-v52{
+  background:#0d0d0e!important;
+  border-radius:28px!important;
+  padding:26px 26px 28px!important;
+  overflow:hidden!important;
+}
+.journey-v52 .journey-title h2{
+  color:#fff!important;
+  margin:0 0 22px!important;
+}
+.cinematic-journey-cards{
+  display:grid!important;
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  gap:0!important;
+  align-items:stretch!important;
+}
+.cinematic-card{
+  position:relative!important;
+  min-height:360px!important;
+  padding:0!important;
+  overflow:hidden!important;
+  border-radius:0!important;
+  border:0!important;
+  background:#111!important;
+  box-shadow:none!important;
+}
+.cinematic-card:first-child{
+  border-radius:18px 0 0 18px!important;
+}
+.cinematic-card:last-child{
+  border-radius:0 18px 18px 0!important;
+}
+.cinematic-card + .cinematic-card{
+  border-left:1px solid rgba(255,255,255,.18)!important;
+}
+.cinematic-card::before,
+.cinematic-card::after{
   content:none!important;
   display:none!important;
 }
-
-.promise-v50{
-  align-items:stretch!important;
-}
-.promise-v50 .audience-card{
-  padding:0!important;
-  overflow:hidden!important;
-  display:flex!important;
-  flex-direction:column!important;
-  min-height:268px!important;
-  background:#fff!important;
-  box-shadow:0 18px 44px rgba(6,31,54,.08)!important;
-  border:1px solid #dceaf3!important;
-}
-.promise-v50 .audience-image{
-  width:100%!important;
-  height:138px!important;
-  overflow:hidden!important;
-  border-bottom:1px solid #dceaf3!important;
-  background:#eef6fb!important;
-}
-.promise-v50 .audience-image img{
+.cinematic-card img{
+  display:block!important;
   width:100%!important;
   height:100%!important;
+  min-height:360px!important;
   object-fit:cover!important;
   object-position:center center!important;
-  display:block!important;
-  filter:saturate(1.03) contrast(1.02)!important;
+  filter:saturate(1.02) contrast(1.02)!important;
 }
-.promise-v50 .audience-copy{
-  padding:20px 22px 22px!important;
+.cinematic-card .cinematic-copy{
+  position:absolute!important;
+  left:28px!important;
+  right:24px!important;
+  bottom:30px!important;
+  z-index:3!important;
+  color:#fff!important;
 }
-.promise-v50 .audience-copy b{
+.cinematic-card .cinematic-copy i{
   display:block!important;
-  color:#0b3d66!important;
+  width:44px!important;
+  height:4px!important;
+  border-radius:999px!important;
+  margin:0 0 18px!important;
+  background:#ff9a1f!important;
+}
+.cinematic-card:nth-child(2) .cinematic-copy i{background:#ffd319!important;}
+.cinematic-card:nth-child(3) .cinematic-copy i{background:#29aae0!important;}
+.cinematic-card:nth-child(4) .cinematic-copy i{background:#00a698!important;}
+.cinematic-card:nth-child(5) .cinematic-copy i{background:#ff6262!important;}
+.cinematic-card .cinematic-copy b{
+  display:block!important;
+  color:#fff!important;
+  font-size:25px!important;
+  line-height:1.08!important;
+  margin:0 0 14px!important;
+  letter-spacing:-.03em!important;
+}
+.cinematic-card .cinematic-copy span{
+  display:block!important;
+  color:rgba(255,255,255,.88)!important;
   font-size:16px!important;
-  margin:0 0 10px!important;
+  line-height:1.32!important;
+  max-width:92%!important;
 }
-.promise-v50 .audience-copy span{
-  display:block!important;
-  color:#53687d!important;
-  font-size:13px!important;
-  line-height:1.45!important;
-}
-
-/* Ensure One ecosystem remains typography-only */
-.journey .steps .step{
-  min-height:auto!important;
-  padding:18px!important;
-}
-.journey .steps .step img,
-.journey .steps .step .card-visual{
-  display:none!important;
+@media(max-width:1200px){
+  .cinematic-journey-cards{grid-template-columns:1fr 1fr!important;}
+  .cinematic-card,
+  .cinematic-card img{min-height:320px!important;}
+  .cinematic-card:first-child,
+  .cinematic-card:last-child{border-radius:18px!important;}
 }
 </style>
 
 </head>
 <body>
-<!-- SMARTVEL_HTML_V50_AUDIENCE_IMAGES_ONLY -->
+<!-- SMARTVEL_HTML_V52_CINEMATIC_JOURNEY_CARDS -->
 <!-- FORCE_V5_EXACT_FILENAME_STATS_LOADED -->
 <!-- SMARTVEL_HOMEPAGE_REBALANCED_MARKER -->
 <!-- SMARTVEL_HOMEPAGE_VIDEO_MARKER -->
@@ -1329,27 +1356,27 @@ section > .wrap {
 <div class="home-video-stage">
   <div class="home-video-frame">
     <video autoplay muted loop playsinline controls preload="metadata">
-      <source src="smartvel_homepage_video.mp4?v=50" type="video/mp4">
+      <source src="smartvel_homepage_video.mp4?v=52" type="video/mp4">
     </video>
   </div>
-  <a class="home-video-open" href="smartvel_homepage_video.mp4?v=50" target="_blank" rel="noopener noreferrer">Open full video</a>
+  <a class="home-video-open" href="smartvel_homepage_video.mp4?v=52" target="_blank" rel="noopener noreferrer">Open full video</a>
 </div>
 
 <div class="promise promise-v50">
   <div class="promise-card audience-card">
-    <div class="audience-image"><img src="Marketing.png?v=50" alt="Marketing teams using Smartvel destination content and campaign tools"></div>
+    <div class="audience-image"><img src="Marketing.png?v=52" alt="Marketing teams using Smartvel destination content and campaign tools"></div>
     <div class="audience-copy"><b>For marketing teams</b><span>Launch destination campaigns, SEO/GEO pages and inspiration experiences without building content operations from scratch.</span></div>
   </div>
   <div class="promise-card audience-card">
-    <div class="audience-image"><img src="Digital.png?v=50" alt="Digital teams integrating Smartvel widgets and APIs"></div>
+    <div class="audience-image"><img src="Digital.png?v=52" alt="Digital teams integrating Smartvel widgets and APIs"></div>
     <div class="audience-copy"><b>For digital teams</b><span>Deploy white-label widgets or APIs that fit existing web, mobile, CRM and booking journeys.</span></div>
   </div>
   <div class="promise-card audience-card">
-    <div class="audience-image"><img src="Operations.png?v=50" alt="Operations teams monitoring travel requirements and support information"></div>
+    <div class="audience-image"><img src="Operations.png?v=52" alt="Operations teams monitoring travel requirements and support information"></div>
     <div class="audience-copy"><b>For operations teams</b><span>Keep travellers informed with maintained content, changing requirements and support information.</span></div>
   </div>
   <div class="promise-card audience-card">
-    <div class="audience-image"><img src="Traveller.png?v=50" alt="Traveller planning and preparing a trip with Smartvel content"></div>
+    <div class="audience-image"><img src="Traveller.png?v=52" alt="Traveller planning and preparing a trip with Smartvel content"></div>
     <div class="audience-copy"><b>For travellers</b><span>Make discovery, planning and preparation easier, clearer and more useful before and during the trip.</span></div>
   </div>
 </div>
@@ -1390,15 +1417,15 @@ section > .wrap {
 </section>
 
 
-<section class="journey">
-<div class="journey-title"><h2>One ecosystem, from inspiration to arrival.</h2></div>
-<div class="steps">
-<div class="step"><i></i><b>Inspire</b><span>Explore & Go, TravelSEO and destination content create demand.</span></div>
-<div class="step"><i></i><b>Plan</b><span>Trip Planner, POIs, restaurants, events and itineraries keep users engaged.</span></div>
-<div class="step"><i></i><b>Convert</b><span>Promos, CTAs and partner integrations turn intent into action.</span></div>
-<div class="step"><i></i><b>Prepare</b><span>EntryDocs and TravelAble reduce friction before departure.</span></div>
-<div class="step"><i></i><b>Experience</b><span>Relevant content supports travellers during and after the trip.</span></div>
-</div>
+<section class="journey journey-v52">
+  <div class="journey-title"><h2>One ecosystem, from inspiration to arrival.</h2></div>
+  <div class="steps cinematic-journey-cards">
+    <div class="step cinematic-card"><img src="home_v52_cinematic_inspire.jpg?v=52" alt="Traveller overlooking destination landscape"><div class="cinematic-copy"><i></i><b>Inspire</b><span>Explore & Go, TravelSEO and destination content create demand.</span></div></div>
+    <div class="step cinematic-card"><img src="home_v52_cinematic_plan.jpg?v=52" alt="Traveller planning trip with laptop, map and itinerary"><div class="cinematic-copy"><i></i><b>Plan</b><span>Trip Planner, POIs, restaurants, events and itineraries keep users engaged.</span></div></div>
+    <div class="step cinematic-card"><img src="home_v52_cinematic_convert.jpg?v=52" alt="Traveller at airport seeing travel offer touchpoint"><div class="cinematic-copy"><i></i><b>Convert</b><span>Promos, CTAs and partner integrations turn intent into action.</span></div></div>
+    <div class="step cinematic-card"><img src="home_v52_cinematic_prepare.jpg?v=52" alt="Traveller checking travel documents on phone before departure"><div class="cinematic-copy"><i></i><b>Prepare</b><span>EntryDocs and TravelAble reduce friction before departure.</span></div></div>
+    <div class="step cinematic-card"><img src="home_v52_cinematic_experience.jpg?v=52" alt="Traveller enjoying destination experience"><div class="cinematic-copy"><i></i><b>Experience</b><span>Relevant content supports travellers during and after the trip.</span></div></div>
+  </div>
 </section>
 
 <section class="bottom-strip">
