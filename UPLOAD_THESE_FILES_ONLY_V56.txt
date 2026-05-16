@@ -1,0 +1,24 @@
+TTT2026 v56 EntryDocs value showcase structure
+
+Directly patches entrydocs.html.
+
+Fixes:
+- Keeps the approved EntryDocs cinematic value image.
+- Moves it out of the cramped hero/intro area.
+- Places it as its own structured full-width showcase section below the hero.
+- Restores breathing room between hero, value strip and following AI/demo section.
+- Keeps EntryDocs hero visual and following content sections intact.
+- Updates index.html EntryDocs iframe to v=56.
+
+Deep scan:
+- v56 marker present: True
+- value showcase section present: True
+- strip ref present: True
+- hero visual still present: True
+- following demo section still present: True
+- strip position before demo section: True
+- strip position after hero visual: False
+- missing image/video refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.
