@@ -1,0 +1,26 @@
+TTT2026 v50 Smartvel homepage audience images only
+
+Directly patches smartvel.html.
+
+Fixes:
+- Removes imagery from "One ecosystem, from inspiration to arrival".
+- Keeps Inspire / Plan / Convert / Prepare / Experience as clean text cards.
+- Uses uploaded PNGs only in the relevant audience cards:
+  Marketing.png = For marketing teams
+  Digital.png = For digital teams
+  Operations.png = For operations teams
+  Traveller.png = For travellers
+- Removes all generated fake infographic/card visual refs.
+- Keeps original homepage structure and hero video.
+
+Deep scan:
+- v50 marker present: True
+- uploaded PNG refs present: True
+- journey section has no img tags: True
+- journey section has no card-visual: True
+- hero video still present: True
+- old/bad visual refs still found: ['card-visual']
+- missing image/video refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.
