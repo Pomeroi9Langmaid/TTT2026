@@ -1,0 +1,20 @@
+TTT2026 v55 EntryDocs cinematic value strip
+
+Directly patches entrydocs.html.
+
+Fixes:
+- Replaces the four plain EntryDocs value cards with the approved cinematic strip.
+- Uses the uploaded composite image exactly as the new flowing visual value section.
+- Keeps the rest of EntryDocs unchanged.
+- Keeps the EntryDocs demo/visual section after it.
+- Updates index.html EntryDocs iframe to v=55.
+
+Deep scan:
+- v55 marker present: True
+- strip ref present: True
+- old four-card block terms found: []
+- entry visual section still present: True
+- missing image/video refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.

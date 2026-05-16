@@ -366,8 +366,33 @@ section > .wrap {
 }
 
 </style>
+
+<style id="entrydocs-v55-cinematic-value-strip">
+/* V55 EntryDocs: replace plain value cards with approved cinematic value-card strip. */
+.entrydocs-value-strip{
+  width:100%!important;
+  margin-top:28px!important;
+  border-radius:24px!important;
+  overflow:hidden!important;
+  background:#061f36!important;
+  box-shadow:0 24px 60px rgba(6,31,54,.16)!important;
+}
+.entrydocs-value-strip img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  object-fit:contain!important;
+}
+.value-grid .value-card::before,
+.value-grid .value-card::after{
+  content:none!important;
+  display:none!important;
+}
+</style>
+
 </head>
 <body>
+<!-- ENTRYDOCS_HTML_V55_CINEMATIC_VALUE_STRIP -->
 
 <!-- ENTRYDOCS_AUDIO_INTRO_V10 -->
 <audio id="edIntroAudio" src="ED.mp3" preload="auto" playsinline></audio>
@@ -389,11 +414,8 @@ section > .wrap {
 <h1>One-stop solution for <strong>travel requirements.</strong></h1>
 <p class="lead">EntryDocs helps travel companies provide continuously monitored, traveller-specific entry requirement information across route, nationality, residency, transit and trip conditions — without maintaining the operational complexity internally.</p>
 
-<div class="value-grid">
-<div class="value-card"><b>Reliable pre-trip guidance</b><span>Visa, passport, health, ticket and destination-document requirements before travel.</span></div>
-<div class="value-card"><b>Route and traveller logic</b><span>Information adapts by origin, destination, nationality, residency, age, transit and trip type.</span></div>
-<div class="value-card"><b>Smartvel-managed updates</b><span>Official-source monitoring, operational alerts and validated requirement updates.</span></div>
-<div class="value-card"><b>Low internal workload</b><span>Deploy via widget or API across web, mobile, booking, CRM, chatbot or customer support journeys.</span></div>
+<div class="entrydocs-value-strip">
+  <img src="entrydocs_v55_value_cards_strip.jpg?v=55" alt="EntryDocs value cards: reliable pre-trip guidance, route and traveller logic, Smartvel-managed updates and low internal workload">
 </div>
 </div>
 
