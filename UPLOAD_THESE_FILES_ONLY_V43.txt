@@ -1,0 +1,27 @@
+TTT2026 v43 Smartvel homepage existing-layout visual enhancement
+
+This corrects v42 by restoring/keeping the original homepage structure.
+It does NOT replace the homepage layout.
+It keeps the hero video.
+
+Directly patches smartvel.html.
+
+Fixes:
+- Keeps original mission/stats section.
+- Keeps original AI intelligence section.
+- Keeps original journey section.
+- Keeps original bottom strip.
+- Adds professional imagery into existing promise, AI, journey and bottom cards via CSS.
+- Updates index.html Smartvel iframe to v=43.
+
+Deep scan:
+- v43 marker present: True
+- mission section present: True
+- ai-intelligence section present: True
+- journey section present: True
+- hero video still present: True
+- bad v42 replacement story absent: True
+- missing image/video refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.
