@@ -1,0 +1,22 @@
+TTT2026 v53 Smartvel homepage cinematic journey strip
+
+Directly patches smartvel.html.
+
+Fixes:
+- Removes the duplicated HTML text overlays from the One ecosystem section.
+- Uses the approved cinematic five-card image as a single strip.
+- Journey section now has exactly one image.
+- No separate HTML card titles/copy inside the journey image area.
+- Removes old individual v52 card image refs.
+- Keeps audience PNGs and hero video.
+
+Deep scan:
+- v53 marker present: True
+- strip ref present: True
+- journey image count: 1
+- bad/duplicate journey terms found: []
+- hero video still present: True
+- missing image/video refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.
