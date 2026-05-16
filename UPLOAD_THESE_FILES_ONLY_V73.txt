@@ -1,0 +1,24 @@
+TTT2026 v73 cropped approved journey sections
+
+Actual cause fixed:
+- The white area was baked into the approved screenshot image assets.
+- CSS wrapper changes could not remove pixels inside the image.
+- This patch crops both approved images down to the actual dark gradient panel only.
+
+Directly patches:
+- exploreandgo.html
+- tripplanner.html
+- index.html
+
+Deep scan:
+- Explore cropped marker present: True
+- Trip cropped marker present: True
+- Explore cropped image ref present: True
+- Trip cropped image ref present: True
+- Explore old uncropped image ref removed: True
+- Trip old uncropped image ref removed: True
+- index Explore ref updated: True
+- index Trip ref updated: True
+- missing files while building patch: []
+
+Upload these files to repo root only.
