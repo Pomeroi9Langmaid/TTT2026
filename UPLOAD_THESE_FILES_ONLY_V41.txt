@@ -1,0 +1,20 @@
+TTT2026 v41 TravelAble airline/PRM cleanup
+
+Directly patches travelable.html.
+
+Fixes:
+- Replaces vague "Accessibility guidance" panel with airline/PRM-specific wording.
+- Replaces duplicated/titled card images with clean visual crops.
+- Updates journey-card titles and text to focus on airline accessibility communication, PRM support, booking clarity and reduced support friction.
+- Keeps top "Explore how it works" removed.
+- Keeps bottom detail CTA.
+
+Deep scan:
+- v41 marker present: True
+- new panel title present: True
+- old bad terms still found: []
+- image refs in travelable.html: ['smartvel_logo.png', 'travelable_v39_hero_visual.jpg?v=41', 'travelable_v41_clean_card_1.jpg?v=41', 'travelable_v41_clean_card_2.jpg?v=41', 'travelable_v41_clean_card_3.jpg?v=41', 'travelable_v41_clean_card_4.jpg?v=41']
+- missing image refs: []
+- missing files while building patch: []
+
+Upload these files to repo root only.
