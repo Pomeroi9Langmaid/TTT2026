@@ -1,0 +1,30 @@
+TTT2026 v33 TravelAble-only upload patch
+
+Upload these files only to the repo root.
+
+Purpose:
+- Removes broken/silly mini image strips from the journey row.
+- Uses clean premium journey step cards instead.
+- Includes all large visual images referenced by the page.
+- Prevents missing-image dark panels/alt text.
+- Cache bumped to v=33.
+
+Deep scan:
+- Image refs in travelable-overview.html: ['smartvel_logo.png', 'travelable_v31_access_context.jpg', 'travelable_v31_assistance.jpg', 'travelable_v31_hero.jpg', 'travelable_v31_mobile_context.jpg']
+- Bad old journey image refs found: []
+- Missing image refs: []
+- Missing files while building patch: []
+
+Files included:
+travelable-overview.html
+travelable-detail.html
+travelable-detailed-overview.html
+travelable_details.html
+travelable_detail.html
+travelable-overview-v26.html
+travelable.html
+index.html
+travelable_v31_hero.jpg
+travelable_v31_assistance.jpg
+travelable_v31_mobile_context.jpg
+travelable_v31_access_context.jpg
