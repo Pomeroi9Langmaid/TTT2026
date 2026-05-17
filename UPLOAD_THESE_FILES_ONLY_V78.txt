@@ -1,0 +1,122 @@
+TTT2026 v78 remove Email Andrew buttons + fix Trip Planner demo URL
+
+Fixes:
+1. Removed bottom CTA "Email Andrew" buttons from:
+   - explorego-overview.html
+   - tripplanner-overview.html
+
+2. Left Schedule meeting as the only bottom CTA button, pointed to:
+   https://meetings.hubspot.com/alangmaid
+
+3. Corrected Trip Planner demo/action URL exactly to:
+   https://sales-itineraries.cst.smartvel.com/?
+
+4. Preserved main slide iframe sources as local pages:
+   - exploreandgo.html?v=73
+   - tripplanner.html?v=73
+
+Deep scan:
+{
+  "explorego-overview.html": {
+    "changed": true,
+    "email_andrew_text_count": 0,
+    "mailto_alangmaid_count": 0,
+    "trip_demo_exact_count": 0,
+    "sales_urls": [],
+    "iframes": [],
+    "anchors": [
+      [
+        "https://meetings.hubspot.com/alangmaid",
+        "Schedule meeting"
+      ],
+      [
+        "https://meetings.hubspot.com/alangmaid",
+        "Schedule meeting"
+      ],
+      [
+        "https://meetings.hubspot.com/alangmaid",
+        "Schedule meeting"
+      ]
+    ]
+  },
+  "tripplanner-overview.html": {
+    "changed": true,
+    "email_andrew_text_count": 0,
+    "mailto_alangmaid_count": 0,
+    "trip_demo_exact_count": 0,
+    "sales_urls": [],
+    "iframes": [],
+    "anchors": [
+      [
+        "tripplanner.html",
+        "Trip Planner"
+      ],
+      [
+        "https://meetings.hubspot.com/alangmaid",
+        "Schedule meeting"
+      ],
+      [
+        "https://meetings.hubspot.com/alangmaid",
+        "Schedule meeting"
+      ],
+      [
+        "https://meetings.hubspot.com/alangmaid",
+        "Schedule meeting"
+      ]
+    ]
+  },
+  "tripplanner.html": {
+    "changed": true,
+    "email_andrew_text_count": 0,
+    "mailto_alangmaid_count": 0,
+    "trip_demo_exact_count": 2,
+    "sales_urls": [
+      "https://sales-itineraries.cst.smartvel.com/?"
+    ],
+    "iframes": [],
+    "anchors": [
+      [
+        "https://sales-itineraries.cst.smartvel.com/?",
+        "Open Trip Planner demo"
+      ],
+      [
+        "tripplanner-overview.html?v=24",
+        "Explore Trip Planner in more detail"
+      ],
+      [
+        "https://sales-itineraries.cst.smartvel.com/?",
+        "Open demo environment"
+      ]
+    ]
+  },
+  "index.html": {
+    "changed": true,
+    "email_andrew_text_count": 2,
+    "mailto_alangmaid_count": 1,
+    "trip_demo_exact_count": 1,
+    "sales_urls": [
+      "https://sales-itineraries.cst.smartvel.com/?"
+    ],
+    "iframes": [
+      "smartvel.html?v=26",
+      "entrydocs.html?v=v11-start-button-audio",
+      "travelable.html?v=30",
+      "exploreandgo.html?v=73",
+      "tripplanner.html?v=73",
+      "travelseo.html?v=v11-start-button-audio",
+      "avuxi.html?v=v11-start-button-audio"
+    ],
+    "anchors": [
+      [
+        "mailto:alangmaid@smartvel.com?subject=Smartvel%20Toronto%20Travel%20Tech%20follow-up",
+        "Email Andrew"
+      ],
+      [
+        "https://meetings.hubspot.com/alangmaid",
+        "Schedule a meeting"
+      ]
+    ]
+  }
+}
+
+Upload these files to repo root only.
