@@ -1,0 +1,125 @@
+TTT2026 v81 fix Explore & Go / Trip Planner cross-demo links
+
+Correct demo URLs:
+- Explore & Go demo environment:
+  https://smartvel-sales-explorego.cst.smartvel.com/?market=world#modal
+- Trip Planner demo environment:
+  https://sales-itineraries.cst.smartvel.com/?lang=en#modal
+
+Fix:
+- Corrected Explore & Go buttons so they do NOT point to Trip Planner demo.
+- Corrected Trip Planner buttons so they point to the Trip Planner demo.
+- Preserved local iframe sources for the main slide deck.
+
+Requirement checks:
+{
+  "explore_demo_exact_url": "https://smartvel-sales-explorego.cst.smartvel.com/?market=world#modal",
+  "trip_demo_exact_url": "https://sales-itineraries.cst.smartvel.com/?lang=en#modal",
+  "no_bad_cross_links": true,
+  "no_external_iframes": true,
+  "no_wrong_explore_variants": true,
+  "no_wrong_trip_variants": true,
+  "index_explore_iframe_local": true,
+  "index_trip_iframe_local": true
+}
+
+Deep scan:
+{
+  "index.html": {
+    "explore_demo_count": 1,
+    "trip_demo_count": 1,
+    "relevant_anchors": [
+      [
+        "#",
+        "Explore"
+      ]
+    ],
+    "bad_cross_links": [],
+    "iframe_srcs": [
+      "smartvel.html?v=26",
+      "entrydocs.html?v=v11-start-button-audio",
+      "travelable.html?v=30",
+      "exploreandgo.html?v=73",
+      "tripplanner.html?v=73",
+      "travelseo.html?v=v11-start-button-audio",
+      "avuxi.html?v=v11-start-button-audio"
+    ],
+    "bad_external_iframes": [],
+    "wrong_explore_url_variants": [],
+    "wrong_trip_url_variants": []
+  },
+  "explorego-overview.html": {
+    "explore_demo_count": 2,
+    "trip_demo_count": 0,
+    "relevant_anchors": [
+      [
+        "exploreandgo.html",
+        "Explore &amp; Go"
+      ],
+      [
+        "https://smartvel-sales-explorego.cst.smartvel.com/?market=world#modal",
+        "View live environment"
+      ],
+      [
+        "explorego_playbook.pdf",
+        "Download playbook"
+      ],
+      [
+        "explorego_product_sheet.pdf",
+        "Download product sheet"
+      ]
+    ],
+    "bad_cross_links": [],
+    "iframe_srcs": [],
+    "bad_external_iframes": [],
+    "wrong_explore_url_variants": [],
+    "wrong_trip_url_variants": []
+  },
+  "tripplanner.html": {
+    "explore_demo_count": 0,
+    "trip_demo_count": 2,
+    "relevant_anchors": [
+      [
+        "https://sales-itineraries.cst.smartvel.com/?lang=en#modal",
+        "Open Trip Planner demo"
+      ],
+      [
+        "tripplanner-overview.html?v=24",
+        "Explore Trip Planner in more detail"
+      ],
+      [
+        "https://sales-itineraries.cst.smartvel.com/?lang=en#modal",
+        "Open demo environment"
+      ]
+    ],
+    "bad_cross_links": [],
+    "iframe_srcs": [],
+    "bad_external_iframes": [],
+    "wrong_explore_url_variants": [],
+    "wrong_trip_url_variants": []
+  },
+  "tripplanner-overview.html": {
+    "explore_demo_count": 0,
+    "trip_demo_count": 2,
+    "relevant_anchors": [
+      [
+        "tripplanner.html",
+        "Trip Planner"
+      ],
+      [
+        "https://sales-itineraries.cst.smartvel.com/?lang=en#modal",
+        "View live environment"
+      ]
+    ],
+    "bad_cross_links": [],
+    "iframe_srcs": [],
+    "bad_external_iframes": [],
+    "wrong_explore_url_variants": [],
+    "wrong_trip_url_variants": []
+  }
+}
+
+Bad cross links found after patch:
+[]
+
+Upload these files to repo root only.
