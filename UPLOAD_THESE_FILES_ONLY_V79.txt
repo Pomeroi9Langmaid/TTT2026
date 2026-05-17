@@ -1,0 +1,115 @@
+TTT2026 v79 correct all Explore & Go / Trip Planner demo buttons
+
+Exact required demo URLs:
+- Explore & Go demo environment:
+  https://smartvel-sales-explorego.cst.smartvel.com/?market=world#modal
+- Trip Planner demo environment:
+  https://sales-itineraries.cst.smartvel.com/?lang=en#modal
+
+Hard rules applied:
+- Demo/action buttons for Explore & Go point to Explore & Go URL.
+- Demo/action buttons for Trip Planner point to Trip Planner URL.
+- Main slide iframe sources remain local pages, not external URLs:
+  exploreandgo.html?v=73
+  tripplanner.html?v=73
+
+Requirement checks:
+{
+  "index_explore_iframe_local": true,
+  "index_trip_iframe_local": true,
+  "explore_demo_url_present_somewhere": true,
+  "trip_demo_url_present_somewhere": true,
+  "no_wrong_explore_urls": true,
+  "no_wrong_trip_urls": true,
+  "no_external_iframes": true
+}
+
+Deep scan:
+{
+  "index.html": {
+    "explore_demo_exact_count": 1,
+    "trip_demo_exact_count": 1,
+    "wrong_explore_urls": [],
+    "wrong_trip_urls": [],
+    "iframe_srcs": [
+      "smartvel.html?v=26",
+      "entrydocs.html?v=v11-start-button-audio",
+      "travelable.html?v=30",
+      "exploreandgo.html?v=73",
+      "tripplanner.html?v=73",
+      "travelseo.html?v=v11-start-button-audio",
+      "avuxi.html?v=v11-start-button-audio"
+    ],
+    "bad_external_iframes": [],
+    "relevant_anchors": [
+      [
+        "#",
+        "Explore"
+      ]
+    ]
+  },
+  "explorego-overview.html": {
+    "explore_demo_exact_count": 0,
+    "trip_demo_exact_count": 0,
+    "wrong_explore_urls": [],
+    "wrong_trip_urls": [],
+    "iframe_srcs": [],
+    "bad_external_iframes": [],
+    "relevant_anchors": [
+      [
+        "exploreandgo.html",
+        "Explore &amp; Go"
+      ],
+      [
+        "https://exploreandgo.smartvel.com/",
+        "View live environment"
+      ],
+      [
+        "explorego_playbook.pdf",
+        "Download playbook"
+      ],
+      [
+        "explorego_product_sheet.pdf",
+        "Download product sheet"
+      ]
+    ]
+  },
+  "tripplanner.html": {
+    "explore_demo_exact_count": 0,
+    "trip_demo_exact_count": 2,
+    "wrong_explore_urls": [],
+    "wrong_trip_urls": [],
+    "iframe_srcs": [],
+    "bad_external_iframes": [],
+    "relevant_anchors": [
+      [
+        "https://sales-itineraries.cst.smartvel.com/?lang=en#modal",
+        "Open Trip Planner demo"
+      ],
+      [
+        "tripplanner-overview.html?v=24",
+        "Explore Trip Planner in more detail"
+      ],
+      [
+        "https://sales-itineraries.cst.smartvel.com/?lang=en#modal",
+        "Open demo environment"
+      ]
+    ]
+  },
+  "tripplanner-overview.html": {
+    "explore_demo_exact_count": 0,
+    "trip_demo_exact_count": 0,
+    "wrong_explore_urls": [],
+    "wrong_trip_urls": [],
+    "iframe_srcs": [],
+    "bad_external_iframes": [],
+    "relevant_anchors": [
+      [
+        "tripplanner.html",
+        "Trip Planner"
+      ]
+    ]
+  }
+}
+
+Upload these files to repo root only.
