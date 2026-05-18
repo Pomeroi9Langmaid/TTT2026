@@ -1,0 +1,9 @@
+Updated EntryDocs EU Package Travel Directive section.
+Changes made:
+- stronger legal/compliance wording
+- pre-contractual traveller information emphasis
+- outdated/static content risk framing
+- single maintained information layer positioning
+- complex package/transit/multi-leg journey support
+- operational defensibility wording
+- legal-advice disclaimer preserved
