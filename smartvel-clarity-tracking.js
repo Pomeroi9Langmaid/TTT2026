@@ -79,3 +79,23 @@
         init();
     }
 })();
+
+/* HubSpot tracking: Smartvel microsites */
+(function () {
+    if (window.__SMARTVEL_HUBSPOT_LOADED__) return;
+    window.__SMARTVEL_HUBSPOT_LOADED__ = true;
+
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.id = 'hs-script-loader';
+    script.async = true;
+    script.defer = true;
+    script.src = 'https://js.hs-scripts.com/4886834.js';
+
+    var firstScript = document.getElementsByTagName('script')[0];
+    if (firstScript && firstScript.parentNode) {
+        firstScript.parentNode.insertBefore(script, firstScript);
+    } else {
+        document.head.appendChild(script);
+    }
+})();
