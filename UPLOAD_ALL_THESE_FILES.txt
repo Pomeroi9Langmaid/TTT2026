@@ -1,0 +1,16 @@
+Upload/replace ALL files in this ZIP in BOTH microsites.
+
+This package includes both old and new filenames so the change shows even if one page is still referencing old image names.
+
+Files:
+- entrydocs.html
+- entrydocs_v61_visual_logic.jpg
+- entrydocs_v61_visual_workload.jpg
+- entrydocs_v64_visual_logic_realistic.jpg
+- entrydocs_v64_visual_workload_realistic.jpg
+
+After upload, check direct image URLs:
+https://smartvel-sales.vercel.app/entrydocs_v64_visual_logic_realistic.jpg?v=64
+https://smartvel-sales.vercel.app/entrydocs_v64_visual_workload_realistic.jpg?v=64
+
+Then hard-refresh the EntryDocs page.
