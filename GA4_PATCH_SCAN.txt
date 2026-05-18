@@ -1,6 +1,6 @@
-GA4 tracking patch for smartvel_sales
+GA4 tracking patch for toronto_traveltech
 Measurement ID: G-9L6TQF5E40
-Patched HTML files: 32
+Patched HTML files: 30
 
 Tracks:
 - product page views
