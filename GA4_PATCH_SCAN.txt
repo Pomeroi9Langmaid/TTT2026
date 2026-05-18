@@ -1,0 +1,13 @@
+GA4 tracking patch for smartvel_sales
+Measurement ID: G-9L6TQF5E40
+Patched HTML files: 32
+
+Tracks:
+- product page views
+- rep attribution
+- campaign attribution
+- meeting clicks
+- email clicks
+- PDF downloads
+- demo clicks
+- LinkedIn clicks

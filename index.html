@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Smartvel Interactive Journey V14 - homepage logos audio</title><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap' rel='stylesheet'>
+<!DOCTYPE html><html lang='en'><head>
+  <base href="/"><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Smartvel Interactive Campaign Microsite</title><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap' rel='stylesheet'>
 <style>
 :root{--blue:#29AAE0;--green:#00A698;--orange:#FF9400}
 *{box-sizing:border-box}
@@ -821,7 +822,11 @@ section > .wrap {
 }
 
 </style>
-<script src="smartvel-clarity-tracking.js?v=20260518"></script>
+
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9L6TQF5E40"></script>
+<script src="smartvel-ga4-tracking.js?v=20260518"></script>
+
 </head>
 <body>
 <!-- LINK_FIX_V79_INDEX_HTML -->
@@ -835,7 +840,7 @@ section > .wrap {
 <audio id="smartvelPageAudio" preload="auto"></audio>
 
 
-<div class='intro' id='introSplash'><div class='intro-inner'><img src='smartvel_logo.png'><h1>Powering the<br>traveller journey.</h1><p>Toronto Travel Tech interactive showcase</p><div class='intro-ai'>AI-powered travel intelligence for better passenger experiences</div><div class='intro-sub'>A guided journey through Smartvel’s travel technology ecosystem</div><button class='intro-start' id='startJourney' type='button'>Start interactive journey <span>→</span></button></div></div>
+<div class='intro' id='introSplash'><div class='intro-inner'><img src='smartvel_logo.png'><h1>Powering the<br>traveller journey.</h1><p>Smartvel interactive campaign showcase</p><div class='intro-ai'>AI-powered travel intelligence for better passenger experiences</div><div class='intro-sub'>A guided journey through Smartvel’s travel technology ecosystem</div><button class='intro-start' id='startJourney' type='button'>Start interactive journey <span>→</span></button></div></div>
 
 <div class='app'>
 <aside class='side'>
@@ -882,7 +887,7 @@ section > .wrap {
   <span>From inspiration and planning to travel requirements, accessibility and destination intelligence — Smartvel helps travel brands create clearer, more useful traveller experiences.</span>
 </div>
 <p>If you can see potential in one of Smartvel’s solutions within your business, schedule a meeting or email Andrew Langmaid, CEO of ArrivalGuides — part of the Smartvel Group.</p>
-<div class='contact-actions'><a class='mail left-mail' href='mailto:alangmaid@smartvel.com?subject=Smartvel%20Toronto%20Travel%20Tech%20follow-up'>Email Andrew</a><a class='schedule' href='https://meetings.hubspot.com/alangmaid' target='_blank' rel='noopener noreferrer'>Schedule a meeting</a></div>
+<div class='contact-actions'><a class='mail left-mail' href='mailto:alangmaid@smartvel.com?subject=Smartvel%20campaign%20follow-up'>Email Andrew</a><a class='schedule' href='https://meetings.hubspot.com/alangmaid' target='_blank' rel='noopener noreferrer'>Schedule a meeting</a></div>
 </div>
 
 <a class='contact-profile-link' href='https://www.linkedin.com/in/andrewlangmaid/' target='_blank' rel='noopener noreferrer' aria-label='Open Andrew Langmaid on LinkedIn'>
@@ -995,6 +1000,47 @@ const ctas=[
   {label:'Schedule a meeting',url:'https://meetings.hubspot.com/alangmaid'}
 ];
 
+const smartvelRouteMap={
+  '/':'0','/smartvel':'0','/smartvel/':'0',
+  '/entrydocs':'1','/entrydocs/':'1',
+  '/travelable':'2','/travelable/':'2',
+  '/explore-and-go':'3','/explore-and-go/':'3','/exploreandgo':'3','/exploreandgo/':'3',
+  '/trip-planner':'4','/trip-planner/':'4','/tripplanner':'4','/tripplanner/':'4',
+  '/travel-seo':'5','/travel-seo/':'5','/travelseo':'5','/travelseo/':'5',
+  '/avuxi':'6','/avuxi/':'6',
+  '/contact':'7','/contact/':'7'
+};
+const smartvelIndexPath=['/smartvel','/entrydocs','/travelable','/explore-and-go','/trip-planner','/travel-seo','/avuxi','/contact'];
+let smartvelInitialRouteIndex = Number(smartvelRouteMap[window.location.pathname] ?? new URLSearchParams(window.location.search).get('slide') ?? 0);
+let smartvelInitialisingRoute = true;
+function smartvelCampaignQuery(){
+  const params=new URLSearchParams(window.location.search);
+  const keep=new URLSearchParams();
+  ['rep','sector','campaign','utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(k=>{const v=params.get(k); if(v) keep.set(k,v);});
+  return keep.toString();
+}
+function smartvelAppendCampaignParamsToFrames(){
+  const q=smartvelCampaignQuery();
+  if(!q) return;
+  document.querySelectorAll('iframe[src]').forEach(frame=>{
+    const src=frame.getAttribute('src');
+    if(!src || frame.dataset.smartvelParamsApplied==='1') return;
+    const u=new URL(src, window.location.origin);
+    const qp=new URLSearchParams(u.search);
+    new URLSearchParams(q).forEach((v,k)=>{ if(!qp.get(k)) qp.set(k,v); });
+    u.search=qp.toString();
+    frame.setAttribute('src', u.pathname.replace(/^\//,'') + (u.search||'') + (u.hash||''));
+    frame.dataset.smartvelParamsApplied='1';
+  });
+}
+function smartvelUpdateRouteForSlide(i){
+  if(smartvelInitialisingRoute || !history || !history.replaceState) return;
+  const path=smartvelIndexPath[i] || '/smartvel';
+  const q=smartvelCampaignQuery();
+  history.replaceState(null,'',path+(q?'?'+q:''));
+}
+
+
 let current=0;
 let splashFinished=false;
 let lastDetailState=false;
@@ -1079,6 +1125,7 @@ function updateCta(i){
 }
 
 function show(i){
+  smartvelAppendCampaignParamsToFrames();
   if(i<0)i=0;
   if(i>=slides.length)i=slides.length-1;
 
@@ -1089,6 +1136,7 @@ function show(i){
   }
 
   current=i;
+  smartvelUpdateRouteForSlide(i);
 
   slides.forEach((s,idx)=>s.classList.toggle('active',idx===i));
   stops.forEach((s,idx)=>{
@@ -1236,8 +1284,16 @@ if(parentMoreCue){
   });
 }
 
-show(0);
+show(smartvelInitialRouteIndex);
+smartvelInitialisingRoute=false;
 const introSplash=document.getElementById('introSplash');
+if(smartvelInitialRouteIndex>0){
+  splashFinished=true;
+  document.body.classList.add('smartvel-audio-ready');
+  if(introSplash) introSplash.classList.add('hide');
+  setTimeout(()=>notifySlideAudio(smartvelInitialRouteIndex),220);
+}
+
 const startJourney=document.getElementById('startJourney');
 function startInteractiveJourney(){
   if(splashFinished) return;
@@ -1352,4 +1408,5 @@ if(startJourney){
 })();
 </script>
 
+<script src="smartvel-campaign-config.js?v=20260517"></script>
 </body></html>

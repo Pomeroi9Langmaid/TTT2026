@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smartvel Internal Link Generator</title>
+  <link rel="icon" href="/smartvel_logo.png">
+  <style>
+    :root{--bg:#07111f;--panel:#0f1f33;--line:rgba(255,255,255,.12);--text:#eef6ff;--muted:#9fb2c8;--orange:#ff7a1a;--blue:#35a7ff;}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;background:radial-gradient(circle at 15% 15%,rgba(53,167,255,.18),transparent 34%),linear-gradient(135deg,#07111f,#0b1828 58%,#081320);color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px;}
+    .shell{width:min(980px,100%);background:rgba(15,31,51,.86);border:1px solid var(--line);border-radius:28px;box-shadow:0 30px 90px rgba(0,0,0,.38);overflow:hidden;}
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 30px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.03)}
+    .brand{display:flex;align-items:center;gap:14px}.brand img{width:132px;background:#fff;border-radius:12px;padding:8px}.badge{font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted)}
+    main{padding:30px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.field{display:flex;flex-direction:column;gap:8px}label{font-size:13px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.08em}select,input{width:100%;border:1px solid var(--line);background:#09182a;color:var(--text);border-radius:14px;padding:14px 15px;font-size:16px;outline:none}select:focus,input:focus{border-color:var(--blue)}
+    .result{margin-top:26px;padding:20px;border:1px solid rgba(53,167,255,.28);background:rgba(53,167,255,.08);border-radius:20px}.url{word-break:break-all;font-size:17px;line-height:1.5;background:#061120;border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0;color:#dff1ff}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}.btn{border:0;border-radius:999px;padding:13px 18px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}.copy{background:var(--orange);color:#fff}.open{background:#fff;color:#07111f}.hint{color:var(--muted);font-size:14px;line-height:1.55;margin-top:18px}.ok{display:none;color:#7dffb2;font-weight:800}.ok.show{display:inline}
+    @media(max-width:720px){body{padding:16px}.grid{grid-template-columns:1fr}header{align-items:flex-start;flex-direction:column}.brand img{width:116px}}
+  </style>
+
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9L6TQF5E40"></script>
+<script src="smartvel-ga4-tracking.js?v=20260518"></script>
+
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="brand"><img src="/smartvel_logo.png" alt="Smartvel"><div><div class="badge">Internal tool</div><h1 style="margin:4px 0 0;font-size:28px">Campaign Link Generator</h1></div></div>
+      <div class="badge">/internal-link-generator</div>
+    </header>
+    <main>
+      <div class="grid">
+        <div class="field"><label for="rep">Representative</label><select id="rep"><option value="andrew">Andrew</option><option value="maria">Maria</option><option value="almu">Almu</option></select></div>
+        <div class="field"><label for="product">Product / landing page</label><select id="product"><option value="/smartvel">Smartvel homepage</option><option value="/entrydocs">EntryDocs</option><option value="/travelable">TravelAble</option><option value="/explore-and-go">Explore &amp; Go</option><option value="/trip-planner">Trip Planner</option><option value="/travel-seo">TravelSEO</option><option value="/avuxi">Avuxi</option><option value="/contact">Contact</option></select></div>
+        <div class="field"><label for="sector">Sector</label><select id="sector"><option value="">None</option><option value="airlines">Airlines</option><option value="airports">Airports</option><option value="otas">OTA's</option><option value="tmcs">TMCs</option><option value="hotels">Hotels</option><option value="cruises">Cruises</option><option value="travel-tech">Travel Tech</option><option value="tour-operators">Tour Operators</option><option value="dmcs-dmos">DMCs / DMOs</option><option value="insurance">Insurance</option></select></div>
+        <div class="field"><label for="campaign">Campaign name, optional</label><input id="campaign" placeholder="e.g. airlines_explore_go_may"></div>
+      </div>
+      <div class="result">
+        <label>Generated campaign link</label>
+        <div class="url" id="url"></div>
+        <div class="actions"><button class="btn copy" id="copy">Copy link</button><a class="btn open" id="open" target="_blank" rel="noopener noreferrer">Open link</a><span class="ok" id="ok">Copied</span></div>
+        <p class="hint">This creates a direct product link that opens the shared Smartvel microsite on the selected page, keeps the sidebar journey available, and switches meeting/contact links to the selected representative.</p>
+      </div>
+    </main>
+  </div>
+<script>
+(function(){
+  const rep=document.getElementById('rep'), product=document.getElementById('product'), sector=document.getElementById('sector'), campaign=document.getElementById('campaign'), out=document.getElementById('url'), open=document.getElementById('open'), copy=document.getElementById('copy'), ok=document.getElementById('ok');
+  function slug(v){return (v||'').trim().toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/^_+|_+$/g,'');}
+  function build(){
+    const origin=window.location.origin;
+    const params=new URLSearchParams();
+    params.set('rep',rep.value);
+    if(sector.value) params.set('sector',sector.value);
+    const c=slug(campaign.value);
+    if(c) params.set('campaign',c);
+    const link=origin+product.value+'?'+params.toString();
+    out.textContent=link; open.href=link; return link;
+  }
+  [rep,product,sector,campaign].forEach(el=>el.addEventListener('input',build));
+  copy.addEventListener('click',async()=>{const link=build(); try{await navigator.clipboard.writeText(link); ok.classList.add('show'); setTimeout(()=>ok.classList.remove('show'),1600);}catch(e){prompt('Copy this link:',link);}});
+  build();
+})();
+</script>
+</body>
+</html>
