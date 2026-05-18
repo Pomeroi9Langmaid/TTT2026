@@ -1,4 +1,4 @@
-// Smartvel GA4 tracking + HubSpot tracking
+// Smartvel GA4 tracking + HubSpot tracking + Slack alert tracker
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
@@ -99,4 +99,15 @@ gtag('config', 'G-9L6TQF5E40', {
     } else {
         document.head.appendChild(script);
     }
+})();
+
+/* Load Slack alert tracker */
+(function () {
+    if (window.__SMARTVEL_ALERT_TRACKER_LOADED__) return;
+    window.__SMARTVEL_ALERT_TRACKER_LOADED__ = true;
+
+    var s = document.createElement("script");
+    s.src = "/microsite-alert-tracker.js?v=20260518";
+    s.async = true;
+    document.head.appendChild(s);
 })();
