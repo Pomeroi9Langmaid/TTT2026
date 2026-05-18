@@ -1,0 +1,17 @@
+FINAL EntryDocs realistic image patch.
+
+Includes:
+- entrydocs.html
+- entrydocs_v63_visual_logic_realistic.jpg
+- entrydocs_v63_visual_workload_realistic.jpg
+
+Changes:
+- Full realistic laptop visibility restored
+- Correct enterprise SaaS photography style
+- No stretched perspective
+- No aggressive crop zoom
+- Forced new filenames to bypass Vercel/browser cache
+
+Upload these files to BOTH:
+- Toronto Travel Tech microsite
+- Smartvel generic sales microsite
