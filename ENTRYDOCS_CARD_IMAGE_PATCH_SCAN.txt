@@ -1,0 +1,7 @@
+Updated only the stretched EntryDocs card image assets.
+
+Replace these files in BOTH sites:
+- entrydocs_v61_visual_logic.jpg
+- entrydocs_v61_visual_workload.jpg
+
+No HTML change required because the filenames are unchanged.
