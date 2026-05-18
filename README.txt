@@ -1,12 +1,7 @@
+Replace these two files in BOTH the Toronto TravelTech site and the Smartvel generic sales microsite.
 
-V72 FORCE duplicate removal
+Files are exact current site dimensions: 900 x 360.
+- entrydocs_v61_visual_logic.jpg
+- entrydocs_v61_visual_workload.jpg
 
-Explore & Go:
-- remaining 'Turn inspiration into action.' count: 1
-
-Trip Planner:
-- remaining 'Connect inspiration to planning.' count: 1
-
-Index updated:
-- exploreandgo.html?v=72
-- tripplanner.html?v=72
+No HTML changes required because filenames are unchanged.
